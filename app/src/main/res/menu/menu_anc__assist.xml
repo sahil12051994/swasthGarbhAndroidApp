@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.swasthgarbh.root.swasthgarbh.ANC_Assist">
+
+
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="hello"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_more">
+
+    <menu>
+
+        <!--<item android:id="@+id/action_refresh"-->
+        <!--android:icon="@android:drawable/ic_menu_rotate"-->
+        <!--app:showAsAction="ifRoom"-->
+        <!--android:title="" />-->
+
+        <item android:id="@+id/hospitalsNearYou"
+            android:icon="@drawable/map"
+            app:showAsAction="ifRoom"
+            android:title="@string/nearby_hospitals" />
+
+        <item android:id="@+id/nutri_advise"
+            android:icon="@drawable/checkup"
+            app:showAsAction="ifRoom"
+            android:title="Nutritional Advise" />
+
+
+    </menu>
+</item>
+</menu>

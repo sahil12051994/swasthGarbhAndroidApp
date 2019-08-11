@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/empty"
+        android:title="hello"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_more">
+
+        <menu>
+
+            <!--<item android:id="@+id/action_refresh"-->
+                <!--android:icon="@android:drawable/ic_menu_rotate"-->
+                <!--app:showAsAction="ifRoom"-->
+                <!--android:title="" />-->
+
+            <item android:id="@+id/action_refresh"
+                android:icon="@drawable/reload2"
+                app:showAsAction="ifRoom"
+                android:title="Refresh" />
+
+            <item android:id="@+id/offlineAnc"
+                android:icon="@drawable/checkup"
+                app:showAsAction="ifRoom"
+                android:title="ANC Assist" />
+
+            <!--<item android:id="@+id/offlineAnc2"-->
+                <!--android:icon="@drawable/pregnant"-->
+                <!--app:showAsAction="ifRoom"-->
+                <!--android:title="Register Patient" />-->
+
+            <item android:id="@+id/registered_patient"
+                android:icon="@drawable/pinkultrasound"
+                app:showAsAction="ifRoom"
+                android:title="Register Patient" />
+
+            <item android:id="@+id/action_logout"
+                android:icon="@drawable/logout"
+                app:showAsAction="ifRoom"
+                android:title="Logout" />
+
+        </menu>
+
+    </item>
+
+</menu>
