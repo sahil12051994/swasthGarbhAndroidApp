@@ -72,7 +72,7 @@
             android:orientation="vertical">
 
 
-
+            <!--Investigations-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -274,8 +274,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+            <!--Investigations-->
 
-
+            <!--ANC 1-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -288,6 +289,7 @@
                         android:orientation="vertical"
                         android:padding="7dp">
 
+                        <!--Topic-->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -315,6 +317,7 @@
 
                         </LinearLayout>
 
+                        <!--Date-->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -345,6 +348,7 @@
 
                         </LinearLayout>
 
+                        <!--POG-->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -375,6 +379,7 @@
 
                         </LinearLayout>
 
+                        <!--History-->
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc1_his_linear"
                             android:layout_width="match_parent"
@@ -513,6 +518,7 @@
 
                         </android.support.v7.widget.CardView>
 
+                        <!--Examination-->
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc1_exam_linear"
                             android:layout_width="match_parent"
@@ -995,6 +1001,7 @@
                             </LinearLayout>
                         </android.support.v7.widget.CardView>
 
+                        <!--Investigation-->
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc1_invest_linear"
                             android:layout_width="match_parent"
@@ -1244,17 +1251,23 @@
                                 android:visibility="gone"/>
 
 
-                            <EditText
-                                android:id="@+id/blood_group"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="5"
-                                android:layout_marginLeft="20dp"
-                                android:gravity="center"
-                                android:backgroundTint="@color/colortheme"
-                                android:inputType="textMultiLine"
-                                android:visibility="gone"
-                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ " />
+                            <!--<EditText-->
+                                <!--android:id="@+id/blood_group"-->
+                                <!--android:layout_width="0dp"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_weight="5"-->
+                                <!--android:layout_marginLeft="20dp"-->
+                                <!--android:gravity="center"-->
+                                <!--android:backgroundTint="@color/colortheme"-->
+                                <!--android:inputType="textMultiLine"-->
+                                <!--android:visibility="gone"-->
+                                <!--android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ " />-->
+
+                                    <Spinner
+                                        android:id="@+id/blood_group"
+                                        android:layout_width="0px"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"/>
 
                         </LinearLayout>
 
@@ -1789,6 +1802,7 @@
                             </LinearLayout>
                         </android.support.v7.widget.CardView>
 
+                        <!--Advice-->
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc1_advice_linear"
                             android:layout_width="match_parent"
@@ -1834,6 +1848,7 @@
                             </LinearLayout>
                         </android.support.v7.widget.CardView>
 
+                        <!--General-->
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc1_general_linear"
                             android:layout_width="match_parent"
@@ -2219,7 +2234,9 @@
 
                     </LinearLayout>
             </android.support.v7.widget.CardView>
+            <!--ANC 1-->
 
+            <!--ANC 2-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -2238,7 +2255,7 @@
                         android:orientation="vertical"
                         android:padding="7dp">
 
-
+                        <!--Topic-->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -2266,6 +2283,7 @@
 
                         </LinearLayout>
 
+                        <!--POG-->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
@@ -2296,6 +2314,7 @@
 
                         </LinearLayout>
 
+                        <!--History-->
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc2_his_linear"
                             android:layout_width="match_parent"
@@ -2398,6 +2417,7 @@
                         </LinearLayout>
                         </android.support.v7.widget.CardView>
 
+                        <!--Examination-->
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc2_exam_linear"
                             android:layout_width="match_parent"
@@ -2591,6 +2611,7 @@
                         </LinearLayout>
                         </android.support.v7.widget.CardView>
 
+                        <!--Investigations-->
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc2_invest_linear"
                             android:layout_width="match_parent"
@@ -2666,6 +2687,7 @@
                         </LinearLayout>
                         </android.support.v7.widget.CardView>
 
+                        <!--Advice-->
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc2_advice_linear"
                             android:layout_width="match_parent"
@@ -2915,9 +2937,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+            <!--ANC 2-->
 
-
-
+            <!--ANC 3-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -3420,8 +3442,6 @@
                         </LinearLayout>
                         </android.support.v7.widget.CardView>
 
-
-
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc3_advice_linear"
                             android:layout_width="match_parent"
@@ -3704,7 +3724,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+            <!--ANC 3-->
 
+            <!--ANC 4-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -4298,7 +4320,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+            <!--ANC 4-->
 
+            <!--ANC 5-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -5265,7 +5289,6 @@
                         </LinearLayout>
                         </android.support.v7.widget.CardView>
 
-
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc5_advice_linear"
                             android:layout_width="match_parent"
@@ -5506,7 +5529,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+            <!--ANC 5-->
 
+            <!--ANC 6-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -5883,7 +5908,6 @@
 
                         </LinearLayout>
 
-
                         <android.support.v7.widget.CardView
                             android:id="@+id/anc6_advice_linear"
                             android:layout_width="match_parent"
@@ -6028,7 +6052,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+            <!--ANC 6-->
 
+            <!--ANC 7-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -6509,7 +6535,9 @@
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+            <!--ANC 7-->
 
+            <!--ANC 8-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -6910,7 +6938,9 @@
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
+            <!--ANC 8-->
 
             <RelativeLayout
                 android:id="@+id/updateButtonLayout"

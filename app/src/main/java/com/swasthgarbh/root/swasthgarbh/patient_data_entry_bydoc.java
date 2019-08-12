@@ -62,7 +62,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     CheckBox anc_6, anc6_his_breath, anc6_his_fatigue, anc6_his_head, anc6_his_bleed, anc6_his_burn, anc6_his_fetal_move, anc6_his_itching, anc6_exam_pallor, anc6_exam_pedal, anc6_advice_DFMC, anc6_advice_TFe_Ca, anc6_advice_BleedPV, anc6_advice_spotPV, anc6_advice_leakPV, anc6_advice_fetalmove, anc6_advice_abdpain, anc6_advice_NST;
     CheckBox anc_7, anc7_his_breath, anc7_his_fatigue, anc7_his_head, anc7_his_bleed, anc7_his_burn, anc7_his_fetal_move, anc7_his_itching, anc7_exam_pallor, anc7_exam_pedal, anc7_advice_DFMC, anc7_advice_TFe_Ca, anc7_advice_BleedPV, anc7_advice_spotPV, anc7_advice_leakPV, anc7_advice_fetalmove, anc7_advice_abdpain;
     CheckBox anc_8, anc8_his_breath, anc8_his_fatigue, anc8_his_head, anc8_his_bleed, anc8_his_burn, anc8_his_fetal_move, anc8_his_itching, anc8_exam_pallor, anc8_exam_pedal, anc8_exam_pa, anc8_advice_DFMC, anc8_advice_Fe_Ca, anc8_advice_induction;
-    EditText invest_others, invest_drug_history, anc_1_date, anc_1_POG, anc_1_GeneralDeranged_fasting, anc_1_GeneralDeranged_breakfast, anc_1_GeneralDeranged_lunch, anc_1_GeneralDeranged_dinner, anc1_his_others, anc1_exam_height, anc1_exam_weight, anc1_exam_BMI, anc1_exam_PR, anc1_exam_BP, anc1_exam_RR, anc1_exam_temp, anc1_exam_proteinuria, anc1_exam_chest, anc1_exam_PA, anc1_exam_others, anc1_invest_bg, anc1_invest_husband_bg, anc1_invest_hemo, anc1_invest_bloodsugar_fast, anc1_invest_bloodsugar_post, anc1_invest_GTT_fast, anc1_invest_GTT_1hr, anc1_invest_GTT_2hr, anc1_invest_TSH, anc1_invest_NT_done, anc1_invest_PAPP, anc1_invest_b_hcg, anc1_invest_levelII_done, anc1_invest_normal, anc1_invest_others, anc1_general_nutritional, anc1_general_ailment, anc1_general_ICT, anc1_general_others;
+    EditText invest_others, invest_drug_history, anc_1_date, anc_1_POG, anc_1_GeneralDeranged_fasting, anc_1_GeneralDeranged_breakfast, anc_1_GeneralDeranged_lunch, anc_1_GeneralDeranged_dinner, anc1_his_others, anc1_exam_height, anc1_exam_weight, anc1_exam_BMI, anc1_exam_PR, anc1_exam_BP, anc1_exam_RR, anc1_exam_temp, anc1_exam_chest, anc1_exam_PA, anc1_exam_others, anc1_invest_husband_bg, anc1_invest_hemo, anc1_invest_bloodsugar_fast, anc1_invest_bloodsugar_post, anc1_invest_GTT_fast, anc1_invest_GTT_1hr, anc1_invest_GTT_2hr, anc1_invest_TSH, anc1_invest_NT_done, anc1_invest_PAPP, anc1_invest_b_hcg, anc1_invest_levelII_done, anc1_invest_normal, anc1_invest_others, anc1_general_nutritional, anc1_general_ailment, anc1_general_ICT, anc1_general_others;
     EditText anc2_POG, anc_2_pa_2weeks, anc2_his_others, anc2_exam_PR, anc2_exam_BP, anc2_exam_weight, anc2_exam_others, anc2_invest_others, anc2_advice_nutri, anc2_advice_general, anc2_advice_common, anc2_advice_others;
     EditText anc3_his_others, anc3_investigation_others, anc_3_pa_2weeks, anc3_exam_PR, anc3_exam_BP, anc3_exam_weight, anc3_exam_others, anc3_advice_nutri, anc3_advice_general, anc3_advice_common, anc3_advice_others;
     EditText anc4_his_others, anc_4_pa_2weeks, anc4_exam_PR, anc4_exam_BP, anc4_exam_weight, anc4_exam_others, anc4_advice_nutri, anc4_advice_general, anc4_advice_common, anc4_advice_others;
@@ -80,7 +80,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     TextView anc8_his_othersBox, anc8_exam_PRBox, anc8_exam_BPBox, anc8_exam_weightBox, anc8_exam_othersBox, anc8_advice_othersBox, anc_8_historyBox, anc_8_adviceBox, anc_8_examinationBox;
     TextView invest_othersBox, invest_drug_historyBox, Co_MorbiditiesBox, Heart_DiseaseBox;
     CardView anc1_his_linearBox, anc1_exam_linearBox, anc1_general_linear, invest_heart_linearBox, anc1_invest_linearBox, anc1_advice_linearBox, anc2_his_linearBox, anc2_exam_linearBox, anc2_invest_linearBox, anc2_advice_linearBox, anc3_his_linearBox, anc3_exam_linearBox, anc3_invest_linearBox, anc3_advice_linearBox, anc4_his_linearBox, anc4_exam_linearBox, anc4_advice_linearBox, anc5_his_linearBox, anc5_exam_linearBox, anc5_invest_linearBox, anc5_advice_linearBox, anc5_USG_linearBox, anc6_advice_linearBox, anc6_his_linearBox, anc6_exam_linearBox, anc7_his_linearBox, anc7_exam_linearBox, anc7_advice_linearBox, anc8_his_linearBox, anc8_exam_linearBox, anc8_advice_linearBox;
-
+    Spinner anc1_invest_bg, anc1_exam_proteinuria;
     int clickedPatientId;
     Button UpdateData;
     String anc_1_dateTime;
@@ -377,7 +377,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
         anc1_exam_others = (EditText) findViewById(R.id.exam_other);
 
-        anc1_invest_bg = (EditText) findViewById(R.id.blood_group);
+        anc1_invest_bg = (Spinner) findViewById(R.id.blood_group);
 
         anc1_invest_husband_bg = (EditText) findViewById(R.id.husband_blood_group);
 
@@ -2404,7 +2404,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_exam_chest.setText(response.getString ("anc1_exam_chest"));
                             anc1_exam_PA.setText(response.getString ("anc1_exam_PA"));
                             anc1_exam_others.setText(response.getString ("anc1_exam_others"));
-                            anc1_invest_bg.setText(response.getString ("anc1_invest_bg"));
+//                            anc1_invest_bg.setText(response.getString ("anc1_invest_bg"));
                             anc1_invest_husband_bg.setText(response.getString ("anc1_invest_husband_bg"));
                             anc1_invest_hemo.setText(response.getString ("anc1_invest_hemo"));
                             anc1_invest_bloodsugar_fast.setText(response.getString ("anc1_invest_bloodsugar_fast"));
@@ -2760,7 +2760,16 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+
+        Spinner spinnerProteinuria = (Spinner) findViewById(R.id.blood_group);
+        ArrayAdapter<CharSequence> adapterProteinuria = ArrayAdapter.createFromResource(this,
+                R.array.BloodGroupDropdownElements, android.R.layout.simple_spinner_item);
+        adapterProteinuria.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerProteinuria.setAdapter(adapterProteinuria);
+
+
     }
+
     public void updateData(){
 //        UpdateData.setVisibility(View.GONE);
         String url = ApplicationController.get_base_url() + "swasthgarbh/patient/" + clickedPatientId;
@@ -2992,7 +3001,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc1_exam_chest", "" + anc1_exam_chest.getText());
                     params.put("anc1_exam_PA", "" + anc1_exam_PA.getText());
                     params.put("anc1_exam_others","" +  anc1_exam_others.getText());
-                    params.put("anc1_invest_bg", "" + anc1_invest_bg.getText());
+//                    params.put("anc1_invest_bg", "" + anc1_invest_bg.getText());
                     params.put("anc1_invest_husband_bg", "" + anc1_invest_husband_bg.getText());
                     params.put("anc1_invest_hemo","" +  anc1_invest_hemo.getText());
                     params.put("anc1_invest_bloodsugar_fast", "" + anc1_invest_bloodsugar_fast.getText());
@@ -3116,9 +3125,5 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         };
         ApplicationController.getInstance().addToRequestQueue(jsonObjReq);
     }
-
-
-
-
 }
 
