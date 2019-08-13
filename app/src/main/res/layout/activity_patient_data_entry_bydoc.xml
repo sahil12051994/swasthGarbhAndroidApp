@@ -4245,11 +4245,9 @@
                                         android:backgroundTint="@color/colortheme"
                                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                         android:gravity="center"
-                                        android:hint="(should be within 2 weeks of POG)"
                                         android:inputType="textMultiLine"
                                         android:visibility="gone" />
                                 </LinearLayout>
-
 
                                 <!--Added fileds-->
                                 <LinearLayout
@@ -4258,7 +4256,7 @@
 
                                     <TextView
                                         android:id="@+id/anc_4_exam_others_box"
-                                        android:layout_width="64dp"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
                                         android:gravity="center"
@@ -4271,9 +4269,9 @@
                                     <EditText
                                         android:id="@+id/anc_4_exam_others"
                                         android:layout_width="0dp"
+                                        android:layout_weight="5"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
-                                        android:layout_weight="5"
                                         android:backgroundTint="@color/colortheme"
                                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                         android:inputType="textMultiLine"/>
@@ -4296,13 +4294,12 @@
                                     <EditText
                                         android:id="@+id/anc_4_ict"
                                         android:layout_width="0dp"
+                                        android:layout_weight="5"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
-                                        android:layout_weight="5"
                                         android:backgroundTint="@color/colortheme"
                                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                         android:gravity="center"
-                                        android:hint="(should be within 2 weeks of POG)"
                                         android:inputType="textMultiLine"/>
 
                                 </LinearLayout>
@@ -4314,7 +4311,7 @@
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginTop="5dp"
                                     android:layout_marginRight="30dp"
-                                    android:text="ICT"
+                                    android:text="CBC"
                                     android:textColor="#008B8B"
                                     android:textSize="20dp"
                                     android:textStyle="italic"/>
@@ -4324,7 +4321,8 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
                                         android:gravity="center"
@@ -4335,13 +4333,12 @@
                                     <EditText
                                         android:id="@+id/anc_4_CBC_HB"
                                         android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
-                                        android:layout_weight="5"
                                         android:backgroundTint="@color/colortheme"
                                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                         android:gravity="center"
-                                        android:hint="(should be within 2 weeks of POG)"
                                         android:inputType="textMultiLine"/>
 
                                 </LinearLayout>
@@ -4351,7 +4348,8 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
                                         android:gravity="center"
@@ -4362,13 +4360,12 @@
                                     <EditText
                                         android:id="@+id/anc_4_CBC_TLC"
                                         android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
-                                        android:layout_weight="5"
                                         android:backgroundTint="@color/colortheme"
                                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                         android:gravity="center"
-                                        android:hint="(should be within 2 weeks of POG)"
                                         android:inputType="textMultiLine"/>
 
                                 </LinearLayout>
@@ -4378,7 +4375,8 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
                                         android:gravity="center"
@@ -4389,13 +4387,12 @@
                                     <EditText
                                         android:id="@+id/anc_4_CBC_Platelets"
                                         android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
-                                        android:layout_weight="5"
                                         android:backgroundTint="@color/colortheme"
                                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                         android:gravity="center"
-                                        android:hint="(should be within 2 weeks of POG)"
                                         android:inputType="textMultiLine"/>
 
                                 </LinearLayout>
@@ -4417,7 +4414,8 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
                                         android:gravity="center"
@@ -4428,13 +4426,12 @@
                                     <EditText
                                         android:id="@+id/anc_4_LFT_OT"
                                         android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
-                                        android:layout_weight="5"
                                         android:backgroundTint="@color/colortheme"
                                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                         android:gravity="center"
-                                        android:hint="(should be within 2 weeks of POG)"
                                         android:inputType="textMultiLine"/>
 
                                 </LinearLayout>
@@ -4444,7 +4441,8 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
                                         android:gravity="center"
@@ -4455,13 +4453,12 @@
                                     <EditText
                                         android:id="@+id/anc_4_LFT_PT"
                                         android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
-                                        android:layout_weight="5"
                                         android:backgroundTint="@color/colortheme"
                                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                         android:gravity="center"
-                                        android:hint="(should be within 2 weeks of POG)"
                                         android:inputType="textMultiLine" />
 
                                 </LinearLayout>
@@ -4471,7 +4468,8 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
                                         android:gravity="center"
@@ -4482,13 +4480,12 @@
                                     <EditText
                                         android:id="@+id/anc_4_LFT_ALP"
                                         android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
-                                        android:layout_weight="5"
                                         android:backgroundTint="@color/colortheme"
                                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                         android:gravity="center"
-                                        android:hint="(should be within 2 weeks of POG)"
                                         android:inputType="textMultiLine"/>
 
                                 </LinearLayout>
@@ -4510,7 +4507,8 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
                                         android:gravity="center"
@@ -4521,13 +4519,12 @@
                                     <EditText
                                         android:id="@+id/anc_4_KFT_UREA"
                                         android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
-                                        android:layout_weight="5"
                                         android:backgroundTint="@color/colortheme"
                                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                         android:gravity="center"
-                                        android:hint="(should be within 2 weeks of POG)"
                                         android:inputType="textMultiLine" />
 
                                 </LinearLayout>
@@ -4537,28 +4534,26 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
                                         android:gravity="center"
                                         android:text="Creatinine"
                                         android:textColor="#000000"
-                                        android:textSize="15sp"
-                                        android:visibility="gone" />
+                                        android:textSize="15sp"/>
 
 
                                     <EditText
                                         android:id="@+id/anc_4_KFT_CREATININE"
                                         android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
-                                        android:layout_weight="5"
                                         android:backgroundTint="@color/colortheme"
                                         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                         android:gravity="center"
-                                        android:hint="(should be within 2 weeks of POG)"
-                                        android:inputType="textMultiLine"
-                                        android:visibility="gone" />
+                                        android:inputType="textMultiLine"/>
                                 </LinearLayout>
 
                             </LinearLayout>
