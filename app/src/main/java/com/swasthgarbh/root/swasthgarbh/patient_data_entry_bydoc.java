@@ -62,7 +62,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     CheckBox anc_6, anc6_his_breath, anc6_his_fatigue, anc6_his_head, anc6_his_bleed, anc6_his_burn, anc6_his_fetal_move, anc6_his_itching, anc6_exam_pallor, anc6_exam_pedal, anc6_advice_DFMC, anc6_advice_TFe_Ca, anc6_advice_BleedPV, anc6_advice_spotPV, anc6_advice_leakPV, anc6_advice_fetalmove, anc6_advice_abdpain, anc6_advice_NST;
     CheckBox anc_7, anc7_his_breath, anc7_his_fatigue, anc7_his_head, anc7_his_bleed, anc7_his_burn, anc7_his_fetal_move, anc7_his_itching, anc7_exam_pallor, anc7_exam_pedal, anc7_advice_DFMC, anc7_advice_TFe_Ca, anc7_advice_BleedPV, anc7_advice_spotPV, anc7_advice_leakPV, anc7_advice_fetalmove, anc7_advice_abdpain;
     CheckBox anc_8, anc8_his_breath, anc8_his_fatigue, anc8_his_head, anc8_his_bleed, anc8_his_burn, anc8_his_fetal_move, anc8_his_itching, anc8_exam_pallor, anc8_exam_pedal, anc8_exam_pa, anc8_advice_DFMC, anc8_advice_Fe_Ca, anc8_advice_induction;
-    EditText invest_others, invest_drug_history, anc_1_date, anc_1_POG, anc_1_GeneralDeranged_fasting, anc_1_GeneralDeranged_breakfast, anc_1_GeneralDeranged_lunch, anc_1_GeneralDeranged_dinner, anc1_his_others, anc1_exam_height, anc1_exam_weight, anc1_exam_BMI, anc1_exam_PR, anc1_exam_BP, anc1_exam_RR, anc1_exam_temp, anc1_exam_chest, anc1_exam_PA, anc1_exam_others, anc1_invest_husband_bg, anc1_invest_hemo, anc1_invest_bloodsugar_fast, anc1_invest_bloodsugar_post, anc1_invest_GTT_fast, anc1_invest_GTT_1hr, anc1_invest_GTT_2hr, anc1_invest_TSH, anc1_invest_NT_done, anc1_invest_PAPP, anc1_invest_b_hcg, anc1_invest_levelII_done, anc1_invest_normal, anc1_invest_others, anc1_general_nutritional, anc1_general_ailment, anc1_general_ICT, anc1_general_others;
+    EditText invest_others, invest_drug_history, anc_1_date, anc_1_POG, anc_1_GeneralDeranged_fasting, anc_1_GeneralDeranged_breakfast, anc_1_GeneralDeranged_lunch, anc_1_GeneralDeranged_dinner, anc1_his_others, anc1_exam_height, anc1_exam_weight, anc1_exam_BMI, anc1_exam_PR, anc1_exam_BP, anc1_exam_RR, anc1_exam_temp, anc1_exam_chest, anc1_exam_PA, anc1_exam_others, anc1_invest_husband_bg, anc1_invest_hemo, anc1_invest_bloodsugar_fast, anc1_invest_bloodsugar_post, anc1_invest_GTT_fast, anc1_invest_GTT_1hr, anc1_invest_GTT_2hr, anc1_invest_TSH, anc1_invest_NT_done, anc1_invest_PAPP, anc1_invest_b_hcg, anc1_invest_levelII_done, anc1_invest_normal, anc1_invest_others, anc1_general_ICT, anc1_general_others;
     EditText anc2_POG, anc_2_pa_2weeks, anc2_his_others, anc2_exam_PR, anc2_exam_BP, anc2_exam_weight, anc2_exam_others, anc2_invest_others, anc2_advice_nutri, anc2_advice_general, anc2_advice_common, anc2_advice_others;
     EditText anc3_his_others, anc3_investigation_others, anc_3_pa_2weeks, anc3_exam_PR, anc3_exam_BP, anc3_exam_weight, anc3_exam_others, anc3_advice_nutri, anc3_advice_general, anc3_advice_common, anc3_advice_others;
     EditText anc4_his_others, anc_4_pa_2weeks, anc4_exam_PR, anc4_exam_BP, anc4_exam_weight, anc4_exam_others, anc4_advice_nutri, anc4_advice_general, anc4_advice_common, anc4_advice_others;
@@ -70,7 +70,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc6_his_others, anc6_pa_2weeks, anc6_exam_PR, anc6_exam_BP, anc6_exam_weight, anc6_exam_others, anc6_exam_pelvic, anc6_advice_others;
     EditText anc7_his_others, anc7_pa_2weeks, anc7_exam_PR, anc7_exam_BP, anc7_exam_weight, anc7_exam_others, anc7_advice_others;
     EditText anc8_his_others, anc8_exam_PR, anc8_exam_BP, anc8_exam_weight, anc8_exam_others, anc8_advice_others;
-    TextView anc_1_GeneralDeranged_bs, anc_1_GeneralDeranged_fastingBox,anc_1_GeneralDeranged_breakfastBox, anc_1_GeneralDeranged_lunchBox, anc_1_GeneralDeranged_dinnerBox, anc1_date_box, anc_1_POG_box, anc1_history, anc1_his_others_box, anc1_examination, anc1_exam_height_box, anc1_exam_weight_box, anc1_exam_BMI_box, anc1_exam_PR_box, anc1_exam_BP_box, anc1_exam_RR_box, anc1_exam_temp_box, anc1_exam_proteinuria_box, anc1_exam_chest_box, anc1_exam_PA_box, anc1_exam_others_box, anc1_invest_bg_box, anc1_invest_husband_bg_box, anc1_invest_hemo_box, anc1_invest_TSH_box, anc1_invest_NT_done_box, anc1_invest_PAPP_box, anc1_invest_b_hcg_box, anc1_invest_levelII_done_box, anc1_invest_normal_box, anc1_invest_others_box, anc1_general_nutritional_box, anc1_general_ailment_box, anc1_general_ICT_box, anc1_general_others_box, anc1_anthropometry, anc1_investigations, anc1_invest_GTT, anc1_invest_levelII_USG, anc1_advice, anc1_adviceGeneral, anc1_general_Urine, anc1_general_Deranged, anc1_vitals, anc1_invest_bloodsugar, anc1_examinationGen, anc1_NTscan, anc1_investDual;
+    TextView anc_1_GeneralDeranged_bs, anc_1_GeneralDeranged_fastingBox,anc_1_GeneralDeranged_breakfastBox, anc_1_GeneralDeranged_lunchBox, anc_1_GeneralDeranged_dinnerBox, anc1_date_box, anc_1_POG_box, anc1_history, anc1_his_others_box, anc1_examination, anc1_exam_height_box, anc1_exam_weight_box, anc1_exam_BMI_box, anc1_exam_PR_box, anc1_exam_BP_box, anc1_exam_RR_box, anc1_exam_temp_box, anc1_exam_proteinuria_box, anc1_exam_chest_box, anc1_exam_PA_box, anc1_exam_others_box, anc1_invest_bg_box, anc1_invest_husband_bg_box, anc1_invest_hemo_box, anc1_invest_TSH_box, anc1_invest_NT_done_box, anc1_invest_PAPP_box, anc1_invest_b_hcg_box, anc1_invest_levelII_done_box, anc1_invest_normal_box, anc1_invest_others_box, anc1_general_ICT_box, anc1_general_others_box, anc1_anthropometry, anc1_investigations, anc1_invest_GTT, anc1_invest_levelII_USG, anc1_advice, anc1_adviceGeneral, anc1_general_Urine, anc1_general_Deranged, anc1_vitals, anc1_invest_bloodsugar, anc1_examinationGen, anc1_NTscan, anc1_investDual;
     TextView anc2_exam_pa, anc_2_POG_box, anc2_his_othersBox, anc_2_exam_PRBox, anc2_exam_BPBox, anc2_exam_weightBox, anc2_exam_othersBox, anc_2_invest_othersBox, anc2_advice_nutriBox, anc2_advice_generalBox, anc2_advice_commonBox, anc2_advice_othersBox, anc_2_history, anc_2_examination, anc2_investigationBox, anc_2_adviceBox, anc2_common_ailment_ifHbBox, anc3_historyBox, Anc_3_examinationBox, anc_3_investigationsBox, anc_3_GTTBox, anc_3_adviceBox, anc_3_inj_antiDBox;
     TextView anc3_his_othersBox, anc3_investigation_othersbox, anc3_exam_pa, anc3_exam_PRBox, anc3_exam_BPBox, anc3_exam_weightBox, anc3_exam_othersBox, anc3_advice_nutriBox, anc3_advice_generalBox, anc3_advice_commonBox, anc3_advice_othersBox, anc_3_reviewBox;
     TextView anc4_his_othersBox, anc4_exam_pa, anc4_exam_PRBox, anc4_exam_BPBox, anc4_exam_weightBox, anc4_exam_othersBox, anc4_advice_nutriBox, anc4_advice_generalBox, anc4_advice_commonBox, anc4_advice_othersBox, anc_4_historyBox, ANC_4_examinationBox, anc_4_adviceBox, anc_4_reviewBox;
@@ -81,6 +81,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     TextView invest_othersBox, invest_drug_historyBox, Co_MorbiditiesBox, Heart_DiseaseBox;
     CardView anc1_his_linearBox, anc1_exam_linearBox, anc1_general_linear, invest_heart_linearBox, anc1_invest_linearBox, anc1_advice_linearBox, anc2_his_linearBox, anc2_exam_linearBox, anc2_invest_linearBox, anc2_advice_linearBox, anc3_his_linearBox, anc3_exam_linearBox, anc3_invest_linearBox, anc3_advice_linearBox, anc4_his_linearBox, anc4_exam_linearBox, anc4_advice_linearBox, anc5_his_linearBox, anc5_exam_linearBox, anc5_invest_linearBox, anc5_advice_linearBox, anc5_USG_linearBox, anc6_advice_linearBox, anc6_his_linearBox, anc6_exam_linearBox, anc7_his_linearBox, anc7_exam_linearBox, anc7_advice_linearBox, anc8_his_linearBox, anc8_exam_linearBox, anc8_advice_linearBox;
     Spinner anc1_invest_bg, anc1_exam_proteinuria;
+    CheckBox anc1_general_nutritional, anc1_general_ailment;
     int clickedPatientId;
     Button UpdateData;
     String anc_1_dateTime;
@@ -171,8 +172,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_patient_data_entry_bydoc);
-        Log.i ("aaaaagyeeeeeee", "screeeen mae: ");
-
 
         anc_1 = (CheckBox) findViewById (R.id.anc_1);
 
@@ -406,10 +405,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc1_invest_normal = (EditText) findViewById(R.id.Level_II_USG_normal);
 
         anc1_invest_others = (EditText) findViewById(R.id.other_invest);
-
-        anc1_general_nutritional = (EditText) findViewById(R.id.general_nutritional);
-
-        anc1_general_ailment = (EditText) findViewById(R.id.general_ailments);
 
         anc1_general_ICT = (EditText) findViewById(R.id.general_BG_negative);
 
@@ -945,9 +940,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
         anc1_adviceGeneral = (TextView) findViewById(R.id.anc_1_General);
 
-        anc1_general_nutritional_box = (TextView) findViewById(R.id.anc_1_GeneralNut);
+        anc1_general_nutritional = (CheckBox) findViewById(R.id.general_nutritional);
 
-        anc1_general_ailment_box = (TextView) findViewById(R.id.anc_1_GeneralCommon);
+        anc1_general_ailment = (CheckBox) findViewById(R.id.general_ailments);
 
         anc1_general_ICT_box = (TextView) findViewById(R.id.anc_1_GeneralBG);
 
@@ -1342,8 +1337,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     anc1_invest_levelII_done_box.setVisibility (View.VISIBLE);
                     anc1_invest_normal_box.setVisibility (View.VISIBLE);
                     anc1_invest_others_box.setVisibility (View.VISIBLE);
-                    anc1_general_nutritional_box.setVisibility (View.VISIBLE);
-                    anc1_general_ailment_box.setVisibility (View.VISIBLE);
+//                    anc1_general_nutritional_box.setVisibility (View.VISIBLE);
+//                    anc1_general_ailment_box.setVisibility (View.VISIBLE);
                     anc1_general_ICT_box.setVisibility (View.VISIBLE);
                     anc1_general_others_box.setVisibility (View.VISIBLE);
                     anc1_investigations.setVisibility (View.VISIBLE);
@@ -1468,8 +1463,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     anc1_invest_levelII_done_box.setVisibility (View.GONE);
                     anc1_invest_normal_box.setVisibility (View.GONE);
                     anc1_invest_others_box.setVisibility (View.GONE);
-                    anc1_general_nutritional_box.setVisibility (View.GONE);
-                    anc1_general_ailment_box.setVisibility (View.GONE);
+//                    anc1_general_nutritional_box.setVisibility (View.GONE);
+//                    anc1_general_ailment_box.setVisibility (View.GONE);
                     anc1_general_ICT_box.setVisibility (View.GONE);
                     anc1_general_others_box.setVisibility (View.GONE);
                     anc1_investigations.setVisibility (View.GONE);
@@ -2419,8 +2414,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_invest_levelII_done.setText(response.getString ("anc1_invest_levelII_done"));
                             anc1_invest_normal.setText(response.getString ("anc1_invest_normal"));
                             anc1_invest_others.setText(response.getString ("anc1_invest_others"));
-                            anc1_general_nutritional.setText(response.getString ("anc1_general_nutritional"));
-                            anc1_general_ailment.setText(response.getString ("anc1_general_ailment"));
+//                            anc1_general_nutritional.setText(response.getString ("anc1_general_nutritional"));
+//                            anc1_general_ailment.setText(response.getString ("anc1_general_ailment"));
                             anc1_general_ICT.setText(response.getString ("anc1_general_ICT"));
                             anc1_general_others.setText(response.getString ("anc1_general_others"));
                             anc_1.setChecked(response.getBoolean("anc_1"));
@@ -3016,8 +3011,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc1_invest_levelII_done", "" + anc1_invest_levelII_done.getText());
                     params.put("anc1_invest_normal", "" + anc1_invest_normal.getText());
                     params.put("anc1_invest_others", "" + anc1_invest_others.getText());
-                    params.put("anc1_general_nutritional", anc1_general_nutritional.getText());
-                    params.put("anc1_general_ailment", anc1_general_ailment.getText());
+//                    params.put("anc1_general_nutritional", anc1_general_nutritional.getText());
+//                    params.put("anc1_general_ailment", anc1_general_ailment.getText());
                     params.put("anc1_general_ICT", "" + anc1_general_ICT.getText());
                     params.put("anc1_general_others", "" + anc1_general_others.getText());
                     params.put("anc2_POG", "" + anc2_POG.getText());
