@@ -1,0 +1,7 @@
+When emulator can not find AVD List: https://stackoverflow.com/questions/48747577/android-studio-3-0-1-shows-emulator-process-finished-with-exit-code-1
+$ sudo nano /etc/environment
+$ ANDROID_AVD_HOME=/root/.android/avd
+
+$ sudo nano /etc/bash.bashrc
+$ export ANDROID_HOME=${HOME}/Android/Sdk
+$ export PATH=${PATH}:${ANDROID_HOME}/emulator

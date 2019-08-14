@@ -333,7 +333,7 @@
                             android:textSize="15sp"
                             android:visibility="gone" />
 
-
+                        <!--date -> anc1_Date-->
                         <EditText
                             android:id="@+id/date"
                             android:layout_width="0dp"
@@ -409,77 +409,77 @@
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/fever"
+                                android:id="@+id/anc1_History_Fever"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/fever"
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/rash"
+                                android:id="@+id/anc1_History_Rash"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/Rash"
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/nausea_vomit"
+                                android:id="@+id/anc1_History_Nausea"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/Nausea_and_Vomiting"
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/bleeding"
+                                android:id="@+id/anc1_History_Bleeding"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/Bleeding"
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/abdomen_pain"
+                                android:id="@+id/anc1_History_AbdomenPain"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/abdomen_pain"
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/drug_intake"
+                                android:id="@+id/anc1_History_DrugIntake"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/drug_intake"
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/smoking"
+                                android:id="@+id/anc1_History_Smoking"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/smoking"
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/alcohol"
+                                android:id="@+id/anc1_History_Alcohol"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/Alcohol"
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/Tob_intake"
+                                android:id="@+id/anc1_History_TobaccoIntake"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/Tob_intake"
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/caff_intake"
+                                android:id="@+id/anc1_History_CaffeineIntake"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/caff_intake"
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/intimate_partner"
+                                android:id="@+id/anc1_History_IntimatePartnerViolence"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/intimate_partner"
@@ -490,7 +490,6 @@
                                 android:layout_height="wrap_content">
 
                                 <TextView
-                                    android:id="@+id/anc_1_his_otherstext"
                                     android:layout_width="64dp"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="1dp"
@@ -503,7 +502,7 @@
 
 
                                 <EditText
-                                    android:id="@+id/anc_1_his_others"
+                                    android:id="@+id/anc1_history_Others"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="10dp"
@@ -514,13 +513,13 @@
                                     android:visibility="gone" />
 
                             </LinearLayout>
+
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
 
                     <!--Examination-->
                     <android.support.v7.widget.CardView
-                        android:id="@+id/anc1_exam_linear"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
@@ -535,7 +534,6 @@
                             android:padding="7dp">
 
                             <TextView
-                                android:id="@+id/anc_1_examination"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="10dp"
@@ -560,7 +558,6 @@
                                     android:padding="7dp">
 
                                     <TextView
-                                        android:id="@+id/anc_1_examinationgen"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginTop="5dp"
@@ -572,50 +569,50 @@
 
 
                                     <CheckBox
-                                        android:id="@+id/pallor"
+                                        android:id="@+id/anc1_examination_general_Pallor"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/pallor"
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/lcterus"
+                                        android:id="@+id/anc1_examination_general_Lcterus"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/lcterus"
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/clubbing"
+                                        android:id="@+id/anc1_examination_general_Clubbing"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/Clubbing"
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/Cyanosis"
+                                        android:id="@+id/anc1_examination_general_Cyanosis"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/Cyanosis"
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/edema"
+                                        android:id="@+id/anc1_examination_general_Edema"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/edema"
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/lymphadenopathy"
+                                        android:id="@+id/anc1_examination_general_Lymphadenopathy"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/lymphadenopathy"
                                         android:visibility="gone" />
 
                                 </LinearLayout>
-                            </android.support.v7.widget.CardView>
 
+                            </android.support.v7.widget.CardView>
 
                             <android.support.v7.widget.CardView
                                 android:layout_width="match_parent"
@@ -630,7 +627,6 @@
                                     android:padding="7dp">
 
                                     <TextView
-                                        android:id="@+id/anc_1_examinationAnth"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginTop="5dp"
@@ -645,7 +641,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_Anthheight"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -657,7 +652,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/height"
+                                            android:id="@+id/anc1_examination_anthropometry_Height"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -674,7 +669,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_Anthweight"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -686,7 +680,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/weight"
+                                            android:id="@+id/anc1_examination_anthropometry_Weight"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -704,7 +698,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_Anthbmi"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -716,7 +709,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/bmi"
+                                            android:id="@+id/anc1_examination_anthropometry_Bmi"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -733,7 +726,6 @@
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
 
-
                             <android.support.v7.widget.CardView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -747,7 +739,6 @@
                                     android:padding="7dp">
 
                                     <TextView
-                                        android:id="@+id/anc_1_vitals"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginTop="5dp"
@@ -762,7 +753,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_vitalsPR"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -774,7 +764,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/PR"
+                                            android:id="@+id/anc1_examination_vitals_Pr"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -791,7 +781,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_vitalsBP"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -803,7 +792,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/BP"
+                                            android:id="@+id/anc1_examination_vitals_Bp"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -821,7 +810,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_vitalsRR"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -833,7 +821,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/RR"
+                                            android:id="@+id/anc1_examination_vitals_Rr"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -850,7 +838,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_vitalsTemp"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -862,7 +849,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/Temp"
+                                            android:id="@+id/anc1_examination_vitals_Temp"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -879,7 +866,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_vitalsChest"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -891,7 +877,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/Chest_CVS"
+                                            android:id="@+id/anc1_examination_vitals_ChestCVS"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="5"
@@ -906,7 +892,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_vitalsPA"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -918,7 +903,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/P_A"
+                                            android:id="@+id/anc1_examination_vitals_PA"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -936,7 +921,6 @@
                                         android:orientation="horizontal">
 
                                         <TextView
-                                            android:id="@+id/anc_1_vitalsProt"
                                             android:layout_width="0px"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -949,33 +933,22 @@
                                             android:visibility="gone" />
 
                                         <Spinner
-                                            android:id="@+id/Proteinuria"
+                                            android:id="@+id/anc1_examination_vitals_Proteinuria"
                                             android:layout_width="0px"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="1" />
 
-                                        <!--<EditText-->
-                                        <!--android:id="@+id/Proteinuria"-->
-                                        <!--android:layout_width="wrap_content"-->
-                                        <!--android:layout_height="wrap_content"-->
-                                        <!--android:layout_weight="5"-->
-                                        <!--android:layout_marginLeft="20dp"-->
-                                        <!--android:gravity="center"-->
-                                        <!--android:backgroundTint="@color/colortheme"-->
-                                        <!--android:inputType="textMultiLine"-->
-                                        <!--android:visibility="gone"-->
-                                        <!--android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "/>-->
                                     </LinearLayout>
-                                </LinearLayout>
-                            </android.support.v7.widget.CardView>
 
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
                                 <TextView
-                                    android:id="@+id/anc_1_vitalsOthers"
                                     android:layout_width="64dp"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="1dp"
@@ -988,7 +961,7 @@
 
 
                                 <EditText
-                                    android:id="@+id/exam_other"
+                                    android:id="@+id/anc1_examination_Others"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="5"
@@ -996,14 +969,15 @@
                                     android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                     android:inputType="textMultiLine"
                                     android:visibility="gone" />
+
                             </LinearLayout>
 
                         </LinearLayout>
+
                     </android.support.v7.widget.CardView>
 
                     <!--Investigation-->
                     <android.support.v7.widget.CardView
-                        android:id="@+id/anc1_invest_linear"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
@@ -1018,7 +992,6 @@
                             android:padding="7dp">
 
                             <TextView
-                                android:id="@+id/anc_1_investigation"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="5dp"
@@ -1035,7 +1008,7 @@
                                 android:orientation="horizontal">
 
                                 <CheckBox
-                                    android:id="@+id/HIV"
+                                    android:id="@+id/anc1_investigations_HIV"
                                     android:layout_width="0px"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -1054,7 +1027,7 @@
                                         android:text="-" />
 
                                     <Switch
-                                        android:id="@+id/switch1"
+                                        android:id="@+id/anc1_investigations_HIV_switch"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:checked="true"
@@ -1077,7 +1050,7 @@
                                 android:orientation="horizontal">
 
                                 <CheckBox
-                                    android:id="@+id/Hbsag"
+                                    android:id="@+id/anc1_investigations_Hbsag"
                                     android:layout_width="0px"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -1095,7 +1068,7 @@
                                         android:text="-" />
 
                                     <Switch
-                                        android:id="@+id/switch2"
+                                        android:id="@+id/anc1_investigations_Hbsag_switch"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:checked="true"
@@ -1118,7 +1091,7 @@
                                 android:orientation="horizontal">
 
                                 <CheckBox
-                                    android:id="@+id/VDRL"
+                                    android:id="@+id/anc1_investigations_Vdrl"
                                     android:layout_width="0px"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -1136,7 +1109,7 @@
                                         android:text="-" />
 
                                     <Switch
-                                        android:id="@+id/switch3"
+                                        android:id="@+id/anc1_investigations_Vdrl_switch"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:checked="true"
@@ -1159,7 +1132,7 @@
                                 android:orientation="horizontal">
 
                                 <CheckBox
-                                    android:id="@+id/Urine_RM_text"
+                                    android:id="@+id/anc1_investigations_UrineRM"
                                     android:layout_width="0px"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -1177,7 +1150,7 @@
                                         android:text="-" />
 
                                     <Switch
-                                        android:id="@+id/switch4"
+                                        android:id="@+id/anc1_investigations_UrineRM_switch"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:checked="true"
@@ -1200,7 +1173,7 @@
                                 android:orientation="horizontal">
 
                                 <CheckBox
-                                    android:id="@+id/Urine_CS_text"
+                                    android:id="@+id/anc1_investigations_UrineCS"
                                     android:layout_width="0px"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -1218,7 +1191,7 @@
                                         android:text="-" />
 
                                     <Switch
-                                        android:id="@+id/switch5"
+                                        android:id="@+id/anc1_investigations_UrineCS_switch"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:checked="true"
@@ -1240,7 +1213,6 @@
                                 android:layout_height="wrap_content">
 
                                 <TextView
-                                    android:id="@+id/anc_1_investBg"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="6dp"
@@ -1250,21 +1222,8 @@
                                     android:textSize="15sp"
                                     android:visibility="gone" />
 
-
-                                <!--<EditText-->
-                                <!--android:id="@+id/blood_group"-->
-                                <!--android:layout_width="0dp"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:layout_weight="5"-->
-                                <!--android:layout_marginLeft="20dp"-->
-                                <!--android:gravity="center"-->
-                                <!--android:backgroundTint="@color/colortheme"-->
-                                <!--android:inputType="textMultiLine"-->
-                                <!--android:visibility="gone"-->
-                                <!--android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ " />-->
-
                                 <Spinner
-                                    android:id="@+id/blood_group"
+                                    android:id="@+id/anc1_investigations_BloodGroup"
                                     android:layout_width="0px"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1" />
@@ -1276,7 +1235,6 @@
                                 android:layout_height="wrap_content">
 
                                 <TextView
-                                    android:id="@+id/anc_1_investHusBg"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="6dp"
@@ -1287,17 +1245,11 @@
                                     android:visibility="gone" />
 
 
-                                <EditText
-                                    android:id="@+id/husband_blood_group"
-                                    android:layout_width="0dp"
+                                <Spinner
+                                    android:id="@+id/anc1_investigations_HusbandBloodGroup"
+                                    android:layout_width="0px"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="20dp"
-                                    android:layout_weight="5"
-                                    android:backgroundTint="@color/colortheme"
-                                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
-                                    android:gravity="center"
-                                    android:inputType="textMultiLine"
-                                    android:visibility="gone" />
+                                    android:layout_weight="1" />
 
                             </LinearLayout>
 
@@ -1306,7 +1258,6 @@
                                 android:layout_height="wrap_content">
 
                                 <TextView
-                                    android:id="@+id/anc_1_investHem"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="6dp"
@@ -1318,7 +1269,7 @@
 
 
                                 <EditText
-                                    android:id="@+id/hemogram"
+                                    android:id="@+id/anc1_investigations_Hemogram"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="20dp"
@@ -1337,7 +1288,6 @@
                                 android:layout_height="wrap_content">
 
                                 <TextView
-                                    android:id="@+id/anc_1_investTSH"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="6dp"
@@ -1349,7 +1299,7 @@
 
 
                                 <EditText
-                                    android:id="@+id/TSH"
+                                    android:id="@+id/anc1_investigations_Tsh"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="20dp"
@@ -1376,7 +1326,6 @@
                                     android:padding="7dp">
 
                                     <TextView
-                                        android:id="@+id/anc_1_investGTT"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginTop="5dp"
@@ -1391,7 +1340,7 @@
                                         android:layout_height="wrap_content">
 
                                         <EditText
-                                            android:id="@+id/GTT_fast"
+                                            android:id="@+id/anc1_investigations_GTT_fast"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -1409,7 +1358,7 @@
                                         android:layout_height="wrap_content">
 
                                         <EditText
-                                            android:id="@+id/GTT_1_hour"
+                                            android:id="@+id/anc1_investigations_GTT_1Hour"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -1428,7 +1377,7 @@
                                         android:layout_height="wrap_content">
 
                                         <EditText
-                                            android:id="@+id/GTT_2_hour"
+                                            android:id="@+id/anc1_investigations_GTT_2Hour"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -1441,6 +1390,7 @@
                                             android:visibility="gone" />
 
                                     </LinearLayout>
+
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
 
@@ -1457,7 +1407,6 @@
                                     android:padding="7dp">
 
                                     <TextView
-                                        android:id="@+id/anc_1_investBs"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:gravity="center"
@@ -1471,7 +1420,7 @@
                                         android:layout_height="wrap_content">
 
                                         <EditText
-                                            android:id="@+id/blood_sugar_fasting"
+                                            android:id="@+id/anc1_investigations_bloodSugar_Fasting"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -1489,7 +1438,7 @@
                                         android:layout_height="wrap_content">
 
                                         <EditText
-                                            android:id="@+id/blood_sugar_post_prandial"
+                                            android:id="@+id/anc1_investigations_bloodSugar_PostPrandial"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -1502,6 +1451,7 @@
                                             android:visibility="gone" />
 
                                     </LinearLayout>
+
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
 
@@ -1518,7 +1468,6 @@
                                     android:padding="7dp">
 
                                     <TextView
-                                        android:id="@+id/anc_1_investNTscan"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
@@ -1534,7 +1483,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_investDone"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -1546,7 +1494,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/NT_NB_done"
+                                            android:id="@+id/anc1_investigations_ntnb_DoneNotDone"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -1561,28 +1509,28 @@
 
 
                                     <CheckBox
-                                        android:id="@+id/NT_NB_CRL"
+                                        android:id="@+id/anc1_investigations_ntnb_CRL"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/CRL"
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/NT_NB_NT"
+                                        android:id="@+id/anc1_investigations_ntnb_NT"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/NT"
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/NT_NB_Centile"
+                                        android:id="@+id/anc1_investigations_ntnb_Centile"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/Centile"
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/NT_NB_text"
+                                        android:id="@+id/anc1_investigations_ntnb_Text"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/text"
@@ -1604,7 +1552,6 @@
                                     android:padding="7dp">
 
                                     <TextView
-                                        android:id="@+id/anc_1_investDual"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
@@ -1620,7 +1567,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_investPAPP"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -1632,7 +1578,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/Dual_screen_PAPP_A"
+                                            android:id="@+id/anc1_investigations_dualScreen_PAPP"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -1650,7 +1596,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_investBcg"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -1663,7 +1608,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/Dual_screen_B_hcg"
+                                            android:id="@+id/anc1_investigations_dualScreen_Bhcg"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -1693,7 +1638,6 @@
                                     android:padding="7dp">
 
                                     <TextView
-                                        android:id="@+id/anc_1_investLevelII"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
@@ -1708,7 +1652,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_investLevelIIDone"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -1720,7 +1663,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/Level_II_USG_done"
+                                            android:id="@+id/anc1_investigations_level2Usg_DoneNotDone"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -1738,7 +1681,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_investNormal"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -1750,7 +1692,7 @@
 
 
                                         <EditText
-                                            android:id="@+id/Level_II_USG_normal"
+                                            android:id="@+id/anc1_investigations_level2Usg_NormalAbnormal"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -1763,6 +1705,7 @@
                                             android:visibility="gone" />
 
                                     </LinearLayout>
+
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
 
@@ -1771,7 +1714,6 @@
                                 android:layout_height="wrap_content">
 
                                 <TextView
-                                    android:id="@+id/anc_1_investOthers"
                                     android:layout_width="64dp"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="1dp"
@@ -1784,7 +1726,7 @@
 
 
                                 <EditText
-                                    android:id="@+id/other_invest"
+                                    android:id="@+id/anc1_investigations_Others"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="5"
@@ -1797,11 +1739,11 @@
                             </LinearLayout>
 
                         </LinearLayout>
+
                     </android.support.v7.widget.CardView>
 
                     <!--Advice-->
                     <android.support.v7.widget.CardView
-                        android:id="@+id/anc1_advice_linear"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
@@ -1816,7 +1758,6 @@
                             android:padding="7dp">
 
                             <TextView
-                                android:id="@+id/anc_1_Advice"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="10dp"
@@ -1845,16 +1786,10 @@
 
                                     <EditText
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/anc1_advice_GTT"/>
 
                                 </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -1868,17 +1803,11 @@
 
                                     <EditText
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/anc1_advice_BloodSugar"/>
 
 
                                 </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -1892,17 +1821,10 @@
 
                                     <EditText
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
-
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/anc1_advice_NtNbScan"/>
 
                                 </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -1916,17 +1838,10 @@
 
                                     <EditText
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
-
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/anc1_advice_DualScreen"/>
 
                                 </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -1940,17 +1855,11 @@
 
                                     <EditText
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/anc1_advice_LeftUterineArteryPl"/>
 
 
                                 </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -1964,17 +1873,10 @@
 
                                     <EditText
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
-
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/anc1_advice_RightUterineArteryPl" />
 
                                 </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -1988,17 +1890,10 @@
 
                                     <EditText
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
-
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/anc1_advice_PIGF" />
 
                                 </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -2012,22 +1907,22 @@
 
                                     <EditText
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content" />
-
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/anc1_advice_ICT" />
 
                                 </LinearLayout>
 
                             </LinearLayout>
 
                             <CheckBox
-                                android:id="@+id/general_nutritional"
+                                android:id="@+id/anc1_advice_GeneralNutritional"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/general_nutritional"
                                 android:visibility="gone" />
 
                             <CheckBox
-                                android:id="@+id/general_ailments"
+                                android:id="@+id/anc1_advice_GeneralAilments"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/general_ailments"
@@ -2053,7 +1948,6 @@
                             android:padding="7dp">
 
                             <TextView
-                                android:id="@+id/anc_1_General"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="10dp"
@@ -2070,7 +1964,6 @@
                                 android:layout_height="wrap_content">
 
                                 <TextView
-                                    android:id="@+id/anc_1_GeneralBG"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="6dp"
@@ -2082,7 +1975,7 @@
 
 
                                 <EditText
-                                    android:id="@+id/general_BG_negative"
+                                    android:id="@+id/anc1_general_BgNegICT"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="20dp"
@@ -2097,7 +1990,7 @@
                             </LinearLayout>
 
                             <CheckBox
-                                android:id="@+id/general_TSH"
+                                android:id="@+id/anc1_general_TSH"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/general_TSH"
@@ -2117,7 +2010,6 @@
 
 
                                     <TextView
-                                        android:id="@+id/anc_1_GeneralUrine"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginTop="5dp"
@@ -2128,28 +2020,28 @@
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/urine_culture_nitrofur"
+                                        android:id="@+id/anc1_general_urineCulture_Nitrofur"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/urine_culture_nitrofur"
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/urine_culture_syp"
+                                        android:id="@+id/anc1_general_urineCulture_Syp"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/urine_culture_syp"
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/urine_culture_vit_c"
+                                        android:id="@+id/anc1_general_urineCulture_VitC"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/urine_culture_vit_c"
                                         android:visibility="gone" />
 
                                     <CheckBox
-                                        android:id="@+id/urine_culture_plenty"
+                                        android:id="@+id/anc1_general_urineCulture_PlentyFluids"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/urine_culture_plenty"
@@ -2171,7 +2063,6 @@
                                     android:padding="7dp">
 
                                     <TextView
-                                        android:id="@+id/anc_1_GeneralDeranged"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -2183,7 +2074,6 @@
                                         android:visibility="gone" />
 
                                     <TextView
-                                        android:id="@+id/anc_1_GeneralDeranged_bs"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -2199,7 +2089,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_GeneralDeranged_fastingBox"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -2211,7 +2100,7 @@
                                             android:visibility="gone" />
 
                                         <EditText
-                                            android:id="@+id/anc_1_GeneralDeranged_fasting"
+                                            android:id="@+id/anc1_general_deranged_Fasting"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -2230,7 +2119,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_GeneralDeranged_breakfastBox"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -2242,7 +2130,7 @@
                                             android:visibility="gone" />
 
                                         <EditText
-                                            android:id="@+id/anc_1_GeneralDeranged_breakfast"
+                                            android:id="@+id/anc1_general_deranged_AfterBreakfast"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -2261,7 +2149,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_GeneralDeranged_lunchBox"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -2273,7 +2160,7 @@
                                             android:visibility="gone" />
 
                                         <EditText
-                                            android:id="@+id/anc_1_GeneralDeranged_lunch"
+                                            android:id="@+id/anc1_general_deranged_AfterLunch"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -2292,7 +2179,6 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:id="@+id/anc_1_GeneralDeranged_dinnerBox"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="6dp"
@@ -2304,7 +2190,7 @@
                                             android:visibility="gone" />
 
                                         <EditText
-                                            android:id="@+id/anc_1_GeneralDeranged_dinner"
+                                            android:id="@+id/anc1_general_deranged_AfterDinner"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
                                             android:layout_marginLeft="20dp"
@@ -2317,7 +2203,9 @@
                                             android:visibility="gone" />
 
                                     </LinearLayout>
+
                                 </LinearLayout>
+
                             </android.support.v7.widget.CardView>
 
                             <LinearLayout
@@ -2325,7 +2213,6 @@
                                 android:layout_height="wrap_content">
 
                                 <TextView
-                                    android:id="@+id/anc_1_GeneralOthers"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="27dp"
@@ -2338,7 +2225,7 @@
 
 
                                 <EditText
-                                    android:id="@+id/general_others"
+                                    android:id="@+id/anc1_general_Others"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="20dp"
@@ -2353,6 +2240,7 @@
                             </LinearLayout>
 
                         </LinearLayout>
+
                     </android.support.v7.widget.CardView>
 
                 </LinearLayout>
@@ -2406,6 +2294,36 @@
 
                         </LinearLayout>
 
+                        <!--Date-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="6dp"
+                                android:gravity="center"
+                                android:text="@string/date"
+                                android:textColor="#000000"
+                                android:textSize="15sp"
+                                android:visibility="gone" />
+
+                            <!--date -> anc1_Date-->
+                            <EditText
+                                android:id="@+id/anc2_Date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="5"
+                                android:backgroundTint="@color/colortheme"
+                                android:focusable="false"
+                                android:gravity="center"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
                         <!--POG-->
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -2439,7 +2357,6 @@
 
                         <!--History-->
                         <android.support.v7.widget.CardView
-                            android:id="@+id/anc2_his_linear"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
@@ -2454,7 +2371,6 @@
                                 android:padding="7dp">
 
                                 <TextView
-                                    android:id="@+id/anc2_history_box"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="10dp"
@@ -2467,42 +2383,42 @@
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/shortness_of_breath"
+                                    android:id="@+id/anc2_history_ShortnessOfBreath"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/shortness_of_breath"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/Easy_fatiguability"
+                                    android:id="@+id/anc2_history_EasyFatiguability"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/Easy_fatiguability"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/Headache_epigastric_pain_blurringofvision_nausea"
+                                    android:id="@+id/anc2_history_HeadacheEpigastricPain"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/Headache_epigastric_pain_blurringofvision_nausea"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/Bleeding_spotting_pv"
+                                    android:id="@+id/anc2_history_BleedingSpottingPv"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/Bleeding_spotting_pv"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/Burning_micturition"
+                                    android:id="@+id/anc2_history_BurningMicturition"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/Burning_micturition"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/Quickening_Perceived_or_not"
+                                    android:id="@+id/anc2_history_QuickeningPerceived"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/Quickening_Perceived_or_not"
@@ -2513,7 +2429,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_2_his_other_box"
                                         android:layout_width="64dp"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
@@ -2526,7 +2441,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_2_his_others"
+                                        android:id="@+id/anc2_history_Others"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="5"
@@ -2542,7 +2457,6 @@
 
                         <!--Examination-->
                         <android.support.v7.widget.CardView
-                            android:id="@+id/anc2_exam_linear"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
@@ -2558,7 +2472,6 @@
 
 
                                 <TextView
-                                    android:id="@+id/Anc_2_examination"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="10dp"
@@ -2571,14 +2484,14 @@
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/Anc_2_pallor"
+                                    android:id="@+id/anc2_examination_Pallor"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/pallor"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_2_Pedal_edema"
+                                    android:id="@+id/anc2_examination_PedalEdema"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/Pedal_edema"
@@ -2589,7 +2502,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_2_PR_box"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -2601,7 +2513,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_2_PR"
+                                        android:id="@+id/anc2_examination_PR"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -2618,7 +2530,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/Anc_2_BP_box"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -2630,7 +2541,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/Anc_2_BP"
+                                        android:id="@+id/anc2_examination_BP"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -2648,7 +2559,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_2_weight_box"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -2660,7 +2570,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_2_weight"
+                                        android:id="@+id/anc2_examination_Weight"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -2677,7 +2587,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_2_pa"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -2689,7 +2598,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_2_pa_2weeks"
+                                        android:id="@+id/anc2_examination_PA2Weeks"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -2707,7 +2616,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_2_exam_others_box"
                                         android:layout_width="64dp"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
@@ -2720,7 +2628,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_2_exam_others"
+                                        android:id="@+id/anc2_examination_Others"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="5"
@@ -2736,7 +2644,6 @@
 
                         <!--Investigations-->
                         <android.support.v7.widget.CardView
-                            android:id="@+id/anc2_invest_linear"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
@@ -2751,7 +2658,6 @@
                                 android:padding="7dp">
 
                                 <TextView
-                                    android:id="@+id/anc_2_investigations"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="10dp"
@@ -2780,7 +2686,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_2_quadruple_screen_text"
+                                        android:id="@+id/anc2_investigations_QuadrupleScreen"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
@@ -2791,13 +2697,13 @@
                                 </LinearLayout>
 
                                 <CheckBox
-                                    android:id="@+id/T_folate_if_lessthan_14weeks"
+                                    android:id="@+id/anc2_investigations_TfolateLessThan14Weeks"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/T_folate_if_lessthan_14weeks"/>
 
                                 <CheckBox
-                                    android:id="@+id/T_Fe_if_morethan_14weeks"
+                                    android:id="@+id/anc2_investigations_TFeMoreThan14Weeks"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/T_Fe_if_morethan_14weeks"/>
@@ -2807,7 +2713,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_2_invest_others_box"
                                         android:layout_width="64dp"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
@@ -2819,7 +2724,7 @@
                                         android:visibility="gone" />
 
                                     <EditText
-                                        android:id="@+id/anc_2_invest_others"
+                                        android:id="@+id/anc2_investigations_Others"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -2836,7 +2741,6 @@
 
                         <!--Advice-->
                         <android.support.v7.widget.CardView
-                            android:id="@+id/anc2_advice_linear"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
@@ -2852,7 +2756,6 @@
 
 
                                 <TextView
-                                    android:id="@+id/anc_2_advice"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="10dp"
@@ -2865,42 +2768,42 @@
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_2_advice_OGTT"
+                                    android:id="@+id/anc2_advice_OGTT"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_2_advice_OGTT"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_2_advice_T_Fe_OD"
+                                    android:id="@+id/anc2_advice_TfeOD"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_2_advice_T_Fe_OD"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_2_advice_T_Ca_BD"
+                                    android:id="@+id/anc2_advice_TcaBD"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_2_advice_T_Ca_BD"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_2_inj_tetanus"
+                                    android:id="@+id/anc2_advice_Tetanus"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_2_inj_tetanus"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_2_Quadruple_Screen"
+                                    android:id="@+id/anc2_advice_QuadrupleScreen"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_2_Quadruple_Screen"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_2_Fetal_Echo"
+                                    android:id="@+id/anc2_advice_FetalEcho"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_2_Fetal_Echo"
@@ -2919,7 +2822,6 @@
                                         android:padding="7dp">
 
                                         <TextView
-                                            android:id="@+id/anc_2_common_ailment_ifHb"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginTop="5dp"
@@ -2930,35 +2832,35 @@
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_2_T_Albendazole"
+                                            android:id="@+id/anc2_advice_HbLess10_TAlbendazole"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_2_T_Albendazole"
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_2_advice_T_Fe_BD"
+                                            android:id="@+id/anc2_advice_HbLess10_TFeBD"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_2_advice_T_Fe_BD"
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_2_hplc"
+                                            android:id="@+id/anc2_advice_HbLess10_Hplc"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_2_hplc"
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_2_Peripheral_smear"
+                                            android:id="@+id/anc2_advice_HbLess10_PeripheralSmear"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_2_Peripheral_smear"
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_2_serum_iron"
+                                            android:id="@+id/anc2_advice_HbLess10_SerumIron"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_2_serum_iron"
@@ -2972,7 +2874,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_2_nutritional_box"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -2984,7 +2885,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_2_nutritional"
+                                        android:id="@+id/anc2_advice_Nutritional"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -3003,7 +2904,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_2_General_advice_box"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -3015,7 +2915,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_2_General_advice"
+                                        android:id="@+id/anc2_advice_GeneralAdvice"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -3034,7 +2934,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_2_common_ailment_box"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -3046,7 +2945,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_2_common_ailment"
+                                        android:id="@+id/anc2_advice_CommonAilment"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -3065,7 +2964,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_2_others_box"
                                         android:layout_width="64dp"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
@@ -3078,7 +2976,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_2_others"
+                                        android:id="@+id/anc2_advice_Others"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -3089,6 +2987,7 @@
                                         android:visibility="gone" />
 
                                 </LinearLayout>
+
                             </LinearLayout>
                         </android.support.v7.widget.CardView>
 
@@ -3160,7 +3059,6 @@
 
 
                                 <TextView
-                                    android:id="@+id/anc3_history_box"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="10dp"
@@ -3173,56 +3071,56 @@
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_shortness_of_breath"
+                                    android:id="@+id/anc3_history_ShortnessOfBreath"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/shortness_of_breath"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_Easy_fatiguability"
+                                    android:id="@+id/anc3_history_EasyFatigability"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/Easy_fatiguability"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_Headache_epigastric_pain_blurringofvision_nausea"
+                                    android:id="@+id/anc3_history_HeadacheEpigastricPain"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/Headache_epigastric_pain_blurringofvision_nausea"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_Bleeding_spotting_pv"
+                                    android:id="@+id/anc3_history_BleedingSpottingPv"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/Bleeding_spotting_pv"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_leaking_discharge_pv"
+                                    android:id="@+id/anc3_history_LeakingDischargePv"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_3_leaking_discharge_pv"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_burning_micturition"
+                                    android:id="@+id/anc3_history_BurningMicturition"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_3_burning_micturition"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_fetal_movements"
+                                    android:id="@+id/anc3_history_FetalMovements"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_3_fetal_movements"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_itching"
+                                    android:id="@+id/anc3_history_Itching"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_3_itching"
@@ -3233,7 +3131,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_3_others_box"
                                         android:layout_width="64dp"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
@@ -3246,7 +3143,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_3_others"
+                                        android:id="@+id/anc3_history_Others"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -3277,7 +3174,6 @@
                                 android:padding="7dp">
 
                                 <TextView
-                                    android:id="@+id/Anc_3_examination"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="10dp"
@@ -3290,14 +3186,14 @@
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/Anc_3_pallor"
+                                    android:id="@+id/anc3_examination_Pallor"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/pallor"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_Pedal_edema"
+                                    android:id="@+id/anc3_examination_PedalEdema"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/Pedal_edema"
@@ -3308,7 +3204,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_3_PR_box"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -3320,7 +3215,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_3_PR"
+                                        android:id="@+id/anc3_examination_PR"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -3337,7 +3232,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/Anc_3_BP_box"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -3349,7 +3243,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/Anc_3_BP"
+                                        android:id="@+id/anc3_examination_BP"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -3367,7 +3261,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_3_weight_box"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -3379,7 +3272,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_3_weight"
+                                        android:id="@+id/anc3_examination_Weight"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -3397,7 +3290,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_3_pa"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -3409,7 +3301,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_3_pa_2weeks"
+                                        android:id="@+id/anc3_examination_PA2Weeks"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -3428,7 +3320,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_3_exam_others_box"
                                         android:layout_width="64dp"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
@@ -3441,7 +3332,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_3_exam_others"
+                                        android:id="@+id/anc3_examination_Others"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -3452,6 +3343,7 @@
                                         android:visibility="gone" />
 
                                 </LinearLayout>
+
                             </LinearLayout>
                         </android.support.v7.widget.CardView>
 
@@ -3472,7 +3364,6 @@
                                 android:padding="7dp">
 
                                 <TextView
-                                    android:id="@+id/anc_3_investigations"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="10dp"
@@ -3485,39 +3376,21 @@
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_CBC"
+                                    android:id="@+id/anc3_investigations_CBC"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_3_CBC"
                                     android:visibility="gone" />
 
-                                <LinearLayout
+                                <CheckBox
+                                    android:id="@+id/anc3_investigations_UrineCS"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-
-                                    <CheckBox
-                                        android:id="@+id/anc_3_urine"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/anc_3_urine"
-                                        android:visibility="gone" />
-
-
-                                    <EditText
-                                        android:id="@+id/anc_3_urine_cs"
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="5"
-                                        android:backgroundTint="@color/colortheme"
-                                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
-                                        android:inputType="textMultiLine"
-                                        android:visibility="gone" />
-                                </LinearLayout>
+                                    android:text="@string/anc_3_urine"
+                                    android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_ICT"
+                                    android:id="@+id/anc3_investigations_ICT"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_3_ICT"
@@ -3528,7 +3401,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc3_investigation_othersbox"
                                         android:layout_width="64dp"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
@@ -3541,7 +3413,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc3_investigation_others"
+                                        android:id="@+id/anc3_investigations_Others"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -3573,7 +3445,6 @@
                                 android:padding="7dp">
 
                                 <TextView
-                                    android:id="@+id/anc_3_advice_box"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_marginLeft="10dp"
@@ -3587,42 +3458,42 @@
 
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_T_Fe_OD"
+                                    android:id="@+id/anc3_advice_TFeOD"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_3_T_Fe_OD"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_DFMC_LLP"
+                                    android:id="@+id/anc3_advice_DFMCLLP"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_3_DFMC_LLP"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_inj_tetanus"
+                                    android:id="@+id/anc3_advice_InjTetanus"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/anc_inj_tetanus"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_CBC_advice"
+                                    android:id="@+id/anc3_advice_CBC"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="CBC"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_LFT_advice"
+                                    android:id="@+id/anc3_advice_LFT"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="LFT"
                                     android:visibility="gone" />
 
                                 <CheckBox
-                                    android:id="@+id/anc_3_KFT_advice"
+                                    android:id="@+id/anc3_advice_KFT"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="KFT"
@@ -3641,7 +3512,6 @@
                                         android:padding="7dp">
 
                                         <TextView
-                                            android:id="@+id/anc_3_GTT_box"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginTop="5dp"
@@ -3652,21 +3522,21 @@
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_3_GTT_fast"
+                                            android:id="@+id/anc3_advice_GTT_Fasting"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_3_GTT_fast"
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_3_GTT_1hr"
+                                            android:id="@+id/anc3_advice_GTT_1hr180Mg"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_3_GTT_1hr"
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_3_GTT_2hr"
+                                            android:id="@+id/anc3_advice_GTT_2hr153Mg"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_3_GTT_2hr"
@@ -3688,7 +3558,6 @@
                                         android:padding="7dp">
 
                                         <TextView
-                                            android:id="@+id/anc_3_review_box"
                                             android:layout_width="wrap_content"
                                             android:layout_height="match_parent"
                                             android:layout_marginTop="5dp"
@@ -3699,7 +3568,7 @@
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_3_bleeding"
+                                            android:id="@+id/anc3_advice_review_BleedingPV"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="20dp"
@@ -3707,28 +3576,28 @@
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_3_spotting"
+                                            android:id="@+id/anc3_advice_review_SpottingPV"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_3_spotting"
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_3_leaking"
+                                            android:id="@+id/anc3_advice_review_LeakingPV"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_3_leaking"
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_3_reducedfm"
+                                            android:id="@+id/anc3_advice_review_ReducedFetalMovement"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_3_reducedfm"
                                             android:visibility="gone" />
 
                                         <CheckBox
-                                            android:id="@+id/anc_3_abdomenpain"
+                                            android:id="@+id/anc3_advice_review_AbdominalPain"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:text="@string/anc_3_abdomenpain"
@@ -3754,7 +3623,6 @@
                                             android:layout_height="wrap_content">
 
                                             <TextView
-                                                android:id="@+id/anc_3_inj_antiD_box"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="match_parent"
                                                 android:layout_marginLeft="1dp"
@@ -3766,7 +3634,7 @@
 
 
                                             <CheckBox
-                                                android:id="@+id/anc_3_inj_antiD"
+                                                android:id="@+id/anc3_advice_ictNegative_InjAntiD300"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_marginLeft="0dp"
@@ -3781,7 +3649,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_3_nutritional_box"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -3793,7 +3660,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_3_nutritional"
+                                        android:id="@+id/anc3_advice_Nutritional"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -3812,7 +3679,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_3_General_advice_box"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -3824,7 +3690,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc_3_General_advice"
+                                        android:id="@+id/anc3_advice_General"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -3843,7 +3709,7 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc_3_common_ailment_box"
+                                        android:id="@+id/anc3_advice_CommonAilments"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
@@ -3874,7 +3740,6 @@
                                     android:layout_height="wrap_content">
 
                                     <TextView
-                                        android:id="@+id/anc3_others_box"
                                         android:layout_width="64dp"
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="1dp"
@@ -3887,7 +3752,7 @@
 
 
                                     <EditText
-                                        android:id="@+id/anc3_others"
+                                        android:id="@+id/anc3_advice_Others"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
