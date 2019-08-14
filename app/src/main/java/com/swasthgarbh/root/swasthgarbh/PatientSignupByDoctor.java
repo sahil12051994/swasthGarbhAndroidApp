@@ -234,7 +234,7 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
                         params.put("name", "" + name.getText());
                         params.put("address", "" + address.getText());
                         params.put("UHID", "" + UHID.getText());
-                        params.put("password", "" + "11111");
+                        params.put("password", "" + name.getText() + "_" + UHID.getText());
                         params.put("mobile", mobile.getText());
                         params.put("email", "" + email.getText());
                         if(docRequried == Boolean.TRUE){

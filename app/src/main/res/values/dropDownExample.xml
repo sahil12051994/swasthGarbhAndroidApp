@@ -18,4 +18,19 @@
         <item>O+</item>
         <item>O-</item>
     </string-array>
+
+    <string-array name="SchoolDropdownElements">
+        <item>Primary</item>
+        <item>Secondary</item>
+        <item>Graduation</item>
+        <item>Post-Graduation</item>
+    </string-array>
+
+    <string-array name="SEStatusDropdownElements">
+        <item>Lower</item>
+        <item>Upper Lower</item>
+        <item>Lower Middle</item>
+        <item>Upper Middle</item>
+        <item>Upper</item>
+    </string-array>
 </resources>

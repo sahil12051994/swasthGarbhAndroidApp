@@ -10,6 +10,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -17,6 +18,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -101,6 +103,18 @@ public class PatientSignup extends AppCompatActivity implements View.OnClickList
         register.setOnClickListener(this);
 
         date_of_birth = (EditText) findViewById(R.id.editText3);
+
+        Spinner spinnerStatus = (Spinner) findViewById(R.id.status);
+        ArrayAdapter<CharSequence> adapterStatus = ArrayAdapter.createFromResource(this,
+                R.array.BloodGroupDropdownElements, android.R.layout.simple_spinner_item);
+        adapterStatus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerStatus.setAdapter(adapterStatus);
+
+        Spinner spinnerEducation = (Spinner) findViewById(R.id.status);
+        ArrayAdapter<CharSequence> adapterEducation = ArrayAdapter.createFromResource(this,
+                R.array.BloodGroupDropdownElements, android.R.layout.simple_spinner_item);
+        adapterEducation.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerEducation.setAdapter(adapterEducation);
 
         session = new SessionManager(this);
 
