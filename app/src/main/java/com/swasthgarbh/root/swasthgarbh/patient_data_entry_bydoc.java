@@ -2750,17 +2750,17 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //      Dropdown for status
         Spinner spinner = (Spinner) findViewById(R.id.Proteinuria);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.SEStatusDropdownElements, android.R.layout.simple_spinner_item);
+                R.array.ProteinuriaDropdownElements, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
 //      Dropdown for education
         Spinner spinnerProteinuria = (Spinner) findViewById(R.id.blood_group);
         ArrayAdapter<CharSequence> adapterProteinuria = ArrayAdapter.createFromResource(this,
-                R.array.SchoolDropdownElements, android.R.layout.simple_spinner_item);
+                R.array.BloodGroupDropdownElements, android.R.layout.simple_spinner_item);
         adapterProteinuria.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerProteinuria.setAdapter(adapterProteinuria);
-        
+
     }
 
     public void updateData(){

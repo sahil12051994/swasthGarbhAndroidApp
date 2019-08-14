@@ -106,13 +106,13 @@ public class PatientSignup extends AppCompatActivity implements View.OnClickList
 
         Spinner spinnerStatus = (Spinner) findViewById(R.id.status);
         ArrayAdapter<CharSequence> adapterStatus = ArrayAdapter.createFromResource(this,
-                R.array.BloodGroupDropdownElements, android.R.layout.simple_spinner_item);
+                R.array.SEStatusDropdownElements, android.R.layout.simple_spinner_item);
         adapterStatus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerStatus.setAdapter(adapterStatus);
 
         Spinner spinnerEducation = (Spinner) findViewById(R.id.status);
         ArrayAdapter<CharSequence> adapterEducation = ArrayAdapter.createFromResource(this,
-                R.array.BloodGroupDropdownElements, android.R.layout.simple_spinner_item);
+                R.array.SchoolDropdownElements, android.R.layout.simple_spinner_item);
         adapterEducation.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerEducation.setAdapter(adapterEducation);
 
