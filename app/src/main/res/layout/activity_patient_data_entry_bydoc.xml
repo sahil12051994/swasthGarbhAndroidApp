@@ -335,7 +335,7 @@
 
                         <!--date -> anc1_Date-->
                         <EditText
-                            android:id="@+id/date"
+                            android:id="@+id/anc1_Date"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
@@ -354,7 +354,6 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/datePOG"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="6dp"
@@ -1507,7 +1506,6 @@
 
                                     </LinearLayout>
 
-
                                     <CheckBox
                                         android:id="@+id/anc1_investigations_ntnb_CRL"
                                         android:layout_width="match_parent"
@@ -1689,7 +1687,6 @@
                                             android:textColor="#000000"
                                             android:textSize="15sp"
                                             android:visibility="gone" />
-
 
                                         <EditText
                                             android:id="@+id/anc1_investigations_level2Usg_NormalAbnormal"
@@ -1972,7 +1969,6 @@
                                     android:textColor="#000000"
                                     android:textSize="15sp"
                                     android:visibility="gone" />
-
 
                                 <EditText
                                     android:id="@+id/anc1_general_BgNegICT"
@@ -2330,7 +2326,6 @@
                             android:layout_height="wrap_content">
 
                             <TextView
-                                android:id="@+id/Anc_2_POG_box"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="6dp"
@@ -2342,7 +2337,7 @@
 
 
                             <EditText
-                                android:id="@+id/Anc_2_POG"
+                                android:id="@+id/anc2_POG"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
@@ -3270,7 +3265,6 @@
                                         android:textSize="15sp"
                                         android:visibility="gone" />
 
-
                                     <EditText
                                         android:id="@+id/anc3_examination_Weight"
                                         android:layout_width="0dp"
@@ -3283,7 +3277,6 @@
                                         android:inputType="textMultiLine"
                                         android:visibility="gone" />
                                 </LinearLayout>
-
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -3299,7 +3292,6 @@
                                         android:textSize="15sp"
                                         android:visibility="gone" />
 
-
                                     <EditText
                                         android:id="@+id/anc3_examination_PA2Weeks"
                                         android:layout_width="0dp"
@@ -3313,7 +3305,6 @@
                                         android:inputType="textMultiLine"
                                         android:visibility="gone" />
                                 </LinearLayout>
-
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -3455,7 +3446,6 @@
                                     android:textSize="20dp"
                                     android:textStyle="italic"
                                     android:visibility="gone" />
-
 
                                 <CheckBox
                                     android:id="@+id/anc3_advice_TFeOD"
@@ -3763,6 +3753,7 @@
                                         android:visibility="gone" />
 
                                 </LinearLayout>
+
                             </LinearLayout>
                         </android.support.v7.widget.CardView>
 
@@ -5821,7 +5812,6 @@
 
 
 
-            
             <!--ANC 6-->
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
