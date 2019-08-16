@@ -307,7 +307,7 @@
 
 
                         <TextView
-                            android:id="@+id/anc1Date"
+                            android:id="@+id/anc1_Date_Automatic"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
@@ -2280,7 +2280,7 @@
 
 
                             <TextView
-                                android:id="@+id/anc2Date"
+                                android:id="@+id/anc2_Date_Automatic"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="start"
@@ -3026,7 +3026,7 @@
                                 android:textStyle="italic" />
 
                             <TextView
-                                android:id="@+id/anc3Date"
+                                android:id="@+id/anc3_Date_Automatic"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="start"
@@ -3797,7 +3797,7 @@
                                 android:textStyle="italic" />
 
                             <TextView
-                                android:id="@+id/anc4Date"
+                                android:id="@+id/anc4_Date_Automatic"
                                 android:layout_width="0px"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="start"
@@ -4666,7 +4666,8 @@
                                 android:layout_gravity="start"
                                 android:layout_weight="1"
                                 android:gravity="right"
-                                android:textColor="@color/colorAccent" />
+                                android:textColor="@color/colorAccent"
+                                android:id="@+id/anc5_Date_Automatic"/>
 
                         </LinearLayout>
 
@@ -4931,7 +4932,6 @@
                                         android:textSize="15sp"
                                         android:visibility="gone" />
 
-
                                     <EditText
                                         android:id="@+id/anc5_examination_PR"
                                         android:layout_width="0dp"
@@ -4943,6 +4943,7 @@
                                         android:gravity="center"
                                         android:inputType="textMultiLine"
                                         android:visibility="gone" />
+
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -5495,7 +5496,6 @@
                                         android:textSize="15sp"
                                         android:visibility="gone" />
 
-
                                     <EditText
                                         android:id="@+id/anc5_USG_UAPI"
                                         android:layout_width="0dp"
@@ -5848,7 +5848,7 @@
 
 
                             <TextView
-                                android:id="@+id/anc6Date"
+                                android:id="@+id/anc6_Date_Automatic"
                                 android:layout_width="0px"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="start"
@@ -6364,7 +6364,7 @@
                             android:textStyle="italic" />
 
                         <TextView
-                            android:id="@+id/anc7Date"
+                            android:id="@+id/anc7_Date_Automatic"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
@@ -6847,7 +6847,7 @@
                             android:textStyle="italic" />
 
                         <TextView
-                            android:id="@+id/anc8Date"
+                            android:id="@+id/anc8_Date_Automatic"
                             android:layout_width="0px"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
