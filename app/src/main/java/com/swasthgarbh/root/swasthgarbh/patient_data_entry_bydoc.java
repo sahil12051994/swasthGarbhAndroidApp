@@ -61,6 +61,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     Button UpdateData;
 
     TextView anc1_Date_Automatic, anc2_Date_Automatic, anc3_Date_Automatic, anc4_Date_Automatic, anc5_Date_Automatic, anc6_Date_Automatic, anc7_Date_Automatic, anc8_Date_Automatic;
+    CheckBox investigations_box, anc_1, anc_2, anc_3, anc_4, anc_5, anc_6, anc_7, anc_8;
+    LinearLayout investigations_elements, anc1_elements, anc2_elements, anc3_elements, anc4_elements, anc5_elements, anc6_elements, anc7_elements, anc8_elements;
 
 //    ANC1 Variables
     EditText anc1_Date;
@@ -329,12 +331,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
         anc1_Date = (EditText) findViewById(R.id.anc1_Date);
         anc2_Date = (EditText) findViewById(R.id.anc2_Date);
-        anc3_Date = (EditText) findViewById(R.id.anc2_Date);
-        anc4_Date = (EditText) findViewById(R.id.anc2_Date);
-        anc5_Date = (EditText) findViewById(R.id.anc2_Date);
-        anc6_Date = (EditText) findViewById(R.id.anc2_Date);
-        anc7_Date = (EditText) findViewById(R.id.anc2_Date);
-        anc8_Date = (EditText) findViewById(R.id.anc2_Date);
+        anc3_Date = (EditText) findViewById(R.id.anc3_Date);
+        anc4_Date = (EditText) findViewById(R.id.anc4_Date);
+        anc5_Date = (EditText) findViewById(R.id.anc5_Date);
+        anc6_Date = (EditText) findViewById(R.id.anc6_Date);
+        anc7_Date = (EditText) findViewById(R.id.anc7_Date);
+        anc8_Date = (EditText) findViewById(R.id.anc8_Date);
 
         Calendar newCalendar = Calendar.getInstance();
         anc1_Date.setOnClickListener(new View.OnClickListener() {
@@ -837,299 +839,112 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc7_Date_Automatic = (TextView) findViewById(R.id.anc7_Date_Automatic);
         anc8_Date_Automatic = (TextView) findViewById(R.id.anc8_Date_Automatic);
 
-//        anc_6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if (isChecked) {
-//                    anc6_his_linearBox.setVisibility(View.VISIBLE);
-//                    anc6_exam_linearBox.setVisibility(View.VISIBLE);
-//                    anc6_advice_linearBox.setVisibility(View.VISIBLE);
-//                    anc6_his_others.setVisibility(View.VISIBLE);
-//                    anc6_exam_PR.setVisibility(View.VISIBLE);
-//                    anc6_exam_BP.setVisibility(View.VISIBLE);
-//                    anc6_exam_weight.setVisibility(View.VISIBLE);
-//                    anc6_exam_others.setVisibility(View.VISIBLE);
-//                    anc6_exam_pelvic.setVisibility(View.VISIBLE);
-//                    anc6_advice_others.setVisibility(View.VISIBLE);
-//                    anc6_his_othersBox.setVisibility(View.VISIBLE);
-//                    anc6_exam_PRBox.setVisibility(View.VISIBLE);
-//                    anc6_exam_BPBox.setVisibility(View.VISIBLE);
-//                    anc6_exam_weightBox.setVisibility(View.VISIBLE);
-//                    anc6_exam_othersBox.setVisibility(View.VISIBLE);
-//                    anc6_exam_pelvicBox.setVisibility(View.VISIBLE);
-//                    anc6_advice_othersBox.setVisibility(View.VISIBLE);
-//                    anc_6_historyBox.setVisibility(View.VISIBLE);
-//                    anc_6_examinationBox.setVisibility(View.VISIBLE);
-//                    anc_6_adviceBox.setVisibility(View.VISIBLE);
-//                    anc_6_reviewBox.setVisibility(View.VISIBLE);
-//                    anc6_his_breath.setVisibility(View.VISIBLE);
-//                    anc6_his_fatigue.setVisibility(View.VISIBLE);
-//                    anc6_his_head.setVisibility(View.VISIBLE);
-//                    anc6_his_bleed.setVisibility(View.VISIBLE);
-//                    anc6_his_burn.setVisibility(View.VISIBLE);
-//                    anc6_his_fetal_move.setVisibility(View.VISIBLE);
-//                    anc6_his_itching.setVisibility(View.VISIBLE);
-//                    anc6_exam_pallor.setVisibility(View.VISIBLE);
-//                    anc6_exam_pedal.setVisibility(View.VISIBLE);
-//                    anc6_exam_pa.setVisibility(View.VISIBLE);
-//                    anc6_pa_2weeks.setVisibility(View.VISIBLE);
-//                    anc6_advice_DFMC.setVisibility(View.VISIBLE);
-//                    anc6_advice_TFe_Ca.setVisibility(View.VISIBLE);
-//                    anc6_advice_BleedPV.setVisibility(View.VISIBLE);
-//                    anc6_advice_spotPV.setVisibility(View.VISIBLE);
-//                    anc6_advice_leakPV.setVisibility(View.VISIBLE);
-//                    anc6_advice_fetalmove.setVisibility(View.VISIBLE);
-//                    anc6_advice_abdpain.setVisibility(View.VISIBLE);
-//                    anc6_advice_NST.setVisibility(View.VISIBLE);
-//
-//                } else {
-//                    anc6_his_linearBox.setVisibility(View.GONE);
-//                    anc6_exam_linearBox.setVisibility(View.GONE);
-//                    anc6_advice_linearBox.setVisibility(View.GONE);
-//                    anc6_his_others.setVisibility(View.GONE);
-//                    anc6_exam_PR.setVisibility(View.GONE);
-//                    anc6_exam_BP.setVisibility(View.GONE);
-//                    anc6_exam_weight.setVisibility(View.GONE);
-//                    anc6_exam_others.setVisibility(View.GONE);
-//                    anc6_exam_pelvic.setVisibility(View.GONE);
-//                    anc6_advice_others.setVisibility(View.GONE);
-//                    anc6_his_othersBox.setVisibility(View.GONE);
-//                    anc6_exam_PRBox.setVisibility(View.GONE);
-//                    anc6_exam_BPBox.setVisibility(View.GONE);
-//                    anc6_exam_weightBox.setVisibility(View.GONE);
-//                    anc6_exam_othersBox.setVisibility(View.GONE);
-//                    anc6_exam_pelvicBox.setVisibility(View.GONE);
-//                    anc6_advice_othersBox.setVisibility(View.GONE);
-//                    anc_6_historyBox.setVisibility(View.GONE);
-//                    anc_6_examinationBox.setVisibility(View.GONE);
-//                    anc_6_adviceBox.setVisibility(View.GONE);
-//                    anc_6_reviewBox.setVisibility(View.GONE);
-//                    anc6_his_breath.setVisibility(View.GONE);
-//                    anc6_his_fatigue.setVisibility(View.GONE);
-//                    anc6_his_head.setVisibility(View.GONE);
-//                    anc6_his_bleed.setVisibility(View.GONE);
-//                    anc6_his_burn.setVisibility(View.GONE);
-//                    anc6_his_fetal_move.setVisibility(View.GONE);
-//                    anc6_his_itching.setVisibility(View.GONE);
-//                    anc6_exam_pallor.setVisibility(View.GONE);
-//                    anc6_exam_pedal.setVisibility(View.GONE);
-//                    anc6_exam_pa.setVisibility(View.GONE);
-//                    anc6_pa_2weeks.setVisibility(View.GONE);
-//                    anc6_advice_DFMC.setVisibility(View.GONE);
-//                    anc6_advice_TFe_Ca.setVisibility(View.GONE);
-//                    anc6_advice_BleedPV.setVisibility(View.GONE);
-//                    anc6_advice_spotPV.setVisibility(View.GONE);
-//                    anc6_advice_leakPV.setVisibility(View.GONE);
-//                    anc6_advice_fetalmove.setVisibility(View.GONE);
-//                    anc6_advice_abdpain.setVisibility(View.GONE);
-//                    anc6_advice_NST.setVisibility(View.GONE);
-//
-//                }
-//            }
-//        });
-//
-//
-//        anc_7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if (isChecked) {
-//                    anc7_his_linearBox.setVisibility(View.VISIBLE);
-//                    anc7_exam_linearBox.setVisibility(View.VISIBLE);
-//                    anc7_advice_linearBox.setVisibility(View.VISIBLE);
-//                    anc7_his_othersBox.setVisibility(View.VISIBLE);
-//                    anc7_exam_PRBox.setVisibility(View.VISIBLE);
-//                    anc7_exam_BPBox.setVisibility(View.VISIBLE);
-//                    anc7_exam_weightBox.setVisibility(View.VISIBLE);
-//                    anc7_exam_othersBox.setVisibility(View.VISIBLE);
-//                    anc7_advice_othersBox.setVisibility(View.VISIBLE);
-//                    anc_7_historyBox.setVisibility(View.VISIBLE);
-//                    anc_7_examinationBox.setVisibility(View.VISIBLE);
-//                    anc_7_adviceBox.setVisibility(View.VISIBLE);
-//                    anc_7_reviewBox.setVisibility(View.VISIBLE);
-//                    anc7_his_breath.setVisibility(View.VISIBLE);
-//                    anc7_his_fatigue.setVisibility(View.VISIBLE);
-//                    anc7_his_head.setVisibility(View.VISIBLE);
-//                    anc7_his_bleed.setVisibility(View.VISIBLE);
-//                    anc7_his_burn.setVisibility(View.VISIBLE);
-//                    anc7_his_fetal_move.setVisibility(View.VISIBLE);
-//                    anc7_his_itching.setVisibility(View.VISIBLE);
-//                    anc7_exam_pallor.setVisibility(View.VISIBLE);
-//                    anc7_exam_pedal.setVisibility(View.VISIBLE);
-//                    anc7_exam_pa.setVisibility(View.VISIBLE);
-//                    anc7_pa_2weeks.setVisibility(View.VISIBLE);
-//                    anc7_advice_DFMC.setVisibility(View.VISIBLE);
-//                    anc7_advice_TFe_Ca.setVisibility(View.VISIBLE);
-//                    anc7_advice_BleedPV.setVisibility(View.VISIBLE);
-//                    anc7_advice_spotPV.setVisibility(View.VISIBLE);
-//                    anc7_advice_leakPV.setVisibility(View.VISIBLE);
-//                    anc7_advice_fetalmove.setVisibility(View.VISIBLE);
-//                    anc7_advice_abdpain.setVisibility(View.VISIBLE);
-//                    anc7_his_others.setVisibility(View.VISIBLE);
-//                    anc7_exam_PR.setVisibility(View.VISIBLE);
-//                    anc7_exam_BP.setVisibility(View.VISIBLE);
-//                    anc7_exam_weight.setVisibility(View.VISIBLE);
-//                    anc7_exam_others.setVisibility(View.VISIBLE);
-//                    anc7_advice_others.setVisibility(View.VISIBLE);
-//
-//                } else {
-//                    anc7_his_linearBox.setVisibility(View.GONE);
-//                    anc7_exam_linearBox.setVisibility(View.GONE);
-//                    anc7_advice_linearBox.setVisibility(View.GONE);
-//                    anc7_his_othersBox.setVisibility(View.GONE);
-//                    anc7_exam_PRBox.setVisibility(View.GONE);
-//                    anc7_exam_BPBox.setVisibility(View.GONE);
-//                    anc7_exam_weightBox.setVisibility(View.GONE);
-//                    anc7_exam_othersBox.setVisibility(View.GONE);
-//                    anc7_advice_othersBox.setVisibility(View.GONE);
-//                    anc_7_historyBox.setVisibility(View.GONE);
-//                    anc_7_examinationBox.setVisibility(View.GONE);
-//                    anc_7_adviceBox.setVisibility(View.GONE);
-//                    anc_7_reviewBox.setVisibility(View.GONE);
-//                    anc7_his_breath.setVisibility(View.GONE);
-//                    anc7_his_fatigue.setVisibility(View.GONE);
-//                    anc7_his_head.setVisibility(View.GONE);
-//                    anc7_his_bleed.setVisibility(View.GONE);
-//                    anc7_his_burn.setVisibility(View.GONE);
-//                    anc7_his_fetal_move.setVisibility(View.GONE);
-//                    anc7_his_itching.setVisibility(View.GONE);
-//                    anc7_exam_pallor.setVisibility(View.GONE);
-//                    anc7_exam_pedal.setVisibility(View.GONE);
-//                    anc7_exam_pa.setVisibility(View.GONE);
-//                    anc7_pa_2weeks.setVisibility(View.GONE);
-//                    anc7_advice_DFMC.setVisibility(View.GONE);
-//                    anc7_advice_TFe_Ca.setVisibility(View.GONE);
-//                    anc7_advice_BleedPV.setVisibility(View.GONE);
-//                    anc7_advice_spotPV.setVisibility(View.GONE);
-//                    anc7_advice_leakPV.setVisibility(View.GONE);
-//                    anc7_advice_fetalmove.setVisibility(View.GONE);
-//                    anc7_advice_abdpain.setVisibility(View.GONE);
-//                    anc7_his_others.setVisibility(View.GONE);
-//                    anc7_exam_PR.setVisibility(View.GONE);
-//                    anc7_exam_BP.setVisibility(View.GONE);
-//                    anc7_exam_weight.setVisibility(View.GONE);
-//                    anc7_exam_others.setVisibility(View.GONE);
-//                    anc7_advice_others.setVisibility(View.GONE);
-//
-//                }
-//            }
-//        });
-//
-//        anc_8.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if (isChecked) {
-//                    anc8_his_linearBox.setVisibility(View.VISIBLE);
-//                    anc8_exam_linearBox.setVisibility(View.VISIBLE);
-//                    anc8_advice_linearBox.setVisibility(View.VISIBLE);
-//                    anc8_his_others.setVisibility(View.VISIBLE);
-//                    anc8_exam_PR.setVisibility(View.VISIBLE);
-//                    anc8_exam_BP.setVisibility(View.VISIBLE);
-//                    anc8_exam_weight.setVisibility(View.VISIBLE);
-//                    anc8_exam_others.setVisibility(View.VISIBLE);
-//                    anc8_advice_others.setVisibility(View.VISIBLE);
-//                    anc8_his_othersBox.setVisibility(View.VISIBLE);
-//                    anc8_exam_PRBox.setVisibility(View.VISIBLE);
-//                    anc8_exam_BPBox.setVisibility(View.VISIBLE);
-//                    anc8_exam_weightBox.setVisibility(View.VISIBLE);
-//                    anc8_exam_othersBox.setVisibility(View.VISIBLE);
-//                    anc8_advice_othersBox.setVisibility(View.VISIBLE);
-//                    anc_8_historyBox.setVisibility(View.VISIBLE);
-//                    anc_8_adviceBox.setVisibility(View.VISIBLE);
-//                    anc_8_examinationBox.setVisibility(View.VISIBLE);
-//                    anc8_his_breath.setVisibility(View.VISIBLE);
-//                    anc8_his_fatigue.setVisibility(View.VISIBLE);
-//                    anc8_his_head.setVisibility(View.VISIBLE);
-//                    anc8_his_bleed.setVisibility(View.VISIBLE);
-//                    anc8_his_burn.setVisibility(View.VISIBLE);
-//                    anc8_his_fetal_move.setVisibility(View.VISIBLE);
-//                    anc8_his_itching.setVisibility(View.VISIBLE);
-//                    anc8_exam_pallor.setVisibility(View.VISIBLE);
-//                    anc8_exam_pedal.setVisibility(View.VISIBLE);
-//                    anc8_exam_pa.setVisibility(View.VISIBLE);
-//                    anc8_advice_DFMC.setVisibility(View.VISIBLE);
-//                    anc8_advice_Fe_Ca.setVisibility(View.VISIBLE);
-//                    anc8_advice_induction.setVisibility(View.VISIBLE);
-//
-//                } else {
-//                    anc8_his_linearBox.setVisibility(View.GONE);
-//                    anc8_exam_linearBox.setVisibility(View.GONE);
-//                    anc8_advice_linearBox.setVisibility(View.GONE);
-//                    anc8_his_others.setVisibility(View.GONE);
-//                    anc8_exam_PR.setVisibility(View.GONE);
-//                    anc8_exam_BP.setVisibility(View.GONE);
-//                    anc8_exam_weight.setVisibility(View.GONE);
-//                    anc8_exam_others.setVisibility(View.GONE);
-//                    anc8_advice_others.setVisibility(View.GONE);
-//                    anc8_his_othersBox.setVisibility(View.GONE);
-//                    anc8_exam_PRBox.setVisibility(View.GONE);
-//                    anc8_exam_BPBox.setVisibility(View.GONE);
-//                    anc8_exam_weightBox.setVisibility(View.GONE);
-//                    anc8_exam_othersBox.setVisibility(View.GONE);
-//                    anc8_advice_othersBox.setVisibility(View.GONE);
-//                    anc_8_historyBox.setVisibility(View.GONE);
-//                    anc_8_adviceBox.setVisibility(View.GONE);
-//                    anc_8_examinationBox.setVisibility(View.GONE);
-//                    anc8_his_breath.setVisibility(View.GONE);
-//                    anc8_his_fatigue.setVisibility(View.GONE);
-//                    anc8_his_head.setVisibility(View.GONE);
-//                    anc8_his_bleed.setVisibility(View.GONE);
-//                    anc8_his_burn.setVisibility(View.GONE);
-//                    anc8_his_fetal_move.setVisibility(View.GONE);
-//                    anc8_his_itching.setVisibility(View.GONE);
-//                    anc8_exam_pallor.setVisibility(View.GONE);
-//                    anc8_exam_pedal.setVisibility(View.GONE);
-//                    anc8_exam_pa.setVisibility(View.GONE);
-//                    anc8_advice_DFMC.setVisibility(View.GONE);
-//                    anc8_advice_Fe_Ca.setVisibility(View.GONE);
-//                    anc8_advice_induction.setVisibility(View.GONE);
-//                }
-//            }
-//        });
-//
-//        investigationsBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                if (isChecked) {
-//                    invest_heart_linearBox.setVisibility(View.VISIBLE);
-//                    invest_othersBox.setVisibility(View.VISIBLE);
-//                    invest_drug_historyBox.setVisibility(View.VISIBLE);
-//                    Co_MorbiditiesBox.setVisibility(View.VISIBLE);
-//                    Heart_DiseaseBox.setVisibility(View.VISIBLE);
-//                    invest_others.setVisibility(View.VISIBLE);
-//                    invest_drug_history.setVisibility(View.VISIBLE);
-//                    invest_chronic_hyper.setVisibility(View.VISIBLE);
-//                    invest_type_2_diabetes.setVisibility(View.VISIBLE);
-//                    invest_RHD_native.setVisibility(View.VISIBLE);
-//                    invest_RHD_post.setVisibility(View.VISIBLE);
-//                    invest_acyanotic.setVisibility(View.VISIBLE);
-//                    invest_cyanotic.setVisibility(View.VISIBLE);
-//                    invest_chronic_liver.setVisibility(View.VISIBLE);
-//                    invest_chronic_kidney.setVisibility(View.VISIBLE);
-//                    invest_APLA.setVisibility(View.VISIBLE);
-//                    invest_SLE.setVisibility(View.VISIBLE);
-//
-//                } else {
-//                    invest_heart_linearBox.setVisibility(View.GONE);
-//                    invest_othersBox.setVisibility(View.GONE);
-//                    invest_drug_historyBox.setVisibility(View.GONE);
-//                    Co_MorbiditiesBox.setVisibility(View.GONE);
-//                    Heart_DiseaseBox.setVisibility(View.GONE);
-//                    invest_others.setVisibility(View.GONE);
-//                    invest_drug_history.setVisibility(View.GONE);
-//                    invest_chronic_hyper.setVisibility(View.GONE);
-//                    invest_type_2_diabetes.setVisibility(View.GONE);
-//                    invest_RHD_native.setVisibility(View.GONE);
-//                    invest_RHD_post.setVisibility(View.GONE);
-//                    invest_acyanotic.setVisibility(View.GONE);
-//                    invest_cyanotic.setVisibility(View.GONE);
-//                    invest_chronic_liver.setVisibility(View.GONE);
-//                    invest_chronic_kidney.setVisibility(View.GONE);
-//                    invest_APLA.setVisibility(View.GONE);
-//                    invest_SLE.setVisibility(View.GONE);
-//                }
-//            }
-//        });
+        anc_1 = (CheckBox) findViewById(R.id.anc_1);
+        anc_2 = (CheckBox) findViewById(R.id.anc_2);
+        anc_3 = (CheckBox) findViewById(R.id.anc_3);
+        anc_4 = (CheckBox) findViewById(R.id.anc_4);
+        anc_5 = (CheckBox) findViewById(R.id.anc_5);
+        anc_6 = (CheckBox) findViewById(R.id.anc_6);
+        anc_7 = (CheckBox) findViewById(R.id.anc_7);
+        anc_8 = (CheckBox) findViewById(R.id.anc_8);
+        investigations_box = (CheckBox) findViewById(R.id.investigations_box);
+
+        investigations_elements = (LinearLayout) findViewById(R.id.investigations_elements);
+        anc1_elements = (LinearLayout) findViewById(R.id.anc1_elements);
+        anc2_elements = (LinearLayout) findViewById(R.id.anc2_elements);
+        anc3_elements = (LinearLayout) findViewById(R.id.anc3_elements);
+        anc4_elements = (LinearLayout) findViewById(R.id.anc4_elements);
+        anc5_elements = (LinearLayout) findViewById(R.id.anc5_elements);
+        anc6_elements = (LinearLayout) findViewById(R.id.anc6_elements);
+        anc7_elements = (LinearLayout) findViewById(R.id.anc7_elements);
+        anc8_elements = (LinearLayout) findViewById(R.id.anc8_elements);
+
+        investigations_box.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    investigations_elements.setVisibility(View.VISIBLE);
+                } else {
+                    investigations_elements.setVisibility(View.GONE);
+                }
+            }
+        });
+        anc_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    anc1_elements.setVisibility(View.VISIBLE);
+                } else {
+                    anc1_elements.setVisibility(View.GONE);
+                }
+            }
+        });
+        anc_2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    anc2_elements.setVisibility(View.VISIBLE);
+                } else {
+                    anc2_elements.setVisibility(View.GONE);
+                }
+            }
+        });
+        anc_3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    anc3_elements.setVisibility(View.VISIBLE);
+                } else {
+                    anc3_elements.setVisibility(View.GONE);
+                }
+            }
+        });
+        anc_4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    anc4_elements.setVisibility(View.VISIBLE);
+                } else {
+                    anc4_elements.setVisibility(View.GONE);
+                }
+            }
+        });
+        anc_5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    anc5_elements.setVisibility(View.VISIBLE);
+                } else {
+                    anc5_elements.setVisibility(View.GONE);
+                }
+            }
+        });
+        anc_6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    anc6_elements.setVisibility(View.VISIBLE);
+                } else {
+                    anc6_elements.setVisibility(View.GONE);
+                }
+            }
+        });
+        anc_7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    anc7_elements.setVisibility(View.VISIBLE);
+                } else {
+                    anc7_elements.setVisibility(View.GONE);
+                }
+            }
+        });
+        anc_8.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                                             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                                                 if (isChecked) {
+                                                     anc8_elements.setVisibility(View.VISIBLE);
+                                                 } else {
+                                                     anc8_elements.setVisibility(View.GONE);
+                                                 }
+                                             }
+                                         });
 
         getSupportActionBar().setTitle("Add Data");
 
         session = new SessionManager(this);
-//      Getting the WHO Data
+
         clickedPatientId = getIntent().getIntExtra("EXTRA_PATIENT_ID", 0);
         System.out.print(clickedPatientId);
         String url = ApplicationController.get_base_url() + "swasthgarbh/patient/" + clickedPatientId;
@@ -1272,7 +1087,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_general_deranged_AfterDinner.setText(response.getString("anc1_general_deranged_AfterDinner"));
                             anc1_general_Others.setText(response.getString("anc1_general_Others"));
 
-                            
+
                             anc2_Date.setText(response.getString("anc2_Date"));
                             anc2_POG.setText(response.getString("anc2_POG"));
                             anc2_history_ShortnessOfBreath.setChecked(response.getBoolean("anc2_history_ShortnessOfBreath"));
@@ -1577,7 +1392,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         spinnerBloodGroup.setAdapter(adapterBloodGroup);
 
 //        Dropdown for Husband Blood Group
-        Spinner spinnerHusbandBloodGroup = (Spinner) findViewById(R.id.anc1_investigations_BloodGroup);
+        Spinner spinnerHusbandBloodGroup = (Spinner) findViewById(R.id.anc1_investigations_HusbandBloodGroup);
         ArrayAdapter<CharSequence> adapterHusbandBloodGroup = ArrayAdapter.createFromResource(this,
                 R.array.BloodGroupDropdownElements, android.R.layout.simple_spinner_item);
         adapterHusbandBloodGroup.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -1938,6 +1753,15 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc8_examination_Weight", "" + anc8_examination_Weight.getText());
                     params.put("anc8_examination_Others", "" + anc8_examination_Others.getText());
                     params.put("anc8_advice_Others", "" + anc8_advice_Others.getText());
+
+                    params.put("anc_1", "" + anc_1.isChecked());
+                    params.put("anc_2", "" + anc_2.isChecked());
+                    params.put("anc_3", "" + anc_3.isChecked());
+                    params.put("anc_4", "" + anc_4.isChecked());
+                    params.put("anc_5", "" + anc_5.isChecked());
+                    params.put("anc_6", "" + anc_6.isChecked());
+                    params.put("anc_7", "" + anc_7.isChecked());
+                    params.put("anc_8", "" + anc_8.isChecked());
 
 
                 } catch (JSONException e) {
