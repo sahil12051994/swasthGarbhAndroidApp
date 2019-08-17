@@ -119,38 +119,38 @@
                                 android:textStyle="italic" />
 
                             <CheckBox
-                                android:id="@+id/chronichyper"
+                                android:id="@+id/investigations_ChronicHyper"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/chronic_hypertension" />
 
                             <CheckBox
-                                android:id="@+id/type2"
+                                android:id="@+id/investigations_Type2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/type2" />
 
                             <CheckBox
-                                android:id="@+id/chronic_liver_disease"
+                                android:id="@+id/investigations_ChronicLiverDisease"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
                                 android:text="@string/chronic_liver_disease" />
 
                             <CheckBox
-                                android:id="@+id/chronic_kidney_disease"
+                                android:id="@+id/investigations_ChronicKidneyDisease"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/chronic_kidney_disease" />
 
                             <CheckBox
-                                android:id="@+id/apla"
+                                android:id="@+id/investigations_ALPA"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/apla" />
 
                             <CheckBox
-                                android:id="@+id/sle"
+                                android:id="@+id/investigations_SLE"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/sle" />
@@ -180,25 +180,25 @@
                                         android:textStyle="bold|italic" />
 
                                     <CheckBox
-                                        android:id="@+id/rhd"
+                                        android:id="@+id/investigations_heatDisease_RHD"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/rhd" />
 
                                     <CheckBox
-                                        android:id="@+id/rhd_post"
+                                        android:id="@+id/investigations_heatDisease_RHDpost"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/rhd_post" />
 
                                     <CheckBox
-                                        android:id="@+id/acyanotic"
+                                        android:id="@+id/investigations_heatDisease_Acyanotic"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/acyanotic" />
 
                                     <CheckBox
-                                        android:id="@+id/cyanotic"
+                                        android:id="@+id/investigations_heatDisease_Cyanotic"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="@string/cyanotic" />
@@ -222,7 +222,7 @@
 
 
                                 <EditText
-                                    android:id="@+id/others"
+                                    android:id="@+id/investigations_Others"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="5"
@@ -248,7 +248,7 @@
 
 
                                 <EditText
-                                    android:id="@+id/drug_history"
+                                    android:id="@+id/investigations_DrugHistory"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="10dp"

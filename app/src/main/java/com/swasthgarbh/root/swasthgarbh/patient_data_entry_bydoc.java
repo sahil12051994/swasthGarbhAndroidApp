@@ -64,6 +64,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     CheckBox investigations_box, anc_1, anc_2, anc_3, anc_4, anc_5, anc_6, anc_7, anc_8;
     LinearLayout investigations_elements, anc1_elements, anc2_elements, anc3_elements, anc4_elements, anc5_elements, anc6_elements, anc7_elements, anc8_elements;
 
+
+    CheckBox investigations_ChronicHyper, investigations_Type2, investigations_ChronicLiverDisease, investigations_ChronicKidneyDisease, investigations_ALPA, investigations_SLE;
+    CheckBox investigations_heatDisease_RHD, investigations_heatDisease_RHDpost, investigations_heatDisease_Acyanotic, investigations_heatDisease_Cyanotic;
+    EditText investigations_Others, investigations_DrugHistory;
+
 //    ANC1 Variables
     EditText anc1_Date;
     EditText anc1_POG;
@@ -475,6 +480,19 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             }
 
         }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
+        investigations_ChronicHyper = (CheckBox) findViewById(R.id.investigations_ChronicHyper);
+        investigations_Type2 = (CheckBox) findViewById(R.id.investigations_Type2);
+        investigations_ChronicLiverDisease = (CheckBox) findViewById(R.id.investigations_ChronicLiverDisease);
+        investigations_ChronicKidneyDisease = (CheckBox) findViewById(R.id.investigations_ChronicKidneyDisease);
+        investigations_ALPA = (CheckBox) findViewById(R.id.investigations_ALPA);
+        investigations_SLE = (CheckBox) findViewById(R.id.investigations_SLE);
+        investigations_heatDisease_RHD = (CheckBox) findViewById(R.id.investigations_heatDisease_RHD);
+        investigations_heatDisease_RHDpost = (CheckBox) findViewById(R.id.investigations_heatDisease_RHDpost);
+        investigations_heatDisease_Acyanotic = (CheckBox) findViewById(R.id.investigations_heatDisease_Acyanotic);
+        investigations_heatDisease_Cyanotic = (CheckBox) findViewById(R.id.investigations_heatDisease_Cyanotic);
+        investigations_Others = (EditText) findViewById(R.id.investigations_Others);
+        investigations_DrugHistory = (EditText) findViewById(R.id.investigations_DrugHistory);
 
 //        ANC1 Variables
         anc1_History_Fever = (CheckBox) findViewById(R.id.anc1_History_Fever);
@@ -979,18 +997,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
                             lmpDate.setText(sdf.format(d));
 
-//                            invest_others.setText(response.getString("invest_others"));
-//                            invest_drug_history.setText(response.getString("invest_drug_history"));
-//                            invest_chronic_hyper.setChecked(response.getBoolean("invest_chronic_hyper"));
-//                            invest_type_2_diabetes.setChecked(response.getBoolean("invest_type_2_diabetes"));
-//                            invest_RHD_native.setChecked(response.getBoolean("invest_RHD_native"));
-//                            invest_RHD_post.setChecked(response.getBoolean("invest_RHD_post"));
-//                            invest_acyanotic.setChecked(response.getBoolean("invest_acyanotic"));
-//                            invest_cyanotic.setChecked(response.getBoolean("invest_cyanotic"));
-//                            invest_chronic_liver.setChecked(response.getBoolean("invest_chronic_liver"));
-//                            invest_chronic_kidney.setChecked(response.getBoolean("invest_chronic_kidney"));
-//                            invest_APLA.setChecked(response.getBoolean("invest_APLA"));
-
                             newDate1.add(Calendar.DATE, 84);
                             anc1_Date_Automatic.setText("12 Weeks - " + sdf.format(newDate1.getTime()));
                             newDate1.add(Calendar.DATE, 56);
@@ -1009,6 +1015,31 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc8_Date_Automatic.setText("40 Weeks - " + sdf.format(newDate1.getTime()));
                             eddDate.setText(sdf.format(newDate1.getTime()));
 
+                            investigations_box.setChecked(response.getBoolean("investigations_box"));
+                            if(!response.getBoolean("investigations_box")){
+                                investigations_elements.setVisibility(View.GONE);
+                            } else {
+                                investigations_elements.setVisibility(View.VISIBLE);
+                            }
+                            investigations_ChronicHyper.setChecked(response.getBoolean("investigations_ChronicHyper"));
+                            investigations_Type2.setChecked(response.getBoolean("investigations_Type2"));
+                            investigations_ChronicLiverDisease.setChecked(response.getBoolean("investigations_ChronicLiverDisease"));
+                            investigations_ChronicKidneyDisease.setChecked(response.getBoolean("investigations_ChronicKidneyDisease"));
+                            investigations_ALPA.setChecked(response.getBoolean("investigations_ALPA"));
+                            investigations_SLE.setChecked(response.getBoolean("investigations_SLE"));
+                            investigations_heatDisease_RHD.setChecked(response.getBoolean("investigations_heatDisease_RHD"));
+                            investigations_heatDisease_RHDpost.setChecked(response.getBoolean("investigations_heatDisease_RHDpost"));
+                            investigations_heatDisease_Acyanotic.setChecked(response.getBoolean("investigations_heatDisease_Acyanotic"));
+                            investigations_heatDisease_Cyanotic.setChecked(response.getBoolean("investigations_heatDisease_Cyanotic"));
+                            investigations_Others.setText(response.getString("investigations_Others"));
+                            investigations_DrugHistory.setText(response.getString("investigations_DrugHistory"));
+
+                            anc_1.setChecked(response.getBoolean("anc_1"));
+                            if(!response.getBoolean("anc_1")){
+                                anc1_elements.setVisibility(View.GONE);
+                            } else {
+                                anc1_elements.setVisibility(View.VISIBLE);
+                            }
                             anc1_History_Fever.setChecked(response.getBoolean("anc1_History_Fever"));
                             anc1_History_Rash.setChecked(response.getBoolean("anc1_History_Rash"));
                             anc1_History_Nausea.setChecked(response.getBoolean("anc1_History_Nausea"));
@@ -1087,7 +1118,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_general_deranged_AfterDinner.setText(response.getString("anc1_general_deranged_AfterDinner"));
                             anc1_general_Others.setText(response.getString("anc1_general_Others"));
 
-
+                            anc_2.setChecked(response.getBoolean("anc_2"));
+                            if(!response.getBoolean("anc_2")){
+                                anc2_elements.setVisibility(View.GONE);
+                            } else {
+                                anc2_elements.setVisibility(View.VISIBLE);
+                            }
                             anc2_Date.setText(response.getString("anc2_Date"));
                             anc2_POG.setText(response.getString("anc2_POG"));
                             anc2_history_ShortnessOfBreath.setChecked(response.getBoolean("anc2_history_ShortnessOfBreath"));
@@ -1123,7 +1159,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc2_advice_CommonAilment.setText(response.getString("anc2_advice_CommonAilment"));
                             anc2_advice_Others.setText(response.getString("anc2_advice_Others"));
 
-
+                            anc_3.setChecked(response.getBoolean("anc_3"));
+                            if(!response.getBoolean("anc_3")){
+                                anc3_elements.setVisibility(View.GONE);
+                            } else {
+                                anc3_elements.setVisibility(View.VISIBLE);
+                            }
                             anc3_history_ShortnessOfBreath.setChecked(response.getBoolean("anc3_history_ShortnessOfBreath"));
                             anc3_history_EasyFatigability.setChecked(response.getBoolean("anc3_history_EasyFatigability"));
                             anc3_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc3_history_HeadacheEpigastricPain"));
@@ -1159,8 +1200,13 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc3_advice_review_AbdominalPain.setChecked(response.getBoolean("anc3_advice_review_AbdominalPain"));
                             anc3_advice_ictNegative_InjAntiD300.setChecked(response.getBoolean("anc3_advice_ictNegative_InjAntiD300"));
 
-
                             //        ANC4 Variables
+                            anc_4.setChecked(response.getBoolean("anc_4"));
+                            if(!response.getBoolean("anc_4")){
+                                anc4_elements.setVisibility(View.GONE);
+                            } else {
+                                anc4_elements.setVisibility(View.VISIBLE);
+                            }
                             anc4_history_ShortnessOfBreath.setChecked(response.getBoolean("anc4_history_ShortnessOfBreath"));
                             anc4_history_EasyFatiguability.setChecked(response.getBoolean("anc4_history_EasyFatiguability"));
                             anc4_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc4_history_HeadacheEpigastricPain"));
@@ -1201,6 +1247,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
 
                             //        ANC5 Variables
+                            anc_5.setChecked(response.getBoolean("anc_5"));
+                            if(!response.getBoolean("anc_5")){
+                                anc5_elements.setVisibility(View.GONE);
+                            } else {
+                                anc5_elements.setVisibility(View.VISIBLE);
+                            }
                             anc5_history_ShortnessOfBreath.setChecked(response.getBoolean("anc5_history_ShortnessOfBreath"));
                             anc5_history_EasyFatiguability.setChecked(response.getBoolean("anc5_history_EasyFatiguability"));
                             anc5_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc5_history_HeadacheEpigastricPain"));
@@ -1259,7 +1311,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc5_advice_review_AbdomenPain.setChecked(response.getBoolean("anc5_advice_review_AbdomenPain"));
                             anc5_advice_Others.setText(response.getString("anc5_advice_Others"));
 
-
+                            anc_6.setChecked(response.getBoolean("anc_6"));
+                            if(!response.getBoolean("anc_6")){
+                                anc6_elements.setVisibility(View.GONE);
+                            } else {
+                                anc6_elements.setVisibility(View.VISIBLE);
+                            }
                             anc6_history_ShortnessOfBreath.setChecked(response.getBoolean("anc6_history_ShortnessOfBreath"));
                             anc6_history_EasyFatiguability.setChecked(response.getBoolean("anc6_history_EasyFatiguability"));
                             anc6_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc6_history_HeadacheEpigastricPain"));
@@ -1286,7 +1343,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc6_Pelvic.setText(response.getString("anc6_Pelvic"));
                             anc6_advice_Others.setText(response.getString("anc6_advice_Others"));
 
-
+                            anc_7.setChecked(response.getBoolean("anc_7"));
+                            if(!response.getBoolean("anc_7")){
+                                anc7_elements.setVisibility(View.GONE);
+                            } else {
+                                anc7_elements.setVisibility(View.VISIBLE);
+                            }
                             anc7_history_ShortnessOfBreath.setChecked(response.getBoolean("anc7_history_ShortnessOfBreath"));
                             anc7_history_EasyFatiguability.setChecked(response.getBoolean("anc7_history_EasyFatiguability"));
                             anc7_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc7_history_HeadacheEpigastricPain"));
@@ -1311,7 +1373,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc7_examination_Others.setText(response.getString("anc7_examination_Others"));
                             anc7_advice_Others.setText(response.getString("anc7_advice_Others"));
 
-
+                            anc_8.setChecked(response.getBoolean("anc_8"));
+                            if(!response.getBoolean("anc_8")){
+                                anc8_elements.setVisibility(View.GONE);
+                            } else {
+                                anc8_elements.setVisibility(View.VISIBLE);
+                            }
                             anc8_history_ShortnessOfBreath.setChecked(response.getBoolean("anc8_history_ShortnessOfBreath"));
                             anc8_history_EasyFatiguability.setChecked(response.getBoolean("anc8_history_EasyFatiguability"));
                             anc8_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc8_history_HeadacheEpigastricPain"));
