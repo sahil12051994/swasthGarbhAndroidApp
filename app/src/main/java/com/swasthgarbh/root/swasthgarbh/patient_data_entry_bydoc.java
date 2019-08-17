@@ -1498,6 +1498,19 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                 JSONObject params = new JSONObject();
                 try {
 
+                    params.put("investigations_ChronicHyper", "" + investigations_ChronicHyper.isChecked());
+                    params.put("investigations_Type2", "" + investigations_Type2.isChecked());
+                    params.put("investigations_ChronicLiverDisease", "" + investigations_ChronicLiverDisease.isChecked());
+                    params.put("investigations_ChronicKidneyDisease", "" + investigations_ChronicKidneyDisease.isChecked());
+                    params.put("investigations_ALPA", "" + investigations_ALPA.isChecked());
+                    params.put("investigations_SLE", "" + investigations_SLE.isChecked());
+                    params.put("investigations_heatDisease_RHD", "" + investigations_heatDisease_RHD.isChecked());
+                    params.put("investigations_heatDisease_RHDpost", "" + investigations_heatDisease_RHDpost.isChecked());
+                    params.put("investigations_heatDisease_Acyanotic", "" + investigations_heatDisease_Acyanotic.isChecked());
+                    params.put("investigations_heatDisease_Cyanotic", "" + investigations_heatDisease_Cyanotic.isChecked());
+                    params.put("investigations_Others", "" + investigations_Others.getText());
+                    params.put("investigations_DrugHistory", "" + investigations_DrugHistory.getText());
+
                     params.put("anc1_History_Fever", "" + anc1_History_Fever.isChecked());
                     params.put("anc1_History_Rash", "" + anc1_History_Rash.isChecked());
                     params.put("anc1_History_Nausea", "" + anc1_History_Nausea.isChecked());
@@ -1829,6 +1842,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc_6", "" + anc_6.isChecked());
                     params.put("anc_7", "" + anc_7.isChecked());
                     params.put("anc_8", "" + anc_8.isChecked());
+                    params.put("investigations_box", "" + investigations_box.isChecked());
 
 
                 } catch (JSONException e) {
