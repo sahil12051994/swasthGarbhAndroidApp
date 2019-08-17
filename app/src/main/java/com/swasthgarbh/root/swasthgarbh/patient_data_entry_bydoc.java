@@ -60,6 +60,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     int clickedPatientId;
     Button UpdateData;
 
+    TextView anc1_Date_Automatic, anc2_Date_Automatic, anc3_Date_Automatic, anc4_Date_Automatic, anc5_Date_Automatic, anc6_Date_Automatic, anc7_Date_Automatic, anc8_Date_Automatic;
+
 //    ANC1 Variables
     EditText anc1_Date;
     EditText anc1_POG;
@@ -228,8 +230,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc6_Date;
     EditText anc7_Date;
     EditText anc8_Date;
-
-    EditText anc1_Date_Automatic, anc2_Date_Automatic, anc3_Date_Automatic, anc4_Date_Automatic, anc5_Date_Automatic, anc6_Date_Automatic, anc7_Date_Automatic, anc8_Date_Automatic;
 
     private DatePickerDialog anc1_datePickerDialog;
     private DatePickerDialog anc2_datePickerDialog;
@@ -828,6 +828,15 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc8_examination_Others =  (EditText) findViewById(R.id.anc8_examination_Others);
         anc8_advice_Others =  (EditText) findViewById(R.id.anc8_advice_Others);
 
+        anc1_Date_Automatic = (TextView) findViewById(R.id.anc1_Date_Automatic);
+        anc2_Date_Automatic = (TextView) findViewById(R.id.anc2_Date_Automatic);
+        anc3_Date_Automatic = (TextView) findViewById(R.id.anc3_Date_Automatic);
+        anc4_Date_Automatic = (TextView) findViewById(R.id.anc4_Date_Automatic);
+        anc5_Date_Automatic = (TextView) findViewById(R.id.anc5_Date_Automatic);
+        anc6_Date_Automatic = (TextView) findViewById(R.id.anc6_Date_Automatic);
+        anc7_Date_Automatic = (TextView) findViewById(R.id.anc7_Date_Automatic);
+        anc8_Date_Automatic = (TextView) findViewById(R.id.anc8_Date_Automatic);
+
 //        anc_6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 //            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 //                if (isChecked) {
@@ -1136,16 +1145,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             if (response.has("ID")) {
                                 response = response.getJSONObject("newPatientData");
                             }
+
                             TextView lmpDate = (TextView) findViewById(R.id.lmpDate);
                             TextView eddDate = (TextView) findViewById(R.id.eddDate);
-                            TextView anc1_Date_Automatic = (TextView) findViewById(R.id.anc1_Date_Automatic);
-                            TextView anc2_Date_Automatic = (TextView) findViewById(R.id.anc2_Date_Automatic);
-                            TextView anc3_Date_Automatic = (TextView) findViewById(R.id.anc3_Date_Automatic);
-                            TextView anc4_Date_Automatic = (TextView) findViewById(R.id.anc4_Date_Automatic);
-                            TextView anc5_Date_Automatic = (TextView) findViewById(R.id.anc5_Date_Automatic);
-                            TextView anc6_Date_Automatic = (TextView) findViewById(R.id.anc6_Date_Automatic);
-                            TextView anc7_Date_Automatic = (TextView) findViewById(R.id.anc7_Date_Automatic);
-                            TextView anc8_Date_Automatic = (TextView) findViewById(R.id.anc8_Date_Automatic);
 
                             String date_date = response.getString("startDate").split("T")[0].split("-")[2];
                             String date_month = response.getString("startDate").split("T")[0].split("-")[1];
@@ -1176,6 +1178,22 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
                             newDate1.add(Calendar.DATE, 84);
                             anc1_Date_Automatic.setText("12 Weeks - " + sdf.format(newDate1.getTime()));
+                            newDate1.add(Calendar.DATE, 56);
+                            anc2_Date_Automatic.setText("20 Weeks - " + sdf.format(newDate1.getTime()));
+                            newDate1.add(Calendar.DATE, 42);
+                            anc3_Date_Automatic.setText("26 Weeks - " + sdf.format(newDate1.getTime()));
+                            newDate1.add(Calendar.DATE, 28);
+                            anc4_Date_Automatic.setText("30 Weeks - " + sdf.format(newDate1.getTime()));
+                            newDate1.add(Calendar.DATE, 28);
+                            anc5_Date_Automatic.setText("34 Weeks - " + sdf.format(newDate1.getTime()));
+                            newDate1.add(Calendar.DATE, 14);
+                            anc6_Date_Automatic.setText("36 Weeks - " + sdf.format(newDate1.getTime()));
+                            newDate1.add(Calendar.DATE, 14);
+                            anc7_Date_Automatic.setText("38 Weeks - " + sdf.format(newDate1.getTime()));
+                            newDate1.add(Calendar.DATE, 16);
+                            anc8_Date_Automatic.setText("40 Weeks - " + sdf.format(newDate1.getTime()));
+                            eddDate.setText(sdf.format(newDate1.getTime()));
+
                             anc1_History_Fever.setChecked(response.getBoolean("anc1_History_Fever"));
                             anc1_History_Rash.setChecked(response.getBoolean("anc1_History_Rash"));
                             anc1_History_Nausea.setChecked(response.getBoolean("anc1_History_Nausea"));
@@ -1187,16 +1205,13 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_History_TobaccoIntake.setChecked(response.getBoolean("anc1_History_TobaccoIntake"));
                             anc1_History_CaffeineIntake.setChecked(response.getBoolean("anc1_History_CaffeineIntake"));
                             anc1_History_IntimatePartnerViolence.setChecked(response.getBoolean("anc1_History_IntimatePartnerViolence"));
-
                             anc1_history_Others.setText(response.getString("anc1_history_Others"));
-
                             anc1_examination_general_Pallor.setChecked(response.getBoolean("anc1_examination_general_Pallor"));
                             anc1_examination_general_Lcterus.setChecked(response.getBoolean("anc1_examination_general_Lcterus"));
                             anc1_examination_general_Clubbing.setChecked(response.getBoolean("anc1_examination_general_Clubbing"));
                             anc1_examination_general_Cyanosis.setChecked(response.getBoolean("anc1_examination_general_Cyanosis"));
                             anc1_examination_general_Edema.setChecked(response.getBoolean("anc1_examination_general_Edema"));
                             anc1_examination_general_Lymphadenopathy.setChecked(response.getBoolean("anc1_examination_general_Lymphadenopathy"));
-
                             anc1_examination_anthropometry_Height.setText(response.getString("anc1_examination_anthropometry_Height"));
                             anc1_examination_anthropometry_Weight.setText(response.getString("anc1_examination_anthropometry_Weight"));
                             anc1_examination_anthropometry_Bmi.setText(response.getString("anc1_examination_anthropometry_Bmi"));
@@ -1207,22 +1222,18 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_examination_vitals_ChestCVS.setText(response.getString("anc1_examination_vitals_ChestCVS"));
                             anc1_examination_vitals_PA.setText(response.getString("anc1_examination_vitals_PA"));
                             anc1_examination_vitals_Proteinuria = (Spinner) findViewById(R.id.anc1_examination_vitals_Proteinuria);
-
                             anc1_investigations_HIV.setChecked(response.getBoolean("anc1_investigations_HIV"));
                             anc1_investigations_Hbsag.setChecked(response.getBoolean("anc1_investigations_Hbsag"));
                             anc1_investigations_Vdrl.setChecked(response.getBoolean("anc1_investigations_Vdrl"));
                             anc1_investigations_UrineRM.setChecked(response.getBoolean("anc1_investigations_UrineRM"));
                             anc1_investigations_UrineCS.setChecked(response.getBoolean("anc1_investigations_UrineCS"));
-
                             anc1_investigations_HIV_switch.setChecked(response.getBoolean("anc1_investigations_HIV_switch"));
                             anc1_investigations_Hbsag_switch.setChecked(response.getBoolean("anc1_investigations_Hbsag_switch"));
                             anc1_investigations_Vdrl_switch.setChecked(response.getBoolean("anc1_investigations_Vdrl_switch"));
                             anc1_investigations_UrineRM_switch.setChecked(response.getBoolean("anc1_investigations_UrineRM_switch"));
                             anc1_investigations_UrineCS_switch.setChecked(response.getBoolean("anc1_investigations_UrineCS_switch"));
-
                             anc1_investigations_BloodGroup = (Spinner) findViewById(R.id.anc1_investigations_BloodGroup);
                             anc1_investigations_HusbandBloodGroup = (Spinner) findViewById(R.id.anc1_investigations_HusbandBloodGroup);
-
                             anc1_investigations_Hemogram.setText(response.getString("anc1_investigations_Hemogram"));
                             anc1_investigations_Tsh.setText(response.getString("anc1_investigations_Tsh"));
                             anc1_investigations_GTT_fast.setText(response.getString("anc1_investigations_GTT_fast"));
@@ -1235,7 +1246,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_investigations_ntnb_NT.setChecked(response.getBoolean("anc1_investigations_ntnb_NT"));
                             anc1_investigations_ntnb_Centile.setChecked(response.getBoolean("anc1_investigations_ntnb_Centile"));
                             anc1_investigations_ntnb_Text.setChecked(response.getBoolean("anc1_investigations_ntnb_Text"));
-
                             anc1_investigations_dualScreen_PAPP.setText(response.getString("anc1_investigations_dualScreen_PAPP"));
                             anc1_investigations_dualScreen_Bhcg.setText(response.getString("anc1_investigations_dualScreen_Bhcg"));
                             anc1_investigations_level2Usg_DoneNotDone.setText(response.getString("anc1_investigations_level2Usg_DoneNotDone"));
@@ -1250,25 +1260,21 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_advice_ICT.setText(response.getString("anc1_advice_ICT"));
                             anc1_advice_GeneralNutritional.setChecked(response.getBoolean("anc1_advice_GeneralNutritional"));
                             anc1_advice_GeneralAilments.setChecked(response.getBoolean("anc1_advice_GeneralAilments"));
-
                             anc1_general_BgNegICT.setText(response.getString("anc1_general_BgNegICT"));
                             anc1_general_TSH.setChecked(response.getBoolean("anc1_general_TSH"));
                             anc1_general_urineCulture_Nitrofur.setChecked(response.getBoolean("anc1_general_urineCulture_Nitrofur"));
                             anc1_general_urineCulture_Syp.setChecked(response.getBoolean("anc1_general_urineCulture_Syp"));
                             anc1_general_urineCulture_VitC.setChecked(response.getBoolean("anc1_general_urineCulture_VitC"));
                             anc1_general_urineCulture_PlentyFluids.setChecked(response.getBoolean("anc1_general_urineCulture_PlentyFluids"));
-
                             anc1_general_deranged_Fasting.setText(response.getString("anc1_general_deranged_Fasting"));
                             anc1_general_deranged_AfterBreakfast.setText(response.getString("anc1_general_deranged_AfterBreakfast"));
                             anc1_general_deranged_AfterLunch.setText(response.getString("anc1_general_deranged_AfterLunch"));
                             anc1_general_deranged_AfterDinner.setText(response.getString("anc1_general_deranged_AfterDinner"));
                             anc1_general_Others.setText(response.getString("anc1_general_Others"));
 
-                            newDate1.add(Calendar.DATE, 56);
-                            anc2_Date_Automatic.setText("20 Weeks - " + sdf.format(newDate1.getTime()));
+                            
                             anc2_Date.setText(response.getString("anc2_Date"));
                             anc2_POG.setText(response.getString("anc2_POG"));
-
                             anc2_history_ShortnessOfBreath.setChecked(response.getBoolean("anc2_history_ShortnessOfBreath"));
                             anc2_history_EasyFatiguability.setChecked(response.getBoolean("anc2_history_EasyFatiguability"));
                             anc2_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc2_history_HeadacheEpigastricPain"));
@@ -1276,7 +1282,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc2_history_BurningMicturition.setChecked(response.getBoolean("anc2_history_BurningMicturition"));
                             anc2_history_QuickeningPerceived.setChecked(response.getBoolean("anc2_history_QuickeningPerceived"));
                             anc2_history_Others.setText(response.getString("anc2_history_Others"));
-
                             anc2_examination_Pallor.setChecked(response.getBoolean("anc2_examination_Pallor"));
                             anc2_examination_PedalEdema.setChecked(response.getBoolean("anc2_examination_PedalEdema"));
                             anc2_examination_PR.setText(response.getString("anc2_examination_PR"));
@@ -1284,11 +1289,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc2_examination_Weight.setText(response.getString("anc2_examination_Weight"));
                             anc2_examination_PA2Weeks.setText(response.getString("anc2_examination_PA2Weeks"));
                             anc2_examination_Others.setText(response.getString("anc2_examination_Others"));
-
                             anc2_investigations_QuadrupleScreen.setText(response.getString("anc2_investigations_QuadrupleScreen"));
                             anc2_investigations_TfolateLessThan14Weeks.setChecked(response.getBoolean("anc2_investigations_TfolateLessThan14Weeks"));
                             anc2_investigations_TFeMoreThan14Weeks.setChecked(response.getBoolean("anc2_investigations_TFeMoreThan14Weeks"));
-
                             anc2_advice_OGTT.setChecked(response.getBoolean("anc2_advice_OGTT"));
                             anc2_advice_TfeOD.setChecked(response.getBoolean("anc2_advice_TfeOD"));
                             anc2_advice_TcaBD.setChecked(response.getBoolean("anc2_advice_TcaBD"));
@@ -1305,8 +1308,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc2_advice_CommonAilment.setText(response.getString("anc2_advice_CommonAilment"));
                             anc2_advice_Others.setText(response.getString("anc2_advice_Others"));
 
-                            newDate1.add(Calendar.DATE, 42);
-                            anc3_Date_Automatic.setText("26 Weeks - " + sdf.format(newDate1.getTime()));
+
                             anc3_history_ShortnessOfBreath.setChecked(response.getBoolean("anc3_history_ShortnessOfBreath"));
                             anc3_history_EasyFatigability.setChecked(response.getBoolean("anc3_history_EasyFatigability"));
                             anc3_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc3_history_HeadacheEpigastricPain"));
@@ -1315,7 +1317,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc3_history_BurningMicturition.setChecked(response.getBoolean("anc3_history_BurningMicturition"));
                             anc3_history_FetalMovements.setChecked(response.getBoolean("anc3_history_FetalMovements"));
                             anc3_history_Itching.setChecked(response.getBoolean("anc3_history_Itching"));
-
                             anc3_examination_Pallor.setChecked(response.getBoolean("anc3_examination_Pallor"));
                             anc3_examination_PedalEdema.setChecked(response.getBoolean("anc3_examination_PedalEdema"));
                             anc3_examination_PR.setText(response.getString("anc3_examination_PR"));
@@ -1323,12 +1324,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc3_examination_Weight.setText(response.getString("anc3_examination_Weight"));
                             anc3_examination_PA2Weeks.setText(response.getString("anc3_examination_PA2Weeks"));
                             anc3_examination_Others.setText(response.getString("anc3_examination_Others"));
-
                             anc3_investigations_CBC.setChecked(response.getBoolean("anc3_investigations_CBC"));
                             anc3_investigations_UrineCS.setChecked(response.getBoolean("anc3_investigations_UrineCS"));
                             anc3_investigations_ICT.setChecked(response.getBoolean("anc3_investigations_ICT"));
                             anc3_investigations_Others.setText(response.getString("anc3_investigations_Others"));
-
                             anc3_advice_TFeOD.setChecked(response.getBoolean("anc3_advice_TFeOD"));
                             anc3_advice_DFMCLLP.setChecked(response.getBoolean("anc3_advice_DFMCLLP"));
                             anc3_advice_InjTetanus.setChecked(response.getBoolean("anc3_advice_InjTetanus"));
@@ -1346,8 +1345,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc3_advice_ictNegative_InjAntiD300.setChecked(response.getBoolean("anc3_advice_ictNegative_InjAntiD300"));
 
 
-                            newDate1.add(Calendar.DATE, 28);
-                            anc4_Date_Automatic.setText("30 Weeks - " + sdf.format(newDate1.getTime()));
                             //        ANC4 Variables
                             anc4_history_ShortnessOfBreath.setChecked(response.getBoolean("anc4_history_ShortnessOfBreath"));
                             anc4_history_EasyFatiguability.setChecked(response.getBoolean("anc4_history_EasyFatiguability"));
@@ -1357,7 +1354,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc4_history_FetalMovements.setChecked(response.getBoolean("anc4_history_FetalMovements"));
                             anc4_history_Itching.setChecked(response.getBoolean("anc4_history_Itching"));
                             anc4_history_Others.setText(response.getString("anc4_history_Others"));
-
                             anc4_examination_Pallor.setChecked(response.getBoolean("anc4_examination_Pallor"));
                             anc4_examination_PedalEdema.setChecked(response.getBoolean("anc4_examination_PedalEdema"));
                             anc4_examination_PR.setText(response.getString("anc4_examination_PR"));
@@ -1374,7 +1370,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc4_examination_LFT_ALP.setText(response.getString("anc4_examination_LFT_ALP"));
                             anc4_examination_KFT_UREA.setText(response.getString("anc4_examination_KFT_UREA"));
                             anc4_examination_KFT_Creatinine.setText(response.getString("anc4_examination_KFT_Creatinine"));
-
                             anc4_advice_TFeOD.setChecked(response.getBoolean("anc4_advice_TFeOD"));
                             anc4_advice_TCaBD.setChecked(response.getBoolean("anc4_advice_TCaBD"));
                             anc4_advice_DFMC.setChecked(response.getBoolean("anc4_advice_DFMC"));
@@ -1389,8 +1384,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc4_advice_CommonAilment.setText(response.getString("anc4_advice_CommonAilment"));
                             anc4_advice_Others.setText(response.getString("anc4_advice_Others"));
 
-                            newDate1.add(Calendar.DATE, 28);
-                            anc5_Date_Automatic.setText("34 Weeks - " + sdf.format(newDate1.getTime()));
+
                             //        ANC5 Variables
                             anc5_history_ShortnessOfBreath.setChecked(response.getBoolean("anc5_history_ShortnessOfBreath"));
                             anc5_history_EasyFatiguability.setChecked(response.getBoolean("anc5_history_EasyFatiguability"));
@@ -1400,12 +1394,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc5_history_FetalMovements.setChecked(response.getBoolean("anc5_history_FetalMovements"));
                             anc5_history_Itching.setChecked(response.getBoolean("anc5_history_Itching"));
                             anc5_history_Others.setText(response.getString("anc5_history_Others"));
-
                             anc5_history_counseling_ModeOfDel_Vaginal.setChecked(response.getBoolean("anc5_history_counseling_ModeOfDel_Vaginal"));
                             anc5_history_counseling_ModeOfDel_LSCS.setChecked(response.getBoolean("anc5_history_counseling_ModeOfDel_LSCS"));
                             anc5_history_counseling_Timing.setText(response.getString("anc5_history_counseling_Timing"));
                             anc5_history_counseling_BirthAttendant.setChecked(response.getBoolean("anc5_history_counseling_BirthAttendant"));
-
                             anc5_examination_Pallor.setChecked(response.getBoolean("anc5_examination_Pallor"));
                             anc5_examination_PedalEdema.setChecked(response.getBoolean("anc5_examination_PedalEdema"));
                             anc5_examination_PR.setText(response.getString("anc5_examination_PR"));
@@ -1413,12 +1405,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc5_examination_Weight.setText(response.getString("anc5_examination_Weight"));
                             anc5_examination_PA2Weeks.setText(response.getString("anc5_examination_PA2Weeks"));
                             anc5_examination_Others.setText(response.getString("anc5_examination_Others"));
-
                             anc5_investigation_CBC.setChecked(response.getBoolean("anc5_investigation_CBC"));
                             anc5_investigation_LFT.setChecked(response.getBoolean("anc5_investigation_LFT"));
                             anc5_investigation_KFT.setChecked(response.getBoolean("anc5_investigation_KFT"));
                             anc5_investigation_Others.setText(response.getString("anc5_investigation_Others"));
-
                             anc5_USG_BPD_cm.setText(response.getString("anc5_USG_BPD_cm"));
                             anc5_USG_BPD_weeks.setText(response.getString("anc5_USG_BPD_weeks"));
                             anc5_USG_BPD_centile.setText(response.getString("anc5_USG_BPD_centile"));
@@ -1440,7 +1430,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc5_USG_UAPI_centile.setText(response.getString("anc5_USG_UAPI_centile"));
                             anc5_USG_MCAPI.setText(response.getString("anc5_USG_MCAPI"));
                             anc5_USG_MCAPI_centile.setText(response.getString("anc5_USG_MCAPI_centile"));
-
                             anc5_USG_CPR.setChecked(response.getBoolean("anc5_USG_CPR"));
                             anc5_advice_DFMCLLP.setChecked(response.getBoolean("anc5_advice_DFMCLLP"));
                             anc5_advice_TFeCa.setChecked(response.getBoolean("anc5_advice_TFeCa"));
@@ -1455,8 +1444,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc5_advice_review_AbdomenPain.setChecked(response.getBoolean("anc5_advice_review_AbdomenPain"));
                             anc5_advice_Others.setText(response.getString("anc5_advice_Others"));
 
-                            newDate1.add(Calendar.DATE, 14);
-                            anc6_Date_Automatic.setText("36 Weeks - " + sdf.format(newDate1.getTime()));
+
                             anc6_history_ShortnessOfBreath.setChecked(response.getBoolean("anc6_history_ShortnessOfBreath"));
                             anc6_history_EasyFatiguability.setChecked(response.getBoolean("anc6_history_EasyFatiguability"));
                             anc6_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc6_history_HeadacheEpigastricPain"));
@@ -1474,7 +1462,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc6_advice_review_Leaking.setChecked(response.getBoolean("anc6_advice_review_Leaking"));
                             anc6_advice_review_ReducedFM.setChecked(response.getBoolean("anc6_advice_review_ReducedFM"));
                             anc6_advice_review_AbdomenPain.setChecked(response.getBoolean("anc6_advice_review_AbdomenPain"));
-
                             anc6_history_Others.setText(response.getString("anc6_history_Others"));
                             anc6_examination_PR.setText(response.getString("anc6_examination_PR"));
                             anc6_examination_BP.setText(response.getString("anc6_examination_BP"));
@@ -1484,8 +1471,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc6_Pelvic.setText(response.getString("anc6_Pelvic"));
                             anc6_advice_Others.setText(response.getString("anc6_advice_Others"));
 
-                            newDate1.add(Calendar.DATE, 14);
-                            anc7_Date_Automatic.setText("38 Weeks - " + sdf.format(newDate1.getTime()));
+
                             anc7_history_ShortnessOfBreath.setChecked(response.getBoolean("anc7_history_ShortnessOfBreath"));
                             anc7_history_EasyFatiguability.setChecked(response.getBoolean("anc7_history_EasyFatiguability"));
                             anc7_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc7_history_HeadacheEpigastricPain"));
@@ -1502,7 +1488,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc7_advice_Leaking.setChecked(response.getBoolean("anc7_advice_Leaking"));
                             anc7_advice_ReducedFM.setChecked(response.getBoolean("anc7_advice_ReducedFM"));
                             anc7_advice_AbdomenPain.setChecked(response.getBoolean("anc7_advice_AbdomenPain"));
-
                             anc7_history_Others.setText(response.getString("anc7_history_Others"));
                             anc7_examination_PR.setText(response.getString("anc7_examination_PR"));
                             anc7_examination_BP.setText(response.getString("anc7_examination_BP"));
@@ -1512,8 +1497,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc7_advice_Others.setText(response.getString("anc7_advice_Others"));
 
 
-                            newDate1.add(Calendar.DATE, 16);
-                            anc8_Date_Automatic.setText("40 Weeks - " + sdf.format(newDate1.getTime()));
                             anc8_history_ShortnessOfBreath.setChecked(response.getBoolean("anc8_history_ShortnessOfBreath"));
                             anc8_history_EasyFatiguability.setChecked(response.getBoolean("anc8_history_EasyFatiguability"));
                             anc8_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc8_history_HeadacheEpigastricPain"));
@@ -1527,15 +1510,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc8_advice_DFMCLLP.setChecked(response.getBoolean("anc8_advice_DFMCLLP"));
                             anc8_advice_FeCa.setChecked(response.getBoolean("anc8_advice_FeCa"));
                             anc8_advice_Induction.setChecked(response.getBoolean("anc8_advice_Induction"));
-
                             anc8_history_Others.setText(response.getString("anc8_history_Others"));
                             anc8_examination_PR.setText(response.getString("anc8_examination_PR"));
                             anc8_examination_BP.setText(response.getString("anc8_examination_BP"));
                             anc8_examination_Weight.setText(response.getString("anc8_examination_Weight"));
                             anc8_examination_Others.setText(response.getString("anc8_examination_Others"));
                             anc8_advice_Others.setText(response.getString("anc8_advice_Others"));
-
-                            eddDate.setText(sdf.format(newDate1.getTime()));
 
                         } catch (JSONException e) {
                             Log.i("Error", e.toString());
