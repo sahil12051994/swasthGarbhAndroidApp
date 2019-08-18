@@ -36,6 +36,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
@@ -53,6 +54,7 @@ import android.widget.CompoundButton;
 import java.util.ResourceBundle;
 
 import static android.app.PendingIntent.getActivity;
+import static com.swasthgarbh.root.swasthgarbh.DoctorScreenForParticularPatient.p_id;
 import static com.swasthgarbh.root.swasthgarbh.patient_registration.session;
 
 public class patient_data_entry_bydoc extends AppCompatActivity {
@@ -326,6 +328,17 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //        }
     }
 
+    //private method of your class
+    private int getIndex(Spinner spinner, String myString){
+        for (int i=0;i<spinner.getCount();i++){
+            if (spinner.getItemAtPosition(i).toString().equalsIgnoreCase(myString)){
+                return i;
+            }
+        }
+
+        return 0;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -408,7 +421,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
             public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
                 anc2_Date_Calender.set(dayOfMonth, monthOfYear, year);
-                anc1_Date.setText(dateFormatterShow.format(anc2_Date_Calender.getTime()));
+                anc2_Date.setText(dateFormatterShow.format(anc2_Date_Calender.getTime()));
                 anc2_Date_String = dateFormatterShow.format(anc2_Date_Calender.getTime());
                 callDateDiff();
             }
@@ -1040,6 +1053,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             } else {
                                 anc1_elements.setVisibility(View.VISIBLE);
                             }
+                            anc1_Date.setText(response.getString("anc1_Date"));
                             anc1_History_Fever.setChecked(response.getBoolean("anc1_History_Fever"));
                             anc1_History_Rash.setChecked(response.getBoolean("anc1_History_Rash"));
                             anc1_History_Nausea.setChecked(response.getBoolean("anc1_History_Nausea"));
@@ -1067,7 +1081,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_examination_vitals_Temp.setText(response.getString("anc1_examination_vitals_Temp"));
                             anc1_examination_vitals_ChestCVS.setText(response.getString("anc1_examination_vitals_ChestCVS"));
                             anc1_examination_vitals_PA.setText(response.getString("anc1_examination_vitals_PA"));
-                            anc1_examination_vitals_Proteinuria = (Spinner) findViewById(R.id.anc1_examination_vitals_Proteinuria);
+                            anc1_examination_vitals_Proteinuria.setSelection(getIndex(anc1_examination_vitals_Proteinuria, response.getString("anc1_examination_vitals_Proteinuria")));
                             anc1_investigations_HIV.setChecked(response.getBoolean("anc1_investigations_HIV"));
                             anc1_investigations_Hbsag.setChecked(response.getBoolean("anc1_investigations_Hbsag"));
                             anc1_investigations_Vdrl.setChecked(response.getBoolean("anc1_investigations_Vdrl"));
@@ -1078,8 +1092,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_investigations_Vdrl_switch.setChecked(response.getBoolean("anc1_investigations_Vdrl_switch"));
                             anc1_investigations_UrineRM_switch.setChecked(response.getBoolean("anc1_investigations_UrineRM_switch"));
                             anc1_investigations_UrineCS_switch.setChecked(response.getBoolean("anc1_investigations_UrineCS_switch"));
-                            anc1_investigations_BloodGroup = (Spinner) findViewById(R.id.anc1_investigations_BloodGroup);
-                            anc1_investigations_HusbandBloodGroup = (Spinner) findViewById(R.id.anc1_investigations_HusbandBloodGroup);
+                            anc1_investigations_BloodGroup.setSelection(getIndex(anc1_investigations_BloodGroup, response.getString("anc1_investigations_BloodGroup")));
+                            anc1_investigations_HusbandBloodGroup.setSelection(getIndex(anc1_investigations_HusbandBloodGroup, response.getString("anc1_investigations_HusbandBloodGroup")));
                             anc1_investigations_Hemogram.setText(response.getString("anc1_investigations_Hemogram"));
                             anc1_investigations_Tsh.setText(response.getString("anc1_investigations_Tsh"));
                             anc1_investigations_GTT_fast.setText(response.getString("anc1_investigations_GTT_fast"));
@@ -1125,7 +1139,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                 anc2_elements.setVisibility(View.VISIBLE);
                             }
                             anc2_Date.setText(response.getString("anc2_Date"));
-                            anc2_POG.setText(response.getString("anc2_POG"));
+//                            anc2_POG.setText(response.getString("anc2_POG"));
                             anc2_history_ShortnessOfBreath.setChecked(response.getBoolean("anc2_history_ShortnessOfBreath"));
                             anc2_history_EasyFatiguability.setChecked(response.getBoolean("anc2_history_EasyFatiguability"));
                             anc2_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc2_history_HeadacheEpigastricPain"));
@@ -1165,6 +1179,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             } else {
                                 anc3_elements.setVisibility(View.VISIBLE);
                             }
+                            anc3_Date.setText(response.getString("anc3_Date"));
                             anc3_history_ShortnessOfBreath.setChecked(response.getBoolean("anc3_history_ShortnessOfBreath"));
                             anc3_history_EasyFatigability.setChecked(response.getBoolean("anc3_history_EasyFatigability"));
                             anc3_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc3_history_HeadacheEpigastricPain"));
@@ -1207,6 +1222,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             } else {
                                 anc4_elements.setVisibility(View.VISIBLE);
                             }
+                            anc4_Date.setText(response.getString("anc4_Date"));
                             anc4_history_ShortnessOfBreath.setChecked(response.getBoolean("anc4_history_ShortnessOfBreath"));
                             anc4_history_EasyFatiguability.setChecked(response.getBoolean("anc4_history_EasyFatiguability"));
                             anc4_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc4_history_HeadacheEpigastricPain"));
@@ -1253,6 +1269,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             } else {
                                 anc5_elements.setVisibility(View.VISIBLE);
                             }
+                            anc5_Date.setText(response.getString("anc5_Date"));
                             anc5_history_ShortnessOfBreath.setChecked(response.getBoolean("anc5_history_ShortnessOfBreath"));
                             anc5_history_EasyFatiguability.setChecked(response.getBoolean("anc5_history_EasyFatiguability"));
                             anc5_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc5_history_HeadacheEpigastricPain"));
@@ -1317,6 +1334,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             } else {
                                 anc6_elements.setVisibility(View.VISIBLE);
                             }
+                            anc6_Date.setText(response.getString("anc6_Date"));
                             anc6_history_ShortnessOfBreath.setChecked(response.getBoolean("anc6_history_ShortnessOfBreath"));
                             anc6_history_EasyFatiguability.setChecked(response.getBoolean("anc6_history_EasyFatiguability"));
                             anc6_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc6_history_HeadacheEpigastricPain"));
@@ -1349,6 +1367,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             } else {
                                 anc7_elements.setVisibility(View.VISIBLE);
                             }
+                            anc7_Date.setText(response.getString("anc7_Date"));
                             anc7_history_ShortnessOfBreath.setChecked(response.getBoolean("anc7_history_ShortnessOfBreath"));
                             anc7_history_EasyFatiguability.setChecked(response.getBoolean("anc7_history_EasyFatiguability"));
                             anc7_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc7_history_HeadacheEpigastricPain"));
@@ -1379,6 +1398,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             } else {
                                 anc8_elements.setVisibility(View.VISIBLE);
                             }
+                            anc8_Date.setText(response.getString("anc8_Date"));
                             anc8_history_ShortnessOfBreath.setChecked(response.getBoolean("anc8_history_ShortnessOfBreath"));
                             anc8_history_EasyFatiguability.setChecked(response.getBoolean("anc8_history_EasyFatiguability"));
                             anc8_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc8_history_HeadacheEpigastricPain"));
@@ -1511,6 +1531,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("investigations_Others", "" + investigations_Others.getText());
                     params.put("investigations_DrugHistory", "" + investigations_DrugHistory.getText());
 
+                    params.put("anc1_Date", "" + anc1_Date.getText());
                     params.put("anc1_History_Fever", "" + anc1_History_Fever.isChecked());
                     params.put("anc1_History_Rash", "" + anc1_History_Rash.isChecked());
                     params.put("anc1_History_Nausea", "" + anc1_History_Nausea.isChecked());
@@ -1592,7 +1613,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
 
                     params.put("anc2_Date", "" + anc2_Date.getText());
-                    params.put("anc2_POG", "" + anc2_POG.getText());
+//                    params.put("anc2_POG", "" + anc2_POG.getText());
                     params.put("anc2_history_ShortnessOfBreath", "" + anc2_history_ShortnessOfBreath.isChecked());
                     params.put("anc2_history_EasyFatiguability", "" + anc2_history_EasyFatiguability.isChecked());
                     params.put("anc2_history_HeadacheEpigastricPain", "" + anc2_history_HeadacheEpigastricPain.isChecked());
@@ -1627,7 +1648,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc2_advice_Others", "" + anc2_advice_Others.getText());
 
 
-
+                    params.put("anc3_Date", "" + anc3_Date.getText());
                     params.put("anc3_history_ShortnessOfBreath", "" + anc3_history_ShortnessOfBreath.isChecked());
                     params.put("anc3_history_EasyFatigability", "" + anc3_history_EasyFatigability.isChecked());
                     params.put("anc3_history_HeadacheEpigastricPain", "" + anc3_history_HeadacheEpigastricPain.isChecked());
@@ -1663,7 +1684,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc3_advice_review_AbdominalPain", "" + anc3_advice_review_AbdominalPain.isChecked());
                     params.put("anc3_advice_ictNegative_InjAntiD300", "" + anc3_advice_ictNegative_InjAntiD300.isChecked());
 
-
+                    params.put("anc4_Date", "" + anc4_Date.getText());
                     params.put("anc4_history_ShortnessOfBreath", "" + anc4_history_ShortnessOfBreath.isChecked());
                     params.put("anc4_history_EasyFatiguability", "" + anc4_history_EasyFatiguability.isChecked());
                     params.put("anc4_history_HeadacheEpigastricPain", "" + anc4_history_HeadacheEpigastricPain.isChecked());
@@ -1702,7 +1723,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc4_advice_CommonAilment", "" + anc4_advice_CommonAilment.getText());
                     params.put("anc4_advice_Others", "" + anc4_advice_Others.getText());
 
-
+                    params.put("anc5_Date", "" + anc5_Date.getText());
                     params.put("anc5_history_ShortnessOfBreath", "" + anc5_history_ShortnessOfBreath.isChecked());
                     params.put("anc5_history_EasyFatiguability", "" + anc5_history_EasyFatiguability.isChecked());
                     params.put("anc5_history_HeadacheEpigastricPain", "" + anc5_history_HeadacheEpigastricPain.isChecked());
@@ -1761,7 +1782,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc5_advice_review_AbdomenPain", "" + anc5_advice_review_AbdomenPain.isChecked());
                     params.put("anc5_advice_Others", "" + anc5_advice_Others.getText());
 
-
+                    params.put("anc6_Date", "" + anc6_Date.getText());
                     params.put("anc6_history_ShortnessOfBreath", "" + anc6_history_ShortnessOfBreath.isChecked());
                     params.put("anc6_history_EasyFatiguability", "" + anc6_history_EasyFatiguability.isChecked());
                     params.put("anc6_history_HeadacheEpigastricPain", "" + anc6_history_HeadacheEpigastricPain.isChecked());
@@ -1788,7 +1809,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc6_Pelvic", "" + anc6_Pelvic.getText());
                     params.put("anc6_advice_Others", "" + anc6_advice_Others.getText());
 
-
+                    params.put("anc7_Date", "" + anc7_Date.getText());
                     params.put("anc7_history_ShortnessOfBreath", "" + anc7_history_ShortnessOfBreath.isChecked());
                     params.put("anc7_history_EasyFatiguability", "" + anc7_history_EasyFatiguability.isChecked());
                     params.put("anc7_history_HeadacheEpigastricPain", "" + anc7_history_HeadacheEpigastricPain.isChecked());
@@ -1813,7 +1834,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc7_examination_Others", "" + anc7_examination_Others.getText());
                     params.put("anc7_advice_Others", "" + anc7_advice_Others.getText());
 
-
+                    params.put("anc8_Date", "" + anc8_Date.getText());
                     params.put("anc8_history_ShortnessOfBreath", "" + anc8_history_ShortnessOfBreath.isChecked());
                     params.put("anc8_history_EasyFatiguability", "" + anc8_history_EasyFatiguability.isChecked());
                     params.put("anc8_history_HeadacheEpigastricPain", "" + anc8_history_HeadacheEpigastricPain.isChecked());
@@ -1844,6 +1865,41 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc_8", "" + anc_8.isChecked());
                     params.put("investigations_box", "" + investigations_box.isChecked());
 
+                    String notfMessage = "";
+                    if(anc1_advice_GeneralNutritional.isChecked() || anc1_advice_GeneralAilments.isChecked()) {
+                        notfMessage += "Have a balanced diet.\n" +
+                                "Ensure adequate hydration and have 6-8 glasses of water daily\n" +
+                                "Ensure a daily diet with adequate protein, dairy products, fruit\n" +
+                                "Have folate rich foods like green leafy vegetables, legumes, beans\n" +
+                                "Have Vitamin C rich food daily\n" +
+                                "Have a High fibre diet\n" +
+                                "Take small, frequent meals\n" +
+                                "Avoid smoking/alcohol\n";
+
+                        notfMessage += "Take iron and calcium supplements daily as prescribed.\n" +
+                                "Iron should not be taken empty stomach\n" +
+                                "A gap of 2 hours should be kept between the ion and calcium tablets\n" +
+                                "Aim for daily moderate intensity activity for 30 minutes\n" +
+                                "Avoid lifting heavy weight\n";
+                    }
+
+                    if(anc1_History_Nausea.isChecked()) {
+                        notfMessage += "Drink plenty of fluids and maintain hydration\n" +
+                                "Eat small frequent meals\n" +
+                                "Have non greasy meals with little odor\n" +
+                                "Ginger or chamomile tea can help reduce morning sickness\n" +
+                                "If excessive, vitamin b6 supplements can be tried\n";
+                    }
+
+                    if(anc2_examination_PedalEdema.isChecked() || anc3_examination_PedalEdema.isChecked() || anc4_examination_PedalEdema.isChecked() || anc5_examination_PedalEdema.isChecked() || anc6_examination_PedalEdema.isChecked() || anc7_examination_PedalEdema.isChecked() || anc8_examination_PedalEdema.isChecked()) {
+                        notfMessage += "Rest with legs elevated\n" +
+                                "Lie in the left lateral position\n" +
+                                "Avoid sitting or standing for long periods\n";
+                    }
+                    notifGeneration(notfMessage);
+
+                    Intent intent = new Intent(patient_data_entry_bydoc.this, AllPatientListActivity.class);
+                    startActivity(intent);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -1856,6 +1912,61 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("Authorization", "Token " + session.getUserDetails().get("Token"));
                 Log.d("TAG", "Token " + session.getUserDetails().get("Token"));
+                return params;
+            }
+        };
+        ApplicationController.getInstance().addToRequestQueue(jsonObjReq);
+    }
+
+    public void notifGeneration(String notfMessage) {
+        String url = ApplicationController.get_base_url() + "dhadkan/api/notification";
+        final String finalNotfMessage = notfMessage;
+        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+                url, null,
+                new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.d("TAG", response.toString());
+
+//
+                        try {
+                            JSONArray patient_details = response.getJSONArray("data");
+                            Log.d("TAG", patient_details.toString());
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+//                            edit.commit();
+                    }
+                }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("TAG", "Error Message: " + error.getMessage());
+            }
+        }) {
+            @Override
+            public byte[] getBody() {
+                JSONObject params = new JSONObject();
+
+                try {
+                    params.put("p_id", p_id);
+                    params.put("message", "" + finalNotfMessage);
+                    params.put("to", "" + clickedPatientId);
+                    params.put("from", "" + "me");
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                return params.toString().getBytes();
+
+            }
+
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("Authorization", "Token " + session.getUserDetails().get("Token"));;
                 return params;
             }
         };
