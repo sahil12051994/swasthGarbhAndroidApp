@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -255,77 +257,84 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
     String lmpDateString;
 
-    void callDateDiff(String p) {
-        Log.d("p =", p);
-        g = p.split("-")[1];
-        g = g.trim();
-        Log.d("g =", g);
+    void callDateDiff() {
+        String[] temp = anc1_Date_String.split("-");
+        String date_year = temp[2];
+        String date_month = temp[1];
+        String date_date = temp[0];
+
+        anc1_Date_String = date_date + "/" + date_month + "/" + date_year;
+//        Log.d("ancdatee =", anc1_Date_String);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
         try {
-            Date d = sdf.parse(g);
-            Log.i("d1", g);
+            Date d1 = sdf.parse(anc1_Date_String);
+//            Log.i("d1", anc1_Date_String);
             Date d2 = sdf.parse(lmpDateString);
-            Log.i("d1", lmpDateString);
-            long diff = d.getTime() - d2.getTime();
-            Log.i("difference", "" + diff);
+//            Log.i("d1", lmpDateString);
+            long diff = d1.getTime() - d2.getTime();
+//            Log.i("difference", "" + diff);
             long days = diff / (24 * 60 * 60 * 1000);
             long month = days / 30;
+
             days = days % 30;
 
-//                Log.i ("month", "" + month);
-//                Log.i ("days", "" + days);
-            String t = "";
+//            Log.i("month", "" + month);
+//            Log.i("days", "" + days);
+            String m = "";
             if (month == 1) {
-                t = month + " Month " + " and " + days + " Days";
+                m = month + " Month " + " and " + days + " Days";
             } else if (month > 1) {
-                t = month + " Months " + " and " + days + " Days";
+                m = month + " Months " + " and " + days + " Days";
+            } else {
+                Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
-            Log.d("final =", t);
-            anc2_POG.setText(t);
+            Log.d("final m =", m);
+            anc1_POG.setText(m);
 
         } catch (ParseException e) {
             e.printStackTrace();
         }
     }
 
-    void callDateDiff() {
-//        String[] temp = anc_1_dateTime.split("-");
-//        String date_year = temp[2];
-//        String date_month = temp[1];
-//        String date_date = temp[0];
-//
-//        anc_1_dateTime = date_date + "/" + date_month + "/" + date_year;
-//        Log.d("ancdatee =", anc_1_dateTime);
-//        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-//
-//        try {
-//            Date d1 = sdf.parse(anc_1_dateTime);
-//            Log.i("d1", anc_1_dateTime);
-//            Date d2 = sdf.parse(lmpDateString);
+    void callDateDiff2() {
+        String[] temp = anc2_Date_String.split("-");
+        String date_year = temp[2];
+        String date_month = temp[1];
+        String date_date = temp[0];
+
+        anc2_Date_String = date_date + "/" + date_month + "/" + date_year;
+        Log.d("ancdatee =", anc2_Date_String);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+        try {
+            Date d1 = sdf.parse(anc2_Date_String);
+//            Log.i("d1", anc2_Date_String);
+            Date d2 = sdf.parse(lmpDateString);
 //            Log.i("d1", lmpDateString);
-//            long diff = d1.getTime() - d2.getTime();
+            long diff = d1.getTime() - d2.getTime();
 //            Log.i("difference", "" + diff);
-//            long days = diff / (24 * 60 * 60 * 1000);
-//            long month = days / 30;
-//
-//            days = days % 30;
-//
+            long days = diff / (24 * 60 * 60 * 1000);
+            long month = days / 30;
+
+            days = days % 30;
+
 //            Log.i("month", "" + month);
 //            Log.i("days", "" + days);
-//            String m = "";
-//            if (month == 1) {
-//                m = month + " Month " + " and " + days + " Days";
-//            } else if (month > 1) {
-//                m = month + " Months " + " and " + days + " Days";
-//            } else {
-//                Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
-//            }
-//            Log.d("final m =", m);
-//            anc1_POG.setText(m);
-//
-//        } catch (ParseException e) {
-//            e.printStackTrace();
-//        }
+            String m = "";
+            if (month == 1) {
+                m = month + " Month " + " and " + days + " Days";
+            } else if (month > 1) {
+                m = month + " Months " + " and " + days + " Days";
+            } else {
+                Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
+            }
+            Log.d("final m =", m);
+            anc2_POG.setText(m);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     //private method of your class
@@ -406,94 +415,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             }
         });
 
-        anc1_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-
-            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
-                anc1_Date_Calender.set(dayOfMonth, monthOfYear, year);
-                anc1_Date.setText(dateFormatterShow.format(anc1_Date_Calender.getTime()));
-                anc1_Date_String = dateFormatterShow.format(anc1_Date_Calender.getTime());
-                callDateDiff();
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-
-        anc2_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-
-            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
-                anc2_Date_Calender.set(dayOfMonth, monthOfYear, year);
-                anc2_Date.setText(dateFormatterShow.format(anc2_Date_Calender.getTime()));
-                anc2_Date_String = dateFormatterShow.format(anc2_Date_Calender.getTime());
-                callDateDiff();
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-
-        anc3_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-
-            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
-                anc3_Date_Calender.set(dayOfMonth, monthOfYear, year);
-                anc3_Date.setText(dateFormatterShow.format(anc3_Date_Calender.getTime()));
-                anc3_Date_String = dateFormatterShow.format(anc3_Date_Calender.getTime());
-                callDateDiff();
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-
-        anc4_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-
-            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
-                anc4_Date_Calender.set(dayOfMonth, monthOfYear, year);
-                anc4_Date.setText(dateFormatterShow.format(anc4_Date_Calender.getTime()));
-                anc4_Date_String = dateFormatterShow.format(anc4_Date_Calender.getTime());
-                callDateDiff();
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-
-        anc5_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-
-            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
-                anc5_Date_Calender.set(dayOfMonth, monthOfYear, year);
-                anc5_Date.setText(dateFormatterShow.format(anc5_Date_Calender.getTime()));
-                anc5_Date_String = dateFormatterShow.format(anc5_Date_Calender.getTime());
-                callDateDiff();
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-
-        anc6_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-
-            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
-                anc6_Date_Calender.set(dayOfMonth, monthOfYear, year);
-                anc6_Date.setText(dateFormatterShow.format(anc6_Date_Calender.getTime()));
-                anc6_Date_String = dateFormatterShow.format(anc6_Date_Calender.getTime());
-                callDateDiff();
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-
-        anc7_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-
-            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
-                anc7_Date_Calender.set(dayOfMonth, monthOfYear, year);
-                anc7_Date.setText(dateFormatterShow.format(anc7_Date_Calender.getTime()));
-                anc7_Date_String = dateFormatterShow.format(anc7_Date_Calender.getTime());
-                callDateDiff();
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-
-        anc8_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-
-            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
-                anc8_Date_Calender.set(dayOfMonth, monthOfYear, year);
-                anc8_Date.setText(dateFormatterShow.format(anc8_Date_Calender.getTime()));
-                anc8_Date_String = dateFormatterShow.format(anc8_Date_Calender.getTime());
-                callDateDiff();
-            }
-
-        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
-
         investigations_ChronicHyper = (CheckBox) findViewById(R.id.investigations_ChronicHyper);
         investigations_Type2 = (CheckBox) findViewById(R.id.investigations_Type2);
         investigations_ChronicLiverDisease = (CheckBox) findViewById(R.id.investigations_ChronicLiverDisease);
@@ -508,6 +429,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         investigations_DrugHistory = (EditText) findViewById(R.id.investigations_DrugHistory);
 
 //        ANC1 Variables
+        anc1_POG = (EditText) findViewById(R.id.anc1_POG);
         anc1_History_Fever = (CheckBox) findViewById(R.id.anc1_History_Fever);
         anc1_History_Rash = (CheckBox) findViewById(R.id.anc1_History_Rash);
         anc1_History_Nausea = (CheckBox) findViewById(R.id.anc1_History_Nausea);
@@ -532,6 +454,49 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc1_examination_anthropometry_Height = (EditText) findViewById(R.id.anc1_examination_anthropometry_Height);
         anc1_examination_anthropometry_Weight = (EditText) findViewById(R.id.anc1_examination_anthropometry_Weight);
         anc1_examination_anthropometry_Bmi = (EditText) findViewById(R.id.anc1_examination_anthropometry_Bmi);
+
+        anc1_examination_anthropometry_Height.addTextChangedListener(new TextWatcher() {
+
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
+                Integer height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Integer) Integer.parseInt(String.valueOf(anc1_examination_anthropometry_Height.getText()));
+                Integer weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Integer) Integer.parseInt(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
+                int BMI = weight / (height * height);
+                anc1_examination_anthropometry_Bmi.setText(String.valueOf(BMI));
+            }
+
+
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+
+            }
+
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        anc1_examination_anthropometry_Weight.addTextChangedListener(new TextWatcher() {
+
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
+                Integer height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Integer) Integer.parseInt(String.valueOf(anc1_examination_anthropometry_Height.getText()));
+                Integer weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Integer) Integer.parseInt(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
+                int BMI = weight / (height * height);
+                anc1_examination_anthropometry_Bmi.setText(String.valueOf(BMI));
+            }
+
+
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+
+            }
+
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         anc1_examination_vitals_Pr = (EditText) findViewById(R.id.anc1_examination_vitals_Pr);
         anc1_examination_vitals_Bp = (EditText) findViewById(R.id.anc1_examination_vitals_Bp);
         anc1_examination_vitals_Rr = (EditText) findViewById(R.id.anc1_examination_vitals_Rr);
@@ -599,6 +564,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //        ANC2 Variables
         anc2_Date = (EditText) findViewById(R.id.anc2_Date);
         anc2_POG = (EditText) findViewById(R.id.anc2_POG);
+//        anc2_POG.setVisibility(View.GONE);
 
         anc2_history_ShortnessOfBreath = (CheckBox) findViewById(R.id.anc2_history_ShortnessOfBreath);
         anc2_history_EasyFatiguability = (CheckBox) findViewById(R.id.anc2_history_EasyFatiguability);
@@ -1054,6 +1020,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                 anc1_elements.setVisibility(View.VISIBLE);
                             }
                             anc1_Date.setText(response.getString("anc1_Date"));
+                            anc1_POG.setText(response.getString("anc1_POG"));
                             anc1_History_Fever.setChecked(response.getBoolean("anc1_History_Fever"));
                             anc1_History_Rash.setChecked(response.getBoolean("anc1_History_Rash"));
                             anc1_History_Nausea.setChecked(response.getBoolean("anc1_History_Nausea"));
@@ -1139,7 +1106,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                 anc2_elements.setVisibility(View.VISIBLE);
                             }
                             anc2_Date.setText(response.getString("anc2_Date"));
-//                            anc2_POG.setText(response.getString("anc2_POG"));
+                            Log.i("jajajajajajajajaaj", "onResponse: " + response.getString("anc2_POG"));
+                            anc2_POG.setText(response.getString("anc2_POG"));
                             anc2_history_ShortnessOfBreath.setChecked(response.getBoolean("anc2_history_ShortnessOfBreath"));
                             anc2_history_EasyFatiguability.setChecked(response.getBoolean("anc2_history_EasyFatiguability"));
                             anc2_history_HeadacheEpigastricPain.setChecked(response.getBoolean("anc2_history_HeadacheEpigastricPain"));
@@ -1485,6 +1453,89 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         adapterHusbandBloodGroup.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerHusbandBloodGroup.setAdapter(adapterHusbandBloodGroup);
 
+
+        anc1_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
+                anc1_Date_Calender.set(dayOfMonth, monthOfYear, year);
+                anc1_Date.setText(dateFormatterShow.format(anc1_Date_Calender.getTime()));
+                anc1_Date_String = dateFormatterShow.format(anc1_Date_Calender.getTime());
+                callDateDiff();
+            }
+
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
+        anc2_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
+                anc2_Date_Calender.set(dayOfMonth, monthOfYear, year);
+                anc2_Date.setText(dateFormatterShow.format(anc2_Date_Calender.getTime()));
+                anc2_Date_String = dateFormatterShow.format(anc2_Date_Calender.getTime());
+                callDateDiff2();
+            }
+
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
+        anc3_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
+                anc3_Date_Calender.set(dayOfMonth, monthOfYear, year);
+                anc3_Date.setText(dateFormatterShow.format(anc3_Date_Calender.getTime()));
+                anc3_Date_String = dateFormatterShow.format(anc3_Date_Calender.getTime());
+            }
+
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
+        anc4_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
+                anc4_Date_Calender.set(dayOfMonth, monthOfYear, year);
+                anc4_Date.setText(dateFormatterShow.format(anc4_Date_Calender.getTime()));
+                anc4_Date_String = dateFormatterShow.format(anc4_Date_Calender.getTime());
+            }
+
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
+        anc5_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
+                anc5_Date_Calender.set(dayOfMonth, monthOfYear, year);
+                anc5_Date.setText(dateFormatterShow.format(anc5_Date_Calender.getTime()));
+                anc5_Date_String = dateFormatterShow.format(anc5_Date_Calender.getTime());
+            }
+
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
+        anc6_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
+                anc6_Date_Calender.set(dayOfMonth, monthOfYear, year);
+                anc6_Date.setText(dateFormatterShow.format(anc6_Date_Calender.getTime()));
+                anc6_Date_String = dateFormatterShow.format(anc6_Date_Calender.getTime());
+            }
+
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
+        anc7_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
+                anc7_Date_Calender.set(dayOfMonth, monthOfYear, year);
+                anc7_Date.setText(dateFormatterShow.format(anc7_Date_Calender.getTime()));
+                anc7_Date_String = dateFormatterShow.format(anc7_Date_Calender.getTime());
+            }
+
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
+        anc8_datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+
+            public void onDateSet(DatePicker view, int dayOfMonth, int monthOfYear, int year) {
+                anc8_Date_Calender.set(dayOfMonth, monthOfYear, year);
+                anc8_Date.setText(dateFormatterShow.format(anc8_Date_Calender.getTime()));
+                anc8_Date_String = dateFormatterShow.format(anc8_Date_Calender.getTime());
+            }
+
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+
     }
 
     public void updateData() {
@@ -1503,6 +1554,41 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //                        pb.setVisibility(View.GONE);
 //                        startActivity(i);
 //                        finish();
+                        String notfMessage = "";
+                        if(anc1_advice_GeneralNutritional.isChecked() || anc1_advice_GeneralAilments.isChecked()) {
+                            notfMessage += "Have a balanced diet.\n" +
+                                    "Ensure adequate hydration and have 6-8 glasses of water daily\n" +
+                                    "Ensure a daily diet with adequate protein, dairy products, fruit\n" +
+                                    "Have folate rich foods like green leafy vegetables, legumes, beans\n" +
+                                    "Have Vitamin C rich food daily\n" +
+                                    "Have a High fibre diet\n" +
+                                    "Take small, frequent meals\n" +
+                                    "Avoid smoking/alcohol\n";
+
+                            notfMessage += "Take iron and calcium supplements daily as prescribed.\n" +
+                                    "Iron should not be taken empty stomach\n" +
+                                    "A gap of 2 hours should be kept between the ion and calcium tablets\n" +
+                                    "Aim for daily moderate intensity activity for 30 minutes\n" +
+                                    "Avoid lifting heavy weight\n";
+                        }
+
+                        if(anc1_History_Nausea.isChecked()) {
+                            notfMessage += "Drink plenty of fluids and maintain hydration\n" +
+                                    "Eat small frequent meals\n" +
+                                    "Have non greasy meals with little odor\n" +
+                                    "Ginger or chamomile tea can help reduce morning sickness\n" +
+                                    "If excessive, vitamin b6 supplements can be tried\n";
+                        }
+
+                        if(anc2_examination_PedalEdema.isChecked() || anc3_examination_PedalEdema.isChecked() || anc4_examination_PedalEdema.isChecked() || anc5_examination_PedalEdema.isChecked() || anc6_examination_PedalEdema.isChecked() || anc7_examination_PedalEdema.isChecked() || anc8_examination_PedalEdema.isChecked()) {
+                            notfMessage += "Rest with legs elevated\n" +
+                                    "Lie in the left lateral position\n" +
+                                    "Avoid sitting or standing for long periods\n";
+                        }
+//                    notifGeneration(notfMessage);
+
+                        Intent intent = new Intent(patient_data_entry_bydoc.this, AllPatientListActivity.class);
+                        startActivity(intent);
                     }
                 }, new Response.ErrorListener() {
 
@@ -1532,6 +1618,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("investigations_DrugHistory", "" + investigations_DrugHistory.getText());
 
                     params.put("anc1_Date", "" + anc1_Date.getText());
+                    params.put("anc1_POG", "" + anc1_POG.getText());
                     params.put("anc1_History_Fever", "" + anc1_History_Fever.isChecked());
                     params.put("anc1_History_Rash", "" + anc1_History_Rash.isChecked());
                     params.put("anc1_History_Nausea", "" + anc1_History_Nausea.isChecked());
@@ -1613,7 +1700,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
 
                     params.put("anc2_Date", "" + anc2_Date.getText());
-//                    params.put("anc2_POG", "" + anc2_POG.getText());
+                    params.put("anc2_POG", "" + anc2_POG.getText());
                     params.put("anc2_history_ShortnessOfBreath", "" + anc2_history_ShortnessOfBreath.isChecked());
                     params.put("anc2_history_EasyFatiguability", "" + anc2_history_EasyFatiguability.isChecked());
                     params.put("anc2_history_HeadacheEpigastricPain", "" + anc2_history_HeadacheEpigastricPain.isChecked());
@@ -1865,53 +1952,18 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc_8", "" + anc_8.isChecked());
                     params.put("investigations_box", "" + investigations_box.isChecked());
 
-                    String notfMessage = "";
-                    if(anc1_advice_GeneralNutritional.isChecked() || anc1_advice_GeneralAilments.isChecked()) {
-                        notfMessage += "Have a balanced diet.\n" +
-                                "Ensure adequate hydration and have 6-8 glasses of water daily\n" +
-                                "Ensure a daily diet with adequate protein, dairy products, fruit\n" +
-                                "Have folate rich foods like green leafy vegetables, legumes, beans\n" +
-                                "Have Vitamin C rich food daily\n" +
-                                "Have a High fibre diet\n" +
-                                "Take small, frequent meals\n" +
-                                "Avoid smoking/alcohol\n";
-
-                        notfMessage += "Take iron and calcium supplements daily as prescribed.\n" +
-                                "Iron should not be taken empty stomach\n" +
-                                "A gap of 2 hours should be kept between the ion and calcium tablets\n" +
-                                "Aim for daily moderate intensity activity for 30 minutes\n" +
-                                "Avoid lifting heavy weight\n";
-                    }
-
-                    if(anc1_History_Nausea.isChecked()) {
-                        notfMessage += "Drink plenty of fluids and maintain hydration\n" +
-                                "Eat small frequent meals\n" +
-                                "Have non greasy meals with little odor\n" +
-                                "Ginger or chamomile tea can help reduce morning sickness\n" +
-                                "If excessive, vitamin b6 supplements can be tried\n";
-                    }
-
-                    if(anc2_examination_PedalEdema.isChecked() || anc3_examination_PedalEdema.isChecked() || anc4_examination_PedalEdema.isChecked() || anc5_examination_PedalEdema.isChecked() || anc6_examination_PedalEdema.isChecked() || anc7_examination_PedalEdema.isChecked() || anc8_examination_PedalEdema.isChecked()) {
-                        notfMessage += "Rest with legs elevated\n" +
-                                "Lie in the left lateral position\n" +
-                                "Avoid sitting or standing for long periods\n";
-                    }
-                    notifGeneration(notfMessage);
-
-                    Intent intent = new Intent(patient_data_entry_bydoc.this, AllPatientListActivity.class);
-                    startActivity(intent);
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+                Log.i("Objectt", "getBody: " + params.toString());
                 return params.toString().getBytes();
             }
 
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
+                params.put("Content-Type", "application/json");
                 params.put("Authorization", "Token " + session.getUserDetails().get("Token"));
-                Log.d("TAG", "Token " + session.getUserDetails().get("Token"));
                 return params;
             }
         };
@@ -1919,7 +1971,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     }
 
     public void notifGeneration(String notfMessage) {
-        String url = ApplicationController.get_base_url() + "dhadkan/api/notification";
+        String url = ApplicationController.get_base_url() + "sg/api/notification";
         final String finalNotfMessage = notfMessage;
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
                 url, null,
@@ -1927,7 +1979,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
                     @Override
                     public void onResponse(JSONObject response) {
-                        Log.d("TAG", response.toString());
+//                        Log.d("TAG", response.toString());
 
 //
                         try {
@@ -1966,6 +2018,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
+                params.put("Content-Type", "application/json");
                 params.put("Authorization", "Token " + session.getUserDetails().get("Token"));;
                 return params;
             }
