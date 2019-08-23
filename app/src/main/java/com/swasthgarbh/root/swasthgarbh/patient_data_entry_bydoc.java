@@ -76,40 +76,30 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //    ANC1 Variables
     EditText anc1_Date;
     EditText anc1_POG;
-
     CheckBox anc1_History_Fever, anc1_History_Rash, anc1_History_Nausea, anc1_History_Bleeding, anc1_History_AbdomenPain, anc1_History_DrugIntake, anc1_History_Smoking, anc1_History_Alcohol, anc1_History_TobaccoIntake, anc1_History_CaffeineIntake, anc1_History_IntimatePartnerViolence;
     EditText anc1_history_Others;
-
     CheckBox anc1_examination_general_Pallor, anc1_examination_general_Lcterus, anc1_examination_general_Clubbing, anc1_examination_general_Cyanosis, anc1_examination_general_Edema, anc1_examination_general_Lymphadenopathy;
     EditText anc1_examination_anthropometry_Height, anc1_examination_anthropometry_Weight, anc1_examination_anthropometry_Bmi;
     EditText anc1_examination_vitals_Pr, anc1_examination_vitals_Bp, anc1_examination_vitals_Rr, anc1_examination_vitals_Temp, anc1_examination_vitals_ChestCVS, anc1_examination_vitals_PA;
     Spinner anc1_examination_vitals_Proteinuria;
-
     CheckBox anc1_investigations_HIV, anc1_investigations_Hbsag, anc1_investigations_Vdrl, anc1_investigations_UrineRM, anc1_investigations_UrineCS;
     Switch anc1_investigations_HIV_switch, anc1_investigations_Hbsag_switch, anc1_investigations_Vdrl_switch, anc1_investigations_UrineRM_switch, anc1_investigations_UrineCS_switch;
     Spinner anc1_investigations_BloodGroup, anc1_investigations_HusbandBloodGroup;
     EditText anc1_investigations_Hemogram, anc1_investigations_Tsh;
-//    EditText anc1_investigations_GTT_fast, anc1_investigations_GTT_1Hour, anc1_investigations_GTT_2Hour;
-
     EditText anc1_investigations_bloodSugar_Fasting, anc1_investigations_bloodSugar_PostPrandial;
     EditText anc1_investigations_ntnb_DoneNotDone;
     CheckBox anc1_investigations_ntnb_CRL, anc1_investigations_ntnb_NT, anc1_investigations_ntnb_Centile, anc1_investigations_ntnb_Text;
     EditText anc1_investigations_dualScreen_PAPP, anc1_investigations_dualScreen_Bhcg;
     EditText anc1_investigations_level2Usg_DoneNotDone, anc1_investigations_level2Usg_NormalAbnormal;
-
-
     CheckBox anc1_investigations_GTT;
-
     CheckBox anc1_advice_GTT, anc1_advice_BloodSugar, anc1_advice_NtNbScan, anc1_advice_DualScreen, anc1_advice_LeftUterineArteryPl, anc1_advice_RightUterineArteryPl, anc1_advice_PIGF, anc1_advice_ICT;
     CheckBox anc1_advice_GeneralNutritional, anc1_advice_GeneralAilments;
     CheckBox anc1_advice_Level2USG;
     CheckBox anc1_advice_TfolateLessThan14Weeks, anc1_advice_TFeMoreThan14Weeks;
     CheckBox anc1_advice_NauseaVomiting, anc1_advice_HeatBurn, anc1_advice_Constipation, anc1_advice_PedalEdema, anc1_advice_LegCramps;
-
     EditText anc1_general_BgNegICT;
     CheckBox anc1_general_TSH;
     CheckBox anc1_general_urineCulture_Nitrofur, anc1_general_urineCulture_Syp, anc1_general_urineCulture_VitC, anc1_general_urineCulture_PlentyFluids;
-
     EditText anc1_general_deranged_Fasting, anc1_general_deranged_AfterBreakfast, anc1_general_deranged_AfterLunch, anc1_general_deranged_AfterDinner;
     EditText anc1_general_Others;
 
@@ -118,46 +108,35 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc2_POG;
     CheckBox anc2_history_ShortnessOfBreath, anc2_history_EasyFatiguability, anc2_history_HeadacheEpigastricPain, anc2_history_BleedingSpottingPv, anc2_history_BurningMicturition, anc2_history_QuickeningPerceived;
     EditText anc2_history_Others;
-
     CheckBox anc2_examination_Pallor, anc2_examination_PedalEdema;
     EditText anc2_examination_PR, anc2_examination_BP, anc2_examination_Weight, anc2_examination_PA2Weeks;
     EditText anc2_examination_Others;
-
     EditText anc2_investigations_QuadrupleScreen;
-
     CheckBox anc2_advice_OGTT, anc2_advice_TfeOD, anc2_advice_TcaBD, anc2_advice_Tetanus, anc2_advice_QuadrupleScreen, anc2_advice_FetalEcho;
-
     CheckBox anc2_advice_HbLess10_TAlbendazole, anc2_advice_HbLess10_TFeBD, anc2_advice_HbLess10_Hplc, anc2_advice_HbLess10_PeripheralSmear, anc2_advice_HbLess10_SerumIron;
     EditText anc2_advice_Nutritional, anc2_advice_GeneralAdvice, anc2_advice_CommonAilment;
     EditText anc2_advice_Others;
 
 //    ANC3 Variables
     CheckBox anc3_history_ShortnessOfBreath, anc3_history_EasyFatigability, anc3_history_HeadacheEpigastricPain, anc3_history_BleedingSpottingPv, anc3_history_LeakingDischargePv, anc3_history_BurningMicturition, anc3_history_FetalMovements, anc3_history_Itching;
-
     CheckBox anc3_examination_Pallor, anc3_examination_PedalEdema;
     EditText anc3_examination_PR, anc3_examination_BP, anc3_examination_Weight, anc3_examination_PA2Weeks, anc3_examination_Others;
-
     CheckBox anc3_investigations_CBC, anc3_investigations_UrineCS, anc3_investigations_ICT;
     EditText anc3_investigations_Others;
-
     CheckBox anc3_advice_TFeOD, anc3_advice_DFMCLLP, anc3_advice_InjTetanus, anc3_advice_CBC, anc3_advice_LFT, anc3_advice_KFT;
     CheckBox anc3_advice_GTT;
     CheckBox anc3_advice_review_BleedingPV, anc3_advice_review_SpottingPV, anc3_advice_review_LeakingPV, anc3_advice_review_ReducedFetalMovement, anc3_advice_review_AbdominalPain;
     CheckBox anc3_advice_ictNegative_InjAntiD300;
-
     EditText anc3_advice_Nutritional, anc3_advice_General, anc_3_common_ailment, anc3_advice_Others;
 
 //    ANC4 Variables
     CheckBox anc4_history_ShortnessOfBreath, anc4_history_EasyFatiguability, anc4_history_HeadacheEpigastricPain, anc4_history_BleedingSpottingPV, anc4_history_BurningMicturition, anc4_history_FetalMovements, anc4_history_Itching;
     EditText anc4_history_Others;
-
     CheckBox anc4_examination_Pallor, anc4_examination_PedalEdema;
     EditText anc4_examination_PR, anc4_examination_BP, anc4_examination_Weight, anc4_examination_PA2Weeks, anc4_examination_UrineCulture, anc4_examination_ICT;
-
     EditText anc4_examination_CBC_HB, anc4_examination_CBC_TLC, anc4_examination_CBC_Platelets;
     EditText anc4_examination_LFT_OT, anc4_examination_LFT_PT, anc4_examination_LFT_ALP;
     EditText anc4_examination_KFT_UREA, anc4_examination_KFT_Creatinine;
-
     CheckBox anc4_advice_TFeOD, anc4_advice_TCaBD, anc4_advice_DFMC, anc4_advice_USG;
     CheckBox anc4_advice_review_Bleeding, anc4_advice_review_Spotting, anc4_advice_review_Leaking, anc4_advice_review_ReducedFM, anc4_advice_review_AbdomenPain;
     EditText anc4_advice_Nutritional, anc4_advice_General, anc4_advice_CommonAilment, anc4_advice_Others;
@@ -165,16 +144,13 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //    ANC5 Variables
     CheckBox anc5_history_ShortnessOfBreath, anc5_history_EasyFatiguability, anc5_history_HeadacheEpigastricPain, anc5_history_BleedingSpottingPV, anc5_history_BurningMicturition, anc5_history_FetalMovements, anc5_history_Itching;
     EditText anc5_history_Others;
-
     CheckBox anc5_history_counseling_ModeOfDel_Vaginal, anc5_history_counseling_ModeOfDel_LSCS;
     EditText anc5_history_counseling_Timing;
     CheckBox anc5_history_counseling_BirthAttendant;
-
     CheckBox anc5_examination_Pallor, anc5_examination_PedalEdema;
     EditText anc5_examination_PR, anc5_examination_BP, anc5_examination_Weight, anc5_examination_PA2Weeks, anc5_examination_Others;
     CheckBox anc5_investigation_CBC, anc5_investigation_LFT, anc5_investigation_KFT;
     EditText anc5_investigation_Others;
-
     EditText anc5_USG_BPD_cm, anc5_USG_BPD_weeks, anc5_USG_BPD_centile;
     EditText anc5_USG_HC_cm, anc5_USG_HC_weeks, anc5_USG_HC_centile;
     EditText anc5_USG_AC_cm, anc5_USG_AC_weeks, anc5_USG_AC_centile;
@@ -184,7 +160,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc5_USG_UAPI, anc5_USG_UAPI_centile;
     EditText anc5_USG_MCAPI, anc5_USG_MCAPI_centile;
     CheckBox anc5_USG_CPR;
-
     CheckBox anc5_advice_DFMCLLP, anc5_advice_TFeCa, anc5_advice_NST;
     EditText anc5_advice_Nutritional, anc5_advice_General, anc5_advice_CommonAilment;
     CheckBox anc5_advice_review_Bleeding, anc5_advice_review_Spotting, anc5_advice_review_Leaking, anc5_advice_review_ReducedFM, anc5_advice_review_AbdomenPain;
@@ -193,12 +168,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //    ANC6 Variables
     CheckBox anc6_history_ShortnessOfBreath, anc6_history_EasyFatiguability, anc6_history_HeadacheEpigastricPain, anc6_history_BleedingSpottingPV, anc6_history_BurningMicturition, anc6_history_FetalMovements, anc6_history_Itching;
     EditText anc6_history_Others;
-
     CheckBox anc6_examination_Pallor, anc6_examination_PedalEdema;
     EditText anc6_examination_PR, anc6_examination_BP, anc6_examination_Weight, anc6_examination_PA2Weeks, anc6_examination_Others;
-
     EditText anc6_Pelvic;
-
     CheckBox anc6_advice_DFMCLLP, anc6_advice_TFeCa, anc6_advice_NST;
     CheckBox anc6_advice_review_Bleeding, anc6_advice_review_Spotting, anc6_advice_review_Leaking, anc6_advice_review_ReducedFM, anc6_advice_review_AbdomenPain;
     EditText anc6_advice_Others;
@@ -206,20 +178,16 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //    ANC7 Variables
     CheckBox anc7_history_ShortnessOfBreath, anc7_history_EasyFatiguability, anc7_history_HeadacheEpigastricPain, anc7_history_BleedingSpottingPV, anc7_history_BurningMicturition, anc7_history_FetalMovements, anc7_history_Itching;
     EditText anc7_history_Others;
-
     CheckBox anc7_examination_Pallor, anc7_examination_PedalEdema;
     EditText anc7_examination_PR, anc7_examination_BP, anc7_examination_Weight, anc7_examination_Pa2Weeks, anc7_examination_Others;
-
     CheckBox anc7_advice_DFMCLLP, anc7_advice_TFeCa, anc7_advice_Bleeding, anc7_advice_Spotting, anc7_advice_Leaking, anc7_advice_ReducedFM, anc7_advice_AbdomenPain;
     EditText anc7_advice_Others;
 
 //    ANC8 Variables
     CheckBox anc8_history_ShortnessOfBreath, anc8_history_EasyFatiguability, anc8_history_HeadacheEpigastricPain, anc8_history_BleedingSpottingPV, anc8_history_BurningMicturition, anc8_history_FetalMovements, anc8_history_Itching;
     EditText anc8_history_Others;
-
     CheckBox anc8_examination_Pallor, anc8_examination_PedalEdema, anc8_examination_PA;
     EditText anc8_examination_PR, anc8_examination_BP, anc8_examination_Weight, anc8_examination_Others;
-
     CheckBox anc8_advice_DFMCLLP, anc8_advice_FeCa, anc8_advice_Induction;
     EditText anc8_advice_Others;
 
@@ -1146,6 +1114,13 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc7_elements = (LinearLayout) findViewById(R.id.anc7_elements);
         anc8_elements = (LinearLayout) findViewById(R.id.anc8_elements);
 
+        anc3_POG = (EditText) findViewById(R.id.anc3_POG);
+        anc4_POG = (EditText) findViewById(R.id.anc4_POG);
+        anc5_POG = (EditText) findViewById(R.id.anc5_POG);
+        anc6_POG = (EditText) findViewById(R.id.anc6_POG);
+        anc7_POG = (EditText) findViewById(R.id.anc7_POG);
+        anc8_POG = (EditText) findViewById(R.id.anc8_POG);
+
         investigations_box.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
@@ -1353,7 +1328,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_investigations_HusbandBloodGroup.setSelection(getIndex(anc1_investigations_HusbandBloodGroup, response.getString("anc1_investigations_HusbandBloodGroup")));
                             anc1_investigations_Hemogram.setText(response.getString("anc1_investigations_Hemogram"));
                             anc1_investigations_Tsh.setText(response.getString("anc1_investigations_Tsh"));
-
                             anc1_investigations_GTT.setChecked(response.getBoolean("anc1_investigations_GTT"));
                             anc1_investigations_bloodSugar_Fasting.setText(response.getString("anc1_investigations_bloodSugar_Fasting"));
                             anc1_investigations_bloodSugar_PostPrandial.setText(response.getString("anc1_investigations_bloodSugar_PostPrandial"));
@@ -1375,6 +1349,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_advice_PIGF.setChecked(response.getBoolean("anc1_advice_PIGF"));
                             anc1_advice_ICT.setChecked(response.getBoolean("anc1_advice_ICT"));
                             anc1_advice_Level2USG.setChecked(response.getBoolean("anc1_advice_Level2USG"));
+
                             anc1_advice_GeneralNutritional.setChecked(response.getBoolean("anc1_advice_GeneralNutritional"));
                             anc1_advice_NauseaVomiting.setChecked(response.getBoolean("anc1_advice_NauseaVomiting"));
                             anc1_advice_HeatBurn.setChecked(response.getBoolean("anc1_advice_HeatBurn"));
@@ -1485,9 +1460,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc2_advice_HbLess10_Hplc.setChecked(response.getBoolean("anc2_advice_HbLess10_Hplc"));
                             anc2_advice_HbLess10_PeripheralSmear.setChecked(response.getBoolean("anc2_advice_HbLess10_PeripheralSmear"));
                             anc2_advice_HbLess10_SerumIron.setChecked(response.getBoolean("anc2_advice_HbLess10_SerumIron"));
-                            anc2_advice_Nutritional.setText(response.getString("anc2_advice_Nutritional"));
-                            anc2_advice_GeneralAdvice.setText(response.getString("anc2_advice_GeneralAdvice"));
-                            anc2_advice_CommonAilment.setText(response.getString("anc2_advice_CommonAilment"));
                             anc2_advice_Others.setText(response.getString("anc2_advice_Others"));
 
                             anc_3.setChecked(response.getBoolean("anc_3"));
@@ -1573,9 +1545,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc4_advice_review_Leaking.setChecked(response.getBoolean("anc4_advice_review_Leaking"));
                             anc4_advice_review_ReducedFM.setChecked(response.getBoolean("anc4_advice_review_ReducedFM"));
                             anc4_advice_review_AbdomenPain .setChecked(response.getBoolean("anc4_advice_review_AbdomenPain"));
-                            anc4_advice_Nutritional.setText(response.getString("anc4_advice_Nutritional"));
-                            anc4_advice_General.setText(response.getString("anc4_advice_General"));
-                            anc4_advice_CommonAilment.setText(response.getString("anc4_advice_CommonAilment"));
                             anc4_advice_Others.setText(response.getString("anc4_advice_Others"));
 
 
@@ -1636,9 +1605,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc5_advice_DFMCLLP.setChecked(response.getBoolean("anc5_advice_DFMCLLP"));
                             anc5_advice_TFeCa.setChecked(response.getBoolean("anc5_advice_TFeCa"));
                             anc5_advice_NST.setChecked(response.getBoolean("anc5_advice_NST"));
-                            anc5_advice_Nutritional.setText(response.getString("anc5_advice_Nutritional"));
-                            anc5_advice_General.setText(response.getString("anc5_advice_General"));
-                            anc5_advice_CommonAilment.setText(response.getString("anc5_advice_CommonAilment"));
                             anc5_advice_review_Bleeding.setChecked(response.getBoolean("anc5_advice_review_Bleeding"));
                             anc5_advice_review_Spotting.setChecked(response.getBoolean("anc5_advice_review_Spotting"));
                             anc5_advice_review_Leaking.setChecked(response.getBoolean("anc5_advice_review_Leaking"));
@@ -1914,36 +1880,36 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //                        startActivity(i);
 //                        finish();
                         String notfMessage = "";
-                        if(anc1_advice_GeneralNutritional.isChecked() || anc1_advice_GeneralAilments.isChecked()) {
-                            notfMessage += "Have a balanced diet.\n" +
-                                    "Ensure adequate hydration and have 6-8 glasses of water daily\n" +
-                                    "Ensure a daily diet with adequate protein, dairy products, fruit\n" +
-                                    "Have folate rich foods like green leafy vegetables, legumes, beans\n" +
-                                    "Have Vitamin C rich food daily\n" +
-                                    "Have a High fibre diet\n" +
-                                    "Take small, frequent meals\n" +
-                                    "Avoid smoking/alcohol\n";
-
-                            notfMessage += "Take iron and calcium supplements daily as prescribed.\n" +
-                                    "Iron should not be taken empty stomach\n" +
-                                    "A gap of 2 hours should be kept between the ion and calcium tablets\n" +
-                                    "Aim for daily moderate intensity activity for 30 minutes\n" +
-                                    "Avoid lifting heavy weight\n";
-                        }
-
-                        if(anc1_History_Nausea.isChecked()) {
-                            notfMessage += "Drink plenty of fluids and maintain hydration\n" +
-                                    "Eat small frequent meals\n" +
-                                    "Have non greasy meals with little odor\n" +
-                                    "Ginger or chamomile tea can help reduce morning sickness\n" +
-                                    "If excessive, vitamin b6 supplements can be tried\n";
-                        }
-
-                        if(anc2_examination_PedalEdema.isChecked() || anc3_examination_PedalEdema.isChecked() || anc4_examination_PedalEdema.isChecked() || anc5_examination_PedalEdema.isChecked() || anc6_examination_PedalEdema.isChecked() || anc7_examination_PedalEdema.isChecked() || anc8_examination_PedalEdema.isChecked()) {
-                            notfMessage += "Rest with legs elevated\n" +
-                                    "Lie in the left lateral position\n" +
-                                    "Avoid sitting or standing for long periods\n";
-                        }
+//                        if(anc1_advice_GeneralNutritional.isChecked() || anc1_advice_GeneralAilments.isChecked()) {
+//                            notfMessage += "Have a balanced diet.\n" +
+//                                    "Ensure adequate hydration and have 6-8 glasses of water daily\n" +
+//                                    "Ensure a daily diet with adequate protein, dairy products, fruit\n" +
+//                                    "Have folate rich foods like green leafy vegetables, legumes, beans\n" +
+//                                    "Have Vitamin C rich food daily\n" +
+//                                    "Have a High fibre diet\n" +
+//                                    "Take small, frequent meals\n" +
+//                                    "Avoid smoking/alcohol\n";
+//
+//                            notfMessage += "Take iron and calcium supplements daily as prescribed.\n" +
+//                                    "Iron should not be taken empty stomach\n" +
+//                                    "A gap of 2 hours should be kept between the ion and calcium tablets\n" +
+//                                    "Aim for daily moderate intensity activity for 30 minutes\n" +
+//                                    "Avoid lifting heavy weight\n";
+//                        }
+//
+//                        if(anc1_History_Nausea.isChecked()) {
+//                            notfMessage += "Drink plenty of fluids and maintain hydration\n" +
+//                                    "Eat small frequent meals\n" +
+//                                    "Have non greasy meals with little odor\n" +
+//                                    "Ginger or chamomile tea can help reduce morning sickness\n" +
+//                                    "If excessive, vitamin b6 supplements can be tried\n";
+//                        }
+//
+//                        if(anc2_examination_PedalEdema.isChecked() || anc3_examination_PedalEdema.isChecked() || anc4_examination_PedalEdema.isChecked() || anc5_examination_PedalEdema.isChecked() || anc6_examination_PedalEdema.isChecked() || anc7_examination_PedalEdema.isChecked() || anc8_examination_PedalEdema.isChecked()) {
+//                            notfMessage += "Rest with legs elevated\n" +
+//                                    "Lie in the left lateral position\n" +
+//                                    "Avoid sitting or standing for long periods\n";
+//                        }
 //                    notifGeneration(notfMessage);
 
                         Intent intent = new Intent(patient_data_entry_bydoc.this, AllPatientListActivity.class);
@@ -2020,7 +1986,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc1_investigations_HusbandBloodGroup", "" + anc1_investigations_HusbandBloodGroup.getSelectedItem().toString());
                     params.put("anc1_investigations_Hemogram", "" + anc1_investigations_Hemogram.getText());
                     params.put("anc1_investigations_Tsh", "" + anc1_investigations_Tsh.getText());
-
                     params.put("anc1_investigations_GTT", "" + anc1_investigations_GTT.isChecked());
                     params.put("anc1_investigations_bloodSugar_Fasting", "" + anc1_investigations_bloodSugar_Fasting.getText());
                     params.put("anc1_investigations_bloodSugar_PostPrandial", "" + anc1_investigations_bloodSugar_PostPrandial.getText());
@@ -2355,7 +2320,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                Log.i("Objectt", "getBody: " + params.toString());
+                Log.v("Objectt", "getBody: " + params.toString());
                 return params.toString().getBytes();
             }
 
