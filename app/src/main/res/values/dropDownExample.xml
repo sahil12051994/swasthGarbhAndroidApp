@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="ProteinuriaDropdownElements">
+        <item>Select</item>
         <item>Nil</item>
         <item>Trace</item>
-        <item>1+</item>
-        <item>2+</item>
-        <item>3+</item>
+        <item>1 +</item>
+        <item>2 +</item>
+        <item>3 +</item>
     </string-array>
 
     <string-array name="BloodGroupDropdownElements">
-        <item>A+</item>
-        <item>A-</item>
-        <item>B+</item>
-        <item>B-</item>
-        <item>AB+</item>
-        <item>AB-</item>
-        <item>O+</item>
-        <item>O-</item>
+        <item>Select</item>
+        <item>A +</item>
+        <item>A -</item>
+        <item>B +</item>
+        <item>B -</item>
+        <item>AB +</item>
+        <item>AB -</item>
+        <item>O +</item>
+        <item>O -</item>
     </string-array>
 
     <string-array name="SchoolDropdownElements">
+        <item>Select</item>
         <item>Primary</item>
         <item>Secondary</item>
         <item>Graduation</item>
@@ -27,6 +30,7 @@
     </string-array>
 
     <string-array name="SEStatusDropdownElements">
+        <item>Select</item>
         <item>Lower</item>
         <item>Upper Lower</item>
         <item>Lower Middle</item>
