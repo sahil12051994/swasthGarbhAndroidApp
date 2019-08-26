@@ -10,12 +10,14 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -77,6 +79,18 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
         histObes = (CheckBox) findViewById (R.id.histObes);
         moreThanOneBaby = (CheckBox) findViewById (R.id.moreThanOneBaby);
         diseases = (CheckBox) findViewById (R.id.diseases);
+
+        Spinner spinnerStatus = (Spinner) findViewById(R.id.status);
+        ArrayAdapter<CharSequence> adapterStatus = ArrayAdapter.createFromResource(this,
+                R.array.SEStatusDropdownElements, android.R.layout.simple_spinner_item);
+        adapterStatus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerStatus.setAdapter(adapterStatus);
+
+        Spinner spinnerEducation = (Spinner) findViewById(R.id.education);
+        ArrayAdapter<CharSequence> adapterEducation = ArrayAdapter.createFromResource(this,
+                R.array.SchoolDropdownElements, android.R.layout.simple_spinner_item);
+        adapterEducation.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerEducation.setAdapter(adapterEducation);
 
 //        aiDoc = (Switch)findViewById(R.id.aiDoc);
 //        normalDoc = (LinearLayout)findViewById(R.id.normalDoc);

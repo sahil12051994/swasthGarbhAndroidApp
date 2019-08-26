@@ -190,8 +190,8 @@
     <string name="Level_II_USG_normal">Normal/Abnormal</string>
     <string name="T_folate_if_lessthan_14weeks"><![CDATA[T folate 5 mg OD (if <14 weeks)]]></string>
     <string name="T_Fe_if_morethan_14weeks"><![CDATA[T Fe OD, T Ca BD( if > 14 weeks)]]></string>
-    <string name="general_nutritional">Nutritional</string>
-    <string name="general_ailments">Common Ailments</string>
+    <string name="general_nutritional">Nutritional Advice</string>
+    <string name="general_ailments">Common Ailments Advice</string>
     <string name="general_BG_negative">If BG Negative- ICT (positive/negative)</string>
     <string name="general_TSH"><![CDATA[If TSH >3.5 mU/L- T  Eltroxin 25 microgram]]></string>
     <string name="general_urine_culture">If Urine culture +ve</string>

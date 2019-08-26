@@ -1279,11 +1279,88 @@
 
                                 </LinearLayout>
 
-                                <CheckBox
-                                    android:id="@+id/anc1_investigations_GTT"
+                                <!--<CheckBox-->
+                                    <!--android:id="@+id/anc1_investigations_GTT"-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:text="GTT with 75 gm Glucose (Fasting, 1hr, 2hr (mg/dL))" />-->
+
+                                <android.support.v7.widget.CardView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="GTT with 75 gm Glucose (Fasting, 1hr, 2hr (mg/dL))" />
+                                    android:layout_margin="5dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:padding="7dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="5dp"
+                                            android:gravity="center"
+                                            android:text="@string/anc_GTT"
+                                            android:textSize="40px"
+                                            android:textStyle="italic|bold"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <EditText
+                                                android:id="@+id/anc1_investigations_GTT_fast"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_weight="5"
+                                                android:backgroundTint="@color/colortheme"
+                                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                                android:gravity="center"
+                                                android:hint="fasting (mg/dL)"
+                                                android:inputType="textMultiLine"/>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <EditText
+                                                android:id="@+id/anc1_investigations_GTT_1Hour"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_weight="5"
+                                                android:backgroundTint="@color/colortheme"
+                                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                                android:gravity="center"
+                                                android:hint="1 hr (mg/dL)"
+                                                android:inputType="textMultiLine"/>
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <EditText
+                                                android:id="@+id/anc1_investigations_GTT_2Hour"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_weight="5"
+                                                android:backgroundTint="@color/colortheme"
+                                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                                android:gravity="center"
+                                                android:hint="2 hr (mg/dL)"
+                                                android:inputType="textMultiLine"/>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                </android.support.v7.widget.CardView>
 
                                 <android.support.v7.widget.CardView
                                     android:layout_width="match_parent"
@@ -1714,7 +1791,7 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:text="Common Ailments"/>
+                                        android:text="@string/general_ailments"/>
 
                                     <CheckBox
                                         android:id="@+id/anc1_advice_NauseaVomiting"
@@ -2413,22 +2490,24 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
+                                            android:text="Quadruple Screen"
                                             android:layout_width="0dp"
+                                            android:layout_weight="3"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="1dp"
-                                            android:layout_weight="1"
                                             android:gravity="center"
-                                            android:text="Quadruple Screen"
+                                            android:textAlignment="viewStart"
                                             android:textColor="#000000"
                                             android:textSize="15sp"
-                                            android:textStyle="italic" />
+                                            android:textStyle="italic"
+                                            />
 
 
                                         <EditText
                                             android:id="@+id/anc2_investigations_QuadrupleScreen"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_weight="1"
+                                            android:layout_weight="5"
                                             android:backgroundTint="@color/colortheme"
                                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                             android:inputType="textMultiLine" />
@@ -2440,10 +2519,12 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
-                                            android:layout_width="64dp"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="3"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="1dp"
                                             android:gravity="center"
+                                            android:textAlignment="viewStart"
                                             android:text="@string/others"
                                             android:textColor="#000000"
                                             android:textSize="15sp"
@@ -2601,7 +2682,7 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:text="Common Ailments"/>
+                                        android:text="@string/general_ailments"/>
 
                                     <CheckBox
                                         android:id="@+id/anc2_advice_NauseaVomiting"
@@ -3233,90 +3314,85 @@
                                         android:text="@string/anc_3_ICT"
                                         android:visibility="visible" />
 
-                                    <android.support.v7.widget.CardView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="5dp"
-                                        android:orientation="vertical">
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:gravity="center"
+                                        android:text="GTT with 75 gm glucose"
+                                        android:visibility="visible"
+                                        android:id="@+id/anc3_advice_GTT"/>
 
-                                        <LinearLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:padding="7dp">
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:gravity="center"
+                                        android:text="Review in labour room if (Bleeding PV, Spotting PV, Leaking PV, Reduced fetal movement, Pain abdomen)"
+                                        android:textSize="15sp"
+                                        android:visibility="visible"
+                                        android:id="@+id/anc3_advice_review"/>
 
-                                            <CheckBox
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent"
-                                                android:layout_marginTop="5dp"
-                                                android:gravity="center"
-                                                android:text="GTT ( Fasting > 92 mg/dL, 1hr > 180 mg/dL, 2hr > 153 mg/dL )"
-                                                android:visibility="visible"
-                                                android:id="@+id/anc3_advice_GTT"/>
+                                    <!--<android.support.v7.widget.CardView-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_margin="5dp"-->
+                                        <!--android:orientation="vertical">-->
 
-                                        </LinearLayout>
-                                    </android.support.v7.widget.CardView>
+                                        <!--<LinearLayout-->
+                                            <!--android:layout_width="match_parent"-->
+                                            <!--android:layout_height="wrap_content"-->
+                                            <!--android:orientation="vertical"-->
+                                            <!--android:padding="7dp">-->
 
-                                    <android.support.v7.widget.CardView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="5dp"
-                                        android:orientation="vertical">
+                                            <!--<TextView-->
+                                                <!--android:layout_width="wrap_content"-->
+                                                <!--android:layout_height="match_parent"-->
+                                                <!--android:layout_marginTop="5dp"-->
+                                                <!--android:gravity="center"-->
+                                                <!--android:text="@string/anc_3_danger"-->
+                                                <!--android:textSize="15sp"-->
+                                                <!--android:textStyle="italic|bold"-->
+                                                <!--android:visibility="visible" />-->
 
-                                        <LinearLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:padding="7dp">
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc3_advice_review_BleedingPV"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:layout_marginTop="20dp"-->
+                                                <!--android:text="@string/anc_3_bleeding"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent"
-                                                android:layout_marginTop="5dp"
-                                                android:gravity="center"
-                                                android:text="@string/anc_3_danger"
-                                                android:textSize="15sp"
-                                                android:textStyle="italic|bold"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc3_advice_review_SpottingPV"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_spotting"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc3_advice_review_BleedingPV"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="20dp"
-                                                android:text="@string/anc_3_bleeding"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc3_advice_review_LeakingPV"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_leaking"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc3_advice_review_SpottingPV"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_spotting"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc3_advice_review_ReducedFetalMovement"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_reducedfm"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc3_advice_review_LeakingPV"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_leaking"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc3_advice_review_AbdominalPain"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_abdomenpain"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc3_advice_review_ReducedFetalMovement"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_reducedfm"
-                                                android:visibility="visible" />
-
-                                            <CheckBox
-                                                android:id="@+id/anc3_advice_review_AbdominalPain"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_abdomenpain"
-                                                android:visibility="visible" />
-
-                                        </LinearLayout>
-                                    </android.support.v7.widget.CardView>
+                                        <!--</LinearLayout>-->
+                                    <!--</android.support.v7.widget.CardView>-->
 
                                     <android.support.v7.widget.CardView
                                         android:layout_width="match_parent"
@@ -3365,7 +3441,7 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:text="Common Ailments"/>
+                                        android:text="@string/general_ailments"/>
 
                                     <CheckBox
                                         android:id="@+id/anc3_advice_NauseaVomiting"
@@ -4175,66 +4251,76 @@
                                         android:text="@string/anc_3_USG"
                                         android:visibility="visible" />
 
-                                    <android.support.v7.widget.CardView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="5dp"
-                                        android:orientation="vertical">
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:gravity="center"
+                                        android:text="Review in labour room if (Bleeding PV, Spotting PV, Leaking PV, Reduced fetal movement, Pain abdomen)"
+                                        android:textSize="15sp"
+                                        android:visibility="visible"
+                                        android:id="@+id/anc4_advice_review"/>
 
-                                        <LinearLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:orientation="vertical"
-                                            android:padding="7dp">
+                                    <!--<android.support.v7.widget.CardView-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_margin="5dp"-->
+                                        <!--android:orientation="vertical">-->
 
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent"
-                                                android:layout_marginTop="5dp"
-                                                android:gravity="center"
-                                                android:text="@string/anc_3_danger"
-                                                android:textSize="15sp"
-                                                android:textStyle="italic|bold"
-                                                android:visibility="visible" />
+                                        <!--<LinearLayout-->
+                                            <!--android:layout_width="match_parent"-->
+                                            <!--android:layout_height="wrap_content"-->
+                                            <!--android:orientation="vertical"-->
+                                            <!--android:padding="7dp">-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc4_advice_review_Bleeding"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="10dp"
-                                                android:text="@string/anc_3_bleeding"
-                                                android:visibility="visible" />
+                                            <!--<TextView-->
+                                                <!--android:layout_width="wrap_content"-->
+                                                <!--android:layout_height="match_parent"-->
+                                                <!--android:layout_marginTop="5dp"-->
+                                                <!--android:gravity="center"-->
+                                                <!--android:text="@string/anc_3_danger"-->
+                                                <!--android:textSize="15sp"-->
+                                                <!--android:textStyle="italic|bold"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc4_advice_review_Spotting"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_spotting"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc4_advice_review_Bleeding"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:layout_marginTop="10dp"-->
+                                                <!--android:text="@string/anc_3_bleeding"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc4_advice_review_Leaking"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_leaking"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc4_advice_review_Spotting"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_spotting"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc4_advice_review_ReducedFM"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_reducedfm"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc4_advice_review_Leaking"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_leaking"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc4_advice_review_AbdomenPain"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_abdomenpain"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc4_advice_review_ReducedFM"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_reducedfm"-->
+                                                <!--android:visibility="visible" />-->
 
-                                        </LinearLayout>
-                                    </android.support.v7.widget.CardView>
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc4_advice_review_AbdomenPain"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_abdomenpain"-->
+                                                <!--android:visibility="visible" />-->
+
+                                        <!--</LinearLayout>-->
+                                    <!--</android.support.v7.widget.CardView>-->
 
                                     <CheckBox
                                         android:id="@+id/anc4_advice_GeneralNutritional"
@@ -4245,7 +4331,7 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:text="Common Ailments"/>
+                                        android:text="@string/general_ailments"/>
 
                                     <CheckBox
                                         android:id="@+id/anc4_advice_NauseaVomiting"
@@ -5384,7 +5470,7 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:text="Common Ailments"/>
+                                        android:text="@string/general_ailments"/>
 
                                     <CheckBox
                                         android:id="@+id/anc5_advice_NauseaVomiting"
@@ -5416,66 +5502,76 @@
                                         android:layout_height="wrap_content"
                                         android:text="Leg Cramps" />
 
-                                    <android.support.v7.widget.CardView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="5dp"
-                                        android:orientation="vertical">
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:gravity="center"
+                                        android:text="Review in labour room if (Bleeding PV, Spotting PV, Leaking PV, Reduced fetal movement, Pain abdomen)"
+                                        android:textSize="15sp"
+                                        android:visibility="visible"
+                                        android:id="@+id/anc5_advice_review"/>
 
-                                        <LinearLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_margin="5dp"
-                                            android:orientation="vertical">
+                                    <!--<android.support.v7.widget.CardView-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_margin="5dp"-->
+                                        <!--android:orientation="vertical">-->
 
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent"
-                                                android:layout_marginTop="10dp"
-                                                android:gravity="center"
-                                                android:text="@string/anc_3_danger"
-                                                android:textSize="15sp"
-                                                android:textStyle="italic|bold"
-                                                android:visibility="visible" />
+                                        <!--<LinearLayout-->
+                                            <!--android:layout_width="match_parent"-->
+                                            <!--android:layout_height="match_parent"-->
+                                            <!--android:layout_margin="5dp"-->
+                                            <!--android:orientation="vertical">-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc5_advice_review_Bleeding"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="10dp"
-                                                android:text="@string/anc_3_bleeding"
-                                                android:visibility="visible" />
+                                            <!--<TextView-->
+                                                <!--android:layout_width="wrap_content"-->
+                                                <!--android:layout_height="match_parent"-->
+                                                <!--android:layout_marginTop="10dp"-->
+                                                <!--android:gravity="center"-->
+                                                <!--android:text="@string/anc_3_danger"-->
+                                                <!--android:textSize="15sp"-->
+                                                <!--android:textStyle="italic|bold"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc5_advice_review_Spotting"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_spotting"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc5_advice_review_Bleeding"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:layout_marginTop="10dp"-->
+                                                <!--android:text="@string/anc_3_bleeding"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc5_advice_review_Leaking"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_leaking"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc5_advice_review_Spotting"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_spotting"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc5_advice_review_ReducedFM"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_reducedfm"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc5_advice_review_Leaking"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_leaking"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc5_advice_review_AbdomenPain"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_abdomenpain"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc5_advice_review_ReducedFM"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_reducedfm"-->
+                                                <!--android:visibility="visible" />-->
 
-                                        </LinearLayout>
-                                    </android.support.v7.widget.CardView>
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc5_advice_review_AbdomenPain"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_abdomenpain"-->
+                                                <!--android:visibility="visible" />-->
+
+                                        <!--</LinearLayout>-->
+                                    <!--</android.support.v7.widget.CardView>-->
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
@@ -6007,7 +6103,7 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:text="Common Ailments"/>
+                                        android:text="@string/general_ailments"/>
 
                                     <CheckBox
                                         android:id="@+id/anc6_advice_NauseaVomiting"
@@ -6039,65 +6135,75 @@
                                         android:layout_height="wrap_content"
                                         android:text="Leg Cramps" />
 
-                                    <android.support.v7.widget.CardView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="5dp"
-                                        android:orientation="vertical">
+                                    <CheckBox
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:gravity="center"
+                                        android:text="Review in labour room if (Bleeding PV, Spotting PV, Leaking PV, Reduced fetal movement, Pain abdomen)"
+                                        android:textSize="15sp"
+                                        android:visibility="visible"
+                                        android:id="@+id/anc6_advice_review"/>
 
-                                        <LinearLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_margin="5dp"
-                                            android:orientation="vertical">
+                                    <!--<android.support.v7.widget.CardView-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_margin="5dp"-->
+                                        <!--android:orientation="vertical">-->
 
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="match_parent"
-                                                android:layout_marginTop="5dp"
-                                                android:gravity="center"
-                                                android:text="@string/anc_3_danger"
-                                                android:textSize="15sp"
-                                                android:textStyle="italic|bold"
-                                                android:visibility="visible" />
+                                        <!--<LinearLayout-->
+                                            <!--android:layout_width="match_parent"-->
+                                            <!--android:layout_height="match_parent"-->
+                                            <!--android:layout_margin="5dp"-->
+                                            <!--android:orientation="vertical">-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc6_advice_review_Bleeding"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginTop="10dp"
-                                                android:text="@string/anc_3_bleeding"
-                                                android:visibility="visible" />
+                                            <!--<TextView-->
+                                                <!--android:layout_width="wrap_content"-->
+                                                <!--android:layout_height="match_parent"-->
+                                                <!--android:layout_marginTop="5dp"-->
+                                                <!--android:gravity="center"-->
+                                                <!--android:text="@string/anc_3_danger"-->
+                                                <!--android:textSize="15sp"-->
+                                                <!--android:textStyle="italic|bold"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc6_advice_review_Spotting"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_spotting"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc6_advice_review_Bleeding"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:layout_marginTop="10dp"-->
+                                                <!--android:text="@string/anc_3_bleeding"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc6_advice_review_Leaking"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_leaking"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc6_advice_review_Spotting"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_spotting"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc6_advice_review_ReducedFM"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_reducedfm"
-                                                android:visibility="visible" />
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc6_advice_review_Leaking"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_leaking"-->
+                                                <!--android:visibility="visible" />-->
 
-                                            <CheckBox
-                                                android:id="@+id/anc6_advice_review_AbdomenPain"
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:text="@string/anc_3_abdomenpain"
-                                                android:visibility="visible" />
-                                        </LinearLayout>
-                                    </android.support.v7.widget.CardView>
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc6_advice_review_ReducedFM"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_reducedfm"-->
+                                                <!--android:visibility="visible" />-->
+
+                                            <!--<CheckBox-->
+                                                <!--android:id="@+id/anc6_advice_review_AbdomenPain"-->
+                                                <!--android:layout_width="match_parent"-->
+                                                <!--android:layout_height="wrap_content"-->
+                                                <!--android:text="@string/anc_3_abdomenpain"-->
+                                                <!--android:visibility="visible" />-->
+                                        <!--</LinearLayout>-->
+                                    <!--</android.support.v7.widget.CardView>-->
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
@@ -6595,7 +6701,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="Common Ailments"/>
+                                    android:text="@string/general_ailments"/>
 
                                 <CheckBox
                                     android:id="@+id/anc7_advice_NauseaVomiting"
@@ -6627,66 +6733,76 @@
                                     android:layout_height="wrap_content"
                                     android:text="Leg Cramps" />
 
-                                <android.support.v7.widget.CardView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:orientation="vertical">
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Review in labour room if (Bleeding PV, Spotting PV, Leaking PV, Reduced fetal movement, Pain abdomen)"
+                                    android:textSize="15sp"
+                                    android:visibility="visible"
+                                    android:id="@+id/anc7_advice_review"/>
 
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="vertical"
-                                        android:padding="7dp">
+                                <!--<android.support.v7.widget.CardView-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_margin="5dp"-->
+                                    <!--android:orientation="vertical">-->
 
-                                        <TextView
-                                            android:id="@+id/anc_7_review"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="match_parent"
-                                            android:layout_marginTop="5dp"
-                                            android:gravity="center"
-                                            android:text="@string/anc_3_danger"
-                                            android:textSize="15sp"
-                                            android:textStyle="italic|bold"
-                                            android:visibility="visible" />
+                                    <!--<LinearLayout-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:orientation="vertical"-->
+                                        <!--android:padding="7dp">-->
 
-                                        <CheckBox
-                                            android:id="@+id/anc7_advice_Bleeding"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="10dp"
-                                            android:text="@string/anc_3_bleeding"
-                                            android:visibility="visible" />
+                                        <!--<TextView-->
+                                            <!--android:id="@+id/anc_7_review"-->
+                                            <!--android:layout_width="wrap_content"-->
+                                            <!--android:layout_height="match_parent"-->
+                                            <!--android:layout_marginTop="5dp"-->
+                                            <!--android:gravity="center"-->
+                                            <!--android:text="@string/anc_3_danger"-->
+                                            <!--android:textSize="15sp"-->
+                                            <!--android:textStyle="italic|bold"-->
+                                            <!--android:visibility="visible" />-->
 
-                                        <CheckBox
-                                            android:id="@+id/anc7_advice_Spotting"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="@string/anc_3_spotting"
-                                            android:visibility="visible" />
+                                        <!--<CheckBox-->
+                                            <!--android:id="@+id/anc7_advice_Bleeding"-->
+                                            <!--android:layout_width="match_parent"-->
+                                            <!--android:layout_height="wrap_content"-->
+                                            <!--android:layout_marginTop="10dp"-->
+                                            <!--android:text="@string/anc_3_bleeding"-->
+                                            <!--android:visibility="visible" />-->
 
-                                        <CheckBox
-                                            android:id="@+id/anc7_advice_Leaking"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="@string/anc_3_leaking"
-                                            android:visibility="visible" />
+                                        <!--<CheckBox-->
+                                            <!--android:id="@+id/anc7_advice_Spotting"-->
+                                            <!--android:layout_width="match_parent"-->
+                                            <!--android:layout_height="wrap_content"-->
+                                            <!--android:text="@string/anc_3_spotting"-->
+                                            <!--android:visibility="visible" />-->
 
-                                        <CheckBox
-                                            android:id="@+id/anc7_advice_ReducedFM"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="@string/anc_3_reducedfm"
-                                            android:visibility="visible" />
+                                        <!--<CheckBox-->
+                                            <!--android:id="@+id/anc7_advice_Leaking"-->
+                                            <!--android:layout_width="match_parent"-->
+                                            <!--android:layout_height="wrap_content"-->
+                                            <!--android:text="@string/anc_3_leaking"-->
+                                            <!--android:visibility="visible" />-->
 
-                                        <CheckBox
-                                            android:id="@+id/anc7_advice_AbdomenPain"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="@string/anc_3_abdomenpain"
-                                            android:visibility="visible" />
-                                    </LinearLayout>
-                                </android.support.v7.widget.CardView>
+                                        <!--<CheckBox-->
+                                            <!--android:id="@+id/anc7_advice_ReducedFM"-->
+                                            <!--android:layout_width="match_parent"-->
+                                            <!--android:layout_height="wrap_content"-->
+                                            <!--android:text="@string/anc_3_reducedfm"-->
+                                            <!--android:visibility="visible" />-->
+
+                                        <!--<CheckBox-->
+                                            <!--android:id="@+id/anc7_advice_AbdomenPain"-->
+                                            <!--android:layout_width="match_parent"-->
+                                            <!--android:layout_height="wrap_content"-->
+                                            <!--android:text="@string/anc_3_abdomenpain"-->
+                                            <!--android:visibility="visible" />-->
+                                    <!--</LinearLayout>-->
+                                <!--</android.support.v7.widget.CardView>-->
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -7167,7 +7283,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="Common Ailments"/>
+                                    android:text="@string/general_ailments"/>
 
                                 <CheckBox
                                     android:id="@+id/anc8_advice_NauseaVomiting"

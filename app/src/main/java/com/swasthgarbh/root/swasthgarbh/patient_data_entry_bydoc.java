@@ -93,7 +93,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc1_investigations_level2Usg_DoneNotDone, anc1_investigations_level2Usg_NormalAbnormal;
     CheckBox anc1_investigations_GTT;
     CheckBox anc1_advice_GTT, anc1_advice_BloodSugar, anc1_advice_NtNbScan, anc1_advice_DualScreen, anc1_advice_LeftUterineArteryPl, anc1_advice_RightUterineArteryPl, anc1_advice_PIGF, anc1_advice_ICT;
-    CheckBox anc1_advice_GeneralNutritional, anc1_advice_GeneralAilments;
+    CheckBox anc1_advice_GeneralNutritional;
     CheckBox anc1_advice_Level2USG;
     CheckBox anc1_advice_TfolateLessThan14Weeks, anc1_advice_TFeMoreThan14Weeks;
     CheckBox anc1_advice_NauseaVomiting, anc1_advice_HeatBurn, anc1_advice_Constipation, anc1_advice_PedalEdema, anc1_advice_LegCramps;
@@ -114,7 +114,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc2_investigations_QuadrupleScreen;
     CheckBox anc2_advice_OGTT, anc2_advice_TfeOD, anc2_advice_TcaBD, anc2_advice_Tetanus, anc2_advice_QuadrupleScreen, anc2_advice_FetalEcho;
     CheckBox anc2_advice_HbLess10_TAlbendazole, anc2_advice_HbLess10_TFeBD, anc2_advice_HbLess10_Hplc, anc2_advice_HbLess10_PeripheralSmear, anc2_advice_HbLess10_SerumIron;
-    EditText anc2_advice_Nutritional, anc2_advice_GeneralAdvice, anc2_advice_CommonAilment;
     EditText anc2_advice_Others;
 
 //    ANC3 Variables
@@ -125,9 +124,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc3_investigations_Others;
     CheckBox anc3_advice_TFeOD, anc3_advice_DFMCLLP, anc3_advice_InjTetanus, anc3_advice_CBC, anc3_advice_LFT, anc3_advice_KFT;
     CheckBox anc3_advice_GTT;
-    CheckBox anc3_advice_review_BleedingPV, anc3_advice_review_SpottingPV, anc3_advice_review_LeakingPV, anc3_advice_review_ReducedFetalMovement, anc3_advice_review_AbdominalPain;
     CheckBox anc3_advice_ictNegative_InjAntiD300;
-    EditText anc3_advice_Nutritional, anc3_advice_General, anc_3_common_ailment, anc3_advice_Others;
+    EditText anc3_advice_Others;
 
 //    ANC4 Variables
     CheckBox anc4_history_ShortnessOfBreath, anc4_history_EasyFatiguability, anc4_history_HeadacheEpigastricPain, anc4_history_BleedingSpottingPV, anc4_history_BurningMicturition, anc4_history_FetalMovements, anc4_history_Itching;
@@ -138,8 +136,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc4_examination_LFT_OT, anc4_examination_LFT_PT, anc4_examination_LFT_ALP;
     EditText anc4_examination_KFT_UREA, anc4_examination_KFT_Creatinine;
     CheckBox anc4_advice_TFeOD, anc4_advice_TCaBD, anc4_advice_DFMC, anc4_advice_USG;
-    CheckBox anc4_advice_review_Bleeding, anc4_advice_review_Spotting, anc4_advice_review_Leaking, anc4_advice_review_ReducedFM, anc4_advice_review_AbdomenPain;
-    EditText anc4_advice_Nutritional, anc4_advice_General, anc4_advice_CommonAilment, anc4_advice_Others;
+    EditText anc4_advice_Others;
 
 //    ANC5 Variables
     CheckBox anc5_history_ShortnessOfBreath, anc5_history_EasyFatiguability, anc5_history_HeadacheEpigastricPain, anc5_history_BleedingSpottingPV, anc5_history_BurningMicturition, anc5_history_FetalMovements, anc5_history_Itching;
@@ -161,8 +158,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc5_USG_MCAPI, anc5_USG_MCAPI_centile;
     CheckBox anc5_USG_CPR;
     CheckBox anc5_advice_DFMCLLP, anc5_advice_TFeCa, anc5_advice_NST;
-    EditText anc5_advice_Nutritional, anc5_advice_General, anc5_advice_CommonAilment;
-    CheckBox anc5_advice_review_Bleeding, anc5_advice_review_Spotting, anc5_advice_review_Leaking, anc5_advice_review_ReducedFM, anc5_advice_review_AbdomenPain;
     EditText anc5_advice_Others;
 
 //    ANC6 Variables
@@ -172,7 +167,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc6_examination_PR, anc6_examination_BP, anc6_examination_Weight, anc6_examination_PA2Weeks, anc6_examination_Others;
     EditText anc6_Pelvic;
     CheckBox anc6_advice_DFMCLLP, anc6_advice_TFeCa, anc6_advice_NST;
-    CheckBox anc6_advice_review_Bleeding, anc6_advice_review_Spotting, anc6_advice_review_Leaking, anc6_advice_review_ReducedFM, anc6_advice_review_AbdomenPain;
     EditText anc6_advice_Others;
 
 //    ANC7 Variables
@@ -180,7 +174,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc7_history_Others;
     CheckBox anc7_examination_Pallor, anc7_examination_PedalEdema;
     EditText anc7_examination_PR, anc7_examination_BP, anc7_examination_Weight, anc7_examination_Pa2Weeks, anc7_examination_Others;
-    CheckBox anc7_advice_DFMCLLP, anc7_advice_TFeCa, anc7_advice_Bleeding, anc7_advice_Spotting, anc7_advice_Leaking, anc7_advice_ReducedFM, anc7_advice_AbdomenPain;
+    CheckBox anc7_advice_DFMCLLP, anc7_advice_TFeCa;
     EditText anc7_advice_Others;
 
 //    ANC8 Variables
@@ -190,6 +184,14 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc8_examination_PR, anc8_examination_BP, anc8_examination_Weight, anc8_examination_Others;
     CheckBox anc8_advice_DFMCLLP, anc8_advice_FeCa, anc8_advice_Induction;
     EditText anc8_advice_Others;
+
+    CheckBox anc3_advice_review;
+    CheckBox anc4_advice_review;
+    CheckBox anc5_advice_review;
+    CheckBox anc6_advice_review;
+    CheckBox anc7_advice_review;
+
+    EditText anc1_investigations_GTT_fast, anc1_investigations_GTT_1Hour, anc1_investigations_GTT_2Hour;
 
     Calendar anc1_Date_Calender = Calendar.getInstance();
     Calendar anc2_Date_Calender = Calendar.getInstance();
@@ -652,6 +654,13 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         investigations_Others = (EditText) findViewById(R.id.investigations_Others);
         investigations_DrugHistory = (EditText) findViewById(R.id.investigations_DrugHistory);
 
+        anc3_advice_review = (CheckBox) findViewById(R.id.anc3_advice_review);
+        anc4_advice_review = (CheckBox) findViewById(R.id.anc4_advice_review);
+        anc5_advice_review = (CheckBox) findViewById(R.id.anc5_advice_review);
+        anc6_advice_review = (CheckBox) findViewById(R.id.anc6_advice_review);
+        anc7_advice_review = (CheckBox) findViewById(R.id.anc7_advice_review);
+
+
 //        ANC1 Variables
         anc1_POG = (EditText) findViewById(R.id.anc1_POG);
         anc1_History_Fever = (CheckBox) findViewById(R.id.anc1_History_Fever);
@@ -746,10 +755,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
         anc1_investigations_Hemogram = (EditText) findViewById(R.id.anc1_investigations_Hemogram);
         anc1_investigations_Tsh = (EditText) findViewById(R.id.anc1_investigations_Tsh);
-        anc1_investigations_GTT = (CheckBox) findViewById(R.id.anc1_investigations_GTT);
-//        anc1_investigations_GTT_fast = (EditText) findViewById(R.id.anc1_investigations_GTT_fast);
-//        anc1_investigations_GTT_1Hour = (EditText) findViewById(R.id.anc1_investigations_GTT_1Hour);
-//        anc1_investigations_GTT_2Hour = (EditText) findViewById(R.id.anc1_investigations_GTT_2Hour);
+        anc1_investigations_GTT_fast = (EditText) findViewById(R.id.anc1_investigations_GTT_fast);
+        anc1_investigations_GTT_1Hour = (EditText) findViewById(R.id.anc1_investigations_GTT_1Hour);
+        anc1_investigations_GTT_2Hour = (EditText) findViewById(R.id.anc1_investigations_GTT_2Hour);
         anc1_investigations_bloodSugar_Fasting = (EditText) findViewById(R.id.anc1_investigations_bloodSugar_Fasting);
         anc1_investigations_bloodSugar_PostPrandial = (EditText) findViewById(R.id.anc1_investigations_bloodSugar_PostPrandial);
         anc1_investigations_ntnb_DoneNotDone = (EditText) findViewById(R.id.anc1_investigations_ntnb_DoneNotDone);
@@ -865,11 +873,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc3_advice_LFT = (CheckBox) findViewById(R.id.anc3_advice_LFT);
         anc3_advice_KFT = (CheckBox) findViewById(R.id.anc3_advice_KFT);
         anc3_advice_GTT = (CheckBox) findViewById(R.id.anc3_advice_GTT);
-        anc3_advice_review_BleedingPV = (CheckBox) findViewById(R.id.anc3_advice_review_BleedingPV);
-        anc3_advice_review_SpottingPV = (CheckBox) findViewById(R.id.anc3_advice_review_SpottingPV);
-        anc3_advice_review_LeakingPV = (CheckBox) findViewById(R.id.anc3_advice_review_LeakingPV);
-        anc3_advice_review_ReducedFetalMovement = (CheckBox) findViewById(R.id.anc3_advice_review_ReducedFetalMovement);
-        anc3_advice_review_AbdominalPain = (CheckBox) findViewById(R.id.anc3_advice_review_AbdominalPain);
         anc3_advice_ictNegative_InjAntiD300 = (CheckBox) findViewById(R.id.anc3_advice_ictNegative_InjAntiD300);
 
         anc3_advice_GeneralNutritional = (CheckBox) findViewById(R.id.anc3_advice_GeneralNutritional);
@@ -911,11 +914,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc4_advice_TCaBD = (CheckBox) findViewById(R.id.anc4_advice_TCaBD);
         anc4_advice_DFMC = (CheckBox) findViewById(R.id.anc4_advice_DFMC);
         anc4_advice_USG = (CheckBox) findViewById(R.id.anc4_advice_USG);
-        anc4_advice_review_Bleeding = (CheckBox) findViewById(R.id.anc4_advice_review_Bleeding);
-        anc4_advice_review_Spotting = (CheckBox) findViewById(R.id.anc4_advice_review_Spotting);
-        anc4_advice_review_Leaking = (CheckBox) findViewById(R.id.anc4_advice_review_Leaking);
-        anc4_advice_review_ReducedFM = (CheckBox) findViewById(R.id.anc4_advice_review_ReducedFM);
-        anc4_advice_review_AbdomenPain = (CheckBox) findViewById(R.id.anc4_advice_review_AbdomenPain);
         anc4_advice_GeneralNutritional = (CheckBox) findViewById(R.id.anc4_advice_GeneralNutritional);
         anc4_advice_NauseaVomiting = (CheckBox) findViewById(R.id.anc4_advice_NauseaVomiting);
         anc4_advice_HeatBurn = (CheckBox) findViewById(R.id.anc4_advice_HeatBurn);
@@ -984,11 +982,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc5_advice_Constipation = (CheckBox) findViewById(R.id.anc5_advice_Constipation);
         anc5_advice_PedalEdema = (CheckBox) findViewById(R.id.anc5_advice_PedalEdema);
         anc5_advice_LegCramps = (CheckBox) findViewById(R.id.anc5_advice_LegCramps);
-        anc5_advice_review_Bleeding = (CheckBox) findViewById(R.id.anc5_advice_review_Bleeding);
-        anc5_advice_review_Spotting = (CheckBox) findViewById(R.id.anc5_advice_review_Spotting);
-        anc5_advice_review_Leaking = (CheckBox) findViewById(R.id.anc5_advice_review_Leaking);
-        anc5_advice_review_ReducedFM = (CheckBox) findViewById(R.id.anc5_advice_review_ReducedFM);
-        anc5_advice_review_AbdomenPain = (CheckBox) findViewById(R.id.anc5_advice_review_AbdomenPain);
         anc5_advice_Others =  (EditText) findViewById(R.id.anc5_advice_Others);
 
 //        ANC6 Variables
@@ -1004,11 +997,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc6_advice_DFMCLLP = (CheckBox) findViewById(R.id.anc6_advice_DFMCLLP);
         anc6_advice_TFeCa = (CheckBox) findViewById(R.id.anc6_advice_TFeCa);
         anc6_advice_NST = (CheckBox) findViewById(R.id.anc6_advice_NST);
-        anc6_advice_review_Bleeding = (CheckBox) findViewById(R.id.anc6_advice_review_Bleeding);
-        anc6_advice_review_Spotting = (CheckBox) findViewById(R.id.anc6_advice_review_Spotting);
-        anc6_advice_review_Leaking = (CheckBox) findViewById(R.id.anc6_advice_review_Leaking);
-        anc6_advice_review_ReducedFM = (CheckBox) findViewById(R.id.anc6_advice_review_ReducedFM);
-        anc6_advice_review_AbdomenPain = (CheckBox) findViewById(R.id.anc6_advice_review_AbdomenPain);
         anc6_advice_GeneralNutritional = (CheckBox) findViewById(R.id.anc6_advice_GeneralNutritional);
         anc6_advice_NauseaVomiting = (CheckBox) findViewById(R.id.anc6_advice_NauseaVomiting);
         anc6_advice_HeatBurn = (CheckBox) findViewById(R.id.anc6_advice_HeatBurn);
@@ -1037,11 +1025,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc7_examination_PedalEdema = (CheckBox) findViewById(R.id.anc7_examination_PedalEdema);
         anc7_advice_DFMCLLP = (CheckBox) findViewById(R.id.anc7_advice_DFMCLLP);
         anc7_advice_TFeCa = (CheckBox) findViewById(R.id.anc7_advice_TFeCa);
-        anc7_advice_Bleeding = (CheckBox) findViewById(R.id.anc7_advice_Bleeding);
-        anc7_advice_Spotting = (CheckBox) findViewById(R.id.anc7_advice_Spotting);
-        anc7_advice_Leaking = (CheckBox) findViewById(R.id.anc7_advice_Leaking);
-        anc7_advice_ReducedFM = (CheckBox) findViewById(R.id.anc7_advice_ReducedFM);
-        anc7_advice_AbdomenPain = (CheckBox) findViewById(R.id.anc7_advice_AbdomenPain);
         anc7_advice_GeneralNutritional = (CheckBox) findViewById(R.id.anc7_advice_GeneralNutritional);
         anc7_advice_NauseaVomiting = (CheckBox) findViewById(R.id.anc7_advice_NauseaVomiting);
         anc7_advice_HeatBurn = (CheckBox) findViewById(R.id.anc7_advice_HeatBurn);
@@ -1278,6 +1261,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             investigations_Others.setText(response.getString("investigations_Others"));
                             investigations_DrugHistory.setText(response.getString("investigations_DrugHistory"));
 
+                            anc3_advice_review.setChecked(response.getBoolean("anc3_advice_review"));
+                            anc4_advice_review.setChecked(response.getBoolean("anc4_advice_review"));
+                            anc5_advice_review.setChecked(response.getBoolean("anc5_advice_review"));
+                            anc6_advice_review.setChecked(response.getBoolean("anc6_advice_review"));
+                            anc7_advice_review.setChecked(response.getBoolean("anc7_advice_review"));
+
                             anc_1.setChecked(response.getBoolean("anc_1"));
                             if(!response.getBoolean("anc_1")){
                                 anc1_elements.setVisibility(View.GONE);
@@ -1328,7 +1317,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_investigations_HusbandBloodGroup.setSelection(getIndex(anc1_investigations_HusbandBloodGroup, response.getString("anc1_investigations_HusbandBloodGroup")));
                             anc1_investigations_Hemogram.setText(response.getString("anc1_investigations_Hemogram"));
                             anc1_investigations_Tsh.setText(response.getString("anc1_investigations_Tsh"));
-                            anc1_investigations_GTT.setChecked(response.getBoolean("anc1_investigations_GTT"));
+
+                            anc1_investigations_GTT_fast.setText(response.getString("anc1_investigations_GTT_fast"));
+                            anc1_investigations_GTT_1Hour.setText(response.getString("anc1_investigations_GTT_1Hour"));
+                            anc1_investigations_GTT_2Hour.setText(response.getString("anc1_investigations_GTT_2Hour"));
+
                             anc1_investigations_bloodSugar_Fasting.setText(response.getString("anc1_investigations_bloodSugar_Fasting"));
                             anc1_investigations_bloodSugar_PostPrandial.setText(response.getString("anc1_investigations_bloodSugar_PostPrandial"));
                             anc1_investigations_ntnb_DoneNotDone.setText(response.getString("anc1_investigations_ntnb_DoneNotDone"));
@@ -1496,11 +1489,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc3_advice_LFT.setChecked(response.getBoolean("anc3_advice_LFT"));
                             anc3_advice_KFT.setChecked(response.getBoolean("anc3_advice_KFT"));
                             anc3_advice_GTT.setChecked(response.getBoolean("anc3_advice_GTT"));
-                            anc3_advice_review_BleedingPV.setChecked(response.getBoolean("anc3_advice_review_BleedingPV"));
-                            anc3_advice_review_SpottingPV.setChecked(response.getBoolean("anc3_advice_review_SpottingPV"));
-                            anc3_advice_review_LeakingPV.setChecked(response.getBoolean("anc3_advice_review_LeakingPV"));
-                            anc3_advice_review_ReducedFetalMovement.setChecked(response.getBoolean("anc3_advice_review_ReducedFetalMovement"));
-                            anc3_advice_review_AbdominalPain.setChecked(response.getBoolean("anc3_advice_review_AbdominalPain"));
                             anc3_advice_ictNegative_InjAntiD300.setChecked(response.getBoolean("anc3_advice_ictNegative_InjAntiD300"));
 
                             //        ANC4 Variables
@@ -1540,11 +1528,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc4_advice_TCaBD.setChecked(response.getBoolean("anc4_advice_TCaBD"));
                             anc4_advice_DFMC.setChecked(response.getBoolean("anc4_advice_DFMC"));
                             anc4_advice_USG.setChecked(response.getBoolean("anc4_advice_USG"));
-                            anc4_advice_review_Bleeding.setChecked(response.getBoolean("anc4_advice_review_Bleeding"));
-                            anc4_advice_review_Spotting.setChecked(response.getBoolean("anc4_advice_review_Spotting"));
-                            anc4_advice_review_Leaking.setChecked(response.getBoolean("anc4_advice_review_Leaking"));
-                            anc4_advice_review_ReducedFM.setChecked(response.getBoolean("anc4_advice_review_ReducedFM"));
-                            anc4_advice_review_AbdomenPain .setChecked(response.getBoolean("anc4_advice_review_AbdomenPain"));
                             anc4_advice_Others.setText(response.getString("anc4_advice_Others"));
 
 
@@ -1605,11 +1588,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc5_advice_DFMCLLP.setChecked(response.getBoolean("anc5_advice_DFMCLLP"));
                             anc5_advice_TFeCa.setChecked(response.getBoolean("anc5_advice_TFeCa"));
                             anc5_advice_NST.setChecked(response.getBoolean("anc5_advice_NST"));
-                            anc5_advice_review_Bleeding.setChecked(response.getBoolean("anc5_advice_review_Bleeding"));
-                            anc5_advice_review_Spotting.setChecked(response.getBoolean("anc5_advice_review_Spotting"));
-                            anc5_advice_review_Leaking.setChecked(response.getBoolean("anc5_advice_review_Leaking"));
-                            anc5_advice_review_ReducedFM.setChecked(response.getBoolean("anc5_advice_review_ReducedFM"));
-                            anc5_advice_review_AbdomenPain.setChecked(response.getBoolean("anc5_advice_review_AbdomenPain"));
                             anc5_advice_Others.setText(response.getString("anc5_advice_Others"));
 
                             anc_6.setChecked(response.getBoolean("anc_6"));
@@ -1632,11 +1610,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc6_advice_DFMCLLP.setChecked(response.getBoolean("anc6_advice_DFMCLLP"));
                             anc6_advice_TFeCa.setChecked(response.getBoolean("anc6_advice_TFeCa"));
                             anc6_advice_NST.setChecked(response.getBoolean("anc6_advice_NST"));
-                            anc6_advice_review_Bleeding.setChecked(response.getBoolean("anc6_advice_review_Bleeding"));
-                            anc6_advice_review_Spotting.setChecked(response.getBoolean("anc6_advice_review_Spotting"));
-                            anc6_advice_review_Leaking.setChecked(response.getBoolean("anc6_advice_review_Leaking"));
-                            anc6_advice_review_ReducedFM.setChecked(response.getBoolean("anc6_advice_review_ReducedFM"));
-                            anc6_advice_review_AbdomenPain.setChecked(response.getBoolean("anc6_advice_review_AbdomenPain"));
                             anc6_history_Others.setText(response.getString("anc6_history_Others"));
                             anc6_examination_PR.setText(response.getString("anc6_examination_PR"));
                             anc6_examination_BP.setText(response.getString("anc6_examination_BP"));
@@ -1665,11 +1638,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc7_examination_PedalEdema.setChecked(response.getBoolean("anc7_examination_PedalEdema"));
                             anc7_advice_DFMCLLP.setChecked(response.getBoolean("anc7_advice_DFMCLLP"));
                             anc7_advice_TFeCa.setChecked(response.getBoolean("anc7_advice_TFeCa"));
-                            anc7_advice_Bleeding.setChecked(response.getBoolean("anc7_advice_Bleeding"));
-                            anc7_advice_Spotting.setChecked(response.getBoolean("anc7_advice_Spotting"));
-                            anc7_advice_Leaking.setChecked(response.getBoolean("anc7_advice_Leaking"));
-                            anc7_advice_ReducedFM.setChecked(response.getBoolean("anc7_advice_ReducedFM"));
-                            anc7_advice_AbdomenPain.setChecked(response.getBoolean("anc7_advice_AbdomenPain"));
                             anc7_history_Others.setText(response.getString("anc7_history_Others"));
                             anc7_examination_PR.setText(response.getString("anc7_examination_PR"));
                             anc7_examination_BP.setText(response.getString("anc7_examination_BP"));
@@ -1875,42 +1843,57 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Toast.makeText(patient_data_entry_bydoc.this, "Updated Successfully!", Toast.LENGTH_SHORT).show();
-//                        Intent i = new Intent(PatientDataEntryByDoc.this, DoctorScreen.class);
 //                        pb.setVisibility(View.GONE);
-//                        startActivity(i);
-//                        finish();
                         String notfMessage = "";
-//                        if(anc1_advice_GeneralNutritional.isChecked() || anc1_advice_GeneralAilments.isChecked()) {
-//                            notfMessage += "Have a balanced diet.\n" +
-//                                    "Ensure adequate hydration and have 6-8 glasses of water daily\n" +
-//                                    "Ensure a daily diet with adequate protein, dairy products, fruit\n" +
-//                                    "Have folate rich foods like green leafy vegetables, legumes, beans\n" +
-//                                    "Have Vitamin C rich food daily\n" +
-//                                    "Have a High fibre diet\n" +
-//                                    "Take small, frequent meals\n" +
-//                                    "Avoid smoking/alcohol\n";
-//
-//                            notfMessage += "Take iron and calcium supplements daily as prescribed.\n" +
-//                                    "Iron should not be taken empty stomach\n" +
-//                                    "A gap of 2 hours should be kept between the ion and calcium tablets\n" +
-//                                    "Aim for daily moderate intensity activity for 30 minutes\n" +
-//                                    "Avoid lifting heavy weight\n";
-//                        }
-//
-//                        if(anc1_History_Nausea.isChecked()) {
+                        if(anc1_advice_GeneralNutritional.isChecked() || anc2_advice_GeneralNutritional.isChecked() || anc3_advice_GeneralNutritional.isChecked() || anc4_advice_GeneralNutritional.isChecked() || anc5_advice_GeneralNutritional.isChecked() || anc6_advice_GeneralNutritional.isChecked() || anc7_advice_GeneralNutritional.isChecked() || anc8_advice_GeneralNutritional.isChecked()) {
+                            notfMessage += "Have a balanced diet.\n" +
+                                    "Ensure adequate hydration and have 6-8 glasses of water daily\n" +
+                                    "Ensure a daily diet with adequate protein, dairy products, fruit\n" +
+                                    "Have folate rich foods like green leafy vegetables, legumes, beans\n" +
+                                    "Have Vitamin C rich food daily\n" +
+                                    "Have a High fibre diet\n" +
+                                    "Take small, frequent meals\n" +
+                                    "Avoid smoking/alcohol\n";
+
+                            notfMessage += "Take iron and calcium supplements daily as prescribed.\n" +
+                                    "Iron should not be taken empty stomach\n" +
+                                    "A gap of 2 hours should be kept between the ion and calcium tablets\n" +
+                                    "Aim for daily moderate intensity activity for 30 minutes\n" +
+                                    "Avoid lifting heavy weight\n";
+                        }
+
+//                        if(anc1_History_Nausea.isChecked() || anc2_History_Nausea.isChecked() || anc3_History_Nausea.isChecked() || anc1_History_Nausea.isChecked()) {
 //                            notfMessage += "Drink plenty of fluids and maintain hydration\n" +
 //                                    "Eat small frequent meals\n" +
 //                                    "Have non greasy meals with little odor\n" +
 //                                    "Ginger or chamomile tea can help reduce morning sickness\n" +
 //                                    "If excessive, vitamin b6 supplements can be tried\n";
 //                        }
-//
-//                        if(anc2_examination_PedalEdema.isChecked() || anc3_examination_PedalEdema.isChecked() || anc4_examination_PedalEdema.isChecked() || anc5_examination_PedalEdema.isChecked() || anc6_examination_PedalEdema.isChecked() || anc7_examination_PedalEdema.isChecked() || anc8_examination_PedalEdema.isChecked()) {
-//                            notfMessage += "Rest with legs elevated\n" +
-//                                    "Lie in the left lateral position\n" +
-//                                    "Avoid sitting or standing for long periods\n";
-//                        }
-//                    notifGeneration(notfMessage);
+
+                        if(anc1_advice_HeatBurn.isChecked() || anc2_advice_HeatBurn.isChecked() || anc3_advice_HeatBurn.isChecked() || anc4_advice_HeatBurn.isChecked() || anc5_advice_HeatBurn.isChecked() || anc6_advice_HeatBurn.isChecked() || anc7_advice_HeatBurn.isChecked() || anc8_advice_HeatBurn.isChecked()){
+                            notfMessage += "Eat small, frequent meals\n" +
+                                    "Avoid spicy, greasy foods\n" +
+                                    "Elevate head of bed when lying down\n" +
+                                    "Avoid lying down immediately after taking a meal\n";
+                        }
+
+                        if(anc2_advice_Constipation.isChecked()){
+                            notfMessage += "Eat fresh fruits and vegetables\n" +
+                                    "Drink 8-10 glasses of water\n" +
+                                    "Eat foods with high fibre\n";
+                        }
+
+                        if(anc2_advice_PedalEdema.isChecked()){
+                            notfMessage += "Rest with legs elevated\n" +
+                                    "Lie in the left lateral position\n" +
+                                    "Avoid sitting or standing for long periods\n";
+                        }
+
+                        if(anc2_advice_LegCramps.isChecked()){
+                            notfMessage += "Daily magnesium/calcium supplements can be used";
+                        }
+
+                    notifGeneration(notfMessage);
 
                         Intent intent = new Intent(patient_data_entry_bydoc.this, AllPatientListActivity.class);
                         startActivity(intent);
@@ -1941,6 +1924,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("investigations_heatDisease_Cyanotic", "" + investigations_heatDisease_Cyanotic.isChecked());
                     params.put("investigations_Others", "" + investigations_Others.getText());
                     params.put("investigations_DrugHistory", "" + investigations_DrugHistory.getText());
+
+                    params.put("anc3_advice_review", "" + anc3_advice_review.isChecked());
+                    params.put("anc4_advice_review", "" + anc4_advice_review.isChecked());
+                    params.put("anc5_advice_review", "" + anc5_advice_review.isChecked());
+                    params.put("anc6_advice_review", "" + anc6_advice_review.isChecked());
+                    params.put("anc7_advice_review", "" + anc7_advice_review.isChecked());
 
                     params.put("anc1_Date", "" + anc1_Date.getText());
                     params.put("anc1_POG", "" + anc1_POG.getText());
@@ -1986,7 +1975,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc1_investigations_HusbandBloodGroup", "" + anc1_investigations_HusbandBloodGroup.getSelectedItem().toString());
                     params.put("anc1_investigations_Hemogram", "" + anc1_investigations_Hemogram.getText());
                     params.put("anc1_investigations_Tsh", "" + anc1_investigations_Tsh.getText());
-                    params.put("anc1_investigations_GTT", "" + anc1_investigations_GTT.isChecked());
+
+                    params.put("anc1_investigations_GTT_fast", "" + anc1_investigations_GTT_fast.getText());
+                    params.put("anc1_investigations_GTT_1Hour", "" + anc1_investigations_GTT_1Hour.getText());
+                    params.put("anc1_investigations_GTT_2Hour", "" + anc1_investigations_GTT_2Hour.getText());
+
                     params.put("anc1_investigations_bloodSugar_Fasting", "" + anc1_investigations_bloodSugar_Fasting.getText());
                     params.put("anc1_investigations_bloodSugar_PostPrandial", "" + anc1_investigations_bloodSugar_PostPrandial.getText());
                     params.put("anc1_investigations_ntnb_DoneNotDone", "" + anc1_investigations_ntnb_DoneNotDone.getText());
@@ -2094,11 +2087,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc3_advice_LFT", "" + anc3_advice_LFT.isChecked());
                     params.put("anc3_advice_KFT", "" + anc3_advice_KFT.isChecked());
                     params.put("anc3_advice_GTT", "" + anc3_advice_GTT.isChecked());
-                    params.put("anc3_advice_review_BleedingPV", "" + anc3_advice_review_BleedingPV.isChecked());
-                    params.put("anc3_advice_review_SpottingPV", "" + anc3_advice_review_SpottingPV.isChecked());
-                    params.put("anc3_advice_review_LeakingPV", "" + anc3_advice_review_LeakingPV.isChecked());
-                    params.put("anc3_advice_review_ReducedFetalMovement", "" + anc3_advice_review_ReducedFetalMovement.isChecked());
-                    params.put("anc3_advice_review_AbdominalPain", "" + anc3_advice_review_AbdominalPain.isChecked());
                     params.put("anc3_advice_ictNegative_InjAntiD300", "" + anc3_advice_ictNegative_InjAntiD300.isChecked());
                     params.put("anc3_advice_GeneralNutritional", "" + anc3_advice_GeneralNutritional.isChecked());
                     params.put("anc3_advice_NauseaVomiting", "" + anc3_advice_NauseaVomiting.isChecked());
@@ -2137,11 +2125,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc4_advice_TCaBD", "" + anc4_advice_TCaBD.isChecked());
                     params.put("anc4_advice_DFMC", "" + anc4_advice_DFMC.isChecked());
                     params.put("anc4_advice_USG", "" + anc4_advice_USG.isChecked());
-                    params.put("anc4_advice_review_Bleeding", "" + anc4_advice_review_Bleeding.isChecked());
-                    params.put("anc4_advice_review_Spotting", "" + anc4_advice_review_Spotting.isChecked());
-                    params.put("anc4_advice_review_Leaking", "" + anc4_advice_review_Leaking.isChecked());
-                    params.put("anc4_advice_review_ReducedFM", "" + anc4_advice_review_ReducedFM.isChecked());
-                    params.put("anc4_advice_review_AbdomenPain", "" + anc4_advice_review_AbdomenPain.isChecked());
                     params.put("anc4_advice_GeneralNutritional", "" + anc4_advice_GeneralNutritional.isChecked());
                     params.put("anc4_advice_NauseaVomiting", "" + anc4_advice_NauseaVomiting.isChecked());
                     params.put("anc4_advice_HeatBurn", "" + anc4_advice_HeatBurn.isChecked());
@@ -2206,11 +2189,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc5_advice_Constipation", "" + anc5_advice_Constipation.isChecked());
                     params.put("anc5_advice_PedalEdema", "" + anc5_advice_PedalEdema.isChecked());
                     params.put("anc5_advice_LegCramps", "" + anc5_advice_LegCramps.isChecked());
-                    params.put("anc5_advice_review_Bleeding", "" + anc5_advice_review_Bleeding.isChecked());
-                    params.put("anc5_advice_review_Spotting", "" + anc5_advice_review_Spotting.isChecked());
-                    params.put("anc5_advice_review_Leaking", "" + anc5_advice_review_Leaking.isChecked());
-                    params.put("anc5_advice_review_ReducedFM", "" + anc5_advice_review_ReducedFM.isChecked());
-                    params.put("anc5_advice_review_AbdomenPain", "" + anc5_advice_review_AbdomenPain.isChecked());
                     params.put("anc5_advice_Others", "" + anc5_advice_Others.getText());
 
                     params.put("anc6_Date", "" + anc6_Date.getText());
@@ -2227,11 +2205,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc6_advice_DFMCLLP", "" + anc6_advice_DFMCLLP.isChecked());
                     params.put("anc6_advice_TFeCa", "" + anc6_advice_TFeCa.isChecked());
                     params.put("anc6_advice_NST", "" + anc6_advice_NST.isChecked());
-                    params.put("anc6_advice_review_Bleeding", "" + anc6_advice_review_Bleeding.isChecked());
-                    params.put("anc6_advice_review_Spotting", "" + anc6_advice_review_Spotting.isChecked());
-                    params.put("anc6_advice_review_Leaking", "" + anc6_advice_review_Leaking.isChecked());
-                    params.put("anc6_advice_review_ReducedFM", "" + anc6_advice_review_ReducedFM.isChecked());
-                    params.put("anc6_advice_review_AbdomenPain", "" + anc6_advice_review_AbdomenPain.isChecked());
                     params.put("anc6_advice_GeneralNutritional", "" + anc6_advice_GeneralNutritional.isChecked());
                     params.put("anc6_advice_NauseaVomiting", "" + anc6_advice_NauseaVomiting.isChecked());
                     params.put("anc6_advice_HeatBurn", "" + anc6_advice_HeatBurn.isChecked());
@@ -2260,11 +2233,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc7_examination_PedalEdema", "" + anc7_examination_PedalEdema.isChecked());
                     params.put("anc7_advice_DFMCLLP", "" + anc7_advice_DFMCLLP.isChecked());
                     params.put("anc7_advice_TFeCa", "" + anc7_advice_TFeCa.isChecked());
-                    params.put("anc7_advice_Bleeding", "" + anc7_advice_Bleeding.isChecked());
-                    params.put("anc7_advice_Spotting", "" + anc7_advice_Spotting.isChecked());
-                    params.put("anc7_advice_Leaking", "" + anc7_advice_Leaking.isChecked());
-                    params.put("anc7_advice_ReducedFM", "" + anc7_advice_ReducedFM.isChecked());
-                    params.put("anc7_advice_AbdomenPain", "" + anc7_advice_AbdomenPain.isChecked());
                     params.put("anc7_advice_GeneralNutritional", "" + anc7_advice_GeneralNutritional.isChecked());
                     params.put("anc7_advice_NauseaVomiting", "" + anc7_advice_NauseaVomiting.isChecked());
                     params.put("anc7_advice_HeatBurn", "" + anc7_advice_HeatBurn.isChecked());
