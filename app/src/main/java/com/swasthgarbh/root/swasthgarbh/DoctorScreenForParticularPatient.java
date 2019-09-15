@@ -437,7 +437,7 @@ public class DoctorScreenForParticularPatient extends AppCompatActivity implemen
                                 listView.setAdapter(itemsAdapter);
                                 JSONObject device = (JSONObject) response.get("device");
                                 to_fcm = device.getString("device_id");
-                                if(response.getString("UHID") != null) {
+                                if(!response.getString("UHID").equals("null")) {
                                     chart.setVisibility(View.GONE);
                                     dummyData.setText("*No chart data available");
                                 }

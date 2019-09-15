@@ -493,7 +493,8 @@ public class patient_registration extends AppCompatActivity {
 
                             patientName.setText(response.getString("name"));
                             whoFollowing.setText(response.getString("who_following"));
-                            if(response.getString("UHID") != null) {
+                            if(!response.getString("UHID").equals("null")) {
+//                                Log.i("UHID", "NULL" + response.getString("UHID"));
                                 addData.setVisibility(View.GONE);
                                 linearLayout2.setVisibility(View.GONE);
                             }
@@ -705,7 +706,7 @@ public class patient_registration extends AppCompatActivity {
                                 listView.setAdapter(itemsAdapter);
                                 pb.setVisibility(View.GONE);
                                 chartPB.setVisibility(View.GONE);
-                                if(response.getString("UHID") != null) {
+                                if(!response.getString("UHID").equals("null")) {
                                     chart.setVisibility(View.GONE);
                                     dummyData.setText("*No chart data available");
                                 }
