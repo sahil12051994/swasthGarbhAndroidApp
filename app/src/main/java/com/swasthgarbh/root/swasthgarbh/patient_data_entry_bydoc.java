@@ -7,8 +7,10 @@ import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -25,6 +27,7 @@ import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -37,6 +40,13 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.LimitLine;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,6 +55,7 @@ import org.w3c.dom.Text;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -53,11 +64,14 @@ import java.util.Map;
 
 import android.widget.CompoundButton;
 
+import java.util.Random;
 import java.util.ResourceBundle;
 
 import static android.app.PendingIntent.getActivity;
 import static com.swasthgarbh.root.swasthgarbh.DoctorScreenForParticularPatient.p_id;
+import static com.swasthgarbh.root.swasthgarbh.DoctorScreenForParticularPatient.to_fcm;
 import static com.swasthgarbh.root.swasthgarbh.patient_registration.session;
+import java.text.DecimalFormat;
 
 public class patient_data_entry_bydoc extends AppCompatActivity {
 
@@ -261,17 +275,17 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             long diff = d1.getTime() - d2.getTime();
 //            Log.i("difference", "" + diff);
             long days = diff / (24 * 60 * 60 * 1000);
-            long month = days / 30;
+            long weeks = days / 7;
 
-            days = days % 30;
+            days = days % 7;
 
 //            Log.i("month", "" + month);
 //            Log.i("days", "" + days);
             String m = "";
-            if (month == 1) {
-                m = month + " Month " + " and " + days + " Days";
-            } else if (month > 1) {
-                m = month + " Months " + " and " + days + " Days";
+            if (weeks == 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
+            } else if (weeks > 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
             } else {
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
@@ -301,17 +315,17 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             long diff = d1.getTime() - d2.getTime();
 //            Log.i("difference", "" + diff);
             long days = diff / (24 * 60 * 60 * 1000);
-            long month = days / 30;
+            long weeks = days / 7;
 
-            days = days % 30;
+            days = days % 7;
 
 //            Log.i("month", "" + month);
 //            Log.i("days", "" + days);
             String m = "";
-            if (month == 1) {
-                m = month + " Month " + " and " + days + " Days";
-            } else if (month > 1) {
-                m = month + " Months " + " and " + days + " Days";
+            if (weeks == 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
+            } else if (weeks > 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
             } else {
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
@@ -341,17 +355,17 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             long diff = d1.getTime() - d2.getTime();
 //            Log.i("difference", "" + diff);
             long days = diff / (24 * 60 * 60 * 1000);
-            long month = days / 30;
+            long weeks = days / 7;
 
-            days = days % 30;
+            days = days % 7;
 
 //            Log.i("month", "" + month);
 //            Log.i("days", "" + days);
             String m = "";
-            if (month == 1) {
-                m = month + " Month " + " and " + days + " Days";
-            } else if (month > 1) {
-                m = month + " Months " + " and " + days + " Days";
+            if (weeks == 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
+            } else if (weeks > 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
             } else {
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
@@ -381,17 +395,17 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             long diff = d1.getTime() - d2.getTime();
 //            Log.i("difference", "" + diff);
             long days = diff / (24 * 60 * 60 * 1000);
-            long month = days / 30;
+            long weeks = days / 7;
 
-            days = days % 30;
+            days = days % 7;
 
 //            Log.i("month", "" + month);
 //            Log.i("days", "" + days);
             String m = "";
-            if (month == 1) {
-                m = month + " Month " + " and " + days + " Days";
-            } else if (month > 1) {
-                m = month + " Months " + " and " + days + " Days";
+            if (weeks == 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
+            } else if (weeks > 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
             } else {
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
@@ -421,17 +435,17 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             long diff = d1.getTime() - d2.getTime();
 //            Log.i("difference", "" + diff);
             long days = diff / (24 * 60 * 60 * 1000);
-            long month = days / 30;
+            long weeks = days / 7;
 
-            days = days % 30;
+            days = days % 7;
 
 //            Log.i("month", "" + month);
 //            Log.i("days", "" + days);
             String m = "";
-            if (month == 1) {
-                m = month + " Month " + " and " + days + " Days";
-            } else if (month > 1) {
-                m = month + " Months " + " and " + days + " Days";
+            if (weeks == 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
+            } else if (weeks > 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
             } else {
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
@@ -461,17 +475,17 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             long diff = d1.getTime() - d2.getTime();
 //            Log.i("difference", "" + diff);
             long days = diff / (24 * 60 * 60 * 1000);
-            long month = days / 30;
+            long weeks = days / 7;
 
-            days = days % 30;
+            days = days % 7;
 
 //            Log.i("month", "" + month);
 //            Log.i("days", "" + days);
             String m = "";
-            if (month == 1) {
-                m = month + " Month " + " and " + days + " Days";
-            } else if (month > 1) {
-                m = month + " Months " + " and " + days + " Days";
+            if (weeks == 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
+            } else if (weeks > 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
             } else {
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
@@ -501,17 +515,17 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             long diff = d1.getTime() - d2.getTime();
 //            Log.i("difference", "" + diff);
             long days = diff / (24 * 60 * 60 * 1000);
-            long month = days / 30;
+            long weeks = days / 7;
 
-            days = days % 30;
+            days = days % 7;
 
 //            Log.i("month", "" + month);
 //            Log.i("days", "" + days);
             String m = "";
-            if (month == 1) {
-                m = month + " Month " + " and " + days + " Days";
-            } else if (month > 1) {
-                m = month + " Months " + " and " + days + " Days";
+            if (weeks == 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
+            } else if (weeks > 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
             } else {
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
@@ -541,17 +555,17 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             long diff = d1.getTime() - d2.getTime();
 //            Log.i("difference", "" + diff);
             long days = diff / (24 * 60 * 60 * 1000);
-            long month = days / 30;
+            long weeks = days / 7;
 
-            days = days % 30;
+            days = days % 7;
 
 //            Log.i("month", "" + month);
 //            Log.i("days", "" + days);
             String m = "";
-            if (month == 1) {
-                m = month + " Month " + " and " + days + " Days";
-            } else if (month > 1) {
-                m = month + " Months " + " and " + days + " Days";
+            if (weeks == 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
+            } else if (weeks > 1) {
+                m = weeks + " weeks " + " and " + days + " Days";
             } else {
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
@@ -695,7 +709,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                 Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
                 Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
                 Double BMI = weight / (height * height);
-                anc1_examination_anthropometry_Bmi.setText(String.valueOf(BMI));
+                DecimalFormat df = new DecimalFormat("#.00");
+                String angleFormated = df.format(BMI);
+                anc1_examination_anthropometry_Bmi.setText(angleFormated);
             }
 
 
@@ -716,7 +732,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                 Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
                 Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
                 Double BMI = weight / (height * height);
-                anc1_examination_anthropometry_Bmi.setText(String.valueOf(BMI));
+                DecimalFormat df = new DecimalFormat("#.00");
+                String angleFormated = df.format(BMI);
+                anc1_examination_anthropometry_Bmi.setText(angleFormated);
             }
 
 
@@ -1191,7 +1209,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         session = new SessionManager(this);
 
         clickedPatientId = getIntent().getIntExtra("EXTRA_PATIENT_ID", 0);
-        System.out.print(clickedPatientId);
         String url = ApplicationController.get_base_url() + "swasthgarbh/patient/" + clickedPatientId;
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
                 url, null,
@@ -1702,6 +1719,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         };
         ApplicationController.getInstance().addToRequestQueue(jsonObjReq);
 
+        getPatientData(clickedPatientId);
+
         UpdateData = (Button) findViewById(R.id.updatedatabydoc);
         LinearLayout a = (LinearLayout) findViewById(R.id.linearLayoutForAll);
         RelativeLayout b = (RelativeLayout) findViewById(R.id.updateButtonLayout);
@@ -1829,6 +1848,47 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
         }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
 
+    }
+
+    public void getPatientData(int pId) {
+        String url = ApplicationController.get_base_url() + "api/patient/" + pId ;
+        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
+                url, null,
+                new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.d("patient data retirval", response.toString());
+                        try {
+                            Log.i("dayaa", String.valueOf(response.getString("device")));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        try {
+                                if(String.valueOf(response.getString("device")) != "null") {
+                                    JSONObject device = (JSONObject) response.get("device");
+                                    to_fcm = device.getString("device_id");
+                                }
+                            } catch (JSONException e1) {
+                            e1.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("TAG", "Error Message: " + error.getMessage());
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("Content-Type", "application/json");
+                params.put("Authorization", "Token " + session.getUserDetails().get("Token"));
+                return params;
+            }
+        };
+        ApplicationController.getInstance().addToRequestQueue(jsonObjReq);
     }
 
     public void updateData() {
@@ -2337,7 +2397,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                 try {
                     params.put("p_id", p_id);
                     params.put("message", "" + finalNotfMessage);
-                    params.put("to", "" + clickedPatientId);
+                    params.put("to", "" + to_fcm);
                     params.put("from", "" + "me");
 
                 } catch (JSONException e) {

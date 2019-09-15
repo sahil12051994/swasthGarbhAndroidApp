@@ -83,6 +83,8 @@ public class patient_registration extends AppCompatActivity {
     Uri ImageUri;
     ImageView loader;
     boolean doubleBackToExitPressedOnce = false;
+    Button addData;
+    LinearLayout linearLayout2;
     // Create a Uri from an intent string. Use the result to create an Intent.
     private void logout(Context _c) {
         session = new SessionManager(_c);
@@ -354,6 +356,7 @@ public class patient_registration extends AppCompatActivity {
         callDoctor = (ImageView)  findViewById(R.id.callDoctor);
         dummyData = (TextView)  findViewById(R.id.dummyData);
         verified = (ImageView)findViewById(R.id.verified);
+        linearLayout2 = (LinearLayout)findViewById(R.id.linearLayout2);
         dummyData.setVisibility(View.GONE);
 
         Button whoGuidelines = (Button) findViewById(R.id.who_button);
@@ -366,7 +369,7 @@ public class patient_registration extends AppCompatActivity {
             }
         });
 
-        Button addData = (Button) findViewById(R.id.addData);
+        addData = (Button) findViewById(R.id.addData);
         addData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -490,6 +493,10 @@ public class patient_registration extends AppCompatActivity {
 
                             patientName.setText(response.getString("name"));
                             whoFollowing.setText(response.getString("who_following"));
+                            if(response.getString("UHID") != null) {
+                                addData.setVisibility(View.GONE);
+                                linearLayout2.setVisibility(View.GONE);
+                            }
                             String date = response.getString("lmp").split("T")[0].split("-")[2] + "-" + response.getString("lmp").split("T")[0].split("-")[1] + "-" + response.getString("lmp").split("T")[0].split("-")[0];
                             pregStartDate.setText(date);
                             SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
@@ -698,6 +705,10 @@ public class patient_registration extends AppCompatActivity {
                                 listView.setAdapter(itemsAdapter);
                                 pb.setVisibility(View.GONE);
                                 chartPB.setVisibility(View.GONE);
+                                if(response.getString("UHID") != null) {
+                                    chart.setVisibility(View.GONE);
+                                    dummyData.setText("*No chart data available");
+                                }
                             }
                             getDoctorData();
                         } catch (JSONException e) {

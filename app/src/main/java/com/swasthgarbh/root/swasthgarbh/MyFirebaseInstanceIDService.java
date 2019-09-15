@@ -49,7 +49,7 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     }
 
     private void sendRegistrationToServer(final String refreshedToken) {
-        String url = ApplicationController.get_base_url() + "cbtbiitr/api/device";
+        String url = ApplicationController.get_base_url() + "api/device";
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
                 url, null,
                 new Response.Listener<JSONObject>() {

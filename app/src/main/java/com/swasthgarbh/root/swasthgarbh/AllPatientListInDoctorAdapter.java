@@ -149,54 +149,67 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
 
                                 if (isdocreg==1){
 
-                                    Object data = response.get ("anc1_exam_BP");
-                                    Log.d ("bpppppdata", data+"");
+                                    Object data;
                                     ArrayList<String> bpdata = new ArrayList<>();
 
-                                    if(data.toString ().contains ("/")) {
-                                        bpdata.add (data + "");
-                                    }
-                                    data = response.get ("anc2_exam_BP").toString ();
-                                    if(data.toString ().contains ("/")) {
-                                        bpdata.add (data + "");
+                                    if(response.get ("anc1_exam_BP") != null) {
+                                        data = response.get ("anc1_exam_BP");
+                                        if(data.toString ().contains ("/")) {
+                                            bpdata.add (data + "");
+                                        }
                                     }
 
+                                    if(response.get ("anc2_exam_BP") != null) {
+                                        data = response.get ("anc2_exam_BP");
+                                        if(data.toString ().contains ("/")) {
+                                            bpdata.add (data + "");
+                                        }
+                                    }
+
+                                    if(response.get ("anc3_exam_BP") != null) {
                                         data = response.get ("anc3_exam_BP");
-                                    if(data.toString ().contains ("/")) {
-                                        bpdata.add (data + "");
+                                        if(data.toString ().contains ("/")) {
+                                            bpdata.add (data + "");
+                                        }
                                     }
 
+                                    if(response.get ("anc4_exam_BP") != null) {
                                         data = response.get ("anc4_exam_BP");
-                                    if(data.toString ().contains ("/")) {
-                                        bpdata.add (data + "");
+                                        if(data.toString ().contains ("/")) {
+                                            bpdata.add (data + "");
+                                        }
                                     }
-
+                                    if(response.get ("anc5_exam_BP") != null) {
                                         data = response.get ("anc5_exam_BP");
-                                    if(data.toString ().contains ("/")) {
-                                        bpdata.add (data + "");
+                                        if(data.toString ().contains ("/")) {
+                                            bpdata.add (data + "");
+                                        }
                                     }
-
+                                    if(response.get ("anc6_exam_BP") != null) {
                                         data = response.get ("anc6_exam_BP");
-                                    if(data.toString ().contains ("/")) {
-                                        bpdata.add (data + "");
+                                        if(data.toString ().contains ("/")) {
+                                            bpdata.add (data + "");
+                                        }
                                     }
-
+                                    if(response.get ("anc7_exam_BP") != null) {
                                         data = response.get ("anc7_exam_BP");
-                                    if(data.toString ().contains ("/")) {
-                                        bpdata.add (data + "");
+                                        if(data.toString ().contains ("/")) {
+                                            bpdata.add (data + "");
+                                        }
                                     }
-
+                                    if(response.get ("anc8_exam_BP") != null) {
                                         data = response.get ("anc8_exam_BP");
-                                    if(data.toString ().contains ("/")) {
-                                        Log.d ("before adding", "bpppppp");
-                                        bpdata.add (data + "");
+                                        if(data.toString ().contains ("/")) {
+                                            bpdata.add (data + "");
+                                        }
                                     }
-                                    Log.d ("bp ka data", bpdata.size ()+"");
-//                                    if (bpdata.size () !=0){
-                                    if(bpdata.size ()==0){
-                                        Toast.makeText (getContext (), "BP Data not found", Toast.LENGTH_SHORT).show ( );
 
-                                    }else{
+                                    if(bpdata.size ()==0){
+//                                        Toast.makeText (getContext (), "BP Data not found", Toast.LENGTH_SHORT).show ( );
+                                        Log.i ("Data","BP Data not found" + bpdata);;
+                                        chart.clear();
+
+                                    } else {
                                         for(int i=0;i<bpdata.size ();i++){
                                             String s = bpdata.get (i);
                                             Log.d ("bpdataaa",s );
@@ -231,9 +244,8 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
                                                     y2Values.add (new Entry (i+1, dys));
                                                 }
                                             }
-
-
                                         }
+                                        Log.i ("Graph","Forming the grph");
                                         chart.setDragEnabled (true);
                                         chart.setScaleEnabled (true);
                                         chart.getDescription ( ).setEnabled (false);
@@ -247,13 +259,11 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
                                         set1.setLineWidth (3.5f);
                                         set1.setColor (Color.rgb (19, 141, 117));
                                         set1.setDrawValues (false);
-//                                set1.setDrawCircles(false);
                                         set1.setCircleColors (colorssys);
 
                                         set2.setLineWidth (2f);
                                         set2.setColor (Color.rgb (171, 235, 198));
                                         set2.setDrawValues (false);
-//                                set2.setDrawCircles(false);
                                         set2.setCircleColors (colorsdys);
 
                                         YAxis leftAxis = chart.getAxisLeft ( );
@@ -279,15 +289,15 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
                                         ArrayList<ILineDataSet> dataSets = new ArrayList<> ( );
                                         dataSets.add (set1);
                                         dataSets.add (set2);
-
                                         LineData dataa = new LineData (dataSets);
                                         chart.setData (dataa);
                                         chart.invalidate ( );
                                         chart.animateXY (1000, 1000);
+
                                     }
 
 
-                                }else{
+                                } else {
                                     Log.d ("gettheGraph", response.toString ( ));
                                     JSONArray patientBpData = response.getJSONArray ("data");
                                     Log.d ("The length check", "onResponse: " + patientBpData.length ( ));
@@ -341,13 +351,11 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
                                         set1.setLineWidth (3.5f);
                                         set1.setColor (Color.rgb (19, 141, 117));
                                         set1.setDrawValues (false);
-//                                set1.setDrawCircles(false);
                                         set1.setCircleColors (colorssys);
 
                                         set2.setLineWidth (2f);
                                         set2.setColor (Color.rgb (171, 235, 198));
                                         set2.setDrawValues (false);
-//                                set2.setDrawCircles(false);
                                         set2.setCircleColors (colorsdys);
 
                                         YAxis leftAxis = chart.getAxisLeft ( );
@@ -374,24 +382,25 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
                                         dataSets.add (set1);
                                         dataSets.add (set2);
 
-                                        LineData data = new LineData (dataSets);
-                                        chart.setData (data);
+                                        LineData dataa = new LineData (dataSets);
+                                        chart.setData (dataa);
                                         chart.invalidate ( );
                                         chart.animateXY (1000, 1000);
+
+
                                     } else {
-                                        Toast.makeText (getContext ( ), "bp not found", Toast.LENGTH_SHORT).show ( );
+//                                        Toast.makeText (getContext ( ), "bp not found", Toast.LENGTH_SHORT).show ( );
                                     }
                                 }
 
-
                             } catch (JSONException e) {
-                                Log.d ("error", "found error");
+                                Log.d ("error", "found error 1" + e);
                             }
                             catch (IndexOutOfBoundsException e){
-                                Log.d ("error", "found error");
+                                Log.d ("error", "found error 2");
                             }
                             catch (Exception e){
-                                Log.d ("error", "found error");
+                                Log.d ("error", "found error 3");
                             }
 
                     }

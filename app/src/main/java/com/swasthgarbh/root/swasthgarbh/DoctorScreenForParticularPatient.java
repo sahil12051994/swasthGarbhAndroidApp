@@ -18,6 +18,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -63,6 +64,7 @@ public class DoctorScreenForParticularPatient extends AppCompatActivity implemen
     Dialog notify_dialog;
     EditText message_box;
     static String p_id, to_fcm;
+    LinearLayout linearLayout2;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -151,6 +153,7 @@ public class DoctorScreenForParticularPatient extends AppCompatActivity implemen
         dummyData = (TextView)  findViewById(R.id.dummyData);
         verified = (ImageView)findViewById(R.id.verified);
         dummyData.setVisibility(View.GONE);
+        linearLayout2 = (LinearLayout)findViewById(R.id.linearLayout2);
 //        Button logOutButton = (Button) findViewById(R.id.analyseResult);
 //        logOutButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -230,6 +233,10 @@ public class DoctorScreenForParticularPatient extends AppCompatActivity implemen
                             whoFollowing.setText(response.getString("who_following"));
                             if(!response.getBoolean("verified")){
                                 verified.setVisibility(View.GONE);
+                            }
+                            if(response.getString("UHID") != null) {
+//                                chart.setVisibility(View.GONE);
+                                linearLayout2.setVisibility(View.GONE);
                             }
                             String date = response.getString("lmp").split("T")[0].split("-")[2] + "-" + response.getString("lmp").split("T")[0].split("-")[1] + "-" + response.getString("lmp").split("T")[0].split("-")[0];
                             pregStartDate.setText(date);
@@ -430,6 +437,10 @@ public class DoctorScreenForParticularPatient extends AppCompatActivity implemen
                                 listView.setAdapter(itemsAdapter);
                                 JSONObject device = (JSONObject) response.get("device");
                                 to_fcm = device.getString("device_id");
+                                if(response.getString("UHID") != null) {
+                                    chart.setVisibility(View.GONE);
+                                    dummyData.setText("*No chart data available");
+                                }
                             }
                             listPB.setVisibility(View.GONE);
                             chartPB.setVisibility(View.GONE);
@@ -498,7 +509,7 @@ public class DoctorScreenForParticularPatient extends AppCompatActivity implemen
                         return;
                     }
 
-                    String url = ApplicationController.get_base_url() + "dhadkan/api/notification";
+                    String url = ApplicationController.get_base_url() + "sg/api/notification";
                     JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
                             url, null,
                             new Response.Listener<JSONObject>() {
