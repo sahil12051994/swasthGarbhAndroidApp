@@ -234,7 +234,7 @@ public class DoctorScreenForParticularPatient extends AppCompatActivity implemen
                             if(!response.getBoolean("verified")){
                                 verified.setVisibility(View.GONE);
                             }
-                            if(response.getString("UHID") != null) {
+                            if(!response.getString("UHID").equals("null")) {
 //                                chart.setVisibility(View.GONE);
                                 linearLayout2.setVisibility(View.GONE);
                             }

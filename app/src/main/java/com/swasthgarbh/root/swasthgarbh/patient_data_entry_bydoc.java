@@ -68,15 +68,14 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 import static android.app.PendingIntent.getActivity;
-import static com.swasthgarbh.root.swasthgarbh.DoctorScreenForParticularPatient.p_id;
-import static com.swasthgarbh.root.swasthgarbh.DoctorScreenForParticularPatient.to_fcm;
-import static com.swasthgarbh.root.swasthgarbh.patient_registration.session;
 import java.text.DecimalFormat;
 
 public class patient_data_entry_bydoc extends AppCompatActivity {
 
     int clickedPatientId;
     Button UpdateData;
+    static String p_id, to_fcm;
+    static SessionManager session;
 
     TextView anc1_Date_Automatic, anc2_Date_Automatic, anc3_Date_Automatic, anc4_Date_Automatic, anc5_Date_Automatic, anc6_Date_Automatic, anc7_Date_Automatic, anc8_Date_Automatic;
     CheckBox investigations_box, anc_1, anc_2, anc_3, anc_4, anc_5, anc_6, anc_7, anc_8;
@@ -250,6 +249,24 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     private DatePickerDialog anc6_datePickerDialog;
     private DatePickerDialog anc7_datePickerDialog;
     private DatePickerDialog anc8_datePickerDialog;
+
+    Boolean temp_anc1_advice_GeneralNutritional;
+    Boolean temp_anc2_advice_GeneralNutritional;
+    Boolean temp_anc3_advice_GeneralNutritional;
+    Boolean temp_anc4_advice_GeneralNutritional;
+    Boolean temp_anc5_advice_GeneralNutritional;
+    Boolean temp_anc6_advice_GeneralNutritional;
+    Boolean temp_anc7_advice_GeneralNutritional;
+    Boolean temp_anc8_advice_GeneralNutritional;
+    Boolean temp_anc1_History_Nausea;
+    Boolean temp_anc2_History_Nausea;
+    Boolean temp_anc3_History_Nausea;
+    Boolean temp_anc1_advice_HeatBurn;
+    Boolean temp_anc2_advice_HeatBurn;
+    Boolean temp_anc3_advice_HeatBurn;
+    Boolean temp_anc2_advice_Constipation;
+    Boolean temp_anc2_advice_PedalEdema;
+    Boolean temp_anc2_advice_LegCramps;
 
     private SimpleDateFormat dateFormatterShow, dateFormatterServer;
     String g;
@@ -1209,6 +1226,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         session = new SessionManager(this);
 
         clickedPatientId = getIntent().getIntExtra("EXTRA_PATIENT_ID", 0);
+        p_id = String.valueOf(clickedPatientId);
         String url = ApplicationController.get_base_url() + "swasthgarbh/patient/" + clickedPatientId;
         JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
                 url, null,
@@ -1373,6 +1391,24 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc2_advice_Constipation.setChecked(response.getBoolean("anc2_advice_Constipation"));
                             anc2_advice_PedalEdema.setChecked(response.getBoolean("anc2_advice_PedalEdema"));
                             anc2_advice_LegCramps.setChecked(response.getBoolean("anc2_advice_LegCramps"));
+
+                            temp_anc1_advice_GeneralNutritional = response.getBoolean("anc2_advice_GeneralNutritional");
+                            temp_anc1_History_Nausea = response.getBoolean("anc2_advice_NauseaVomiting");
+                            temp_anc1_advice_HeatBurn = response.getBoolean("anc2_advice_HeatBurn");
+                            temp_anc2_advice_GeneralNutritional = response.getBoolean("anc2_advice_GeneralNutritional");
+                            temp_anc3_advice_GeneralNutritional = response.getBoolean("anc3_advice_GeneralNutritional");
+                            temp_anc4_advice_GeneralNutritional = response.getBoolean("anc4_advice_GeneralNutritional");
+                            temp_anc5_advice_GeneralNutritional = response.getBoolean("anc5_advice_GeneralNutritional");
+                            temp_anc6_advice_GeneralNutritional = response.getBoolean("anc6_advice_GeneralNutritional");
+                            temp_anc7_advice_GeneralNutritional = response.getBoolean("anc7_advice_GeneralNutritional");
+                            temp_anc8_advice_GeneralNutritional = response.getBoolean("anc8_advice_GeneralNutritional");
+                            temp_anc2_History_Nausea = response.getBoolean("anc2_advice_NauseaVomiting");
+                            temp_anc3_History_Nausea = response.getBoolean("anc3_advice_NauseaVomiting");
+                            temp_anc2_advice_HeatBurn = response.getBoolean("anc2_advice_HeatBurn");
+                            temp_anc3_advice_HeatBurn = response.getBoolean("anc3_advice_HeatBurn");
+                            temp_anc2_advice_Constipation = response.getBoolean("anc2_advice_Constipation");
+                            temp_anc2_advice_PedalEdema = response.getBoolean("anc2_advice_PedalEdema");
+                            temp_anc2_advice_LegCramps = response.getBoolean("anc2_advice_LegCramps");
 
                             anc3_advice_GeneralNutritional.setChecked(response.getBoolean("anc3_advice_GeneralNutritional"));
                             anc3_advice_NauseaVomiting.setChecked(response.getBoolean("anc3_advice_NauseaVomiting"));
@@ -1905,6 +1941,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         Toast.makeText(patient_data_entry_bydoc.this, "Updated Successfully!", Toast.LENGTH_SHORT).show();
 //                        pb.setVisibility(View.GONE);
                         String notfMessage = "";
+
                         if(anc1_advice_GeneralNutritional.isChecked() || anc2_advice_GeneralNutritional.isChecked() || anc3_advice_GeneralNutritional.isChecked() || anc4_advice_GeneralNutritional.isChecked() || anc5_advice_GeneralNutritional.isChecked() || anc6_advice_GeneralNutritional.isChecked() || anc7_advice_GeneralNutritional.isChecked() || anc8_advice_GeneralNutritional.isChecked()) {
                             notfMessage += "Have a balanced diet.\n" +
                                     "Ensure adequate hydration and have 6-8 glasses of water daily\n" +
@@ -2399,7 +2436,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("message", "" + finalNotfMessage);
                     params.put("to", "" + to_fcm);
                     params.put("from", "" + "me");
-
+                    params.put("docId", "" + session.getUserDetails().get("id"));
+                    Log.d("NOTIFICATIONNNNNN", "dATA: " + params);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
