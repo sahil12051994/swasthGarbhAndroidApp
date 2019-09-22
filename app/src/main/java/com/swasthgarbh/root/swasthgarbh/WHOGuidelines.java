@@ -47,6 +47,14 @@ public class WHOGuidelines extends AppCompatActivity {
     Button updateWhoData;
     Calendar newDate1 = Calendar.getInstance();
     int key=1;
+    TextView anc1Date;
+    TextView anc2Date;
+    TextView anc3Date;
+    TextView anc4Date;
+    TextView anc5Date;
+    TextView anc6Date;
+    TextView anc7Date;
+    TextView anc8Date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,14 +127,14 @@ public class WHOGuidelines extends AppCompatActivity {
 
                             TextView lmpDate = (TextView) findViewById(R.id.lmpDate);
                             TextView eddDate = (TextView) findViewById(R.id.eddDate);
-                            TextView anc1Date = (TextView) findViewById(R.id.anc1Date);
-                            TextView anc2Date = (TextView) findViewById(R.id.anc2Date);
-                            TextView anc3Date = (TextView) findViewById(R.id.anc3Date);
-                            TextView anc4Date = (TextView) findViewById(R.id.anc4Date);
-                            TextView anc5Date = (TextView) findViewById(R.id.anc5Date);
-                            TextView anc6Date = (TextView) findViewById(R.id.anc6Date);
-                            TextView anc7Date = (TextView) findViewById(R.id.anc7Date);
-                            TextView anc8Date = (TextView) findViewById(R.id.anc8Date);
+                             anc1Date = (TextView) findViewById(R.id.anc1Date);
+                             anc2Date = (TextView) findViewById(R.id.anc2Date);
+                             anc3Date = (TextView) findViewById(R.id.anc3Date);
+                             anc4Date = (TextView) findViewById(R.id.anc4Date);
+                             anc5Date = (TextView) findViewById(R.id.anc5Date);
+                             anc6Date = (TextView) findViewById(R.id.anc6Date);
+                             anc7Date = (TextView) findViewById(R.id.anc7Date);
+                             anc8Date = (TextView) findViewById(R.id.anc8Date);
 
                             String date_date = response.getString("startDate").split("T")[0].split("-")[2];
                             String date_month = response.getString("startDate").split("T")[0].split("-")[1];
@@ -650,6 +658,15 @@ public class WHOGuidelines extends AppCompatActivity {
                     params.put("anc6_anemia", anc6_anemia.isChecked());
                     params.put("anc7_diabtese", anc7_diabtese.isChecked());
                     params.put("anc8_diabtese", anc8_diabtese.isChecked());
+
+//                    params.put("anc1_dueDate", "" + anc1Date.getText());
+//                    params.put("anc2_dueDate", "" + anc2Date.getText());
+//                    params.put("anc3_dueDate", "" + anc3Date.getText());
+//                    params.put("anc4_dueDate", "" + anc4Date.getText());
+//                    params.put("anc5_dueDate", "" + anc5Date.getText());
+//                    params.put("anc6_dueDate", "" + anc6Date.getText());
+//                    params.put("anc7_dueDate", "" + anc7Date.getText());
+//                    params.put("anc8_dueDate", "" + anc8Date.getText());
 
                 } catch (JSONException e) {
                     e.printStackTrace();

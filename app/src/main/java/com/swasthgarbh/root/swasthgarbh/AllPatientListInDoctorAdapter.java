@@ -148,6 +148,7 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
                                 ArrayList<Integer> colorsdys = new ArrayList<Integer> ( );
 
                                 if (isdocreg==1){
+                                    Log.i("Doc Entered Data","asd");
 
                                     Object data;
                                     ArrayList<String> bpdata = new ArrayList<>();
@@ -298,16 +299,11 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
 
 
                                 } else {
+                                    Log.i("Patient Entered Data","asd");
                                     Log.d ("gettheGraph", response.toString ( ));
                                     JSONArray patientBpData = response.getJSONArray ("data");
                                     Log.d ("The length check", "onResponse: " + patientBpData.length ( ));
                                     if (patientBpData.length ( ) != 0) {
-//                                for (int i = 0; i < patientBpData.length(); i++) {
-//                                    JSONObject po = (JSONObject) patientBpData.get (i);
-//                                        yValues.add (new Entry (i, po.getInt ("systolic")));
-//                                        y2Values.add (new Entry (i, po.getInt ("diastolic")));
-//
-//                                }
 
                                         for (int i = patientBpData.length ( ) - 1; i >= 0; i--) {
                                             JSONObject po = (JSONObject) patientBpData.get (i);
@@ -390,6 +386,8 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
 
                                     } else {
 //                                        Toast.makeText (getContext ( ), "bp not found", Toast.LENGTH_SHORT).show ( );
+                                        chart.invalidate();
+                                        chart.clear();
                                     }
                                 }
 
