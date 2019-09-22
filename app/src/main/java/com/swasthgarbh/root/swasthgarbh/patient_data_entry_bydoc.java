@@ -53,6 +53,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -1940,7 +1941,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         Toast.makeText(patient_data_entry_bydoc.this, "Updated Successfully!", Toast.LENGTH_SHORT).show();
 //                        pb.setVisibility(View.GONE);
-                        String notfMessage = "";
+                        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                        Date date = new Date();
+
+                        String notfMessage = "Date : " + dateFormat.format(date) + " ";
 
                         if(     anc1_advice_GeneralNutritional.isChecked() ||
                                 anc2_advice_GeneralNutritional.isChecked() ||
@@ -2024,31 +2028,31 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         }
 
                         if( anc1_advice_BloodSugar.isChecked()){
-                            notfMessage += anc1_advice_BloodSugar.getText();
+                            notfMessage += anc1_advice_BloodSugar.getText() + " , ";
                         }
 
                         if( anc1_advice_NtNbScan.isChecked()){
-                            notfMessage += anc1_advice_NtNbScan.getText();
+                            notfMessage += anc1_advice_NtNbScan.getText() + " , ";
                         }
 
                         if( anc1_advice_DualScreen.isChecked()){
-                            notfMessage += anc1_advice_DualScreen.getText();
+                            notfMessage += anc1_advice_DualScreen.getText() + " , ";
                         }
 
                         if( anc1_advice_LeftUterineArteryPl.isChecked()){
-                            notfMessage += anc1_advice_LeftUterineArteryPl.getText();
+                            notfMessage += anc1_advice_LeftUterineArteryPl.getText() + " , ";
                         }
 
                         if( anc1_advice_RightUterineArteryPl.isChecked()){
-                            notfMessage += anc1_advice_RightUterineArteryPl.getText();
+                            notfMessage += anc1_advice_RightUterineArteryPl.getText() + " , ";
                         }
 
                         if( anc1_advice_PIGF.isChecked()){
-                            notfMessage += anc1_advice_PIGF.getText();
+                            notfMessage += anc1_advice_PIGF.getText() + " , ";
                         }
 
                         if( anc1_advice_ICT.isChecked()){
-                            notfMessage += anc1_advice_ICT.getText();
+                            notfMessage += anc1_advice_ICT.getText() + " , ";
                         }
 
                         if( anc1_advice_Level2USG.isChecked()){
@@ -2068,115 +2072,115 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         }
 
                         if (anc1_advice_TfolateLessThan14Weeks.isChecked()){
-                            notfMessage += anc1_advice_TfolateLessThan14Weeks.getText();
+                            notfMessage += anc1_advice_TfolateLessThan14Weeks.getText() + " , ";
                         }
 
                         if (anc1_advice_TFeMoreThan14Weeks.isChecked()){
-                            notfMessage += anc1_advice_TFeMoreThan14Weeks.getText();
+                            notfMessage += anc1_advice_TFeMoreThan14Weeks.getText() + " , ";
                         }
 
                         if (anc2_advice_OGTT.isChecked()){
-                            notfMessage += anc2_advice_OGTT.getText();
+                            notfMessage += anc2_advice_OGTT.getText() + " , ";
                         }
 
                         if (anc2_advice_TfeOD.isChecked()){
-                            notfMessage += anc2_advice_TfeOD.getText();
+                            notfMessage += anc2_advice_TfeOD.getText() + " , ";
                         }
 
                         if (anc2_advice_TcaBD.isChecked()){
-                            notfMessage += anc2_advice_TcaBD.getText();
+                            notfMessage += anc2_advice_TcaBD.getText() + " , ";
                         }
 
                         if (anc2_advice_Tetanus.isChecked()){
-                            notfMessage += anc2_advice_Tetanus.getText();
+                            notfMessage += anc2_advice_Tetanus.getText() + " , ";
                         }
 
                         if (anc2_advice_QuadrupleScreen.isChecked()){
-                            notfMessage += anc2_advice_QuadrupleScreen.getText();
+                            notfMessage += anc2_advice_QuadrupleScreen.getText() + " , ";
                         }
 
                         if (anc2_advice_FetalEcho.isChecked()){
-                            notfMessage += anc2_advice_FetalEcho.getText();
+                            notfMessage += anc2_advice_FetalEcho.getText() + " , ";
                         }
 
                         if (anc2_advice_HbLess10_TAlbendazole.isChecked()){
-                            notfMessage += anc2_advice_HbLess10_TAlbendazole.getText();
+                            notfMessage += anc2_advice_HbLess10_TAlbendazole.getText() + " , ";
                         }
 
                         if (anc2_advice_HbLess10_TFeBD.isChecked()){
-                            notfMessage += anc2_advice_HbLess10_TFeBD.getText();
+                            notfMessage += anc2_advice_HbLess10_TFeBD.getText() + " , ";
                         }
 
                         if (anc2_advice_HbLess10_Hplc.isChecked()){
-                            notfMessage += anc2_advice_HbLess10_Hplc.getText();
+                            notfMessage += anc2_advice_HbLess10_Hplc.getText() + " , ";
                         }
 
                         if (anc2_advice_HbLess10_PeripheralSmear.isChecked()){
-                            notfMessage += anc2_advice_HbLess10_PeripheralSmear.getText();
+                            notfMessage += anc2_advice_HbLess10_PeripheralSmear.getText() + " , ";
                         }
 
                         if (anc2_advice_HbLess10_SerumIron.isChecked()){
-                            notfMessage += anc2_advice_HbLess10_SerumIron.getText();
+                            notfMessage += anc2_advice_HbLess10_SerumIron.getText() + " , ";
                         }
 
                         if (anc3_advice_TFeOD.isChecked()){
-                            notfMessage += anc3_advice_TFeOD.getText();
+                            notfMessage += anc3_advice_TFeOD.getText() + " , ";
                         }
 
                         if (anc3_advice_DFMCLLP.isChecked()){
-                            notfMessage += anc3_advice_DFMCLLP.getText();
+                            notfMessage += anc3_advice_DFMCLLP.getText() + " , ";
                         }
 
                         if (anc3_advice_InjTetanus.isChecked()){
-                            notfMessage += anc3_advice_InjTetanus.getText();
+                            notfMessage += anc3_advice_InjTetanus.getText() + " , ";
                         }
 
                         if (anc3_advice_CBC.isChecked()){
-                            notfMessage += anc3_advice_CBC.getText();
+                            notfMessage += anc3_advice_CBC.getText() + " , ";
                         }
 
                         if (anc3_advice_LFT.isChecked()){
-                            notfMessage += anc3_advice_LFT.getText();
+                            notfMessage += anc3_advice_LFT.getText() + " , ";
                         }
 
                         if (anc3_advice_KFT.isChecked()){
-                            notfMessage += anc3_advice_KFT.getText();
+                            notfMessage += anc3_advice_KFT.getText() + " , ";
                         }
 
                         if (anc3_advice_GTT.isChecked()){
-                            notfMessage += anc3_advice_GTT.getText();
+                            notfMessage += anc3_advice_GTT.getText() + " , ";
                         }
 
                         if (anc3_advice_ictNegative_InjAntiD300.isChecked()){
-                            notfMessage += anc3_advice_ictNegative_InjAntiD300.getText();
+                            notfMessage += anc3_advice_ictNegative_InjAntiD300.getText() + " , ";
                         }
 
                         if (anc4_advice_TFeOD.isChecked()){
-                            notfMessage += anc4_advice_TFeOD.getText();
+                            notfMessage += anc4_advice_TFeOD.getText() + " , ";
                         }
 
                         if (anc4_advice_TCaBD.isChecked()){
-                            notfMessage += anc4_advice_TCaBD.getText();
+                            notfMessage += anc4_advice_TCaBD.getText() + " , ";
                         }
 
                         if (anc4_advice_DFMC.isChecked()){
-                            notfMessage += anc4_advice_DFMC.getText();
+                            notfMessage += anc4_advice_DFMC.getText() + " , ";
                         }
 
                         if (anc4_advice_USG.isChecked()){
-                            notfMessage += anc4_advice_USG.getText();
+                            notfMessage += anc4_advice_USG.getText() + " , ";
                         }
 
                         if (anc5_advice_DFMCLLP.isChecked()){
-                            notfMessage += anc5_advice_DFMCLLP.getText();
+                            notfMessage += anc5_advice_DFMCLLP.getText() + " , ";
                         }
 
                         if (anc5_advice_TFeCa.isChecked()){
-                            notfMessage += anc5_advice_TFeCa.getText();
+                            notfMessage += anc5_advice_TFeCa.getText() + " , ";
                         }
 
                         if (anc5_advice_NST.isChecked()){
-                            notfMessage += anc5_advice_NST.getText();
+                            notfMessage += anc5_advice_NST.getText() + " , ";
                         }
 
                     notifGeneration(notfMessage);
