@@ -16,7 +16,7 @@ public class ApplicationController extends Application {
 
     private static String base_url = "http://compbio.iitr.ac.in/sg/";
 
-//    private static String base_url = "http://10.0.2.2:8000/sg/";
+//    private static String base_url = "http://10.0.2.2:8012/sg/";
 
 //    App Icon Generators Online
 //    https://romannurik.github.io/AndroidAssetStudio/index.html

@@ -305,6 +305,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             } else if (weeks > 1) {
                 m = weeks + " weeks " + " and " + days + " Days";
             } else {
+                m = weeks + " weeks " + " and " + days + " Days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -345,6 +346,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             } else if (weeks > 1) {
                 m = weeks + " weeks " + " and " + days + " Days";
             } else {
+                m = weeks + " weeks " + " and " + days + " Days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -385,6 +387,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             } else if (weeks > 1) {
                 m = weeks + " weeks " + " and " + days + " Days";
             } else {
+                m = weeks + " weeks " + " and " + days + " Days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -425,6 +428,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             } else if (weeks > 1) {
                 m = weeks + " weeks " + " and " + days + " Days";
             } else {
+                m = weeks + " weeks " + " and " + days + " Days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -465,6 +469,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             } else if (weeks > 1) {
                 m = weeks + " weeks " + " and " + days + " Days";
             } else {
+                m = weeks + " weeks " + " and " + days + " Days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -505,6 +510,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             } else if (weeks > 1) {
                 m = weeks + " weeks " + " and " + days + " Days";
             } else {
+                m = weeks + " weeks " + " and " + days + " Days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -545,6 +551,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             } else if (weeks > 1) {
                 m = weeks + " weeks " + " and " + days + " Days";
             } else {
+                m = weeks + " weeks " + " and " + days + " Days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -585,6 +592,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             } else if (weeks > 1) {
                 m = weeks + " weeks " + " and " + days + " Days";
             } else {
+                m = weeks + " weeks " + " and " + days + " Days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -724,12 +732,18 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
             public void onTextChanged(CharSequence s, int start, int before,
                                       int count) {
-                Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
-                Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
-                Double BMI = weight / (height * height);
-                DecimalFormat df = new DecimalFormat("#.00");
-                String angleFormated = df.format(BMI);
-                anc1_examination_anthropometry_Bmi.setText(angleFormated);
+                if (getCurrentFocus() == anc1_examination_anthropometry_Height) {
+                    // is only executed if the EditText was directly changed by the user
+//                    anc1_examination_anthropometry_Height.clearFocus();
+//                    anc1_examination_anthropometry_Height.getText().clear();
+//                    anc1_examination_anthropometry_Height.requestFocus();
+                    Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
+                    Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
+                    Double BMI = weight / (height * height);
+                    DecimalFormat df = new DecimalFormat("#.00");
+                    String angleFormated = df.format(BMI);
+                    anc1_examination_anthropometry_Bmi.setText(angleFormated);
+                }
             }
 
 
@@ -747,12 +761,18 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
             public void onTextChanged(CharSequence s, int start, int before,
                                       int count) {
-                Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
-                Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
-                Double BMI = weight / (height * height);
-                DecimalFormat df = new DecimalFormat("#.00");
-                String angleFormated = df.format(BMI);
-                anc1_examination_anthropometry_Bmi.setText(angleFormated);
+                if (getCurrentFocus() == anc1_examination_anthropometry_Weight) {
+                    // is only executed if the EditText was directly changed by the user
+//                    anc1_examination_anthropometry_Weight.clearFocus();
+//                    anc1_examination_anthropometry_Weight.getText().clear();
+//                    anc1_examination_anthropometry_Weight.requestFocus();
+                    Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
+                    Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
+                    Double BMI = weight / (height * height);
+                    DecimalFormat df = new DecimalFormat("#.00");
+                    String angleFormated = df.format(BMI);
+                    anc1_examination_anthropometry_Bmi.setText(angleFormated);
+                }
             }
 
 
@@ -1328,6 +1348,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_examination_general_Clubbing.setChecked(response.getBoolean("anc1_examination_general_Clubbing"));
                             anc1_examination_general_Cyanosis.setChecked(response.getBoolean("anc1_examination_general_Cyanosis"));
                             anc1_examination_general_Edema.setChecked(response.getBoolean("anc1_examination_general_Edema"));
+//                            anc1_examination_anthropometry_Height.clearFocus();
+//                            anc1_examination_anthropometry_Weight.clearFocus();
+
+
+
+
                             anc1_examination_general_Lymphadenopathy.setChecked(response.getBoolean("anc1_examination_general_Lymphadenopathy"));
                             anc1_examination_anthropometry_Height.setText(response.getString("anc1_examination_anthropometry_Height"));
                             anc1_examination_anthropometry_Weight.setText(response.getString("anc1_examination_anthropometry_Weight"));
@@ -1944,7 +1970,155 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
                         Date date = new Date();
 
-                        String notfMessage = "Date : " + dateFormat.format(date) + " ";
+                        String notfMessage = "Date : " + dateFormat.format(date) + " \n";
+
+                        if( anc1_advice_GTT.isChecked()){
+                            notfMessage += anc1_advice_GTT.getText() + " ,\n";
+                        }
+
+                        if( anc1_advice_BloodSugar.isChecked()){
+                            notfMessage += anc1_advice_BloodSugar.getText() + " ,\n";
+                        }
+
+                        if( anc1_advice_NtNbScan.isChecked()){
+                            notfMessage += anc1_advice_NtNbScan.getText() + " ,\n";
+                        }
+
+                        if( anc1_advice_DualScreen.isChecked()){
+                            notfMessage += anc1_advice_DualScreen.getText() + " ,\n";
+                        }
+
+                        if( anc1_advice_LeftUterineArteryPl.isChecked()){
+                            notfMessage += anc1_advice_LeftUterineArteryPl.getText() + " ,\n";
+                        }
+
+                        if (anc1_advice_TfolateLessThan14Weeks.isChecked()){
+                            notfMessage += anc1_advice_TfolateLessThan14Weeks.getText() + " ,\n";
+                        }
+
+                        if (anc1_advice_TFeMoreThan14Weeks.isChecked()){
+                            notfMessage += anc1_advice_TFeMoreThan14Weeks.getText() + " ,\n";
+                        }
+
+                        if( anc1_advice_RightUterineArteryPl.isChecked()){
+                            notfMessage += anc1_advice_RightUterineArteryPl.getText() + " ,\n";
+                        }
+
+                        if( anc1_advice_PIGF.isChecked()){
+                            notfMessage += anc1_advice_PIGF.getText() + " ,\n";
+                        }
+
+                        if( anc1_advice_ICT.isChecked()){
+                            notfMessage += anc1_advice_ICT.getText() + " ,\n";
+                        }
+
+                        if( anc1_advice_Level2USG.isChecked()){
+                            notfMessage += anc1_advice_Level2USG.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_OGTT.isChecked()){
+                            notfMessage += anc2_advice_OGTT.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_TfeOD.isChecked()){
+                            notfMessage += anc2_advice_TfeOD.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_TcaBD.isChecked()){
+                            notfMessage += anc2_advice_TcaBD.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_Tetanus.isChecked()){
+                            notfMessage += anc2_advice_Tetanus.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_QuadrupleScreen.isChecked()){
+                            notfMessage += anc2_advice_QuadrupleScreen.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_FetalEcho.isChecked()){
+                            notfMessage += anc2_advice_FetalEcho.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_HbLess10_TAlbendazole.isChecked()){
+                            notfMessage += anc2_advice_HbLess10_TAlbendazole.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_HbLess10_TFeBD.isChecked()){
+                            notfMessage += anc2_advice_HbLess10_TFeBD.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_HbLess10_Hplc.isChecked()){
+                            notfMessage += anc2_advice_HbLess10_Hplc.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_HbLess10_PeripheralSmear.isChecked()){
+                            notfMessage += anc2_advice_HbLess10_PeripheralSmear.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_HbLess10_SerumIron.isChecked()){
+                            notfMessage += anc2_advice_HbLess10_SerumIron.getText() + " ,\n";
+                        }
+
+                        if (anc3_advice_TFeOD.isChecked()){
+                            notfMessage += anc3_advice_TFeOD.getText() + " ,\n";
+                        }
+
+                        if (anc3_advice_DFMCLLP.isChecked()){
+                            notfMessage += anc3_advice_DFMCLLP.getText() + " ,\n";
+                        }
+
+                        if (anc3_advice_InjTetanus.isChecked()){
+                            notfMessage += anc3_advice_InjTetanus.getText() + " ,\n";
+                        }
+
+                        if (anc3_advice_CBC.isChecked()){
+                            notfMessage += anc3_advice_CBC.getText() + " ,\n";
+                        }
+
+                        if (anc3_advice_LFT.isChecked()){
+                            notfMessage += anc3_advice_LFT.getText() + " ,\n";
+                        }
+
+                        if (anc3_advice_KFT.isChecked()){
+                            notfMessage += anc3_advice_KFT.getText() + " ,\n";
+                        }
+
+                        if (anc3_advice_GTT.isChecked()){
+                            notfMessage += anc3_advice_GTT.getText() + " ,\n";
+                        }
+
+                        if (anc3_advice_ictNegative_InjAntiD300.isChecked()){
+                            notfMessage += anc3_advice_ictNegative_InjAntiD300.getText() + " ,\n";
+                        }
+
+                        if (anc4_advice_TFeOD.isChecked()){
+                            notfMessage += anc4_advice_TFeOD.getText() + " ,\n";
+                        }
+
+                        if (anc4_advice_TCaBD.isChecked()){
+                            notfMessage += anc4_advice_TCaBD.getText() + " ,\n";
+                        }
+
+                        if (anc4_advice_DFMC.isChecked()){
+                            notfMessage += anc4_advice_DFMC.getText() + " ,\n";
+                        }
+
+                        if (anc4_advice_USG.isChecked()){
+                            notfMessage += anc4_advice_USG.getText() + " ,\n";
+                        }
+
+                        if (anc5_advice_DFMCLLP.isChecked()){
+                            notfMessage += anc5_advice_DFMCLLP.getText() + " ,\n";
+                        }
+
+                        if (anc5_advice_TFeCa.isChecked()){
+                            notfMessage += anc5_advice_TFeCa.getText() + " ,\n";
+                        }
+
+                        if (anc5_advice_NST.isChecked()){
+                            notfMessage += anc5_advice_NST.getText() + " ,\n";
+                        }
 
                         if(     anc1_advice_GeneralNutritional.isChecked() ||
                                 anc2_advice_GeneralNutritional.isChecked() ||
@@ -1955,19 +2129,19 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                 anc7_advice_GeneralNutritional.isChecked() ||
                                 anc8_advice_GeneralNutritional.isChecked()) {
                             notfMessage += "Have a balanced diet.\n" +
-                                    "Ensure adequate hydration and have 6-8 glasses of water daily\n" +
-                                    "Ensure a daily diet with adequate protein, dairy products, fruit\n" +
-                                    "Have folate rich foods like green leafy vegetables, legumes, beans\n" +
-                                    "Have Vitamin C rich food daily\n" +
-                                    "Have a High fibre diet\n" +
-                                    "Take small, frequent meals\n" +
-                                    "Avoid smoking/alcohol\n";
+                                    "Ensure adequate hydration and have 6-8 glasses of water daily.\n" +
+                                    "Ensure a daily diet with adequate protein, dairy products, fruit.\n" +
+                                    "Have folate rich foods like green leafy vegetables, legumes, beans.\n" +
+                                    "Have Vitamin C rich food daily.\n" +
+                                    "Have a High fibre diet.\n" +
+                                    "Take small, frequent meals.\n" +
+                                    "Avoid smoking/alcohol.\n";
 
                             notfMessage += "Take iron and calcium supplements daily as prescribed.\n" +
-                                    "Iron should not be taken empty stomach\n" +
-                                    "A gap of 2 hours should be kept between the ion and calcium tablets\n" +
-                                    "Aim for daily moderate intensity activity for 30 minutes\n" +
-                                    "Avoid lifting heavy weight\n";
+                                    "Iron should not be taken empty stomach.\n" +
+                                    "A gap of 2 hours should be kept between the ion and calcium tablets.\n" +
+                                    "Aim for daily moderate intensity activity for 30 minutes.\n" +
+                                    "Avoid lifting heavy weight.\n";
                         }
 
                         if(     anc1_advice_NauseaVomiting.isChecked() ||
@@ -1978,11 +2152,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                 anc6_advice_NauseaVomiting.isChecked() ||
                                 anc7_advice_NauseaVomiting.isChecked() ||
                                 anc8_advice_NauseaVomiting.isChecked()) {
-                            notfMessage += "Drink plenty of fluids and maintain hydration\n" +
-                                    "Eat small frequent meals\n" +
-                                    "Have non greasy meals with little odor\n" +
-                                    "Ginger or chamomile tea can help reduce morning sickness\n" +
-                                    "If excessive, vitamin b6 supplements can be tried\n";
+                            notfMessage += "Drink plenty of fluids and maintain hydration.\n" +
+                                    "Eat small frequent meals.\n" +
+                                    "Have non greasy meals with little odor.\n" +
+                                    "Ginger or chamomile tea can help reduce morning sickness.\n" +
+                                    "If excessive, vitamin b6 supplements can be tried.\n";
                         }
 
                         if(     anc1_advice_HeatBurn.isChecked() ||
@@ -1993,10 +2167,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                 anc6_advice_HeatBurn.isChecked() ||
                                 anc7_advice_HeatBurn.isChecked() ||
                                 anc8_advice_HeatBurn.isChecked()){
-                            notfMessage += "Eat small, frequent meals\n" +
-                                    "Avoid spicy, greasy foods\n" +
-                                    "Elevate head of bed when lying down\n" +
-                                    "Avoid lying down immediately after taking a meal\n";
+                            notfMessage += "Eat small, frequent meals.\n" +
+                                    "Avoid spicy, greasy foods.\n" +
+                                    "Elevate head of bed when lying down.\n" +
+                                    "Avoid lying down immediately after taking a meal.\n";
                         }
 
                         if(     anc1_advice_Constipation.isChecked() ||
@@ -2008,9 +2182,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                 anc7_advice_Constipation.isChecked() ||
                                 anc8_advice_Constipation.isChecked()
                         ){
-                            notfMessage += "Eat fresh fruits and vegetables\n" +
-                                    "Drink 8-10 glasses of water\n" +
-                                    "Eat foods with high fibre\n";
+                            notfMessage += "Eat fresh fruits and vegetables.\n" +
+                                    "Drink 8-10 glasses of water.\n" +
+                                    "Eat foods with high fibre.\n";
                         }
 
                         if(     anc1_advice_PedalEdema.isChecked() ||
@@ -2022,41 +2196,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                 anc7_advice_PedalEdema.isChecked() ||
                                 anc8_advice_PedalEdema.isChecked()
                         ){
-                            notfMessage += "Rest with legs elevated\n" +
-                                    "Lie in the left lateral position\n" +
-                                    "Avoid sitting or standing for long periods\n";
-                        }
-
-                        if( anc1_advice_BloodSugar.isChecked()){
-                            notfMessage += anc1_advice_BloodSugar.getText() + " , ";
-                        }
-
-                        if( anc1_advice_NtNbScan.isChecked()){
-                            notfMessage += anc1_advice_NtNbScan.getText() + " , ";
-                        }
-
-                        if( anc1_advice_DualScreen.isChecked()){
-                            notfMessage += anc1_advice_DualScreen.getText() + " , ";
-                        }
-
-                        if( anc1_advice_LeftUterineArteryPl.isChecked()){
-                            notfMessage += anc1_advice_LeftUterineArteryPl.getText() + " , ";
-                        }
-
-                        if( anc1_advice_RightUterineArteryPl.isChecked()){
-                            notfMessage += anc1_advice_RightUterineArteryPl.getText() + " , ";
-                        }
-
-                        if( anc1_advice_PIGF.isChecked()){
-                            notfMessage += anc1_advice_PIGF.getText() + " , ";
-                        }
-
-                        if( anc1_advice_ICT.isChecked()){
-                            notfMessage += anc1_advice_ICT.getText() + " , ";
-                        }
-
-                        if( anc1_advice_Level2USG.isChecked()){
-                            notfMessage += anc1_advice_Level2USG.getText();
+                            notfMessage += "Rest with legs elevated.\n" +
+                                    "Lie in the left lateral position.\n" +
+                                    "Avoid sitting or standing for long periods.\n";
                         }
 
                         if(     anc1_advice_LegCramps.isChecked() ||
@@ -2068,119 +2210,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                 anc7_advice_LegCramps.isChecked() ||
                                 anc8_advice_LegCramps.isChecked()
                         ){
-                            notfMessage += "Daily magnesium/calcium supplements can be used";
-                        }
-
-                        if (anc1_advice_TfolateLessThan14Weeks.isChecked()){
-                            notfMessage += anc1_advice_TfolateLessThan14Weeks.getText() + " , ";
-                        }
-
-                        if (anc1_advice_TFeMoreThan14Weeks.isChecked()){
-                            notfMessage += anc1_advice_TFeMoreThan14Weeks.getText() + " , ";
-                        }
-
-                        if (anc2_advice_OGTT.isChecked()){
-                            notfMessage += anc2_advice_OGTT.getText() + " , ";
-                        }
-
-                        if (anc2_advice_TfeOD.isChecked()){
-                            notfMessage += anc2_advice_TfeOD.getText() + " , ";
-                        }
-
-                        if (anc2_advice_TcaBD.isChecked()){
-                            notfMessage += anc2_advice_TcaBD.getText() + " , ";
-                        }
-
-                        if (anc2_advice_Tetanus.isChecked()){
-                            notfMessage += anc2_advice_Tetanus.getText() + " , ";
-                        }
-
-                        if (anc2_advice_QuadrupleScreen.isChecked()){
-                            notfMessage += anc2_advice_QuadrupleScreen.getText() + " , ";
-                        }
-
-                        if (anc2_advice_FetalEcho.isChecked()){
-                            notfMessage += anc2_advice_FetalEcho.getText() + " , ";
-                        }
-
-                        if (anc2_advice_HbLess10_TAlbendazole.isChecked()){
-                            notfMessage += anc2_advice_HbLess10_TAlbendazole.getText() + " , ";
-                        }
-
-                        if (anc2_advice_HbLess10_TFeBD.isChecked()){
-                            notfMessage += anc2_advice_HbLess10_TFeBD.getText() + " , ";
-                        }
-
-                        if (anc2_advice_HbLess10_Hplc.isChecked()){
-                            notfMessage += anc2_advice_HbLess10_Hplc.getText() + " , ";
-                        }
-
-                        if (anc2_advice_HbLess10_PeripheralSmear.isChecked()){
-                            notfMessage += anc2_advice_HbLess10_PeripheralSmear.getText() + " , ";
-                        }
-
-                        if (anc2_advice_HbLess10_SerumIron.isChecked()){
-                            notfMessage += anc2_advice_HbLess10_SerumIron.getText() + " , ";
-                        }
-
-                        if (anc3_advice_TFeOD.isChecked()){
-                            notfMessage += anc3_advice_TFeOD.getText() + " , ";
-                        }
-
-                        if (anc3_advice_DFMCLLP.isChecked()){
-                            notfMessage += anc3_advice_DFMCLLP.getText() + " , ";
-                        }
-
-                        if (anc3_advice_InjTetanus.isChecked()){
-                            notfMessage += anc3_advice_InjTetanus.getText() + " , ";
-                        }
-
-                        if (anc3_advice_CBC.isChecked()){
-                            notfMessage += anc3_advice_CBC.getText() + " , ";
-                        }
-
-                        if (anc3_advice_LFT.isChecked()){
-                            notfMessage += anc3_advice_LFT.getText() + " , ";
-                        }
-
-                        if (anc3_advice_KFT.isChecked()){
-                            notfMessage += anc3_advice_KFT.getText() + " , ";
-                        }
-
-                        if (anc3_advice_GTT.isChecked()){
-                            notfMessage += anc3_advice_GTT.getText() + " , ";
-                        }
-
-                        if (anc3_advice_ictNegative_InjAntiD300.isChecked()){
-                            notfMessage += anc3_advice_ictNegative_InjAntiD300.getText() + " , ";
-                        }
-
-                        if (anc4_advice_TFeOD.isChecked()){
-                            notfMessage += anc4_advice_TFeOD.getText() + " , ";
-                        }
-
-                        if (anc4_advice_TCaBD.isChecked()){
-                            notfMessage += anc4_advice_TCaBD.getText() + " , ";
-                        }
-
-                        if (anc4_advice_DFMC.isChecked()){
-                            notfMessage += anc4_advice_DFMC.getText() + " , ";
-                        }
-
-                        if (anc4_advice_USG.isChecked()){
-                            notfMessage += anc4_advice_USG.getText() + " , ";
-                        }
-
-                        if (anc5_advice_DFMCLLP.isChecked()){
-                            notfMessage += anc5_advice_DFMCLLP.getText() + " , ";
-                        }
-
-                        if (anc5_advice_TFeCa.isChecked()){
-                            notfMessage += anc5_advice_TFeCa.getText() + " , ";
-                        }
-
-                        if (anc5_advice_NST.isChecked()){
-                            notfMessage += anc5_advice_NST.getText() + " , ";
+                            notfMessage += "Daily magnesium/calcium supplements can be used.\n";
                         }
 
                     notifGeneration(notfMessage);

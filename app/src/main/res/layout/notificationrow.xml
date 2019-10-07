@@ -25,7 +25,6 @@
             android:id="@+id/TextView17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="5"
             android:minLines="1"
             android:text="Patient named Ramesh suffered drastic changes in weight during recent days."
             android:textSize="15sp" />

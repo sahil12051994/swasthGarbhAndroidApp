@@ -21,6 +21,7 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -31,9 +32,11 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
-public class PatientSignupByDoctor extends AppCompatActivity implements View.OnClickListener, TextWatcher {
+public class PatientSignupByDoctor extends AppCompatActivity implements View.OnClickListener {
     Button register;
     EditText date_of_birth, name, address, email, mobile, password, doctor_number, doctor_name, lmpDate, UHID;
 //    Switch aiDoc;
@@ -92,28 +95,6 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
         adapterEducation.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerEducation.setAdapter(adapterEducation);
 
-//        aiDoc = (Switch)findViewById(R.id.aiDoc);
-//        normalDoc = (LinearLayout)findViewById(R.id.normalDoc);
-//
-//        normalDoc.setVisibility(View.GONE);
-//        docRequried = Boolean.FALSE;
-
-//        aiDoc.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                // do something, the isChecked will be
-//                // true if the switch is in the On position
-//                if(isChecked){
-//                    normalDoc.setVisibility(View.VISIBLE);
-//                    docRequried = Boolean.TRUE;
-//                }else{
-//                    normalDoc.setVisibility(View.GONE);
-//                    docRequried = Boolean.FALSE;
-//                    Toast.makeText(PatientSignupByDoctor.this, "Automated Monitoring", Toast.LENGTH_SHORT).show();
-////                    Toast.makeText(getApplicationContext().this, "Automated Monitoring", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-
         register = (Button) findViewById (R.id.register);
         register.setOnClickListener (this);
 
@@ -150,8 +131,7 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
             String str_UHID = "" + UHID.getText();
             String str_address = "" + address.getText();
             String str_dob = "" + date_of_birth.getText();
-    //        String str_doctor_mobile = session.getUserDetails().get("id");
-     //       String str_doc_name = ""+ doctor_name.getText(); //"root"; //+ doctor_name.getText();
+
             String str_lmpDate = "" + lmpDate.getText();
 
        //     Log.i("DoctorID",str_doctor_mobile);
@@ -165,38 +145,6 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
                 Toast.makeText(PatientSignupByDoctor.this, "Enter UHID OR Registration no.", Toast.LENGTH_LONG).show();
                 return;
             }
-//
-//            if (str_mobile.length() == 0) {
-                //Toast.makeText(PatientSignupByDoctor.this, "Enter your mobile number", Toast.LENGTH_LONG).show();
-              //  str_mobile = UHID.getText()+"";
- //               mobile.setText(str_mobile);
-//                return;
-//            }
-//
-//            if (str_password.length() == 0) {
-//                Toast.makeText(PatientSignupByDoctor.this, "Enter your password", Toast.LENGTH_LONG).show();
-//                return;
-//            }
-//
-//            if (str_dob.length() == 0) {
-//                Toast.makeText(PatientSignupByDoctor.this, "Enter your age", Toast.LENGTH_LONG).show();
-//                return;
-//            }
-//            if(docRequried == Boolean.TRUE){
-//                if (str_doctor_mobile.length() == 0) {
-//                    Toast.makeText(PatientSignupByDoctor.this, "Enter your doctor's number", Toast.LENGTH_LONG).show();
-//                    return;
-//                }
-//
-//                if (str_doc_name.length() == 0) {
-//                    Toast.makeText(PatientSignupByDoctor.this, "Enter a valid doctor's number", Toast.LENGTH_LONG).show();
-//                    return;
-//                }
-//            }
-//            if (str_lmpDate.length() == 0) {
-//                Toast.makeText(PatientSignupByDoctor.this, "Enter your LMP date", Toast.LENGTH_LONG).show();
-//                return;
-//            }
 
             String url = ApplicationController.get_base_url() + "api/onboard/patient";
             JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
@@ -206,8 +154,6 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
                         @Override
                         public void onResponse(JSONObject response) {
                             Log.d("TAG", response.toString());
-//                            SharedPreferences pref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-//                            SharedPreferences.Editor edit = pref.edit();
                             try {
                                 int U_ID = Integer.parseInt(response.get("U_ID").toString());
                                 String token = "" + response.get("Token");
@@ -226,7 +172,7 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
 
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Log.d("TAG", "Error Message: " + error.getMessage());
+                    Log.d("TAG", "Error Message: " + error);
                     Toast.makeText(PatientSignupByDoctor.this, "Some error occurred", Toast.LENGTH_LONG).show();
                 }
             }) {
@@ -234,16 +180,6 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
                 @Override
                 public byte[] getBody() {
                     JSONObject params = new JSONObject();
-//                    int selectedId = sexRadioGroup.getCheckedRadioButtonId();
-//                    int gender;
-//                    if (selectedId == R.id.radioMale) {
-//                        gender = 1;
-//                    }
-//                    else{
-//                        gender = 0;
-//                    }
-
-                    SharedPreferences pref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
                     try {
                         params.put("name", "" + name.getText());
                         params.put("address", "" + address.getText());
@@ -267,59 +203,18 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
                         params.put("more_than_one_baby", moreThanOneBaby.isChecked());
                         params.put("history_of_diseases", diseases.isChecked());
                         params.put("verified", Boolean.FALSE);
-
-
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                     return params.toString().getBytes();
                 }
-            };
-            ApplicationController.getInstance().addToRequestQueue(jsonObjReq);
-
-        }
-    }
-
-    @Override
-    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-    }
-
-    @Override
-    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-    }
-
-    @Override
-    public void afterTextChanged(final Editable editable) {
-        if (editable.toString().length() == 10) {
-            String url = ApplicationController.get_base_url() + "api/doctor?mobile=" + editable.toString();
-            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
-                    url, null,
-                    new Response.Listener<JSONObject>() {
-
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            Log.d("TAG", response.toString());
-
-                            try {
-                                doctor_name.setText(response.get("name") + "");
-                                doc_id = Integer.parseInt(session.getUserDetails().get("id"));//;)//(int) response.get("pk");
-                                Log.i("DocId",doc_id+"");
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                                doctor_name.setText("");
-                                Toast.makeText(PatientSignupByDoctor.this, "No doctor with this mobile number is registered", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    }, new Response.ErrorListener() {
-
                 @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.d("TAG", "Error Message: " + error.getMessage());
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("Content-Type", "application/json");
+                    params.put("Authorization", "Token " + session.getUserDetails().get("Token"));;
+                    return params;
                 }
-            }) {
-
             };
             ApplicationController.getInstance().addToRequestQueue(jsonObjReq);
         }
