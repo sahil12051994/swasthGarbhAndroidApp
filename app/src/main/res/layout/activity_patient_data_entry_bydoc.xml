@@ -627,7 +627,7 @@
                                                 android:backgroundTint="@color/colortheme"
                                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                                 android:gravity="center"
-                                                android:inputType="textMultiLine" />
+                                                android:inputType="number" />
                                         </LinearLayout>
 
                                         <LinearLayout
@@ -653,7 +653,7 @@
                                                 android:backgroundTint="@color/colortheme"
                                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                                 android:gravity="center"
-                                                android:inputType="text" />
+                                                android:inputType="number" />
 
                                         </LinearLayout>
 
@@ -681,7 +681,7 @@
                                                 android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
                                                 android:gravity="center"
                                                 android:hint="(wt/ht(in metres)^2)"
-                                                android:inputType="text" />
+                                                android:inputType="number" />
 
                                         </LinearLayout>
 
@@ -1261,6 +1261,90 @@
                                         android:layout_height="match_parent"
                                         android:layout_marginLeft="6dp"
                                         android:gravity="center"
+                                        android:text="Left Uterine Artery Pl"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp" />
+
+
+                                    <EditText
+                                        android:id="@+id/anc1_advice_LeftUterineArteryPl"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="5"
+                                        android:backgroundTint="@color/colortheme"
+                                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                        android:gravity="center"
+                                        android:hint=""
+                                        android:inputType="textMultiLine" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="6dp"
+                                        android:gravity="center"
+                                        android:text="Right Uterine Artery Pl"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp" />
+
+
+                                    <EditText
+                                        android:id="@+id/anc1_advice_RightUterineArteryPl"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="5"
+                                        android:backgroundTint="@color/colortheme"
+                                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                        android:gravity="center"
+                                        android:hint=""
+                                        android:inputType="textMultiLine" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="6dp"
+                                        android:gravity="center"
+                                        android:text="PIGF"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp" />
+
+
+                                    <EditText
+                                        android:id="@+id/anc1_advice_PIGF"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="5"
+                                        android:backgroundTint="@color/colortheme"
+                                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                        android:gravity="center"
+                                        android:hint=""
+                                        android:inputType="textMultiLine" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="6dp"
+                                        android:gravity="center"
                                         android:text="@string/general_BG_negative"
                                         android:textColor="#000000"
                                         android:textSize="15sp" />
@@ -1469,29 +1553,113 @@
 
                                         </LinearLayout>
 
-                                        <CheckBox
-                                            android:id="@+id/anc1_investigations_ntnb_CRL"
+                                        <LinearLayout
                                             android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="@string/CRL" />
+                                            android:layout_height="wrap_content">
 
-                                        <CheckBox
-                                            android:id="@+id/anc1_investigations_ntnb_NT"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="@string/NT" />
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="6dp"
+                                                android:gravity="center"
+                                                android:text="CRL"
+                                                android:textColor="#000000"
+                                                android:textSize="15sp" />
 
-                                        <CheckBox
-                                            android:id="@+id/anc1_investigations_ntnb_Centile"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="@string/Centile" />
 
-                                        <CheckBox
-                                            android:id="@+id/anc1_investigations_ntnb_Text"
+                                            <EditText
+                                                android:id="@+id/anc1_investigations_ntnb_CRL"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_weight="5"
+                                                android:backgroundTint="@color/colortheme"
+                                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                                android:gravity="center"
+                                                android:inputType="textMultiLine" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
                                             android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:text="@string/text" />
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="6dp"
+                                                android:gravity="center"
+                                                android:text="NT"
+                                                android:textColor="#000000"
+                                                android:textSize="15sp" />
+
+
+                                            <EditText
+                                                android:id="@+id/anc1_investigations_ntnb_NT"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_weight="5"
+                                                android:backgroundTint="@color/colortheme"
+                                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                                android:gravity="center"
+                                                android:inputType="textMultiLine" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="6dp"
+                                                android:gravity="center"
+                                                android:text="@string/Centile"
+                                                android:textColor="#000000"
+                                                android:textSize="15sp" />
+
+
+                                            <EditText
+                                                android:id="@+id/anc1_investigations_ntnb_Centile"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_weight="5"
+                                                android:backgroundTint="@color/colortheme"
+                                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                                android:gravity="center"
+                                                android:inputType="textMultiLine" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="6dp"
+                                                android:gravity="center"
+                                                android:text="@string/text"
+                                                android:textColor="#000000"
+                                                android:textSize="15sp" />
+
+
+                                            <EditText
+                                                android:id="@+id/anc1_investigations_ntnb_Text"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_weight="5"
+                                                android:backgroundTint="@color/colortheme"
+                                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                                android:gravity="center"
+                                                android:inputType="textMultiLine" />
+
+                                        </LinearLayout>
 
                                     </LinearLayout>
                                 </android.support.v7.widget.CardView>
@@ -1740,11 +1908,11 @@
                                         android:layout_height="wrap_content"
                                         android:text="Dual Screen" />
 
-                                    <CheckBox
-                                        android:id="@+id/anc1_advice_LeftUterineArteryPl"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="Left Uterine Artery Pl" />
+<!--                                    <CheckBox-->
+<!--                                        android:id="@+id/anc1_advice_LeftUterineArteryPl"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:text="Left Uterine Artery Pl" />-->
 
                                     <CheckBox
                                         android:id="@+id/anc1_advice_TfolateLessThan14Weeks"
@@ -1758,17 +1926,17 @@
                                         android:layout_height="wrap_content"
                                         android:text="@string/T_Fe_if_morethan_14weeks" />
 
-                                    <CheckBox
-                                        android:id="@+id/anc1_advice_RightUterineArteryPl"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="Right Uterine Artery Pl" />
+<!--                                    <CheckBox-->
+<!--                                        android:id="@+id/anc1_advice_RightUterineArteryPl"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:text="Right Uterine Artery Pl" />-->
 
-                                    <CheckBox
-                                        android:id="@+id/anc1_advice_PIGF"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="PIGF" />
+<!--                                    <CheckBox-->
+<!--                                        android:id="@+id/anc1_advice_PIGF"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:text="PIGF" />-->
 
                                     <CheckBox
                                         android:id="@+id/anc1_advice_ICT"
@@ -3137,6 +3305,33 @@
                                         android:layout_height="wrap_content">
 
                                         <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="6dp"
+                                            android:gravity="center"
+                                            android:text="Fetal Echo"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+
+                                        <EditText
+                                            android:id="@+id/anc3_examination_FetalEcho"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="5"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:gravity="center"
+                                            android:hint=""
+                                            android:inputType="textMultiLine" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
                                             android:layout_width="64dp"
                                             android:layout_height="match_parent"
                                             android:layout_marginLeft="1dp"
@@ -3294,12 +3489,12 @@
                                         android:text="KFT"
                                         android:visibility="visible" />
 
-                                    <CheckBox
-                                        android:id="@+id/anc3_investigations_CBC"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/anc_3_CBC"
-                                        android:visibility="visible" />
+<!--                                    <CheckBox-->
+<!--                                        android:id="@+id/anc3_investigations_CBC"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:text="@string/anc_3_CBC"-->
+<!--                                        android:visibility="visible" />-->
 
                                     <CheckBox
                                         android:id="@+id/anc3_investigations_UrineCS"
@@ -4934,26 +5129,92 @@
                                         android:textStyle="italic"
                                         android:visibility="visible" />
 
-                                    <CheckBox
-                                        android:id="@+id/anc5_investigation_CBC"
+                                    <LinearLayout
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/anc_5_CBC"
-                                        android:visibility="visible" />
+                                        android:layout_height="wrap_content">
 
-                                    <CheckBox
-                                        android:id="@+id/anc5_investigation_LFT"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/anc_5_LFT"
-                                        android:visibility="visible" />
+                                        <TextView
+                                            android:layout_width="64dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="1dp"
+                                            android:gravity="center"
+                                            android:text="@string/anc_5_CBC"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp"
+                                            android:textStyle="italic"
+                                            android:visibility="visible" />
 
-                                    <CheckBox
-                                        android:id="@+id/anc5_investigation_KFT"
+
+                                        <EditText
+                                            android:id="@+id/anc5_investigation_CBC"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:layout_weight="5"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:inputType="textMultiLine"
+                                            android:visibility="visible" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/anc_5_KFT"
-                                        android:visibility="visible" />
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="64dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="1dp"
+                                            android:gravity="center"
+                                            android:text="@string/anc_5_LFT"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp"
+                                            android:textStyle="italic"
+                                            android:visibility="visible" />
+
+
+                                        <EditText
+                                            android:id="@+id/anc5_investigation_LFT"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:layout_weight="5"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:inputType="textMultiLine"
+                                            android:visibility="visible" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="64dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="1dp"
+                                            android:gravity="center"
+                                            android:text="@string/anc_5_KFT"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp"
+                                            android:textStyle="italic"
+                                            android:visibility="visible" />
+
+
+                                        <EditText
+                                            android:id="@+id/anc5_investigation_KFT"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:layout_weight="5"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:inputType="textMultiLine"
+                                            android:visibility="visible" />
+
+                                    </LinearLayout>
 
                                     <LinearLayout
                                         android:layout_width="match_parent"

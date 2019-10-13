@@ -1,24 +1,12 @@
 package com.swasthgarbh.root.swasthgarbh;
 
-import android.app.AlarmManager;
 import android.app.DatePickerDialog;
-import android.app.PendingIntent;
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.net.Uri;
-import android.os.Build;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -27,8 +15,6 @@ import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -40,36 +26,20 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.LimitLine;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-
-import android.widget.CompoundButton;
-
-import java.util.Random;
-import java.util.ResourceBundle;
-
-import static android.app.PendingIntent.getActivity;
-import java.text.DecimalFormat;
 
 public class patient_data_entry_bydoc extends AppCompatActivity {
 
@@ -102,11 +72,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc1_investigations_Hemogram, anc1_investigations_Tsh;
     EditText anc1_investigations_bloodSugar_Fasting, anc1_investigations_bloodSugar_PostPrandial;
     EditText anc1_investigations_ntnb_DoneNotDone;
-    CheckBox anc1_investigations_ntnb_CRL, anc1_investigations_ntnb_NT, anc1_investigations_ntnb_Centile, anc1_investigations_ntnb_Text;
+    EditText anc1_investigations_ntnb_CRL, anc1_investigations_ntnb_NT, anc1_investigations_ntnb_Centile, anc1_investigations_ntnb_Text;
     EditText anc1_investigations_dualScreen_PAPP, anc1_investigations_dualScreen_Bhcg;
     EditText anc1_investigations_level2Usg_DoneNotDone, anc1_investigations_level2Usg_NormalAbnormal;
     CheckBox anc1_investigations_GTT;
-    CheckBox anc1_advice_GTT, anc1_advice_BloodSugar, anc1_advice_NtNbScan, anc1_advice_DualScreen, anc1_advice_LeftUterineArteryPl, anc1_advice_RightUterineArteryPl, anc1_advice_PIGF, anc1_advice_ICT;
+    CheckBox anc1_advice_GTT, anc1_advice_BloodSugar, anc1_advice_NtNbScan, anc1_advice_DualScreen, anc1_advice_ICT;
     CheckBox anc1_advice_GeneralNutritional;
     CheckBox anc1_advice_Level2USG;
     CheckBox anc1_advice_TfolateLessThan14Weeks, anc1_advice_TFeMoreThan14Weeks;
@@ -116,6 +86,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     CheckBox anc1_general_urineCulture_Nitrofur, anc1_general_urineCulture_Syp, anc1_general_urineCulture_VitC, anc1_general_urineCulture_PlentyFluids;
     EditText anc1_general_deranged_Fasting, anc1_general_deranged_AfterBreakfast, anc1_general_deranged_AfterLunch, anc1_general_deranged_AfterDinner;
     EditText anc1_general_Others;
+    EditText anc1_advice_LeftUterineArteryPl, anc1_advice_RightUterineArteryPl, anc1_advice_PIGF;
 
 //    ANC2 Variables
     EditText anc2_Date;
@@ -134,7 +105,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     CheckBox anc3_history_ShortnessOfBreath, anc3_history_EasyFatigability, anc3_history_HeadacheEpigastricPain, anc3_history_BleedingSpottingPv, anc3_history_LeakingDischargePv, anc3_history_BurningMicturition, anc3_history_FetalMovements, anc3_history_Itching;
     CheckBox anc3_examination_Pallor, anc3_examination_PedalEdema;
     EditText anc3_examination_PR, anc3_examination_BP, anc3_examination_Weight, anc3_examination_PA2Weeks, anc3_examination_Others;
-    CheckBox anc3_investigations_CBC, anc3_investigations_UrineCS, anc3_investigations_ICT;
+    EditText anc3_examination_FetalEcho;
+    CheckBox anc3_investigations_UrineCS, anc3_investigations_ICT;
     EditText anc3_investigations_Others;
     CheckBox anc3_advice_TFeOD, anc3_advice_DFMCLLP, anc3_advice_InjTetanus, anc3_advice_CBC, anc3_advice_LFT, anc3_advice_KFT;
     CheckBox anc3_advice_GTT;
@@ -160,7 +132,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     CheckBox anc5_history_counseling_BirthAttendant;
     CheckBox anc5_examination_Pallor, anc5_examination_PedalEdema;
     EditText anc5_examination_PR, anc5_examination_BP, anc5_examination_Weight, anc5_examination_PA2Weeks, anc5_examination_Others;
-    CheckBox anc5_investigation_CBC, anc5_investigation_LFT, anc5_investigation_KFT;
+    EditText anc5_investigation_CBC, anc5_investigation_LFT, anc5_investigation_KFT;
     EditText anc5_investigation_Others;
     EditText anc5_USG_BPD_cm, anc5_USG_BPD_weeks, anc5_USG_BPD_centile;
     EditText anc5_USG_HC_cm, anc5_USG_HC_weeks, anc5_USG_HC_centile;
@@ -732,11 +704,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
             public void onTextChanged(CharSequence s, int start, int before,
                                       int count) {
+//                anc1_examination_anthropometry_Height.clearFocus();
+//                anc1_examination_anthropometry_Height.getText().clear();
+//                anc1_examination_anthropometry_Height.requestFocus();
                 if (getCurrentFocus() == anc1_examination_anthropometry_Height) {
                     // is only executed if the EditText was directly changed by the user
-//                    anc1_examination_anthropometry_Height.clearFocus();
-//                    anc1_examination_anthropometry_Height.getText().clear();
-//                    anc1_examination_anthropometry_Height.requestFocus();
                     Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
                     Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
                     Double BMI = weight / (height * height);
@@ -761,10 +733,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
             public void onTextChanged(CharSequence s, int start, int before,
                                       int count) {
+//                anc1_examination_anthropometry_Weight.clearFocus();
+//                anc1_examination_anthropometry_Weight.getText().clear();
+//                anc1_examination_anthropometry_Weight.requestFocus();
                 if (getCurrentFocus() == anc1_examination_anthropometry_Weight) {
                     // is only executed if the EditText was directly changed by the user
-//                    anc1_examination_anthropometry_Weight.clearFocus();
-//                    anc1_examination_anthropometry_Weight.getText().clear();
 //                    anc1_examination_anthropometry_Weight.requestFocus();
                     Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
                     Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
@@ -817,10 +790,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc1_investigations_bloodSugar_Fasting = (EditText) findViewById(R.id.anc1_investigations_bloodSugar_Fasting);
         anc1_investigations_bloodSugar_PostPrandial = (EditText) findViewById(R.id.anc1_investigations_bloodSugar_PostPrandial);
         anc1_investigations_ntnb_DoneNotDone = (EditText) findViewById(R.id.anc1_investigations_ntnb_DoneNotDone);
-        anc1_investigations_ntnb_CRL = (CheckBox) findViewById(R.id.anc1_investigations_ntnb_CRL);
-        anc1_investigations_ntnb_NT = (CheckBox) findViewById(R.id.anc1_investigations_ntnb_NT);
-        anc1_investigations_ntnb_Centile = (CheckBox) findViewById(R.id.anc1_investigations_ntnb_Centile);
-        anc1_investigations_ntnb_Text = (CheckBox) findViewById(R.id.anc1_investigations_ntnb_Text);
+        anc1_investigations_ntnb_CRL = (EditText) findViewById(R.id.anc1_investigations_ntnb_CRL);
+        anc1_investigations_ntnb_NT = (EditText) findViewById(R.id.anc1_investigations_ntnb_NT);
+        anc1_investigations_ntnb_Centile = (EditText) findViewById(R.id.anc1_investigations_ntnb_Centile);
+        anc1_investigations_ntnb_Text = (EditText) findViewById(R.id.anc1_investigations_ntnb_Text);
 
         anc1_investigations_dualScreen_PAPP = (EditText) findViewById(R.id.anc1_investigations_dualScreen_PAPP);
         anc1_investigations_dualScreen_Bhcg = (EditText) findViewById(R.id.anc1_investigations_dualScreen_Bhcg);
@@ -830,9 +803,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc1_advice_BloodSugar = (CheckBox) findViewById(R.id.anc1_advice_BloodSugar);
         anc1_advice_NtNbScan = (CheckBox) findViewById(R.id.anc1_advice_NtNbScan);
         anc1_advice_DualScreen = (CheckBox) findViewById(R.id.anc1_advice_DualScreen);
-        anc1_advice_LeftUterineArteryPl = (CheckBox) findViewById(R.id.anc1_advice_LeftUterineArteryPl);
-        anc1_advice_RightUterineArteryPl = (CheckBox) findViewById(R.id.anc1_advice_RightUterineArteryPl);
-        anc1_advice_PIGF = (CheckBox) findViewById(R.id.anc1_advice_PIGF);
+        anc1_advice_LeftUterineArteryPl = (EditText) findViewById(R.id.anc1_advice_LeftUterineArteryPl);
+        anc1_advice_RightUterineArteryPl = (EditText) findViewById(R.id.anc1_advice_RightUterineArteryPl);
+        anc1_advice_PIGF = (EditText) findViewById(R.id.anc1_advice_PIGF);
         anc1_advice_ICT = (CheckBox) findViewById(R.id.anc1_advice_ICT);
         anc1_advice_Level2USG = (CheckBox) findViewById(R.id.anc1_advice_Level2USG);
         anc1_advice_GeneralNutritional = (CheckBox) findViewById(R.id.anc1_advice_GeneralNutritional);
@@ -915,9 +888,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc3_examination_BP = (EditText) findViewById(R.id.anc3_examination_BP);
         anc3_examination_Weight = (EditText) findViewById(R.id.anc3_examination_Weight);
         anc3_examination_PA2Weeks = (EditText) findViewById(R.id.anc3_examination_PA2Weeks);
+        anc3_examination_FetalEcho = (EditText) findViewById(R.id.anc3_examination_FetalEcho);
         anc3_examination_Others = (EditText) findViewById(R.id.anc3_examination_Others);
 
-        anc3_investigations_CBC = (CheckBox) findViewById(R.id.anc3_investigations_CBC);
         anc3_investigations_UrineCS = (CheckBox) findViewById(R.id.anc3_investigations_UrineCS);
         anc3_investigations_ICT = (CheckBox) findViewById(R.id.anc3_investigations_ICT);
         anc3_investigations_Others = (EditText) findViewById(R.id.anc3_investigations_Others);
@@ -1001,9 +974,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc5_examination_PA2Weeks =  (EditText) findViewById(R.id.anc5_examination_PA2Weeks);
         anc5_examination_Others =  (EditText) findViewById(R.id.anc5_examination_Others);
 
-        anc5_investigation_CBC = (CheckBox) findViewById(R.id.anc5_investigation_CBC);
-        anc5_investigation_LFT = (CheckBox) findViewById(R.id.anc5_investigation_LFT);
-        anc5_investigation_KFT = (CheckBox) findViewById(R.id.anc5_investigation_KFT);
+        anc5_investigation_CBC = (EditText) findViewById(R.id.anc5_investigation_CBC);
+        anc5_investigation_LFT = (EditText) findViewById(R.id.anc5_investigation_LFT);
+        anc5_investigation_KFT = (EditText) findViewById(R.id.anc5_investigation_KFT);
         anc5_investigation_Others =  (EditText) findViewById(R.id.anc5_investigation_Others);
 
         anc5_USG_BPD_cm =  (EditText) findViewById(R.id.anc5_USG_BPD_cm);
@@ -1365,6 +1338,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_examination_vitals_ChestCVS.setText(response.getString("anc1_examination_vitals_ChestCVS"));
                             anc1_examination_vitals_PA.setText(response.getString("anc1_examination_vitals_PA"));
                             anc1_examination_vitals_Proteinuria.setSelection(getIndex(anc1_examination_vitals_Proteinuria, response.getString("anc1_examination_vitals_Proteinuria")));
+
                             anc1_investigations_HIV.setChecked(response.getBoolean("anc1_investigations_HIV"));
                             anc1_investigations_Hbsag.setChecked(response.getBoolean("anc1_investigations_Hbsag"));
                             anc1_investigations_Vdrl.setChecked(response.getBoolean("anc1_investigations_Vdrl"));
@@ -1379,39 +1353,38 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_investigations_HusbandBloodGroup.setSelection(getIndex(anc1_investigations_HusbandBloodGroup, response.getString("anc1_investigations_HusbandBloodGroup")));
                             anc1_investigations_Hemogram.setText(response.getString("anc1_investigations_Hemogram"));
                             anc1_investigations_Tsh.setText(response.getString("anc1_investigations_Tsh"));
-
                             anc1_investigations_GTT_fast.setText(response.getString("anc1_investigations_GTT_fast"));
                             anc1_investigations_GTT_1Hour.setText(response.getString("anc1_investigations_GTT_1Hour"));
                             anc1_investigations_GTT_2Hour.setText(response.getString("anc1_investigations_GTT_2Hour"));
-
                             anc1_investigations_bloodSugar_Fasting.setText(response.getString("anc1_investigations_bloodSugar_Fasting"));
                             anc1_investigations_bloodSugar_PostPrandial.setText(response.getString("anc1_investigations_bloodSugar_PostPrandial"));
                             anc1_investigations_ntnb_DoneNotDone.setText(response.getString("anc1_investigations_ntnb_DoneNotDone"));
-                            anc1_investigations_ntnb_CRL.setChecked(response.getBoolean("anc1_investigations_ntnb_CRL"));
-                            anc1_investigations_ntnb_NT.setChecked(response.getBoolean("anc1_investigations_ntnb_NT"));
-                            anc1_investigations_ntnb_Centile.setChecked(response.getBoolean("anc1_investigations_ntnb_Centile"));
-                            anc1_investigations_ntnb_Text.setChecked(response.getBoolean("anc1_investigations_ntnb_Text"));
+                            anc1_investigations_ntnb_CRL.setText(response.getString("anc1_investigations_ntnb_CRL"));
+                            anc1_investigations_ntnb_NT.setText(response.getString("anc1_investigations_ntnb_NT"));
+                            anc1_investigations_ntnb_Centile.setText(response.getString("anc1_investigations_ntnb_Centile"));
+                            anc1_investigations_ntnb_Text.setText(response.getString("anc1_investigations_ntnb_Text"));
                             anc1_investigations_dualScreen_PAPP.setText(response.getString("anc1_investigations_dualScreen_PAPP"));
                             anc1_investigations_dualScreen_Bhcg.setText(response.getString("anc1_investigations_dualScreen_Bhcg"));
                             anc1_investigations_level2Usg_DoneNotDone.setText(response.getString("anc1_investigations_level2Usg_DoneNotDone"));
                             anc1_investigations_level2Usg_NormalAbnormal.setText(response.getString("anc1_investigations_level2Usg_NormalAbnormal"));
+
                             anc1_advice_GTT.setChecked(response.getBoolean("anc1_advice_GTT"));
                             anc1_advice_BloodSugar.setChecked(response.getBoolean("anc1_advice_BloodSugar"));
                             anc1_advice_NtNbScan.setChecked(response.getBoolean("anc1_advice_NtNbScan"));
                             anc1_advice_DualScreen.setChecked(response.getBoolean("anc1_advice_DualScreen"));
-                            anc1_advice_LeftUterineArteryPl.setChecked(response.getBoolean("anc1_advice_LeftUterineArteryPl"));
-                            anc1_advice_RightUterineArteryPl.setChecked(response.getBoolean("anc1_advice_RightUterineArteryPl"));
-                            anc1_advice_PIGF.setChecked(response.getBoolean("anc1_advice_PIGF"));
+
+                            anc1_advice_LeftUterineArteryPl.setText(response.getString("anc1_advice_LeftUterineArteryPl"));
+                            anc1_advice_RightUterineArteryPl.setText(response.getString("anc1_advice_RightUterineArteryPl"));
+                            anc1_advice_PIGF.setText(response.getString("anc1_advice_PIGF"));
+
                             anc1_advice_ICT.setChecked(response.getBoolean("anc1_advice_ICT"));
                             anc1_advice_Level2USG.setChecked(response.getBoolean("anc1_advice_Level2USG"));
-
                             anc1_advice_GeneralNutritional.setChecked(response.getBoolean("anc1_advice_GeneralNutritional"));
                             anc1_advice_NauseaVomiting.setChecked(response.getBoolean("anc1_advice_NauseaVomiting"));
                             anc1_advice_HeatBurn.setChecked(response.getBoolean("anc1_advice_HeatBurn"));
                             anc1_advice_Constipation.setChecked(response.getBoolean("anc1_advice_Constipation"));
                             anc1_advice_PedalEdema.setChecked(response.getBoolean("anc1_advice_PedalEdema"));
                             anc1_advice_LegCramps.setChecked(response.getBoolean("anc1_advice_LegCramps"));
-
                             anc2_advice_GeneralNutritional.setChecked(response.getBoolean("anc2_advice_GeneralNutritional"));
                             anc2_advice_NauseaVomiting.setChecked(response.getBoolean("anc2_advice_NauseaVomiting"));
                             anc2_advice_HeatBurn.setChecked(response.getBoolean("anc2_advice_HeatBurn"));
@@ -1557,8 +1530,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc3_examination_BP.setText(response.getString("anc3_examination_BP"));
                             anc3_examination_Weight.setText(response.getString("anc3_examination_Weight"));
                             anc3_examination_PA2Weeks.setText(response.getString("anc3_examination_PA2Weeks"));
+                            anc3_examination_FetalEcho.setText(response.getString("anc3_examination_FetalEcho"));
                             anc3_examination_Others.setText(response.getString("anc3_examination_Others"));
-                            anc3_investigations_CBC.setChecked(response.getBoolean("anc3_investigations_CBC"));
                             anc3_investigations_UrineCS.setChecked(response.getBoolean("anc3_investigations_UrineCS"));
                             anc3_investigations_ICT.setChecked(response.getBoolean("anc3_investigations_ICT"));
                             anc3_investigations_Others.setText(response.getString("anc3_investigations_Others"));
@@ -1639,9 +1612,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc5_examination_Weight.setText(response.getString("anc5_examination_Weight"));
                             anc5_examination_PA2Weeks.setText(response.getString("anc5_examination_PA2Weeks"));
                             anc5_examination_Others.setText(response.getString("anc5_examination_Others"));
-                            anc5_investigation_CBC.setChecked(response.getBoolean("anc5_investigation_CBC"));
-                            anc5_investigation_LFT.setChecked(response.getBoolean("anc5_investigation_LFT"));
-                            anc5_investigation_KFT.setChecked(response.getBoolean("anc5_investigation_KFT"));
+                            anc5_investigation_CBC.setText(response.getString("anc5_investigation_CBC"));
+                            anc5_investigation_LFT.setText(response.getString("anc5_investigation_LFT"));
+                            anc5_investigation_KFT.setText(response.getString("anc5_investigation_KFT"));
                             anc5_investigation_Others.setText(response.getString("anc5_investigation_Others"));
                             anc5_USG_BPD_cm.setText(response.getString("anc5_USG_BPD_cm"));
                             anc5_USG_BPD_weeks.setText(response.getString("anc5_USG_BPD_weeks"));
@@ -1988,9 +1961,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc1_advice_DualScreen.getText() + " ,\n";
                         }
 
-                        if( anc1_advice_LeftUterineArteryPl.isChecked()){
-                            notfMessage += anc1_advice_LeftUterineArteryPl.getText() + " ,\n";
-                        }
+//                        if( anc1_advice_LeftUterineArteryPl.isChecked()){
+//                            notfMessage += anc1_advice_LeftUterineArteryPl.getText() + " ,\n";
+//                        }
 
                         if (anc1_advice_TfolateLessThan14Weeks.isChecked()){
                             notfMessage += anc1_advice_TfolateLessThan14Weeks.getText() + " ,\n";
@@ -2000,13 +1973,13 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc1_advice_TFeMoreThan14Weeks.getText() + " ,\n";
                         }
 
-                        if( anc1_advice_RightUterineArteryPl.isChecked()){
-                            notfMessage += anc1_advice_RightUterineArteryPl.getText() + " ,\n";
-                        }
-
-                        if( anc1_advice_PIGF.isChecked()){
-                            notfMessage += anc1_advice_PIGF.getText() + " ,\n";
-                        }
+//                        if( anc1_advice_RightUterineArteryPl.isChecked()){
+//                            notfMessage += anc1_advice_RightUterineArteryPl.getText() + " ,\n";
+//                        }
+//
+//                        if( anc1_advice_PIGF.isChecked()){
+//                            notfMessage += anc1_advice_PIGF.getText() + " ,\n";
+//                        }
 
                         if( anc1_advice_ICT.isChecked()){
                             notfMessage += anc1_advice_ICT.getText() + " ,\n";
@@ -2303,10 +2276,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc1_investigations_bloodSugar_Fasting", "" + anc1_investigations_bloodSugar_Fasting.getText());
                     params.put("anc1_investigations_bloodSugar_PostPrandial", "" + anc1_investigations_bloodSugar_PostPrandial.getText());
                     params.put("anc1_investigations_ntnb_DoneNotDone", "" + anc1_investigations_ntnb_DoneNotDone.getText());
-                    params.put("anc1_investigations_ntnb_CRL", "" + anc1_investigations_ntnb_CRL.isChecked());
-                    params.put("anc1_investigations_ntnb_NT", "" + anc1_investigations_ntnb_NT.isChecked());
-                    params.put("anc1_investigations_ntnb_Centile", "" + anc1_investigations_ntnb_Centile.isChecked());
-                    params.put("anc1_investigations_ntnb_Text", "" + anc1_investigations_ntnb_Text.isChecked());
+
+                    params.put("anc1_investigations_ntnb_CRL", "" + anc1_investigations_ntnb_CRL.getText());
+                    params.put("anc1_investigations_ntnb_NT", "" + anc1_investigations_ntnb_NT.getText());
+                    params.put("anc1_investigations_ntnb_Centile", "" + anc1_investigations_ntnb_Centile.getText());
+                    params.put("anc1_investigations_ntnb_Text", "" + anc1_investigations_ntnb_Text.getText());
+
                     params.put("anc1_investigations_dualScreen_PAPP", "" + anc1_investigations_dualScreen_PAPP.getText());
                     params.put("anc1_investigations_dualScreen_Bhcg", "" + anc1_investigations_dualScreen_Bhcg.getText());
                     params.put("anc1_investigations_level2Usg_DoneNotDone", "" + anc1_investigations_level2Usg_DoneNotDone.getText());
@@ -2315,9 +2290,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc1_advice_BloodSugar", "" + anc1_advice_BloodSugar.isChecked());
                     params.put("anc1_advice_NtNbScan", "" + anc1_advice_NtNbScan.isChecked());
                     params.put("anc1_advice_DualScreen", "" + anc1_advice_DualScreen.isChecked());
-                    params.put("anc1_advice_LeftUterineArteryPl", "" + anc1_advice_LeftUterineArteryPl.isChecked());
-                    params.put("anc1_advice_RightUterineArteryPl", "" + anc1_advice_RightUterineArteryPl.isChecked());
-                    params.put("anc1_advice_PIGF", "" + anc1_advice_PIGF.isChecked());
+                    params.put("anc1_advice_LeftUterineArteryPl", "" + anc1_advice_LeftUterineArteryPl.getText());
+                    params.put("anc1_advice_RightUterineArteryPl", "" + anc1_advice_RightUterineArteryPl.getText());
+                    params.put("anc1_advice_PIGF", "" + anc1_advice_PIGF.getText());
                     params.put("anc1_advice_ICT", "" + anc1_advice_ICT.isChecked());
                     params.put("anc1_advice_Level2USG", "" + anc1_advice_Level2USG.isChecked());
                     params.put("anc1_advice_GeneralNutritional", "" + anc1_advice_GeneralNutritional.isChecked());
@@ -2395,8 +2370,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc3_examination_BP", "" + anc3_examination_BP.getText());
                     params.put("anc3_examination_Weight", "" + anc3_examination_Weight.getText());
                     params.put("anc3_examination_PA2Weeks", "" + anc3_examination_PA2Weeks.getText());
+                    params.put("anc3_examination_FetalEcho", "" + anc3_examination_FetalEcho.getText());
                     params.put("anc3_examination_Others", "" + anc3_examination_Others.getText());
-                    params.put("anc3_investigations_CBC", "" + anc3_investigations_CBC.isChecked());
                     params.put("anc3_investigations_UrineCS", "" + anc3_investigations_UrineCS.isChecked());
                     params.put("anc3_investigations_ICT", "" + anc3_investigations_ICT.isChecked());
                     params.put("anc3_investigations_Others", "" + anc3_investigations_Others.getText());
@@ -2474,9 +2449,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc5_examination_Weight", "" + anc5_examination_Weight.getText());
                     params.put("anc5_examination_PA2Weeks", "" + anc5_examination_PA2Weeks.getText());
                     params.put("anc5_examination_Others", "" + anc5_examination_Others.getText());
-                    params.put("anc5_investigation_CBC", "" + anc5_investigation_CBC.isChecked());
-                    params.put("anc5_investigation_LFT", "" + anc5_investigation_LFT.isChecked());
-                    params.put("anc5_investigation_KFT", "" + anc5_investigation_KFT.isChecked());
+                    params.put("anc5_investigation_CBC", "" + anc5_investigation_CBC.getText());
+                    params.put("anc5_investigation_LFT", "" + anc5_investigation_LFT.getText());
+                    params.put("anc5_investigation_KFT", "" + anc5_investigation_KFT.getText());
                     params.put("anc5_investigation_Others", "" + anc5_investigation_Others.getText());
                     params.put("anc5_USG_BPD_cm", "" + anc5_USG_BPD_cm.getText());
                     params.put("anc5_USG_BPD_weeks", "" + anc5_USG_BPD_weeks.getText());
