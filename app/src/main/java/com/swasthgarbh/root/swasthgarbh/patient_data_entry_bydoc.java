@@ -142,7 +142,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc5_USG_liquor_SLP, anc5_USG_liquor_AFI;
     EditText anc5_USG_UAPI, anc5_USG_UAPI_centile;
     EditText anc5_USG_MCAPI, anc5_USG_MCAPI_centile;
-    CheckBox anc5_USG_CPR;
+    EditText anc5_USG_CPR;
     CheckBox anc5_advice_DFMCLLP, anc5_advice_TFeCa, anc5_advice_NST;
     EditText anc5_advice_Others;
 
@@ -213,6 +213,15 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     CheckBox anc6_advice_GeneralNutritional, anc6_advice_NauseaVomiting, anc6_advice_HeatBurn, anc6_advice_Constipation, anc6_advice_PedalEdema, anc6_advice_LegCramps;
     CheckBox anc7_advice_GeneralNutritional, anc7_advice_NauseaVomiting, anc7_advice_HeatBurn, anc7_advice_Constipation, anc7_advice_PedalEdema, anc7_advice_LegCramps;
     CheckBox anc8_advice_GeneralNutritional, anc8_advice_NauseaVomiting, anc8_advice_HeatBurn, anc8_advice_Constipation, anc8_advice_PedalEdema, anc8_advice_LegCramps;
+
+    CheckBox anc1_advice_Diabetic;
+    CheckBox anc2_advice_Diabetic;
+    CheckBox anc3_advice_Diabetic;
+    CheckBox anc4_advice_Diabetic;
+    CheckBox anc5_advice_Diabetic;
+    CheckBox anc6_advice_Diabetic;
+    CheckBox anc7_advice_Diabetic;
+    CheckBox anc8_advice_Diabetic;
 
     private DatePickerDialog anc1_datePickerDialog;
     private DatePickerDialog anc2_datePickerDialog;
@@ -1001,7 +1010,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc5_USG_MCAPI =  (EditText) findViewById(R.id.anc5_USG_MCAPI);
         anc5_USG_MCAPI_centile =  (EditText) findViewById(R.id.anc5_USG_MCAPI_centile);
 
-        anc5_USG_CPR = (CheckBox) findViewById(R.id.anc5_USG_CPR);
+        anc5_USG_CPR = (EditText) findViewById(R.id.anc5_USG_CPR);
         anc5_advice_DFMCLLP = (CheckBox) findViewById(R.id.anc5_advice_DFMCLLP);
         anc5_advice_TFeCa = (CheckBox) findViewById(R.id.anc5_advice_TFeCa);
         anc5_advice_NST = (CheckBox) findViewById(R.id.anc5_advice_NST);
@@ -1105,6 +1114,15 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc6_Date_Automatic = (TextView) findViewById(R.id.anc6_Date_Automatic);
         anc7_Date_Automatic = (TextView) findViewById(R.id.anc7_Date_Automatic);
         anc8_Date_Automatic = (TextView) findViewById(R.id.anc8_Date_Automatic);
+
+        anc1_advice_Diabetic = (CheckBox) findViewById(R.id.anc1_advice_Diabetic);
+        anc2_advice_Diabetic = (CheckBox) findViewById(R.id.anc2_advice_Diabetic);
+        anc3_advice_Diabetic = (CheckBox) findViewById(R.id.anc3_advice_Diabetic);
+        anc4_advice_Diabetic = (CheckBox) findViewById(R.id.anc4_advice_Diabetic);
+        anc5_advice_Diabetic = (CheckBox) findViewById(R.id.anc5_advice_Diabetic);
+        anc6_advice_Diabetic = (CheckBox) findViewById(R.id.anc6_advice_Diabetic);
+        anc7_advice_Diabetic = (CheckBox) findViewById(R.id.anc7_advice_Diabetic);
+        anc8_advice_Diabetic = (CheckBox) findViewById(R.id.anc8_advice_Diabetic);
 
         anc_1 = (CheckBox) findViewById(R.id.anc_1);
         anc_2 = (CheckBox) findViewById(R.id.anc_2);
@@ -1637,7 +1655,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc5_USG_UAPI_centile.setText(response.getString("anc5_USG_UAPI_centile"));
                             anc5_USG_MCAPI.setText(response.getString("anc5_USG_MCAPI"));
                             anc5_USG_MCAPI_centile.setText(response.getString("anc5_USG_MCAPI_centile"));
-                            anc5_USG_CPR.setChecked(response.getBoolean("anc5_USG_CPR"));
+                            anc5_USG_CPR.setText(response.getString("anc5_USG_CPR"));
                             anc5_advice_DFMCLLP.setChecked(response.getBoolean("anc5_advice_DFMCLLP"));
                             anc5_advice_TFeCa.setChecked(response.getBoolean("anc5_advice_TFeCa"));
                             anc5_advice_NST.setChecked(response.getBoolean("anc5_advice_NST"));
@@ -1726,6 +1744,15 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc8_examination_Weight.setText(response.getString("anc8_examination_Weight"));
                             anc8_examination_Others.setText(response.getString("anc8_examination_Others"));
                             anc8_advice_Others.setText(response.getString("anc8_advice_Others"));
+
+                            anc1_advice_Diabetic.setChecked(response.getBoolean("anc1_advice_Diabetic"));
+                            anc2_advice_Diabetic.setChecked(response.getBoolean("anc2_advice_Diabetic"));
+                            anc3_advice_Diabetic.setChecked(response.getBoolean("anc3_advice_Diabetic"));
+                            anc4_advice_Diabetic.setChecked(response.getBoolean("anc4_advice_Diabetic"));
+                            anc5_advice_Diabetic.setChecked(response.getBoolean("anc5_advice_Diabetic"));
+                            anc6_advice_Diabetic.setChecked(response.getBoolean("anc6_advice_Diabetic"));
+                            anc7_advice_Diabetic.setChecked(response.getBoolean("anc7_advice_Diabetic"));
+                            anc8_advice_Diabetic.setChecked(response.getBoolean("anc8_advice_Diabetic"));
 
                         } catch (JSONException e) {
                             Log.i("Error", e.toString());
@@ -2186,6 +2213,27 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += "Daily magnesium/calcium supplements can be used.\n";
                         }
 
+                        if(     anc1_advice_Diabetic.isChecked() ||
+                                anc2_advice_Diabetic.isChecked() ||
+                                anc3_advice_Diabetic.isChecked() ||
+                                anc4_advice_Diabetic.isChecked() ||
+                                anc5_advice_Diabetic.isChecked() ||
+                                anc6_advice_Diabetic.isChecked() ||
+                                anc7_advice_Diabetic.isChecked() ||
+                                anc8_advice_Diabetic.isChecked()
+                        ){
+                            notfMessage += "Diabetic Diet (3+3) pattern. Take 3 major meals with intervening 3 minor meals.\n" +
+                                    "Avoid long hours of fasting.\n" +
+                                    "The diet should be balanced comprising 35-40% carbohydrates, 20% proteins and 40% fat.\n" +
+                                    "Light exercises are advocated.\n" +
+                                    "30 min of walking daily for 5 days a week.\n" +
+                                    "Symptoms of hypoglycaemia : sweating, palpitations, weakness should not be ignored.\n" +
+                                    "A spot blood sugar test using glucometer should be done. If BS &lt; 60; take biscuits or juice. Contact your\n" +
+                                    "treating Physician.\n" +
+                                    "Home Blood sugar monitoring should be done routinely and recorded.\n" +
+                                    "Records should be brought to ANC OPD for assessment of therapy.";
+                        }
+
                     notifGeneration(notfMessage);
 
                         Intent intent = new Intent(patient_data_entry_bydoc.this, AllPatientListActivity.class);
@@ -2204,6 +2252,15 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
             public byte[] getBody() {
                 JSONObject params = new JSONObject();
                 try {
+
+                    params.put("anc1_advice_Diabetic", "" + anc1_advice_Diabetic.isChecked());
+                    params.put("anc2_advice_Diabetic", "" + anc2_advice_Diabetic.isChecked());
+                    params.put("anc3_advice_Diabetic", "" + anc3_advice_Diabetic.isChecked());
+                    params.put("anc4_advice_Diabetic", "" + anc4_advice_Diabetic.isChecked());
+                    params.put("anc5_advice_Diabetic", "" + anc5_advice_Diabetic.isChecked());
+                    params.put("anc6_advice_Diabetic", "" + anc6_advice_Diabetic.isChecked());
+                    params.put("anc7_advice_Diabetic", "" + anc7_advice_Diabetic.isChecked());
+                    params.put("anc8_advice_Diabetic", "" + anc8_advice_Diabetic.isChecked());
 
                     params.put("investigations_ChronicHyper", "" + investigations_ChronicHyper.isChecked());
                     params.put("investigations_Type2", "" + investigations_Type2.isChecked());
@@ -2474,7 +2531,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc5_USG_UAPI_centile", "" + anc5_USG_UAPI_centile.getText());
                     params.put("anc5_USG_MCAPI", "" + anc5_USG_MCAPI.getText());
                     params.put("anc5_USG_MCAPI_centile", "" + anc5_USG_MCAPI_centile.getText());
-                    params.put("anc5_USG_CPR", "" + anc5_USG_CPR.isChecked());
+                    params.put("anc5_USG_CPR", "" + anc5_USG_CPR.getText());
                     params.put("anc5_advice_DFMCLLP", "" + anc5_advice_DFMCLLP.isChecked());
                     params.put("anc5_advice_TFeCa", "" + anc5_advice_TFeCa.isChecked());
                     params.put("anc5_advice_NST", "" + anc5_advice_NST.isChecked());

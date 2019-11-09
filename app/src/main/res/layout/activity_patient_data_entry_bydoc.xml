@@ -1992,6 +1992,12 @@
                                         android:layout_height="wrap_content"
                                         android:text="Leg Cramps" />
 
+                                    <CheckBox
+                                        android:id="@+id/anc1_advice_Diabetic"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Diabetic" />
+
                                 </LinearLayout>
 
                             </LinearLayout>
@@ -2072,7 +2078,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="5dp"
-                                    android:orientation="vertical">
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
@@ -2883,6 +2890,12 @@
                                         android:layout_height="wrap_content"
                                         android:text="Leg Cramps" />
 
+                                    <CheckBox
+                                        android:id="@+id/anc2_advice_Diabetic"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Diabetic" />
+
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content">
@@ -3670,6 +3683,12 @@
                                         android:layout_height="wrap_content"
                                         android:text="Leg Cramps" />
 
+                                    <CheckBox
+                                        android:id="@+id/anc3_advice_Diabetic"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Diabetic" />
+
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content">
@@ -4448,16 +4467,6 @@
                                         android:text="@string/anc_3_USG"
                                         android:visibility="visible" />
 
-                                    <CheckBox
-                                        android:id="@+id/anc4_advice_review"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginTop="5dp"
-                                        android:gravity="center"
-                                        android:text="Review in labour room if (Bleeding PV, Spotting PV, Leaking PV, Reduced fetal movement, Pain abdomen)"
-                                        android:textSize="15sp"
-                                        android:visibility="visible" />
-
                                     <!--<android.support.v7.widget.CardView-->
                                     <!--android:layout_width="match_parent"-->
                                     <!--android:layout_height="wrap_content"-->
@@ -4560,6 +4569,22 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="Leg Cramps" />
+
+                                    <CheckBox
+                                        android:id="@+id/anc4_advice_Diabetic"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Diabetic" />
+
+                                    <CheckBox
+                                        android:id="@+id/anc4_advice_review"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="5dp"
+                                        android:gravity="center"
+                                        android:text="Review in labour room if (Bleeding PV, Spotting PV, Leaking PV, Reduced fetal movement, Pain abdomen)"
+                                        android:textSize="15sp"
+                                        android:visibility="visible" />
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
@@ -5149,7 +5174,7 @@
                                             android:id="@+id/anc5_investigation_CBC"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_margin="10dp"
+                                            android:layout_margin="3dp"
                                             android:layout_weight="5"
                                             android:backgroundTint="@color/colortheme"
                                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
@@ -5178,7 +5203,7 @@
                                             android:id="@+id/anc5_investigation_LFT"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_margin="10dp"
+                                            android:layout_margin="3dp"
                                             android:layout_weight="5"
                                             android:backgroundTint="@color/colortheme"
                                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
@@ -5207,7 +5232,7 @@
                                             android:id="@+id/anc5_investigation_KFT"
                                             android:layout_width="0dp"
                                             android:layout_height="wrap_content"
-                                            android:layout_margin="10dp"
+                                            android:layout_margin="3dp"
                                             android:layout_weight="5"
                                             android:backgroundTint="@color/colortheme"
                                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
@@ -5666,12 +5691,32 @@
 
                                     </LinearLayout>
 
-                                    <CheckBox
-                                        android:id="@+id/anc5_USG_CPR"
+                                    <LinearLayout
                                         android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/anc_5_CPR"
-                                        android:visibility="visible" />
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:text="@string/anc_5_CPR"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+                                        <EditText
+                                            android:id="@+id/anc5_USG_CPR"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="1"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:gravity="center"
+                                            android:inputType="textMultiLine" />
+
+                                    </LinearLayout>
 
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
@@ -5766,6 +5811,12 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:text="Leg Cramps" />
+
+                                    <CheckBox
+                                        android:id="@+id/anc5_advice_Diabetic"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Diabetic" />
 
                                     <CheckBox
                                         android:id="@+id/anc5_advice_review"
@@ -6402,6 +6453,12 @@
                                         android:text="Leg Cramps" />
 
                                     <CheckBox
+                                        android:id="@+id/anc6_advice_Diabetic"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Diabetic" />
+
+                                    <CheckBox
                                         android:id="@+id/anc6_advice_review"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
@@ -7001,6 +7058,12 @@
                                     android:text="Leg Cramps" />
 
                                 <CheckBox
+                                    android:id="@+id/anc7_advice_Diabetic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Diabetic" />
+
+                                <CheckBox
                                     android:id="@+id/anc7_advice_review"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
@@ -7582,6 +7645,12 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Leg Cramps" />
+
+                                <CheckBox
+                                    android:id="@+id/anc8_advice_Diabetic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Diabetic" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
