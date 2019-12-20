@@ -49,6 +49,7 @@ public class PatientSignup extends AppCompatActivity implements View.OnClickList
     Calendar newDate1 = Calendar.getInstance();
     private DatePickerDialog lmpDatePickerDialog;
     private SimpleDateFormat dateFormatterShow, dateFormatterServer;
+    Spinner spinnerStatus, spinnerEducation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +82,9 @@ public class PatientSignup extends AppCompatActivity implements View.OnClickList
         aiDoc = (Switch)findViewById(R.id.aiDoc);
         normalDoc = (LinearLayout)findViewById(R.id.normalDoc);
 
+        spinnerEducation = (Spinner) findViewById(R.id.education);
+        spinnerStatus = (Spinner) findViewById(R.id.status);
+
         normalDoc.setVisibility(View.GONE);
         docRequried = Boolean.FALSE;
 
@@ -104,17 +108,17 @@ public class PatientSignup extends AppCompatActivity implements View.OnClickList
 
         date_of_birth = (EditText) findViewById(R.id.editText3);
 
-        Spinner spinnerStatus = (Spinner) findViewById(R.id.status);
+        Spinner spinnerStatus2 = (Spinner) findViewById(R.id.status);
         ArrayAdapter<CharSequence> adapterStatus = ArrayAdapter.createFromResource(this,
                 R.array.SEStatusDropdownElements, android.R.layout.simple_spinner_item);
         adapterStatus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerStatus.setAdapter(adapterStatus);
+        spinnerStatus2.setAdapter(adapterStatus);
 
-        Spinner spinnerEducation = (Spinner) findViewById(R.id.education);
+        Spinner spinnerEducation2 = (Spinner) findViewById(R.id.education);
         ArrayAdapter<CharSequence> adapterEducation = ArrayAdapter.createFromResource(this,
                 R.array.SchoolDropdownElements, android.R.layout.simple_spinner_item);
         adapterEducation.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerEducation.setAdapter(adapterEducation);
+        spinnerEducation2.setAdapter(adapterEducation);
 
         session = new SessionManager(this);
 
@@ -148,6 +152,7 @@ public class PatientSignup extends AppCompatActivity implements View.OnClickList
             String str_doctor_mobile = "" + doctor_number.getText();
             String str_doc_name = "" + doctor_name.getText();
             String str_lmpDate = "" + lmpDate.getText();
+            Log.i("vaaaaallllueeeee", "onClick: " + spinnerEducation.getSelectedItem().toString());
             if (str_name.length() == 0) {
                 Toast.makeText(PatientSignup.this, "Enter your name", Toast.LENGTH_LONG).show();
                 return;
@@ -223,14 +228,6 @@ public class PatientSignup extends AppCompatActivity implements View.OnClickList
                 @Override
                 public byte[] getBody() {
                     JSONObject params = new JSONObject();
-//                    int selectedId = sexRadioGroup.getCheckedRadioButtonId();
-//                    int gender;
-//                    if (selectedId == R.id.radioMale) {
-//                        gender = 1;
-//                    }
-//                    else{
-//                        gender = 0;
-//                    }
 
                     SharedPreferences pref = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
                     try {
@@ -257,6 +254,8 @@ public class PatientSignup extends AppCompatActivity implements View.OnClickList
                         params.put("more_than_one_baby", moreThanOneBaby.isChecked());
                         params.put("history_of_diseases", diseases.isChecked());
                         params.put("verified", Boolean.FALSE);
+                        params.put("spinnerEducation", spinnerEducation.getSelectedItem().toString());
+                        params.put("spinnerStatus", spinnerStatus.getSelectedItem().toString());
 
                     } catch (JSONException e) {
                         e.printStackTrace();

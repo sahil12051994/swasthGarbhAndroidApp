@@ -530,7 +530,7 @@ public class patient_registration extends AppCompatActivity {
                                 }
                                 Log.i("dataaaaaaa", "onResponse: " + ja);
                                 patientBpData = ja;
-                                Toast.makeText(patient_registration.this, "Dummy Data", Toast.LENGTH_LONG).show();
+//                                Toast.makeText(patient_registration.this, "Dummy Data", Toast.LENGTH_LONG).show();
                                 dummyData.setVisibility(View.VISIBLE);
                                 dummyDataVariable = 1;
                             }

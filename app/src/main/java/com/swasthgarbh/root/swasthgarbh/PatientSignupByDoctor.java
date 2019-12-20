@@ -51,6 +51,7 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
     Calendar newDate1 = Calendar.getInstance();
     private DatePickerDialog lmpDatePickerDialog;
     private SimpleDateFormat dateFormatterShow, dateFormatterServer;
+    Spinner spinnerStatus, spinnerEducation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +65,8 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
         email = (EditText) findViewById (R.id.editemail);
         mobile = (EditText) findViewById (R.id.editphone);
         UHID = (EditText) findViewById (R.id.editUHID);
+        spinnerEducation = (Spinner) findViewById(R.id.education);
+        spinnerStatus = (Spinner) findViewById(R.id.status);
 
 //        password = (EditText) findViewById(R.id.editText6);
 
@@ -83,17 +86,17 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
         moreThanOneBaby = (CheckBox) findViewById (R.id.moreThanOneBaby);
         diseases = (CheckBox) findViewById (R.id.diseases);
 
-        Spinner spinnerStatus = (Spinner) findViewById(R.id.status);
+        Spinner spinnerStatus2 = (Spinner) findViewById(R.id.status);
         ArrayAdapter<CharSequence> adapterStatus = ArrayAdapter.createFromResource(this,
                 R.array.SEStatusDropdownElements, android.R.layout.simple_spinner_item);
         adapterStatus.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerStatus.setAdapter(adapterStatus);
+        spinnerStatus2.setAdapter(adapterStatus);
 
-        Spinner spinnerEducation = (Spinner) findViewById(R.id.education);
+        Spinner spinnerEducation2 = (Spinner) findViewById(R.id.education);
         ArrayAdapter<CharSequence> adapterEducation = ArrayAdapter.createFromResource(this,
                 R.array.SchoolDropdownElements, android.R.layout.simple_spinner_item);
         adapterEducation.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerEducation.setAdapter(adapterEducation);
+        spinnerEducation2.setAdapter(adapterEducation);
 
         register = (Button) findViewById (R.id.register);
         register.setOnClickListener (this);
@@ -203,6 +206,8 @@ public class PatientSignupByDoctor extends AppCompatActivity implements View.OnC
                         params.put("more_than_one_baby", moreThanOneBaby.isChecked());
                         params.put("history_of_diseases", diseases.isChecked());
                         params.put("verified", Boolean.FALSE);
+                        params.put("spinnerEducation", spinnerEducation.getSelectedItem().toString());
+                        params.put("spinnerStatus", spinnerStatus.getSelectedItem().toString());
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

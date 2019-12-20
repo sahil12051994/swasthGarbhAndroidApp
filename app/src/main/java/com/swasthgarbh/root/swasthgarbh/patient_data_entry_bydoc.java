@@ -56,6 +56,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     CheckBox investigations_ChronicHyper, investigations_Type2, investigations_ChronicLiverDisease, investigations_ChronicKidneyDisease, investigations_ALPA, investigations_SLE;
     CheckBox investigations_heatDisease_RHD, investigations_heatDisease_RHDpost, investigations_heatDisease_Acyanotic, investigations_heatDisease_Cyanotic;
     EditText investigations_Others, investigations_DrugHistory;
+    EditText investigationFtPtAbortion, investigationAncComplication, investigationMod, investigationBabyOutcome;
 
 //    ANC1 Variables
     EditText anc1_Date;
@@ -66,7 +67,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc1_examination_anthropometry_Height, anc1_examination_anthropometry_Weight, anc1_examination_anthropometry_Bmi;
     EditText anc1_examination_vitals_Pr, anc1_examination_vitals_Bp, anc1_examination_vitals_Rr, anc1_examination_vitals_Temp, anc1_examination_vitals_ChestCVS, anc1_examination_vitals_PA;
     Spinner anc1_examination_vitals_Proteinuria;
-    CheckBox anc1_investigations_HIV, anc1_investigations_Hbsag, anc1_investigations_Vdrl, anc1_investigations_UrineRM, anc1_investigations_UrineCS;
+    CheckBox anc1_investigations_HIV, anc1_investigations_Hbsag, anc1_investigations_Vdrl;
+    EditText anc1_investigations_UrineRM, anc1_investigations_UrineCS;
     Switch anc1_investigations_HIV_switch, anc1_investigations_Hbsag_switch, anc1_investigations_Vdrl_switch, anc1_investigations_UrineRM_switch, anc1_investigations_UrineCS_switch;
     Spinner anc1_investigations_BloodGroup, anc1_investigations_HusbandBloodGroup;
     EditText anc1_investigations_Hemogram, anc1_investigations_Tsh;
@@ -87,7 +89,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     EditText anc1_general_deranged_Fasting, anc1_general_deranged_AfterBreakfast, anc1_general_deranged_AfterLunch, anc1_general_deranged_AfterDinner;
     EditText anc1_general_Others;
     EditText anc1_advice_LeftUterineArteryPl, anc1_advice_RightUterineArteryPl, anc1_advice_PIGF;
-
+    EditText obsForG, obsForA, obsForP, obsForL;
 //    ANC2 Variables
     EditText anc2_Date;
     EditText anc2_POG;
@@ -612,6 +614,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc7_Date = (EditText) findViewById(R.id.anc7_Date);
         anc8_Date = (EditText) findViewById(R.id.anc8_Date);
 
+        obsForA = (EditText) findViewById(R.id.obsForA);
+        obsForG = (EditText) findViewById(R.id.obsForG);
+        obsForL = (EditText) findViewById(R.id.obsForL);
+        obsForP = (EditText) findViewById(R.id.obsForP);
+
         Calendar newCalendar = Calendar.getInstance();
         anc1_Date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -675,6 +682,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         investigations_Others = (EditText) findViewById(R.id.investigations_Others);
         investigations_DrugHistory = (EditText) findViewById(R.id.investigations_DrugHistory);
 
+        investigationFtPtAbortion = (EditText) findViewById(R.id.investigationFtPtAbortion);
+        investigationAncComplication = (EditText) findViewById(R.id.investigationAncComplication);
+        investigationMod = (EditText) findViewById(R.id.investigationMod);
+        investigationBabyOutcome = (EditText) findViewById(R.id.investigationBabyOutcome);
+
         anc3_advice_review = (CheckBox) findViewById(R.id.anc3_advice_review);
         anc4_advice_review = (CheckBox) findViewById(R.id.anc4_advice_review);
         anc5_advice_review = (CheckBox) findViewById(R.id.anc5_advice_review);
@@ -718,12 +730,16 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //                anc1_examination_anthropometry_Height.requestFocus();
                 if (getCurrentFocus() == anc1_examination_anthropometry_Height) {
                     // is only executed if the EditText was directly changed by the user
-                    Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
-                    Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
-                    Double BMI = weight / (height * height);
-                    DecimalFormat df = new DecimalFormat("#.00");
-                    String angleFormated = df.format(BMI);
-                    anc1_examination_anthropometry_Bmi.setText(angleFormated);
+//                    Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
+//                    Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
+                    if(!anc1_examination_anthropometry_Height.getText().toString().matches("") && !anc1_examination_anthropometry_Weight.getText().toString().matches("")) {
+                        Double height = (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
+                        Double weight = (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
+                        Double BMI = weight / (height * height);
+                        DecimalFormat df = new DecimalFormat("#.00");
+                        String angleFormated = df.format(BMI);
+                        anc1_examination_anthropometry_Bmi.setText(angleFormated);
+                    }
                 }
             }
 
@@ -748,12 +764,20 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                 if (getCurrentFocus() == anc1_examination_anthropometry_Weight) {
                     // is only executed if the EditText was directly changed by the user
 //                    anc1_examination_anthropometry_Weight.requestFocus();
-                    Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
-                    Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
-                    Double BMI = weight / (height * height);
-                    DecimalFormat df = new DecimalFormat("#.00");
-                    String angleFormated = df.format(BMI);
-                    anc1_examination_anthropometry_Bmi.setText(angleFormated);
+//                    Double height = (anc1_examination_anthropometry_Height.getText().toString().matches("")) ? 1 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
+//                    Double weight = (anc1_examination_anthropometry_Weight.getText().toString().matches("")) ? 0 : (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
+//                    Double BMI = weight / (height * height);
+//                    DecimalFormat df = new DecimalFormat("#.00");
+//                    String angleFormated = df.format(BMI);
+//                    anc1_examination_anthropometry_Bmi.setText(angleFormated);
+                    if(!anc1_examination_anthropometry_Height.getText().toString().matches("") && !anc1_examination_anthropometry_Weight.getText().toString().matches("")) {
+                        Double height = (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Height.getText()));
+                        Double weight = (Double) Double.parseDouble(String.valueOf(anc1_examination_anthropometry_Weight.getText()));
+                        Double BMI = weight / (height * height);
+                        DecimalFormat df = new DecimalFormat("#.00");
+                        String angleFormated = df.format(BMI);
+                        anc1_examination_anthropometry_Bmi.setText(angleFormated);
+                    }
                 }
             }
 
@@ -779,14 +803,14 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
         anc1_investigations_HIV = (CheckBox) findViewById(R.id.anc1_investigations_HIV);
         anc1_investigations_Hbsag = (CheckBox) findViewById(R.id.anc1_investigations_Hbsag);
         anc1_investigations_Vdrl = (CheckBox) findViewById(R.id.anc1_investigations_Vdrl);
-        anc1_investigations_UrineRM = (CheckBox) findViewById(R.id.anc1_investigations_UrineRM);
-        anc1_investigations_UrineCS = (CheckBox) findViewById(R.id.anc1_investigations_UrineCS);
+        anc1_investigations_UrineRM = (EditText) findViewById(R.id.anc1_investigations_UrineRM);
+        anc1_investigations_UrineCS = (EditText) findViewById(R.id.anc1_investigations_UrineCS);
 
         anc1_investigations_HIV_switch = (Switch) findViewById(R.id.anc1_investigations_HIV_switch);
         anc1_investigations_Hbsag_switch = (Switch) findViewById(R.id.anc1_investigations_Hbsag_switch);
         anc1_investigations_Vdrl_switch = (Switch) findViewById(R.id.anc1_investigations_Vdrl_switch);
-        anc1_investigations_UrineRM_switch = (Switch) findViewById(R.id.anc1_investigations_UrineRM_switch);
-        anc1_investigations_UrineCS_switch = (Switch) findViewById(R.id.anc1_investigations_UrineCS_switch);
+//        anc1_investigations_UrineRM_switch = (Switch) findViewById(R.id.anc1_investigations_UrineRM_switch);
+//        anc1_investigations_UrineCS_switch = (Switch) findViewById(R.id.anc1_investigations_UrineCS_switch);
 
         anc1_investigations_BloodGroup = (Spinner) findViewById(R.id.anc1_investigations_BloodGroup);
         anc1_investigations_HusbandBloodGroup = (Spinner) findViewById(R.id.anc1_investigations_HusbandBloodGroup);
@@ -1308,6 +1332,16 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             investigations_Others.setText(response.getString("investigations_Others"));
                             investigations_DrugHistory.setText(response.getString("investigations_DrugHistory"));
 
+                            obsForG.setText(response.getString("obsForG"));
+                            obsForA.setText(response.getString("obsForA"));
+                            obsForP.setText(response.getString("obsForP"));
+                            obsForL.setText(response.getString("obsForL"));
+
+                            investigationFtPtAbortion.setText(response.getString("investigationFtPtAbortion"));
+                            investigationAncComplication.setText(response.getString("investigationAncComplication"));
+                            investigationMod.setText(response.getString("investigationMod"));
+                            investigationBabyOutcome.setText(response.getString("investigationBabyOutcome"));
+
                             anc3_advice_review.setChecked(response.getBoolean("anc3_advice_review"));
                             anc4_advice_review.setChecked(response.getBoolean("anc4_advice_review"));
                             anc5_advice_review.setChecked(response.getBoolean("anc5_advice_review"));
@@ -1360,13 +1394,13 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_investigations_HIV.setChecked(response.getBoolean("anc1_investigations_HIV"));
                             anc1_investigations_Hbsag.setChecked(response.getBoolean("anc1_investigations_Hbsag"));
                             anc1_investigations_Vdrl.setChecked(response.getBoolean("anc1_investigations_Vdrl"));
-                            anc1_investigations_UrineRM.setChecked(response.getBoolean("anc1_investigations_UrineRM"));
-                            anc1_investigations_UrineCS.setChecked(response.getBoolean("anc1_investigations_UrineCS"));
+                            anc1_investigations_UrineRM.setText(response.getString("anc1_investigations_UrineRM"));
+                            anc1_investigations_UrineCS.setText(response.getString("anc1_investigations_UrineCS"));
                             anc1_investigations_HIV_switch.setChecked(response.getBoolean("anc1_investigations_HIV_switch"));
                             anc1_investigations_Hbsag_switch.setChecked(response.getBoolean("anc1_investigations_Hbsag_switch"));
                             anc1_investigations_Vdrl_switch.setChecked(response.getBoolean("anc1_investigations_Vdrl_switch"));
-                            anc1_investigations_UrineRM_switch.setChecked(response.getBoolean("anc1_investigations_UrineRM_switch"));
-                            anc1_investigations_UrineCS_switch.setChecked(response.getBoolean("anc1_investigations_UrineCS_switch"));
+//                            anc1_investigations_UrineRM_switch.setChecked(response.getBoolean("anc1_investigations_UrineRM_switch"));
+//                            anc1_investigations_UrineCS_switch.setChecked(response.getBoolean("anc1_investigations_UrineCS_switch"));
                             anc1_investigations_BloodGroup.setSelection(getIndex(anc1_investigations_BloodGroup, response.getString("anc1_investigations_BloodGroup")));
                             anc1_investigations_HusbandBloodGroup.setSelection(getIndex(anc1_investigations_HusbandBloodGroup, response.getString("anc1_investigations_HusbandBloodGroup")));
                             anc1_investigations_Hemogram.setText(response.getString("anc1_investigations_Hemogram"));
@@ -1972,6 +2006,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
                         String notfMessage = "Date : " + dateFormat.format(date) + " \n";
 
+                        notfMessage += "\n Tests:\n";
                         if( anc1_advice_GTT.isChecked()){
                             notfMessage += anc1_advice_GTT.getText() + " ,\n";
                         }
@@ -1996,9 +2031,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc1_advice_TfolateLessThan14Weeks.getText() + " ,\n";
                         }
 
-                        if (anc1_advice_TFeMoreThan14Weeks.isChecked()){
-                            notfMessage += anc1_advice_TFeMoreThan14Weeks.getText() + " ,\n";
-                        }
 
 //                        if( anc1_advice_RightUterineArteryPl.isChecked()){
 //                            notfMessage += anc1_advice_RightUterineArteryPl.getText() + " ,\n";
@@ -2016,12 +2048,22 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc1_advice_Level2USG.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_OGTT.isChecked()){
-                            notfMessage += anc2_advice_OGTT.getText() + " ,\n";
+
+                        if( anc1_general_urineCulture_Syp.isChecked()){
+                            notfMessage += anc1_general_urineCulture_Syp.getText() + " ,\n";
+                        }
+                        if( anc1_general_urineCulture_VitC.isChecked()){
+                            notfMessage += anc1_general_urineCulture_VitC.getText() + " ,\n";
+                        }
+                        if( anc1_general_urineCulture_PlentyFluids.isChecked()){
+                            notfMessage += anc1_general_urineCulture_PlentyFluids.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_TfeOD.isChecked()){
-                            notfMessage += anc2_advice_TfeOD.getText() + " ,\n";
+
+
+
+                        if (anc2_advice_OGTT.isChecked()){
+                            notfMessage += anc2_advice_OGTT.getText() + " ,\n";
                         }
 
                         if (anc2_advice_TcaBD.isChecked()){
@@ -2088,6 +2130,24 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc3_advice_GTT.getText() + " ,\n";
                         }
 
+                        notfMessage += "\n Medicines:\n";
+
+                        if (anc1_advice_TFeMoreThan14Weeks.isChecked()){
+                            notfMessage += anc1_advice_TFeMoreThan14Weeks.getText() + " ,\n";
+                        }
+
+                        if( anc1_general_TSH.isChecked()){
+                            notfMessage += anc1_general_TSH.getText() + " ,\n";
+                        }
+
+                        if( anc1_general_urineCulture_Nitrofur.isChecked()){
+                            notfMessage += anc1_general_urineCulture_Nitrofur.getText() + " ,\n";
+                        }
+
+                        if (anc2_advice_TfeOD.isChecked()){
+                            notfMessage += anc2_advice_TfeOD.getText() + " ,\n";
+                        }
+
                         if (anc3_advice_ictNegative_InjAntiD300.isChecked()){
                             notfMessage += anc3_advice_ictNegative_InjAntiD300.getText() + " ,\n";
                         }
@@ -2120,6 +2180,63 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc5_advice_NST.getText() + " ,\n";
                         }
 
+                        notfMessage += "\n Exercise:\n";
+                        if(     anc1_advice_GeneralNutritional.isChecked() ||
+                                anc2_advice_GeneralNutritional.isChecked() ||
+                                anc3_advice_GeneralNutritional.isChecked() ||
+                                anc4_advice_GeneralNutritional.isChecked() ||
+                                anc5_advice_GeneralNutritional.isChecked() ||
+                                anc6_advice_GeneralNutritional.isChecked() ||
+                                anc7_advice_GeneralNutritional.isChecked() ||
+                                anc8_advice_GeneralNutritional.isChecked()) {
+
+                            notfMessage += "Aim for daily moderate intensity activity for 30 minutes.\n" +
+                                    "Aim for daily moderate intensity activity for 30 minutes.\n" +
+                                    "Avoid lifting heavy weight.\n";
+                        }
+
+                        if(     anc1_advice_HeatBurn.isChecked() ||
+                                anc2_advice_HeatBurn.isChecked() ||
+                                anc3_advice_HeatBurn.isChecked() ||
+                                anc4_advice_HeatBurn.isChecked() ||
+                                anc5_advice_HeatBurn.isChecked() ||
+                                anc6_advice_HeatBurn.isChecked() ||
+                                anc7_advice_HeatBurn.isChecked() ||
+                                anc8_advice_HeatBurn.isChecked()){
+
+                            notfMessage += "Elevate head of bed when lying down.\n" +
+                                    "Avoid lying down immediately after taking a meal.\n";
+                        }
+
+                        if(     anc1_advice_PedalEdema.isChecked() ||
+                                anc2_advice_PedalEdema.isChecked() ||
+                                anc3_advice_PedalEdema.isChecked() ||
+                                anc4_advice_PedalEdema.isChecked() ||
+                                anc5_advice_PedalEdema.isChecked() ||
+                                anc6_advice_PedalEdema.isChecked() ||
+                                anc7_advice_PedalEdema.isChecked() ||
+                                anc8_advice_PedalEdema.isChecked()
+                        ){
+                            notfMessage += "Rest with legs elevated.\n" +
+                                    "Lie in the left lateral position.\n" +
+                                    "Avoid sitting or standing for long periods.\n";
+                        }
+
+                        if(     anc1_advice_Diabetic.isChecked() ||
+                                anc2_advice_Diabetic.isChecked() ||
+                                anc3_advice_Diabetic.isChecked() ||
+                                anc4_advice_Diabetic.isChecked() ||
+                                anc5_advice_Diabetic.isChecked() ||
+                                anc6_advice_Diabetic.isChecked() ||
+                                anc7_advice_Diabetic.isChecked() ||
+                                anc8_advice_Diabetic.isChecked()
+                        ){
+                            notfMessage += "Light exercises are advocated.\n" +
+                                    "30 min of walking daily for 5 days a week.\n" +
+                                    "Symptoms of hypoglycaemia : sweating, palpitations, weakness should not be ignored.\n" +
+                                    "Contact your treating Physician.\n";
+                        }
+                        notfMessage += "\n Diet:\n";
                         if(     anc1_advice_GeneralNutritional.isChecked() ||
                                 anc2_advice_GeneralNutritional.isChecked() ||
                                 anc3_advice_GeneralNutritional.isChecked() ||
@@ -2140,7 +2257,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += "Take iron and calcium supplements daily as prescribed.\n" +
                                     "Iron should not be taken empty stomach.\n" +
                                     "A gap of 2 hours should be kept between the ion and calcium tablets.\n" +
-                                    "Aim for daily moderate intensity activity for 30 minutes.\n" +
                                     "Avoid lifting heavy weight.\n";
                         }
 
@@ -2168,9 +2284,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                 anc7_advice_HeatBurn.isChecked() ||
                                 anc8_advice_HeatBurn.isChecked()){
                             notfMessage += "Eat small, frequent meals.\n" +
-                                    "Avoid spicy, greasy foods.\n" +
-                                    "Elevate head of bed when lying down.\n" +
-                                    "Avoid lying down immediately after taking a meal.\n";
+                                    "Avoid spicy, greasy foods.\n";
                         }
 
                         if(     anc1_advice_Constipation.isChecked() ||
@@ -2185,20 +2299,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += "Eat fresh fruits and vegetables.\n" +
                                     "Drink 8-10 glasses of water.\n" +
                                     "Eat foods with high fibre.\n";
-                        }
-
-                        if(     anc1_advice_PedalEdema.isChecked() ||
-                                anc2_advice_PedalEdema.isChecked() ||
-                                anc3_advice_PedalEdema.isChecked() ||
-                                anc4_advice_PedalEdema.isChecked() ||
-                                anc5_advice_PedalEdema.isChecked() ||
-                                anc6_advice_PedalEdema.isChecked() ||
-                                anc7_advice_PedalEdema.isChecked() ||
-                                anc8_advice_PedalEdema.isChecked()
-                        ){
-                            notfMessage += "Rest with legs elevated.\n" +
-                                    "Lie in the left lateral position.\n" +
-                                    "Avoid sitting or standing for long periods.\n";
                         }
 
                         if(     anc1_advice_LegCramps.isChecked() ||
@@ -2225,13 +2325,28 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += "Diabetic Diet (3+3) pattern. Take 3 major meals with intervening 3 minor meals.\n" +
                                     "Avoid long hours of fasting.\n" +
                                     "The diet should be balanced comprising 35-40% carbohydrates, 20% proteins and 40% fat.\n" +
-                                    "Light exercises are advocated.\n" +
-                                    "30 min of walking daily for 5 days a week.\n" +
-                                    "Symptoms of hypoglycaemia : sweating, palpitations, weakness should not be ignored.\n" +
-                                    "A spot blood sugar test using glucometer should be done. If BS &lt; 60; take biscuits or juice. Contact your\n" +
-                                    "treating Physician.\n" +
+                                    "A spot blood sugar test using glucometer should be done. If BS &lt; 60; take biscuits or juice.\n" +
                                     "Home Blood sugar monitoring should be done routinely and recorded.\n" +
                                     "Records should be brought to ANC OPD for assessment of therapy.";
+                        }
+
+                        if(     !anc1_general_Others.getText().toString().isEmpty() ||
+                                !anc2_advice_Others.getText().toString().isEmpty() ||
+                                !anc3_advice_Others.getText().toString().isEmpty() ||
+                                !anc4_advice_Others.getText().toString().isEmpty() ||
+                                !anc5_advice_Others.getText().toString().isEmpty() ||
+                                !anc6_advice_Others.getText().toString().isEmpty() ||
+                                !anc7_advice_Others.getText().toString().isEmpty() ||
+                                !anc8_advice_Others.getText().toString().isEmpty()
+                        ){
+                            notfMessage += anc1_general_Others.getText().toString() + "  " +
+                                    anc2_advice_Others.getText().toString() + "  " +
+                                    anc3_advice_Others.getText().toString() + "  " +
+                                    anc4_advice_Others.getText().toString() + "  " +
+                                    anc5_advice_Others.getText().toString() + "  " +
+                                    anc6_advice_Others.getText().toString() + "  " +
+                                    anc7_advice_Others.getText().toString() + "  " +
+                                    anc8_advice_Others.getText().toString() + "  ";
                         }
 
                     notifGeneration(notfMessage);
@@ -2275,6 +2390,17 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("investigations_Others", "" + investigations_Others.getText());
                     params.put("investigations_DrugHistory", "" + investigations_DrugHistory.getText());
 
+                    params.put("investigationFtPtAbortion", "" + investigationFtPtAbortion.getText());
+                    params.put("investigationAncComplication", "" + investigationAncComplication.getText());
+                    params.put("investigationMod", "" + investigationMod.getText());
+                    params.put("investigationBabyOutcome", "" + investigationBabyOutcome.getText());
+
+                    params.put("obsForG", "" + obsForG.getText());
+                    params.put("obsForA", "" + obsForA.getText());
+                    params.put("obsForP", "" + obsForP.getText());
+                    params.put("obsForL ", "" + obsForL.getText());
+
+
                     params.put("anc3_advice_review", "" + anc3_advice_review.isChecked());
                     params.put("anc4_advice_review", "" + anc4_advice_review.isChecked());
                     params.put("anc5_advice_review", "" + anc5_advice_review.isChecked());
@@ -2314,13 +2440,13 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("anc1_investigations_HIV", "" + anc1_investigations_HIV.isChecked());
                     params.put("anc1_investigations_Hbsag", "" + anc1_investigations_Hbsag.isChecked());
                     params.put("anc1_investigations_Vdrl", "" + anc1_investigations_Vdrl.isChecked());
-                    params.put("anc1_investigations_UrineRM", "" + anc1_investigations_UrineRM.isChecked());
-                    params.put("anc1_investigations_UrineCS", "" + anc1_investigations_UrineCS.isChecked());
+                    params.put("anc1_investigations_UrineRM", "" + anc1_investigations_UrineRM.getText());
+                    params.put("anc1_investigations_UrineCS", "" + anc1_investigations_UrineCS.getText());
                     params.put("anc1_investigations_HIV_switch", "" + anc1_investigations_HIV_switch.isChecked());
                     params.put("anc1_investigations_Hbsag_switch", "" + anc1_investigations_Hbsag_switch.isChecked());
                     params.put("anc1_investigations_Vdrl_switch", "" + anc1_investigations_Vdrl_switch.isChecked());
-                    params.put("anc1_investigations_UrineRM_switch", "" + anc1_investigations_UrineRM_switch.isChecked());
-                    params.put("anc1_investigations_UrineCS_switch", "" + anc1_investigations_UrineCS_switch.isChecked());
+//                    params.put("anc1_investigations_UrineRM_switch", "" + anc1_investigations_UrineRM_switch.isChecked());
+//                    params.put("anc1_investigations_UrineCS_switch", "" + anc1_investigations_UrineCS_switch.isChecked());
                     params.put("anc1_investigations_BloodGroup", "" + anc1_investigations_BloodGroup.getSelectedItem().toString());
                     params.put("anc1_investigations_HusbandBloodGroup", "" + anc1_investigations_HusbandBloodGroup.getSelectedItem().toString());
                     params.put("anc1_investigations_Hemogram", "" + anc1_investigations_Hemogram.getText());

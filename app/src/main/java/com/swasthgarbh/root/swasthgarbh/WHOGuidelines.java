@@ -154,6 +154,13 @@ public class WHOGuidelines extends AppCompatActivity {
                             newDate1.set(Calendar.AM_PM,Calendar.AM);
 
                             lmpDate.setText(sdf.format(d));
+
+                            Date d2 = sdf.parse(lmpDateString);
+                            Calendar c2 = Calendar.getInstance();
+                            c2.setTime(d2);
+                            c2.add(Calendar.DAY_OF_MONTH, 282);
+                            eddDate.setText(sdf.format(c2.getTime()));
+
                             newDate1.add(Calendar.DATE, 84);
                             anc1Date.setText("12 Weeks - " + sdf.format(newDate1.getTime()));
                             anc1_diabtese.setChecked(response.getBoolean("anc1_diabtese"));
@@ -557,11 +564,6 @@ public class WHOGuidelines extends AppCompatActivity {
                                 }
                             }
 
-
-
-
-
-                            eddDate.setText(sdf.format(newDate1.getTime()));
                             //set notifications
 
                         } catch (JSONException e) {

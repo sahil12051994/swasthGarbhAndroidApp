@@ -275,7 +275,7 @@ public class DoctorScreenForParticularPatient extends AppCompatActivity implemen
                                 }
                                 Log.i("dataaaaaaa", "onResponse: " + ja);
                                 patientBpData = ja;
-                                Toast.makeText(DoctorScreenForParticularPatient.this, "Dummy Data", Toast.LENGTH_LONG).show();
+//                                Toast.makeText(DoctorScreenForParticularPatient.this, "Dummy Data", Toast.LENGTH_LONG).show();
                                 dummyData.setVisibility(View.VISIBLE);
                                 dummyDataVariable = 1;
                             }
