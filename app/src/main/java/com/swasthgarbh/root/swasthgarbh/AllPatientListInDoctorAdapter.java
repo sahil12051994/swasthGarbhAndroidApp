@@ -68,13 +68,18 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
         patientName.setText(current_patient_data.getName());
 
         TextView eddDateOfPatient = (TextView)listItemView.findViewById(R.id.eddDateOfPatientInList);
+        TextView uhidOfPatientInList = (TextView) listItemView.findViewById(R.id.uhidOfPatientInList);
+
         int isdocreg;
         iv = (ImageView)listItemView.findViewById (R.id.nextt);
         if(current_patient_data.getUHID ().equals ("null")) {
             iv.setImageResource (R.drawable.next);
+            uhidOfPatientInList.setVisibility(View.GONE);
             isdocreg=0;
         }else{
             iv.setImageResource (R.drawable.open);
+            uhidOfPatientInList.setVisibility(View.VISIBLE);
+            uhidOfPatientInList.setText("UHID: " + current_patient_data.getUHID ());
             isdocreg=1;
         }
 
