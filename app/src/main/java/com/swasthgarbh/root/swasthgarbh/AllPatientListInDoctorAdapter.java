@@ -110,13 +110,11 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
             public void onClick(View v) {
 //                Log.i("Clicked","Next Clicked");what is left now?
                 if (UHID.equals ("null")) {
-                    Log.i ("onclick", "onClick: dddddddddddddddddddddddddddddddddddddd");
                     Intent intent = new Intent(v.getContext(), DoctorScreenForParticularPatient.class);
                     intent.putExtra("EXTRA_PATIENT_ID", patientId);
                     v.getContext().startActivity(intent);
 
                 } else {
-                    Log.i ("onclick", "onClick: svfcefcefcefcecvedvcefvrffffffffffffffffffffffffffffffffffffffffffffff");
                     Intent intent = new Intent (v.getContext(), patient_data_entry_bydoc.class);
                     intent.putExtra ("EXTRA_PATIENT_ID", patientId);
                     v.getContext().startActivity (intent);

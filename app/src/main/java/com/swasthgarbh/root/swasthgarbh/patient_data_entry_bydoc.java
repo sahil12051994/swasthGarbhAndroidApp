@@ -234,23 +234,105 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     private DatePickerDialog anc7_datePickerDialog;
     private DatePickerDialog anc8_datePickerDialog;
 
-    Boolean temp_anc1_advice_GeneralNutritional;
-    Boolean temp_anc2_advice_GeneralNutritional;
-    Boolean temp_anc3_advice_GeneralNutritional;
-    Boolean temp_anc4_advice_GeneralNutritional;
-    Boolean temp_anc5_advice_GeneralNutritional;
-    Boolean temp_anc6_advice_GeneralNutritional;
-    Boolean temp_anc7_advice_GeneralNutritional;
-    Boolean temp_anc8_advice_GeneralNutritional;
-    Boolean temp_anc1_History_Nausea;
-    Boolean temp_anc2_History_Nausea;
-    Boolean temp_anc3_History_Nausea;
-    Boolean temp_anc1_advice_HeatBurn;
-    Boolean temp_anc2_advice_HeatBurn;
-    Boolean temp_anc3_advice_HeatBurn;
-    Boolean temp_anc2_advice_Constipation;
-    Boolean temp_anc2_advice_PedalEdema;
-    Boolean temp_anc2_advice_LegCramps;
+    Boolean anc1_advice_GTT_Temp;
+    Boolean anc1_advice_BloodSugar_Temp;
+    Boolean anc1_advice_NtNbScan_Temp;
+    Boolean anc1_advice_DualScreen_Temp;
+    Boolean anc1_advice_LeftUterineArteryPl_Temp;
+    Boolean anc1_advice_TfolateLessThan14Weeks_Temp;
+    Boolean anc1_advice_RightUterineArteryPl_Temp;
+    Boolean anc1_advice_PIGF_Temp;
+    Boolean anc1_advice_ICT_Temp;
+    Boolean anc1_advice_Level2USG_Temp;
+    Boolean anc1_general_urineCulture_Syp_Temp;
+    Boolean anc1_general_urineCulture_VitC_Temp;
+    Boolean anc1_general_urineCulture_PlentyFluids_Temp;
+    Boolean anc2_advice_OGTT_Temp;
+    Boolean anc2_advice_TcaBD_Temp;
+    Boolean anc2_advice_Tetanus_Temp;
+    Boolean anc2_advice_QuadrupleScreen_Temp;
+    Boolean anc2_advice_FetalEcho_Temp;
+    Boolean anc2_advice_HbLess10_TAlbendazole_Temp;
+    Boolean anc2_advice_HbLess10_TFeBD_Temp;
+    Boolean anc2_advice_HbLess10_Hplc_Temp;
+    Boolean anc2_advice_HbLess10_PeripheralSmear_Temp;
+    Boolean anc2_advice_HbLess10_SerumIron_Temp;
+    Boolean anc3_advice_TFeOD_Temp;
+    Boolean anc3_advice_DFMCLLP_Temp;
+    Boolean anc3_advice_InjTetanus_Temp;
+    Boolean anc3_advice_CBC_Temp;
+    Boolean anc3_advice_LFT_Temp;
+    Boolean anc3_advice_KFT_Temp;
+    Boolean anc3_advice_GTT_Temp;
+    Boolean anc1_advice_TFeMoreThan14Weeks_Temp;
+    Boolean anc1_general_TSH_Temp;
+    Boolean anc1_general_urineCulture_Nitrofur_Temp;
+    Boolean anc2_advice_TfeOD_Temp;
+    Boolean anc3_advice_ictNegative_InjAntiD300_Temp;
+    Boolean anc4_advice_TFeOD_Temp;
+    Boolean anc4_advice_TCaBD_Temp;
+    Boolean anc4_advice_DFMC_Temp;
+    Boolean anc4_advice_USG_Temp;
+    Boolean anc5_advice_DFMCLLP_Temp;
+    Boolean anc5_advice_TFeCa_Temp;
+    Boolean anc5_advice_NST_Temp;
+    Boolean anc1_advice_GeneralNutritional_Temp;
+    Boolean anc2_advice_GeneralNutritional_Temp;
+    Boolean anc3_advice_GeneralNutritional_Temp;
+    Boolean anc4_advice_GeneralNutritional_Temp;
+    Boolean anc5_advice_GeneralNutritional_Temp;
+    Boolean anc6_advice_GeneralNutritional_Temp;
+    Boolean anc7_advice_GeneralNutritional_Temp;
+    Boolean anc8_advice_GeneralNutritional_Temp;
+    Boolean anc1_advice_HeatBurn_Temp;
+    Boolean anc2_advice_HeatBurn_Temp;
+    Boolean anc3_advice_HeatBurn_Temp;
+    Boolean anc4_advice_HeatBurn_Temp;
+    Boolean anc5_advice_HeatBurn_Temp;
+    Boolean anc6_advice_HeatBurn_Temp;
+    Boolean anc7_advice_HeatBurn_Temp;
+    Boolean anc8_advice_HeatBurn_Temp;
+    Boolean anc1_advice_PedalEdema_Temp;
+    Boolean anc2_advice_PedalEdema_Temp;
+    Boolean anc3_advice_PedalEdema_Temp;
+    Boolean anc4_advice_PedalEdema_Temp;
+    Boolean anc5_advice_PedalEdema_Temp;
+    Boolean anc6_advice_PedalEdema_Temp;
+    Boolean anc7_advice_PedalEdema_Temp;
+    Boolean anc8_advice_PedalEdema_Temp;
+    Boolean anc1_advice_Diabetic_Temp;
+    Boolean anc2_advice_Diabetic_Temp;
+    Boolean anc3_advice_Diabetic_Temp;
+    Boolean anc4_advice_Diabetic_Temp;
+    Boolean anc5_advice_Diabetic_Temp;
+    Boolean anc6_advice_Diabetic_Temp;
+    Boolean anc7_advice_Diabetic_Temp;
+    Boolean anc8_advice_Diabetic_Temp;
+    Boolean anc1_advice_NauseaVomiting_Temp;
+    Boolean anc2_advice_NauseaVomiting_Temp;
+    Boolean anc3_advice_NauseaVomiting_Temp;
+    Boolean anc4_advice_NauseaVomiting_Temp;
+    Boolean anc5_advice_NauseaVomiting_Temp;
+    Boolean anc6_advice_NauseaVomiting_Temp;
+    Boolean anc7_advice_NauseaVomiting_Temp;
+    Boolean anc8_advice_NauseaVomiting_Temp;
+    Boolean anc1_advice_Constipation_Temp;
+    Boolean anc2_advice_Constipation_Temp;
+    Boolean anc3_advice_Constipation_Temp;
+    Boolean anc4_advice_Constipation_Temp;
+    Boolean anc5_advice_Constipation_Temp;
+    Boolean anc6_advice_Constipation_Temp;
+    Boolean anc7_advice_Constipation_Temp;
+    Boolean anc8_advice_Constipation_Temp;
+    Boolean anc1_advice_LegCramps_Temp;
+    Boolean anc2_advice_LegCramps_Temp;
+    Boolean anc3_advice_LegCramps_Temp;
+    Boolean anc4_advice_LegCramps_Temp;
+    Boolean anc5_advice_LegCramps_Temp;
+    Boolean anc6_advice_LegCramps_Temp;
+    Boolean anc7_advice_LegCramps_Temp;
+    Boolean anc8_advice_LegCramps_Temp;
+
 
     private SimpleDateFormat dateFormatterShow, dateFormatterServer;
     String g;
@@ -1444,24 +1526,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc2_advice_PedalEdema.setChecked(response.getBoolean("anc2_advice_PedalEdema"));
                             anc2_advice_LegCramps.setChecked(response.getBoolean("anc2_advice_LegCramps"));
 
-                            temp_anc1_advice_GeneralNutritional = response.getBoolean("anc2_advice_GeneralNutritional");
-                            temp_anc1_History_Nausea = response.getBoolean("anc2_advice_NauseaVomiting");
-                            temp_anc1_advice_HeatBurn = response.getBoolean("anc2_advice_HeatBurn");
-                            temp_anc2_advice_GeneralNutritional = response.getBoolean("anc2_advice_GeneralNutritional");
-                            temp_anc3_advice_GeneralNutritional = response.getBoolean("anc3_advice_GeneralNutritional");
-                            temp_anc4_advice_GeneralNutritional = response.getBoolean("anc4_advice_GeneralNutritional");
-                            temp_anc5_advice_GeneralNutritional = response.getBoolean("anc5_advice_GeneralNutritional");
-                            temp_anc6_advice_GeneralNutritional = response.getBoolean("anc6_advice_GeneralNutritional");
-                            temp_anc7_advice_GeneralNutritional = response.getBoolean("anc7_advice_GeneralNutritional");
-                            temp_anc8_advice_GeneralNutritional = response.getBoolean("anc8_advice_GeneralNutritional");
-                            temp_anc2_History_Nausea = response.getBoolean("anc2_advice_NauseaVomiting");
-                            temp_anc3_History_Nausea = response.getBoolean("anc3_advice_NauseaVomiting");
-                            temp_anc2_advice_HeatBurn = response.getBoolean("anc2_advice_HeatBurn");
-                            temp_anc3_advice_HeatBurn = response.getBoolean("anc3_advice_HeatBurn");
-                            temp_anc2_advice_Constipation = response.getBoolean("anc2_advice_Constipation");
-                            temp_anc2_advice_PedalEdema = response.getBoolean("anc2_advice_PedalEdema");
-                            temp_anc2_advice_LegCramps = response.getBoolean("anc2_advice_LegCramps");
-
                             anc3_advice_GeneralNutritional.setChecked(response.getBoolean("anc3_advice_GeneralNutritional"));
                             anc3_advice_NauseaVomiting.setChecked(response.getBoolean("anc3_advice_NauseaVomiting"));
                             anc3_advice_HeatBurn.setChecked(response.getBoolean("anc3_advice_HeatBurn"));
@@ -1788,6 +1852,131 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc7_advice_Diabetic.setChecked(response.getBoolean("anc7_advice_Diabetic"));
                             anc8_advice_Diabetic.setChecked(response.getBoolean("anc8_advice_Diabetic"));
 
+                            /////////////////////
+                            anc1_advice_GTT_Temp = response.getBoolean("anc1_advice_GTT");
+                            anc1_advice_BloodSugar_Temp = response.getBoolean("anc1_advice_BloodSugar");
+                            anc1_advice_NtNbScan_Temp = response.getBoolean("anc1_advice_NtNbScan");
+                            anc1_advice_DualScreen_Temp = response.getBoolean("anc1_advice_DualScreen");
+                            anc1_advice_LeftUterineArteryPl_Temp = response.getBoolean("anc1_advice_LeftUterineArteryPl");
+                            anc1_advice_TfolateLessThan14Weeks_Temp = response.getBoolean("anc1_advice_TfolateLessThan14Weeks");
+                            anc1_advice_RightUterineArteryPl_Temp = response.getBoolean("anc1_advice_RightUterineArteryPl");
+                            anc1_advice_PIGF_Temp = response.getBoolean("anc1_advice_PIGF");
+                            anc1_advice_ICT_Temp = response.getBoolean("anc1_advice_ICT");
+                            anc1_advice_Level2USG_Temp = response.getBoolean("anc1_advice_Level2USG");
+                            anc1_general_urineCulture_Syp_Temp = response.getBoolean("anc1_general_urineCulture_Syp");
+                            anc1_general_urineCulture_VitC_Temp = response.getBoolean("anc1_general_urineCulture_VitC");
+                            anc1_general_urineCulture_PlentyFluids_Temp = response.getBoolean("anc1_general_urineCulture_PlentyFluids");
+                            anc2_advice_OGTT_Temp = response.getBoolean("anc2_advice_OGTT");
+                            anc2_advice_TcaBD_Temp = response.getBoolean("anc2_advice_TcaBD");
+                            anc2_advice_Tetanus_Temp = response.getBoolean("anc2_advice_Tetanus");
+                            anc2_advice_QuadrupleScreen_Temp = response.getBoolean("anc2_advice_QuadrupleScreen");
+                            anc2_advice_FetalEcho_Temp = response.getBoolean("anc2_advice_FetalEcho");
+                            anc2_advice_HbLess10_TAlbendazole_Temp = response.getBoolean("anc2_advice_HbLess10_TAlbendazole");
+                            anc2_advice_HbLess10_TFeBD_Temp = response.getBoolean("anc2_advice_HbLess10_TFeBD");
+                            anc2_advice_HbLess10_Hplc_Temp = response.getBoolean("anc2_advice_HbLess10_Hplc");
+                            anc2_advice_HbLess10_PeripheralSmear_Temp = response.getBoolean("anc2_advice_HbLess10_PeripheralSmear");
+                            anc2_advice_HbLess10_SerumIron_Temp = response.getBoolean("anc2_advice_HbLess10_SerumIron");
+                            anc3_advice_TFeOD_Temp = response.getBoolean("anc3_advice_TFeOD");
+                            anc3_advice_DFMCLLP_Temp = response.getBoolean("anc3_advice_DFMCLLP");
+                            anc3_advice_InjTetanus_Temp = response.getBoolean("anc3_advice_InjTetanus");
+                            anc3_advice_CBC_Temp = response.getBoolean("anc3_advice_CBC");
+                            anc3_advice_LFT_Temp = response.getBoolean("anc3_advice_LFT");
+                            anc3_advice_KFT_Temp = response.getBoolean("anc3_advice_KFT");
+                            anc3_advice_GTT_Temp = response.getBoolean("anc3_advice_GTT");
+                            anc1_advice_TFeMoreThan14Weeks_Temp = response.getBoolean("anc1_advice_TFeMoreThan14Weeks");
+                            anc1_general_TSH_Temp = response.getBoolean("anc1_general_TSH");
+                            anc1_general_urineCulture_Nitrofur_Temp = response.getBoolean("anc1_general_urineCulture_Nitrofur");
+                            anc2_advice_TfeOD_Temp = response.getBoolean("anc2_advice_TfeOD");
+                            anc3_advice_ictNegative_InjAntiD300_Temp = response.getBoolean("anc3_advice_ictNegative_InjAntiD300");
+                            anc4_advice_TFeOD_Temp = response.getBoolean("anc4_advice_TFeOD");
+                            anc4_advice_TCaBD_Temp = response.getBoolean("anc4_advice_TCaBD");
+                            anc4_advice_DFMC_Temp = response.getBoolean("anc4_advice_DFMC");
+                            anc4_advice_USG_Temp = response.getBoolean("anc4_advice_USG");
+                            anc5_advice_DFMCLLP_Temp = response.getBoolean("anc5_advice_DFMCLLP");
+                            anc5_advice_TFeCa_Temp = response.getBoolean("anc5_advice_TFeCa");
+                            anc5_advice_NST_Temp = response.getBoolean("anc5_advice_NST");
+                            anc1_advice_GeneralNutritional_Temp = response.getBoolean("anc1_advice_GeneralNutritional");
+                            anc2_advice_GeneralNutritional_Temp = response.getBoolean("anc2_advice_GeneralNutritional");
+                            anc3_advice_GeneralNutritional_Temp = response.getBoolean("anc3_advice_GeneralNutritional");
+                            anc4_advice_GeneralNutritional_Temp = response.getBoolean("anc4_advice_GeneralNutritional");
+                            anc5_advice_GeneralNutritional_Temp = response.getBoolean("anc5_advice_GeneralNutritional");
+                            anc6_advice_GeneralNutritional_Temp = response.getBoolean("anc6_advice_GeneralNutritional");
+                            anc7_advice_GeneralNutritional_Temp = response.getBoolean("anc7_advice_GeneralNutritional");
+                            anc8_advice_GeneralNutritional_Temp = response.getBoolean("anc8_advice_GeneralNutritional");
+                            anc1_advice_HeatBurn_Temp = response.getBoolean("anc1_advice_HeatBurn");
+                            anc2_advice_HeatBurn_Temp = response.getBoolean("anc2_advice_HeatBurn");
+                            anc3_advice_HeatBurn_Temp = response.getBoolean("anc3_advice_HeatBurn");
+                            anc4_advice_HeatBurn_Temp = response.getBoolean("anc4_advice_HeatBurn");
+                            anc5_advice_HeatBurn_Temp = response.getBoolean("anc5_advice_HeatBurn");
+                            anc6_advice_HeatBurn_Temp = response.getBoolean("anc6_advice_HeatBurn");
+                            anc7_advice_HeatBurn_Temp = response.getBoolean("anc7_advice_HeatBurn");
+                            anc8_advice_HeatBurn_Temp = response.getBoolean("anc8_advice_HeatBurn");
+                            anc1_advice_PedalEdema_Temp = response.getBoolean("anc1_advice_PedalEdema");
+                            anc2_advice_PedalEdema_Temp = response.getBoolean("anc2_advice_PedalEdema");
+                            anc3_advice_PedalEdema_Temp = response.getBoolean("anc3_advice_PedalEdema");
+                            anc4_advice_PedalEdema_Temp = response.getBoolean("anc4_advice_PedalEdema");
+                            anc5_advice_PedalEdema_Temp = response.getBoolean("anc5_advice_PedalEdema");
+                            anc6_advice_PedalEdema_Temp = response.getBoolean("anc6_advice_PedalEdema");
+                            anc7_advice_PedalEdema_Temp = response.getBoolean("anc7_advice_PedalEdema");
+                            anc8_advice_PedalEdema_Temp = response.getBoolean("anc8_advice_PedalEdema");
+                            anc1_advice_Diabetic_Temp = response.getBoolean("anc1_advice_Diabetic");
+                            anc2_advice_Diabetic_Temp = response.getBoolean("anc2_advice_Diabetic");
+                            anc3_advice_Diabetic_Temp = response.getBoolean("anc3_advice_Diabetic");
+                            anc4_advice_Diabetic_Temp = response.getBoolean("anc4_advice_Diabetic");
+                            anc5_advice_Diabetic_Temp = response.getBoolean("anc5_advice_Diabetic");
+                            anc6_advice_Diabetic_Temp = response.getBoolean("anc6_advice_Diabetic");
+                            anc7_advice_Diabetic_Temp = response.getBoolean("anc7_advice_Diabetic");
+                            anc8_advice_Diabetic_Temp = response.getBoolean("anc8_advice_Diabetic");
+                            anc1_advice_GeneralNutritional_Temp = response.getBoolean("anc1_advice_GeneralNutritional");
+                            anc2_advice_GeneralNutritional_Temp = response.getBoolean("anc2_advice_GeneralNutritional");
+                            anc3_advice_GeneralNutritional_Temp = response.getBoolean("anc3_advice_GeneralNutritional");
+                            anc4_advice_GeneralNutritional_Temp = response.getBoolean("anc4_advice_GeneralNutritional");
+                            anc5_advice_GeneralNutritional_Temp = response.getBoolean("anc5_advice_GeneralNutritional");
+                            anc6_advice_GeneralNutritional_Temp = response.getBoolean("anc6_advice_GeneralNutritional");
+                            anc7_advice_GeneralNutritional_Temp = response.getBoolean("anc7_advice_GeneralNutritional");
+                            anc8_advice_GeneralNutritional_Temp = response.getBoolean("anc8_advice_GeneralNutritional");
+                            anc1_advice_NauseaVomiting_Temp = response.getBoolean("anc1_advice_NauseaVomiting");
+                            anc2_advice_NauseaVomiting_Temp = response.getBoolean("anc2_advice_NauseaVomiting");
+                            anc3_advice_NauseaVomiting_Temp = response.getBoolean("anc3_advice_NauseaVomiting");
+                            anc4_advice_NauseaVomiting_Temp = response.getBoolean("anc4_advice_NauseaVomiting");
+                            anc5_advice_NauseaVomiting_Temp = response.getBoolean("anc5_advice_NauseaVomiting");
+                            anc6_advice_NauseaVomiting_Temp = response.getBoolean("anc6_advice_NauseaVomiting");
+                            anc7_advice_NauseaVomiting_Temp = response.getBoolean("anc7_advice_NauseaVomiting");
+                            anc8_advice_NauseaVomiting_Temp = response.getBoolean("anc8_advice_NauseaVomiting");
+                            anc1_advice_HeatBurn_Temp = response.getBoolean("anc1_advice_HeatBurn");
+                            anc2_advice_HeatBurn_Temp = response.getBoolean("anc2_advice_HeatBurn");
+                            anc3_advice_HeatBurn_Temp = response.getBoolean("anc3_advice_HeatBurn");
+                            anc4_advice_HeatBurn_Temp = response.getBoolean("anc4_advice_HeatBurn");
+                            anc5_advice_HeatBurn_Temp = response.getBoolean("anc5_advice_HeatBurn");
+                            anc6_advice_HeatBurn_Temp = response.getBoolean("anc6_advice_HeatBurn");
+                            anc7_advice_HeatBurn_Temp = response.getBoolean("anc7_advice_HeatBurn");
+                            anc8_advice_HeatBurn_Temp = response.getBoolean("anc8_advice_HeatBurn");
+                            anc1_advice_Constipation_Temp = response.getBoolean("anc1_advice_Constipation");
+                            anc2_advice_Constipation_Temp = response.getBoolean("anc2_advice_Constipation");
+                            anc3_advice_Constipation_Temp = response.getBoolean("anc3_advice_Constipation");
+                            anc4_advice_Constipation_Temp = response.getBoolean("anc4_advice_Constipation");
+                            anc5_advice_Constipation_Temp = response.getBoolean("anc5_advice_Constipation");
+                            anc6_advice_Constipation_Temp = response.getBoolean("anc6_advice_Constipation");
+                            anc7_advice_Constipation_Temp = response.getBoolean("anc7_advice_Constipation");
+                            anc8_advice_Constipation_Temp = response.getBoolean("anc8_advice_Constipation");
+                            anc1_advice_LegCramps_Temp = response.getBoolean("anc1_advice_LegCramps");
+                            anc2_advice_LegCramps_Temp = response.getBoolean("anc2_advice_LegCramps");
+                            anc3_advice_LegCramps_Temp = response.getBoolean("anc3_advice_LegCramps");
+                            anc4_advice_LegCramps_Temp = response.getBoolean("anc4_advice_LegCramps");
+                            anc5_advice_LegCramps_Temp = response.getBoolean("anc5_advice_LegCramps");
+                            anc6_advice_LegCramps_Temp = response.getBoolean("anc6_advice_LegCramps");
+                            anc7_advice_LegCramps_Temp = response.getBoolean("anc7_advice_LegCramps");
+                            anc8_advice_LegCramps_Temp = response.getBoolean("anc8_advice_LegCramps");
+                            anc1_advice_Diabetic_Temp = response.getBoolean("anc1_advice_Diabetic");
+                            anc2_advice_Diabetic_Temp = response.getBoolean("anc2_advice_Diabetic");
+                            anc3_advice_Diabetic_Temp = response.getBoolean("anc3_advice_Diabetic");
+                            anc4_advice_Diabetic_Temp = response.getBoolean("anc4_advice_Diabetic");
+                            anc5_advice_Diabetic_Temp = response.getBoolean("anc5_advice_Diabetic");
+                            anc6_advice_Diabetic_Temp = response.getBoolean("anc6_advice_Diabetic");
+                            anc7_advice_Diabetic_Temp = response.getBoolean("anc7_advice_Diabetic");
+                            anc8_advice_Diabetic_Temp = response.getBoolean("anc8_advice_Diabetic");
+                            /////////////////////
+
                         } catch (JSONException e) {
                             Log.i("Error", e.toString());
 //                            e.printStackTrace();
@@ -2007,19 +2196,19 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         String notfMessage = "Date : " + dateFormat.format(date) + " \n";
 
                         notfMessage += "\n Tests:\n";
-                        if( anc1_advice_GTT.isChecked()){
+                        if( (!anc1_advice_GTT_Temp) && anc1_advice_GTT.isChecked()){
                             notfMessage += anc1_advice_GTT.getText() + " ,\n";
                         }
 
-                        if( anc1_advice_BloodSugar.isChecked()){
+                        if( (!anc1_advice_BloodSugar_Temp) && anc1_advice_BloodSugar.isChecked()){
                             notfMessage += anc1_advice_BloodSugar.getText() + " ,\n";
                         }
 
-                        if( anc1_advice_NtNbScan.isChecked()){
+                        if( (!anc1_advice_NtNbScan_Temp) && anc1_advice_NtNbScan.isChecked()){
                             notfMessage += anc1_advice_NtNbScan.getText() + " ,\n";
                         }
 
-                        if( anc1_advice_DualScreen.isChecked()){
+                        if( (!anc1_advice_DualScreen_Temp) && anc1_advice_DualScreen.isChecked()){
                             notfMessage += anc1_advice_DualScreen.getText() + " ,\n";
                         }
 
@@ -2027,7 +2216,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //                            notfMessage += anc1_advice_LeftUterineArteryPl.getText() + " ,\n";
 //                        }
 
-                        if (anc1_advice_TfolateLessThan14Weeks.isChecked()){
+                        if ( (!anc1_advice_TfolateLessThan14Weeks_Temp) && anc1_advice_TfolateLessThan14Weeks.isChecked()){
                             notfMessage += anc1_advice_TfolateLessThan14Weeks.getText() + " ,\n";
                         }
 
@@ -2040,196 +2229,196 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //                            notfMessage += anc1_advice_PIGF.getText() + " ,\n";
 //                        }
 
-                        if( anc1_advice_ICT.isChecked()){
+                        if( (!anc1_advice_ICT_Temp) && anc1_advice_ICT.isChecked()){
                             notfMessage += anc1_advice_ICT.getText() + " ,\n";
                         }
 
-                        if( anc1_advice_Level2USG.isChecked()){
+                        if( (!anc1_advice_Level2USG_Temp) && anc1_advice_Level2USG.isChecked()){
                             notfMessage += anc1_advice_Level2USG.getText() + " ,\n";
                         }
 
 
-                        if( anc1_general_urineCulture_Syp.isChecked()){
+                        if( (!anc1_general_urineCulture_Syp_Temp) && anc1_general_urineCulture_Syp.isChecked()){
                             notfMessage += anc1_general_urineCulture_Syp.getText() + " ,\n";
                         }
-                        if( anc1_general_urineCulture_VitC.isChecked()){
+                        if( (!anc1_general_urineCulture_VitC_Temp) && anc1_general_urineCulture_VitC.isChecked()){
                             notfMessage += anc1_general_urineCulture_VitC.getText() + " ,\n";
                         }
-                        if( anc1_general_urineCulture_PlentyFluids.isChecked()){
+                        if( (!anc1_general_urineCulture_PlentyFluids_Temp) && anc1_general_urineCulture_PlentyFluids.isChecked()){
                             notfMessage += anc1_general_urineCulture_PlentyFluids.getText() + " ,\n";
                         }
 
 
 
 
-                        if (anc2_advice_OGTT.isChecked()){
+                        if ( (!anc2_advice_OGTT_Temp) && anc2_advice_OGTT.isChecked()){
                             notfMessage += anc2_advice_OGTT.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_TcaBD.isChecked()){
+                        if ( (!anc2_advice_TcaBD_Temp) && anc2_advice_TcaBD.isChecked()){
                             notfMessage += anc2_advice_TcaBD.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_Tetanus.isChecked()){
+                        if ( (!anc2_advice_Tetanus_Temp) && anc2_advice_Tetanus.isChecked()){
                             notfMessage += anc2_advice_Tetanus.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_QuadrupleScreen.isChecked()){
+                        if ( (!anc2_advice_QuadrupleScreen_Temp) && anc2_advice_QuadrupleScreen.isChecked()){
                             notfMessage += anc2_advice_QuadrupleScreen.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_FetalEcho.isChecked()){
+                        if ( (!anc2_advice_FetalEcho_Temp) && anc2_advice_FetalEcho.isChecked()){
                             notfMessage += anc2_advice_FetalEcho.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_HbLess10_TAlbendazole.isChecked()){
+                        if ( (!anc2_advice_HbLess10_TAlbendazole_Temp) && anc2_advice_HbLess10_TAlbendazole.isChecked()){
                             notfMessage += anc2_advice_HbLess10_TAlbendazole.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_HbLess10_TFeBD.isChecked()){
+                        if ( (!anc2_advice_HbLess10_TFeBD_Temp) && anc2_advice_HbLess10_TFeBD.isChecked()){
                             notfMessage += anc2_advice_HbLess10_TFeBD.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_HbLess10_Hplc.isChecked()){
+                        if ( (!anc2_advice_HbLess10_Hplc_Temp) && anc2_advice_HbLess10_Hplc.isChecked()){
                             notfMessage += anc2_advice_HbLess10_Hplc.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_HbLess10_PeripheralSmear.isChecked()){
+                        if ( (!anc2_advice_HbLess10_PeripheralSmear_Temp) && anc2_advice_HbLess10_PeripheralSmear.isChecked()){
                             notfMessage += anc2_advice_HbLess10_PeripheralSmear.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_HbLess10_SerumIron.isChecked()){
+                        if ( (!anc2_advice_HbLess10_SerumIron_Temp) && anc2_advice_HbLess10_SerumIron.isChecked()){
                             notfMessage += anc2_advice_HbLess10_SerumIron.getText() + " ,\n";
                         }
 
-                        if (anc3_advice_TFeOD.isChecked()){
+                        if ( (!anc3_advice_TFeOD_Temp) && anc3_advice_TFeOD.isChecked()){
                             notfMessage += anc3_advice_TFeOD.getText() + " ,\n";
                         }
 
-                        if (anc3_advice_DFMCLLP.isChecked()){
+                        if ( (!anc3_advice_DFMCLLP_Temp) && anc3_advice_DFMCLLP.isChecked()){
                             notfMessage += anc3_advice_DFMCLLP.getText() + " ,\n";
                         }
 
-                        if (anc3_advice_InjTetanus.isChecked()){
+                        if ( (!anc3_advice_InjTetanus_Temp) && anc3_advice_InjTetanus.isChecked()){
                             notfMessage += anc3_advice_InjTetanus.getText() + " ,\n";
                         }
 
-                        if (anc3_advice_CBC.isChecked()){
+                        if ( (!anc3_advice_CBC_Temp) && anc3_advice_CBC.isChecked()){
                             notfMessage += anc3_advice_CBC.getText() + " ,\n";
                         }
 
-                        if (anc3_advice_LFT.isChecked()){
+                        if ( (!anc3_advice_LFT_Temp) && anc3_advice_LFT.isChecked()){
                             notfMessage += anc3_advice_LFT.getText() + " ,\n";
                         }
 
-                        if (anc3_advice_KFT.isChecked()){
+                        if ( (!anc3_advice_KFT_Temp) && anc3_advice_KFT.isChecked()){
                             notfMessage += anc3_advice_KFT.getText() + " ,\n";
                         }
 
-                        if (anc3_advice_GTT.isChecked()){
+                        if ( (!anc3_advice_GTT_Temp) && anc3_advice_GTT.isChecked()){
                             notfMessage += anc3_advice_GTT.getText() + " ,\n";
                         }
 
                         notfMessage += "\n Medicines:\n";
 
-                        if (anc1_advice_TFeMoreThan14Weeks.isChecked()){
+                        if ( (!anc1_advice_TFeMoreThan14Weeks_Temp) && anc1_advice_TFeMoreThan14Weeks.isChecked()){
                             notfMessage += anc1_advice_TFeMoreThan14Weeks.getText() + " ,\n";
                         }
 
-                        if( anc1_general_TSH.isChecked()){
+                        if(  (!anc1_general_TSH_Temp) && anc1_general_TSH.isChecked()){
                             notfMessage += anc1_general_TSH.getText() + " ,\n";
                         }
 
-                        if( anc1_general_urineCulture_Nitrofur.isChecked()){
+                        if(  (!anc1_general_urineCulture_Nitrofur_Temp) && anc1_general_urineCulture_Nitrofur.isChecked()){
                             notfMessage += anc1_general_urineCulture_Nitrofur.getText() + " ,\n";
                         }
 
-                        if (anc2_advice_TfeOD.isChecked()){
+                        if ( (!anc2_advice_TfeOD_Temp) && anc2_advice_TfeOD.isChecked()){
                             notfMessage += anc2_advice_TfeOD.getText() + " ,\n";
                         }
 
-                        if (anc3_advice_ictNegative_InjAntiD300.isChecked()){
+                        if ( (!anc3_advice_ictNegative_InjAntiD300_Temp) && anc3_advice_ictNegative_InjAntiD300.isChecked()){
                             notfMessage += anc3_advice_ictNegative_InjAntiD300.getText() + " ,\n";
                         }
 
-                        if (anc4_advice_TFeOD.isChecked()){
+                        if ( (!anc4_advice_TFeOD_Temp) && anc4_advice_TFeOD.isChecked()){
                             notfMessage += anc4_advice_TFeOD.getText() + " ,\n";
                         }
 
-                        if (anc4_advice_TCaBD.isChecked()){
+                        if ( (!anc4_advice_TCaBD_Temp) && anc4_advice_TCaBD.isChecked()){
                             notfMessage += anc4_advice_TCaBD.getText() + " ,\n";
                         }
 
-                        if (anc4_advice_DFMC.isChecked()){
+                        if ( (!anc4_advice_DFMC_Temp) && anc4_advice_DFMC.isChecked()){
                             notfMessage += anc4_advice_DFMC.getText() + " ,\n";
                         }
 
-                        if (anc4_advice_USG.isChecked()){
+                        if ( (!anc4_advice_USG_Temp) && anc4_advice_USG.isChecked()){
                             notfMessage += anc4_advice_USG.getText() + " ,\n";
                         }
 
-                        if (anc5_advice_DFMCLLP.isChecked()){
+                        if ( (!anc5_advice_DFMCLLP_Temp) && anc5_advice_DFMCLLP.isChecked()){
                             notfMessage += anc5_advice_DFMCLLP.getText() + " ,\n";
                         }
 
-                        if (anc5_advice_TFeCa.isChecked()){
+                        if ( (!anc5_advice_TFeCa_Temp) && anc5_advice_TFeCa.isChecked()){
                             notfMessage += anc5_advice_TFeCa.getText() + " ,\n";
                         }
 
-                        if (anc5_advice_NST.isChecked()){
+                        if ( (!anc5_advice_NST_Temp) && anc5_advice_NST.isChecked()){
                             notfMessage += anc5_advice_NST.getText() + " ,\n";
                         }
 
                         notfMessage += "\n Exercise:\n";
-                        if(     anc1_advice_GeneralNutritional.isChecked() ||
-                                anc2_advice_GeneralNutritional.isChecked() ||
-                                anc3_advice_GeneralNutritional.isChecked() ||
-                                anc4_advice_GeneralNutritional.isChecked() ||
-                                anc5_advice_GeneralNutritional.isChecked() ||
-                                anc6_advice_GeneralNutritional.isChecked() ||
-                                anc7_advice_GeneralNutritional.isChecked() ||
-                                anc8_advice_GeneralNutritional.isChecked()) {
+                        if(     ((!anc1_advice_GeneralNutritional_Temp) && anc1_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc2_advice_GeneralNutritional_Temp) && anc2_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc3_advice_GeneralNutritional_Temp) && anc3_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc4_advice_GeneralNutritional_Temp) && anc4_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc5_advice_GeneralNutritional_Temp) && anc5_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc6_advice_GeneralNutritional_Temp) && anc6_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc7_advice_GeneralNutritional_Temp) && anc7_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc8_advice_GeneralNutritional_Temp) && anc8_advice_GeneralNutritional.isChecked())) {
 
                             notfMessage += "Aim for daily moderate intensity activity for 30 minutes.\n" +
                                     "Aim for daily moderate intensity activity for 30 minutes.\n" +
                                     "Avoid lifting heavy weight.\n";
                         }
 
-                        if(     anc1_advice_HeatBurn.isChecked() ||
-                                anc2_advice_HeatBurn.isChecked() ||
-                                anc3_advice_HeatBurn.isChecked() ||
-                                anc4_advice_HeatBurn.isChecked() ||
-                                anc5_advice_HeatBurn.isChecked() ||
-                                anc6_advice_HeatBurn.isChecked() ||
-                                anc7_advice_HeatBurn.isChecked() ||
-                                anc8_advice_HeatBurn.isChecked()){
+                        if(     ((!anc1_advice_HeatBurn_Temp) && anc1_advice_HeatBurn.isChecked()) ||
+                                ((!anc2_advice_HeatBurn_Temp) && anc2_advice_HeatBurn.isChecked()) ||
+                                ((!anc3_advice_HeatBurn_Temp) && anc3_advice_HeatBurn.isChecked()) ||
+                                ((!anc4_advice_HeatBurn_Temp) && anc4_advice_HeatBurn.isChecked()) ||
+                                ((!anc5_advice_HeatBurn_Temp) && anc5_advice_HeatBurn.isChecked()) ||
+                                ((!anc6_advice_HeatBurn_Temp) && anc6_advice_HeatBurn.isChecked()) ||
+                                ((!anc7_advice_HeatBurn_Temp) && anc7_advice_HeatBurn.isChecked()) ||
+                                ((!anc8_advice_HeatBurn_Temp) && anc8_advice_HeatBurn.isChecked())){
 
                             notfMessage += "Elevate head of bed when lying down.\n" +
                                     "Avoid lying down immediately after taking a meal.\n";
                         }
 
-                        if(     anc1_advice_PedalEdema.isChecked() ||
-                                anc2_advice_PedalEdema.isChecked() ||
-                                anc3_advice_PedalEdema.isChecked() ||
-                                anc4_advice_PedalEdema.isChecked() ||
-                                anc5_advice_PedalEdema.isChecked() ||
-                                anc6_advice_PedalEdema.isChecked() ||
-                                anc7_advice_PedalEdema.isChecked() ||
-                                anc8_advice_PedalEdema.isChecked()
+                        if(     ((!anc1_advice_PedalEdema_Temp) && anc1_advice_PedalEdema.isChecked()) ||
+                                ((!anc2_advice_PedalEdema_Temp) && anc2_advice_PedalEdema.isChecked()) ||
+                                ((!anc3_advice_PedalEdema_Temp) && anc3_advice_PedalEdema.isChecked()) ||
+                                ((!anc4_advice_PedalEdema_Temp) && anc4_advice_PedalEdema.isChecked()) ||
+                                ((!anc5_advice_PedalEdema_Temp) && anc5_advice_PedalEdema.isChecked()) ||
+                                ((!anc6_advice_PedalEdema_Temp) && anc6_advice_PedalEdema.isChecked()) ||
+                                ((!anc7_advice_PedalEdema_Temp) && anc7_advice_PedalEdema.isChecked()) ||
+                                ((!anc8_advice_PedalEdema_Temp) && anc8_advice_PedalEdema.isChecked())
                         ){
                             notfMessage += "Rest with legs elevated.\n" +
                                     "Lie in the left lateral position.\n" +
                                     "Avoid sitting or standing for long periods.\n";
                         }
 
-                        if(     anc1_advice_Diabetic.isChecked() ||
-                                anc2_advice_Diabetic.isChecked() ||
-                                anc3_advice_Diabetic.isChecked() ||
-                                anc4_advice_Diabetic.isChecked() ||
-                                anc5_advice_Diabetic.isChecked() ||
-                                anc6_advice_Diabetic.isChecked() ||
-                                anc7_advice_Diabetic.isChecked() ||
-                                anc8_advice_Diabetic.isChecked()
+                        if(     ((!anc1_advice_Diabetic_Temp) && anc1_advice_Diabetic.isChecked()) ||
+                                ((!anc2_advice_Diabetic_Temp) && anc2_advice_Diabetic.isChecked()) ||
+                                ((!anc3_advice_Diabetic_Temp) && anc3_advice_Diabetic.isChecked()) ||
+                                ((!anc4_advice_Diabetic_Temp) && anc4_advice_Diabetic.isChecked()) ||
+                                ((!anc5_advice_Diabetic_Temp) && anc5_advice_Diabetic.isChecked()) ||
+                                ((!anc6_advice_Diabetic_Temp) && anc6_advice_Diabetic.isChecked()) ||
+                                ((!anc7_advice_Diabetic_Temp) && anc7_advice_Diabetic.isChecked()) ||
+                                ((!anc8_advice_Diabetic_Temp) && anc8_advice_Diabetic.isChecked())
                         ){
                             notfMessage += "Light exercises are advocated.\n" +
                                     "30 min of walking daily for 5 days a week.\n" +
@@ -2237,14 +2426,14 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                     "Contact your treating Physician.\n";
                         }
                         notfMessage += "\n Diet:\n";
-                        if(     anc1_advice_GeneralNutritional.isChecked() ||
-                                anc2_advice_GeneralNutritional.isChecked() ||
-                                anc3_advice_GeneralNutritional.isChecked() ||
-                                anc4_advice_GeneralNutritional.isChecked() ||
-                                anc5_advice_GeneralNutritional.isChecked() ||
-                                anc6_advice_GeneralNutritional.isChecked() ||
-                                anc7_advice_GeneralNutritional.isChecked() ||
-                                anc8_advice_GeneralNutritional.isChecked()) {
+                        if(     ((!anc1_advice_GeneralNutritional_Temp) && anc1_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc2_advice_GeneralNutritional_Temp) && anc2_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc3_advice_GeneralNutritional_Temp) && anc3_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc4_advice_GeneralNutritional_Temp) && anc4_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc5_advice_GeneralNutritional_Temp) && anc5_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc6_advice_GeneralNutritional_Temp) && anc6_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc7_advice_GeneralNutritional_Temp) && anc7_advice_GeneralNutritional.isChecked()) ||
+                                ((!anc8_advice_GeneralNutritional_Temp) && anc8_advice_GeneralNutritional.isChecked())) {
                             notfMessage += "Have a balanced diet.\n" +
                                     "Ensure adequate hydration and have 6-8 glasses of water daily.\n" +
                                     "Ensure a daily diet with adequate protein, dairy products, fruit.\n" +
@@ -2260,14 +2449,14 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                     "Avoid lifting heavy weight.\n";
                         }
 
-                        if(     anc1_advice_NauseaVomiting.isChecked() ||
-                                anc2_advice_NauseaVomiting.isChecked() ||
-                                anc3_advice_NauseaVomiting.isChecked() ||
-                                anc4_advice_NauseaVomiting.isChecked() ||
-                                anc5_advice_NauseaVomiting.isChecked() ||
-                                anc6_advice_NauseaVomiting.isChecked() ||
-                                anc7_advice_NauseaVomiting.isChecked() ||
-                                anc8_advice_NauseaVomiting.isChecked()) {
+                        if(     ((!anc1_advice_NauseaVomiting_Temp) && anc1_advice_NauseaVomiting.isChecked()) ||
+                                ((!anc2_advice_NauseaVomiting_Temp) && anc2_advice_NauseaVomiting.isChecked()) ||
+                                ((!anc3_advice_NauseaVomiting_Temp) && anc3_advice_NauseaVomiting.isChecked()) ||
+                                ((!anc4_advice_NauseaVomiting_Temp) && anc4_advice_NauseaVomiting.isChecked()) ||
+                                ((!anc5_advice_NauseaVomiting_Temp) && anc5_advice_NauseaVomiting.isChecked()) ||
+                                ((!anc6_advice_NauseaVomiting_Temp) && anc6_advice_NauseaVomiting.isChecked()) ||
+                                ((!anc7_advice_NauseaVomiting_Temp) && anc7_advice_NauseaVomiting.isChecked()) ||
+                                ((!anc8_advice_NauseaVomiting_Temp) && anc8_advice_NauseaVomiting.isChecked())) {
                             notfMessage += "Drink plenty of fluids and maintain hydration.\n" +
                                     "Eat small frequent meals.\n" +
                                     "Have non greasy meals with little odor.\n" +
@@ -2275,52 +2464,52 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                     "If excessive, vitamin b6 supplements can be tried.\n";
                         }
 
-                        if(     anc1_advice_HeatBurn.isChecked() ||
-                                anc2_advice_HeatBurn.isChecked() ||
-                                anc3_advice_HeatBurn.isChecked() ||
-                                anc4_advice_HeatBurn.isChecked() ||
-                                anc5_advice_HeatBurn.isChecked() ||
-                                anc6_advice_HeatBurn.isChecked() ||
-                                anc7_advice_HeatBurn.isChecked() ||
-                                anc8_advice_HeatBurn.isChecked()){
+                        if(     ((!anc1_advice_HeatBurn_Temp) && anc1_advice_HeatBurn.isChecked()) ||
+                                ((!anc2_advice_HeatBurn_Temp) && anc2_advice_HeatBurn.isChecked()) ||
+                                ((!anc3_advice_HeatBurn_Temp) && anc3_advice_HeatBurn.isChecked()) ||
+                                ((!anc4_advice_HeatBurn_Temp) && anc4_advice_HeatBurn.isChecked()) ||
+                                ((!anc5_advice_HeatBurn_Temp) && anc5_advice_HeatBurn.isChecked()) ||
+                                ((!anc6_advice_HeatBurn_Temp) && anc6_advice_HeatBurn.isChecked()) ||
+                                ((!anc7_advice_HeatBurn_Temp) && anc7_advice_HeatBurn.isChecked()) ||
+                                ((!anc8_advice_HeatBurn_Temp) && anc8_advice_HeatBurn.isChecked())){
                             notfMessage += "Eat small, frequent meals.\n" +
                                     "Avoid spicy, greasy foods.\n";
                         }
 
-                        if(     anc1_advice_Constipation.isChecked() ||
-                                anc2_advice_Constipation.isChecked() ||
-                                anc3_advice_Constipation.isChecked() ||
-                                anc4_advice_Constipation.isChecked() ||
-                                anc5_advice_Constipation.isChecked() ||
-                                anc6_advice_Constipation.isChecked() ||
-                                anc7_advice_Constipation.isChecked() ||
-                                anc8_advice_Constipation.isChecked()
+                        if(     ((!anc1_advice_Constipation_Temp) && anc1_advice_Constipation.isChecked()) ||
+                                ((!anc2_advice_Constipation_Temp) && anc2_advice_Constipation.isChecked()) ||
+                                ((!anc3_advice_Constipation_Temp) && anc3_advice_Constipation.isChecked()) ||
+                                ((!anc4_advice_Constipation_Temp) && anc4_advice_Constipation.isChecked()) ||
+                                ((!anc5_advice_Constipation_Temp) && anc5_advice_Constipation.isChecked()) ||
+                                ((!anc6_advice_Constipation_Temp) && anc6_advice_Constipation.isChecked()) ||
+                                ((!anc7_advice_Constipation_Temp) && anc7_advice_Constipation.isChecked()) ||
+                                ((!anc8_advice_Constipation_Temp) && anc8_advice_Constipation.isChecked())
                         ){
                             notfMessage += "Eat fresh fruits and vegetables.\n" +
                                     "Drink 8-10 glasses of water.\n" +
                                     "Eat foods with high fibre.\n";
                         }
 
-                        if(     anc1_advice_LegCramps.isChecked() ||
-                                anc2_advice_LegCramps.isChecked() ||
-                                anc3_advice_LegCramps.isChecked() ||
-                                anc4_advice_LegCramps.isChecked() ||
-                                anc5_advice_LegCramps.isChecked() ||
-                                anc6_advice_LegCramps.isChecked() ||
-                                anc7_advice_LegCramps.isChecked() ||
-                                anc8_advice_LegCramps.isChecked()
+                        if(     ((!anc1_advice_LegCramps_Temp) && anc1_advice_LegCramps.isChecked()) ||
+                                ((!anc2_advice_LegCramps_Temp) && anc2_advice_LegCramps.isChecked()) ||
+                                ((!anc3_advice_LegCramps_Temp) && anc3_advice_LegCramps.isChecked()) ||
+                                ((!anc4_advice_LegCramps_Temp) && anc4_advice_LegCramps.isChecked()) ||
+                                ((!anc5_advice_LegCramps_Temp) && anc5_advice_LegCramps.isChecked()) ||
+                                ((!anc6_advice_LegCramps_Temp) && anc6_advice_LegCramps.isChecked()) ||
+                                ((!anc7_advice_LegCramps_Temp) && anc7_advice_LegCramps.isChecked()) ||
+                                ((!anc8_advice_LegCramps_Temp) && anc8_advice_LegCramps.isChecked())
                         ){
                             notfMessage += "Daily magnesium/calcium supplements can be used.\n";
                         }
 
-                        if(     anc1_advice_Diabetic.isChecked() ||
-                                anc2_advice_Diabetic.isChecked() ||
-                                anc3_advice_Diabetic.isChecked() ||
-                                anc4_advice_Diabetic.isChecked() ||
-                                anc5_advice_Diabetic.isChecked() ||
-                                anc6_advice_Diabetic.isChecked() ||
-                                anc7_advice_Diabetic.isChecked() ||
-                                anc8_advice_Diabetic.isChecked()
+                        if(     ((!anc1_advice_Diabetic_Temp) && anc1_advice_Diabetic.isChecked()) ||
+                                ((!anc2_advice_Diabetic_Temp) && anc2_advice_Diabetic.isChecked()) ||
+                                ((!anc3_advice_Diabetic_Temp) && anc3_advice_Diabetic.isChecked()) ||
+                                ((!anc4_advice_Diabetic_Temp) && anc4_advice_Diabetic.isChecked()) ||
+                                ((!anc5_advice_Diabetic_Temp) && anc5_advice_Diabetic.isChecked()) ||
+                                ((!anc6_advice_Diabetic_Temp) && anc6_advice_Diabetic.isChecked()) ||
+                                ((!anc7_advice_Diabetic_Temp) && anc7_advice_Diabetic.isChecked()) ||
+                                ((!anc8_advice_Diabetic_Temp) && anc8_advice_Diabetic.isChecked())
                         ){
                             notfMessage += "Diabetic Diet (3+3) pattern. Take 3 major meals with intervening 3 minor meals.\n" +
                                     "Avoid long hours of fasting.\n" +
