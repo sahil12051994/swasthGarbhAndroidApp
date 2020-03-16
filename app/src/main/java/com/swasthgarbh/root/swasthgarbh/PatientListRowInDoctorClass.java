@@ -76,7 +76,7 @@ public class PatientListRowInDoctorClass {
         Calendar c = Calendar.getInstance();
         c.setTime(d);
         c.add(Calendar.DAY_OF_MONTH, 282);
-        endDate = sdf2.format(c.getTime());
+        endDate = sdf.format(c.getTime());
         return endDate;
     }
 

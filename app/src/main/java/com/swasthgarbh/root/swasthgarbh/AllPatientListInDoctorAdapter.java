@@ -79,7 +79,7 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
         }else{
             iv.setImageResource (R.drawable.open);
             uhidOfPatientInList.setVisibility(View.VISIBLE);
-            uhidOfPatientInList.setText("UHID: " + current_patient_data.getUHID ());
+            uhidOfPatientInList.setText(" | UHID: " + current_patient_data.getUHID ());
             isdocreg=1;
         }
 
