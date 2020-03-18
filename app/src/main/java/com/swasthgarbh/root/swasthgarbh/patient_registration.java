@@ -483,7 +483,7 @@ public class patient_registration extends AppCompatActivity {
 
                     @Override
                     public void onResponse(JSONObject response) {
-                        Log.d("apihit", response.toString());
+                        Log.d("patientDataRecieved", response.toString());
                         try {
                             if(response.getString("doctor") == "null"){
                                 doctorId = 0;
@@ -496,7 +496,7 @@ public class patient_registration extends AppCompatActivity {
                             if(!response.getString("UHID").equals("null")) {
 //                                Log.i("UHID", "NULL" + response.getString("UHID"));
                                 addData.setVisibility(View.GONE);
-                                linearLayout2.setVisibility(View.GONE);
+//                                linearLayout2.setVisibility(View.GONE);
                             }
                             String date = response.getString("lmp").split("T")[0].split("-")[2] + "-" + response.getString("lmp").split("T")[0].split("-")[1] + "-" + response.getString("lmp").split("T")[0].split("-")[0];
                             pregStartDate.setText(date);
@@ -707,11 +707,12 @@ public class patient_registration extends AppCompatActivity {
                                 pb.setVisibility(View.GONE);
                                 chartPB.setVisibility(View.GONE);
                                 if(!response.getString("UHID").equals("null")) {
-                                    chart.setVisibility(View.GONE);
+//                                    chart.setVisibility(View.GONE);
                                     dummyData.setText("*No chart data available");
                                 }
                             }
                             getDoctorData();
+                            Log.i("Chart Printed", "Done");
                         } catch (JSONException e) {
                             e.printStackTrace();
                         } catch (ParseException e) {

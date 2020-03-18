@@ -151,58 +151,59 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
                                 ArrayList<Integer> colorsdys = new ArrayList<Integer> ( );
 
                                 if (isdocreg==1){
-                                    Log.i("Doc Entered Data","asd");
+                                    Log.i("Doc Entered Data","1");
+                                    Log.i("Doc Entered Data","2" + response.getString ("anc1_examination_vitals_Bp"));
 
                                     Object data;
                                     ArrayList<String> bpdata = new ArrayList<>();
 
-                                    if(response.get ("anc1_exam_BP") != null) {
-                                        data = response.get ("anc1_exam_BP");
+                                    if(response.has ("anc1_examination_vitals_Bp")) {
+                                        data = response.getString ("anc1_examination_vitals_Bp");
                                         if(data.toString ().contains ("/")) {
                                             bpdata.add (data + "");
                                         }
                                     }
 
-                                    if(response.get ("anc2_exam_BP") != null) {
-                                        data = response.get ("anc2_exam_BP");
+                                    if(response.has ("anc2_examination_BP")) {
+                                        data = response.get ("anc2_examination_BP");
                                         if(data.toString ().contains ("/")) {
                                             bpdata.add (data + "");
                                         }
                                     }
 
-                                    if(response.get ("anc3_exam_BP") != null) {
-                                        data = response.get ("anc3_exam_BP");
+                                    if(response.has ("anc3_examination_BP")) {
+                                        data = response.get ("anc3_examination_BP");
                                         if(data.toString ().contains ("/")) {
                                             bpdata.add (data + "");
                                         }
                                     }
 
-                                    if(response.get ("anc4_exam_BP") != null) {
-                                        data = response.get ("anc4_exam_BP");
+                                    if(response.has ("anc4_examination_BP")) {
+                                        data = response.get ("anc4_examination_BP");
                                         if(data.toString ().contains ("/")) {
                                             bpdata.add (data + "");
                                         }
                                     }
-                                    if(response.get ("anc5_exam_BP") != null) {
-                                        data = response.get ("anc5_exam_BP");
+                                    if(response.has ("anc5_examination_BP")) {
+                                        data = response.get ("anc5_examination_BP");
                                         if(data.toString ().contains ("/")) {
                                             bpdata.add (data + "");
                                         }
                                     }
-                                    if(response.get ("anc6_exam_BP") != null) {
-                                        data = response.get ("anc6_exam_BP");
+                                    if(response.has ("anc6_examination_BP")) {
+                                        data = response.get ("anc6_examination_BP");
                                         if(data.toString ().contains ("/")) {
                                             bpdata.add (data + "");
                                         }
                                     }
-                                    if(response.get ("anc7_exam_BP") != null) {
-                                        data = response.get ("anc7_exam_BP");
+                                    if(response.has ("anc7_examination_BP")) {
+                                        data = response.get ("anc7_examination_BP");
                                         if(data.toString ().contains ("/")) {
                                             bpdata.add (data + "");
                                         }
                                     }
-                                    if(response.get ("anc8_exam_BP") != null) {
-                                        data = response.get ("anc8_exam_BP");
+                                    if(response.has ("anc8_examination_BP")) {
+                                        data = response.get ("anc8_examination_BP");
                                         if(data.toString ().contains ("/")) {
                                             bpdata.add (data + "");
                                         }
