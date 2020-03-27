@@ -238,10 +238,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     Boolean anc1_advice_BloodSugar_Temp = Boolean.FALSE;
     Boolean anc1_advice_NtNbScan_Temp = Boolean.FALSE;
     Boolean anc1_advice_DualScreen_Temp = Boolean.FALSE;
-    Boolean anc1_advice_LeftUterineArteryPl_Temp = Boolean.FALSE;
+//    Boolean anc1_advice_LeftUterineArteryPl_Temp = Boolean.FALSE;
     Boolean anc1_advice_TfolateLessThan14Weeks_Temp = Boolean.FALSE;
-    Boolean anc1_advice_RightUterineArteryPl_Temp = Boolean.FALSE;
-    Boolean anc1_advice_PIGF_Temp = Boolean.FALSE;
+//    Boolean anc1_advice_RightUterineArteryPl_Temp = Boolean.FALSE;
+//    Boolean anc1_advice_PIGF_Temp = Boolean.FALSE;
     Boolean anc1_advice_ICT_Temp = Boolean.FALSE;
     Boolean anc1_advice_Level2USG_Temp = Boolean.FALSE;
     Boolean anc1_general_urineCulture_Syp_Temp = Boolean.FALSE;
@@ -1857,10 +1857,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc1_advice_BloodSugar_Temp = response.getBoolean("anc1_advice_BloodSugar");
                             anc1_advice_NtNbScan_Temp = response.getBoolean("anc1_advice_NtNbScan");
                             anc1_advice_DualScreen_Temp = response.getBoolean("anc1_advice_DualScreen");
-                            anc1_advice_LeftUterineArteryPl_Temp = response.getBoolean("anc1_advice_LeftUterineArteryPl");
+//                            anc1_advice_LeftUterineArteryPl_Temp = response.getBoolean("anc1_advice_LeftUterineArteryPl");
                             anc1_advice_TfolateLessThan14Weeks_Temp = response.getBoolean("anc1_advice_TfolateLessThan14Weeks");
-                            anc1_advice_RightUterineArteryPl_Temp = response.getBoolean("anc1_advice_RightUterineArteryPl");
-                            anc1_advice_PIGF_Temp = response.getBoolean("anc1_advice_PIGF");
+//                            anc1_advice_RightUterineArteryPl_Temp = response.getBoolean("anc1_advice_RightUterineArteryPl");
+//                            anc1_advice_PIGF_Temp = response.getBoolean("anc1_advice_PIGF");
                             anc1_advice_ICT_Temp = response.getBoolean("anc1_advice_ICT");
                             anc1_advice_Level2USG_Temp = response.getBoolean("anc1_advice_Level2USG");
                             anc1_general_urineCulture_Syp_Temp = response.getBoolean("anc1_general_urineCulture_Syp");
@@ -2216,10 +2216,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //                            notfMessage += anc1_advice_LeftUterineArteryPl.getText() + " ,\n";
 //                        }
 
-                        if ( (!anc1_advice_TfolateLessThan14Weeks_Temp) && anc1_advice_TfolateLessThan14Weeks.isChecked()){
-                            notfMessage += anc1_advice_TfolateLessThan14Weeks.getText() + " ,\n";
-                        }
-
 
 //                        if( anc1_advice_RightUterineArteryPl.isChecked()){
 //                            notfMessage += anc1_advice_RightUterineArteryPl.getText() + " ,\n";
@@ -2237,7 +2233,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc1_advice_Level2USG.getText() + " ,\n";
                         }
 
-
                         if( (!anc1_general_urineCulture_Syp_Temp) && anc1_general_urineCulture_Syp.isChecked()){
                             notfMessage += anc1_general_urineCulture_Syp.getText() + " ,\n";
                         }
@@ -2248,15 +2243,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc1_general_urineCulture_PlentyFluids.getText() + " ,\n";
                         }
 
-
-
-
                         if ( (!anc2_advice_OGTT_Temp) && anc2_advice_OGTT.isChecked()){
                             notfMessage += anc2_advice_OGTT.getText() + " ,\n";
-                        }
-
-                        if ( (!anc2_advice_TcaBD_Temp) && anc2_advice_TcaBD.isChecked()){
-                            notfMessage += anc2_advice_TcaBD.getText() + " ,\n";
                         }
 
                         if ( (!anc2_advice_Tetanus_Temp) && anc2_advice_Tetanus.isChecked()){
@@ -2289,10 +2277,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
                         if ( (!anc2_advice_HbLess10_SerumIron_Temp) && anc2_advice_HbLess10_SerumIron.isChecked()){
                             notfMessage += anc2_advice_HbLess10_SerumIron.getText() + " ,\n";
-                        }
-
-                        if ( (!anc3_advice_TFeOD_Temp) && anc3_advice_TFeOD.isChecked()){
-                            notfMessage += anc3_advice_TFeOD.getText() + " ,\n";
                         }
 
                         if ( (!anc3_advice_DFMCLLP_Temp) && anc3_advice_DFMCLLP.isChecked()){
@@ -2335,6 +2319,18 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
                         if ( (!anc2_advice_TfeOD_Temp) && anc2_advice_TfeOD.isChecked()){
                             notfMessage += anc2_advice_TfeOD.getText() + " ,\n";
+                        }
+
+                        if ( (!anc2_advice_TcaBD_Temp) && anc2_advice_TcaBD.isChecked()){
+                            notfMessage += anc2_advice_TcaBD.getText() + " ,\n";
+                        }
+
+                        if ( (!anc1_advice_TfolateLessThan14Weeks_Temp) && anc1_advice_TfolateLessThan14Weeks.isChecked()){
+                            notfMessage += anc1_advice_TfolateLessThan14Weeks.getText() + " ,\n";
+                        }
+
+                        if ( (!anc3_advice_TFeOD_Temp) && anc3_advice_TFeOD.isChecked()){
+                            notfMessage += anc3_advice_TFeOD.getText() + " ,\n";
                         }
 
                         if ( (!anc3_advice_ictNegative_InjAntiD300_Temp) && anc3_advice_ictNegative_InjAntiD300.isChecked()){

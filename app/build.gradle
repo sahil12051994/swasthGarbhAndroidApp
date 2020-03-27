@@ -6,7 +6,7 @@ android {
         applicationId "com.swasthgarbh.root.swasthgarbh"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 53
+        versionCode 56
         versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
