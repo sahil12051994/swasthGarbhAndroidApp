@@ -332,6 +332,14 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     Boolean anc6_advice_LegCramps_Temp = Boolean.FALSE;
     Boolean anc7_advice_LegCramps_Temp = Boolean.FALSE;
     Boolean anc8_advice_LegCramps_Temp = Boolean.FALSE;
+    Boolean anc6_advice_DFMCLLP_Temp = Boolean.FALSE;
+    Boolean anc6_advice_TFeCa_Temp = Boolean.FALSE;
+    Boolean anc6_advice_NST_Temp = Boolean.FALSE;
+    Boolean anc8_advice_DFMCLLP_Temp = Boolean.FALSE;
+    Boolean anc8_advice_FeCa_Temp = Boolean.FALSE;
+    Boolean anc8_advice_Induction_Temp = Boolean.FALSE;
+    Boolean anc7_advice_DFMCLLP_Temp = Boolean.FALSE;
+    Boolean anc7_advice_TFeCa_Temp = Boolean.FALSE;
 
 
     private SimpleDateFormat dateFormatterShow, dateFormatterServer;
@@ -1975,6 +1983,14 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc6_advice_Diabetic_Temp = response.getBoolean("anc6_advice_Diabetic");
                             anc7_advice_Diabetic_Temp = response.getBoolean("anc7_advice_Diabetic");
                             anc8_advice_Diabetic_Temp = response.getBoolean("anc8_advice_Diabetic");
+                            anc6_advice_DFMCLLP_Temp = response.getBoolean("anc6_advice_DFMCLLP");
+                            anc6_advice_TFeCa_Temp = response.getBoolean("anc6_advice_TFeCa");
+                            anc6_advice_NST_Temp = response.getBoolean("anc6_advice_NST");
+                            anc8_advice_DFMCLLP_Temp = response.getBoolean("anc8_advice_DFMCLLP");
+                            anc8_advice_FeCa_Temp = response.getBoolean("anc8_advice_FeCa");
+                            anc8_advice_Induction_Temp = response.getBoolean("anc8_advice_Induction");
+                            anc7_advice_DFMCLLP_Temp = response.getBoolean("anc7_advice_DFMCLLP");
+                            anc7_advice_TFeCa_Temp =response.getBoolean ("anc7_advice_TFeCa");
                             /////////////////////
 
                         } catch (JSONException e) {
@@ -2364,6 +2380,39 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         if ( (!anc5_advice_NST_Temp) && anc5_advice_NST.isChecked()){
                             notfMessage += anc5_advice_NST.getText() + " ,\n";
                         }
+
+                        if ( (!anc6_advice_DFMCLLP_Temp) && anc6_advice_DFMCLLP.isChecked()){
+                            notfMessage += anc6_advice_DFMCLLP.getText() + " ,\n";
+                        }
+
+                        if ( (!anc6_advice_TFeCa_Temp) && anc6_advice_TFeCa.isChecked()){
+                            notfMessage += anc6_advice_TFeCa.getText() + " ,\n";
+                        }
+
+                        if ( (!anc6_advice_NST_Temp) && anc6_advice_NST.isChecked()){
+                            notfMessage += anc6_advice_NST.getText() + " ,\n";
+                        }
+
+                        if ( (!anc8_advice_DFMCLLP_Temp) && anc8_advice_DFMCLLP.isChecked()){
+                            notfMessage += anc8_advice_DFMCLLP.getText() + " ,\n";
+                        }
+
+                        if ( (!anc8_advice_FeCa_Temp) && anc8_advice_FeCa.isChecked()){
+                            notfMessage += anc8_advice_FeCa.getText() + " ,\n";
+                        }
+
+                        if ( (!anc8_advice_Induction_Temp) && anc8_advice_Induction.isChecked()){
+                            notfMessage += anc8_advice_Induction.getText() + " ,\n";
+                        }
+
+                        if ( (!anc7_advice_DFMCLLP_Temp) && anc7_advice_DFMCLLP.isChecked()){
+                            notfMessage += anc7_advice_DFMCLLP.getText() + " ,\n";
+                        }
+
+                        if ( (!anc7_advice_TFeCa_Temp) && anc7_advice_TFeCa.isChecked()){
+                            notfMessage += anc7_advice_TFeCa.getText() + " ,\n";
+                        }
+
 
                         notfMessage += "\n Exercise:\n";
                         if(     ((!anc1_advice_GeneralNutritional_Temp) && anc1_advice_GeneralNutritional.isChecked()) ||

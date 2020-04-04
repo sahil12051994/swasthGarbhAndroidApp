@@ -1514,34 +1514,6 @@
 
                                 </LinearLayout>
 
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginLeft="6dp"
-                                        android:gravity="center"
-                                        android:text="PIGF"
-                                        android:textColor="#000000"
-                                        android:textSize="15sp" />
-
-
-                                    <EditText
-                                        android:id="@+id/anc1_advice_PIGF"
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="20dp"
-                                        android:layout_weight="5"
-                                        android:backgroundTint="@color/colortheme"
-                                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
-                                        android:gravity="center"
-                                        android:hint=""
-                                        android:inputType="textMultiLine" />
-
-                                </LinearLayout>
-
                                 <!--<CheckBox-->
                                 <!--android:id="@+id/anc1_investigations_GTT"-->
                                 <!--android:layout_width="match_parent"-->
@@ -1887,6 +1859,34 @@
 
                                     <EditText
                                         android:id="@+id/anc1_advice_RightUterineArteryPl"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_weight="5"
+                                        android:backgroundTint="@color/colortheme"
+                                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                        android:gravity="center"
+                                        android:hint=""
+                                        android:inputType="textMultiLine" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="6dp"
+                                        android:gravity="center"
+                                        android:text="PIGF"
+                                        android:textColor="#000000"
+                                        android:textSize="15sp" />
+
+
+                                    <EditText
+                                        android:id="@+id/anc1_advice_PIGF"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_marginLeft="20dp"
@@ -3716,27 +3716,6 @@
                                         android:text="@string/anc_inj_tetanus"
                                         android:visibility="visible" />
 
-                                    <CheckBox
-                                        android:id="@+id/anc3_advice_CBC"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="CBC"
-                                        android:visibility="visible" />
-
-                                    <CheckBox
-                                        android:id="@+id/anc3_advice_LFT"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="LFT"
-                                        android:visibility="visible" />
-
-                                    <CheckBox
-                                        android:id="@+id/anc3_advice_KFT"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="KFT"
-                                        android:visibility="visible" />
-
 <!--                                    <CheckBox-->
 <!--                                        android:id="@+id/anc3_investigations_CBC"-->
 <!--                                        android:layout_width="match_parent"-->
@@ -4391,258 +4370,6 @@
 
                                     </LinearLayout>
 
-                                    <!--CBC-->
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginLeft="10dp"
-                                        android:layout_marginTop="5dp"
-                                        android:layout_marginRight="30dp"
-                                        android:text="CBC"
-                                        android:textColor="#008B8B"
-                                        android:textSize="20dp"
-                                        android:textStyle="italic" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
-
-                                        <TextView
-                                            android:layout_width="0dp"
-                                            android:layout_height="match_parent"
-                                            android:layout_marginLeft="6dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="HB"
-                                            android:textColor="#000000"
-                                            android:textSize="15sp" />
-
-                                        <EditText
-                                            android:id="@+id/anc4_examination_CBC_HB"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginLeft="20dp"
-                                            android:layout_weight="1"
-                                            android:backgroundTint="@color/colortheme"
-                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
-                                            android:gravity="center"
-                                            android:inputType="textMultiLine" />
-
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
-
-                                        <TextView
-                                            android:layout_width="0dp"
-                                            android:layout_height="match_parent"
-                                            android:layout_marginLeft="6dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="TLC"
-                                            android:textColor="#000000"
-                                            android:textSize="15sp" />
-
-                                        <EditText
-                                            android:id="@+id/anc4_examination_CBC_TLC"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginLeft="20dp"
-                                            android:layout_weight="1"
-                                            android:backgroundTint="@color/colortheme"
-                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
-                                            android:gravity="center"
-                                            android:inputType="textMultiLine" />
-
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
-
-                                        <TextView
-                                            android:layout_width="0dp"
-                                            android:layout_height="match_parent"
-                                            android:layout_marginLeft="6dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="Platelets"
-                                            android:textColor="#000000"
-                                            android:textSize="15sp" />
-
-                                        <EditText
-                                            android:id="@+id/anc4_examination_CBC_Platelets"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginLeft="20dp"
-                                            android:layout_weight="1"
-                                            android:backgroundTint="@color/colortheme"
-                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
-                                            android:gravity="center"
-                                            android:inputType="textMultiLine" />
-
-                                    </LinearLayout>
-
-                                    <!--LFT-->
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginLeft="10dp"
-                                        android:layout_marginTop="5dp"
-                                        android:layout_marginRight="30dp"
-                                        android:text="LFT"
-                                        android:textColor="#008B8B"
-                                        android:textSize="20dp"
-                                        android:textStyle="italic" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
-
-                                        <TextView
-                                            android:layout_width="0dp"
-                                            android:layout_height="match_parent"
-                                            android:layout_marginLeft="6dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="OT"
-                                            android:textColor="#000000"
-                                            android:textSize="15sp" />
-
-                                        <EditText
-                                            android:id="@+id/anc4_examination_LFT_OT"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginLeft="20dp"
-                                            android:layout_weight="1"
-                                            android:backgroundTint="@color/colortheme"
-                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
-                                            android:gravity="center"
-                                            android:inputType="textMultiLine" />
-
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
-
-                                        <TextView
-                                            android:layout_width="0dp"
-                                            android:layout_height="match_parent"
-                                            android:layout_marginLeft="6dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="PT"
-                                            android:textColor="#000000"
-                                            android:textSize="15sp" />
-
-                                        <EditText
-                                            android:id="@+id/anc4_examination_LFT_PT"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginLeft="20dp"
-                                            android:layout_weight="1"
-                                            android:backgroundTint="@color/colortheme"
-                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
-                                            android:gravity="center"
-                                            android:inputType="textMultiLine" />
-
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
-
-                                        <TextView
-                                            android:layout_width="0dp"
-                                            android:layout_height="match_parent"
-                                            android:layout_marginLeft="6dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="ALP"
-                                            android:textColor="#000000"
-                                            android:textSize="15sp" />
-
-                                        <EditText
-                                            android:id="@+id/anc4_examination_LFT_ALP"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginLeft="20dp"
-                                            android:layout_weight="1"
-                                            android:backgroundTint="@color/colortheme"
-                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
-                                            android:gravity="center"
-                                            android:inputType="textMultiLine" />
-
-                                    </LinearLayout>
-
-                                    <!--KFT-->
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginLeft="10dp"
-                                        android:layout_marginTop="5dp"
-                                        android:layout_marginRight="30dp"
-                                        android:text="KFT"
-                                        android:textColor="#008B8B"
-                                        android:textSize="20dp"
-                                        android:textStyle="italic" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
-
-                                        <TextView
-                                            android:layout_width="0dp"
-                                            android:layout_height="match_parent"
-                                            android:layout_marginLeft="6dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="Urea"
-                                            android:textColor="#000000"
-                                            android:textSize="15sp" />
-
-                                        <EditText
-                                            android:id="@+id/anc4_examination_KFT_UREA"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginLeft="20dp"
-                                            android:layout_weight="1"
-                                            android:backgroundTint="@color/colortheme"
-                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
-                                            android:gravity="center"
-                                            android:inputType="textMultiLine" />
-
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content">
-
-                                        <TextView
-                                            android:layout_width="0dp"
-                                            android:layout_height="match_parent"
-                                            android:layout_marginLeft="6dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="Creatinine"
-                                            android:textColor="#000000"
-                                            android:textSize="15sp" />
-
-
-                                        <EditText
-                                            android:id="@+id/anc4_examination_KFT_Creatinine"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginLeft="20dp"
-                                            android:layout_weight="1"
-                                            android:backgroundTint="@color/colortheme"
-                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
-                                            android:gravity="center"
-                                            android:inputType="textMultiLine" />
-                                    </LinearLayout>
-
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
 
@@ -4762,6 +4489,27 @@
 
                                     <!--</LinearLayout>-->
                                     <!--</android.support.v7.widget.CardView>-->
+
+                                    <CheckBox
+                                        android:id="@+id/anc3_advice_CBC"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="CBC"
+                                        android:visibility="visible" />
+
+                                    <CheckBox
+                                        android:id="@+id/anc3_advice_LFT"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="LFT"
+                                        android:visibility="visible" />
+
+                                    <CheckBox
+                                        android:id="@+id/anc3_advice_KFT"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="KFT"
+                                        android:visibility="visible" />
 
                                     <CheckBox
                                         android:id="@+id/anc4_advice_GeneralNutritional"
@@ -5328,6 +5076,258 @@
                                             android:visibility="visible" />
                                     </LinearLayout>
 
+                                    <!--CBC-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="30dp"
+                                        android:text="CBC"
+                                        android:textColor="#008B8B"
+                                        android:textSize="20dp"
+                                        android:textStyle="italic" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:text="HB"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+                                        <EditText
+                                            android:id="@+id/anc4_examination_CBC_HB"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="1"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:gravity="center"
+                                            android:inputType="textMultiLine" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:text="TLC"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+                                        <EditText
+                                            android:id="@+id/anc4_examination_CBC_TLC"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="1"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:gravity="center"
+                                            android:inputType="textMultiLine" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:text="Platelets"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+                                        <EditText
+                                            android:id="@+id/anc4_examination_CBC_Platelets"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="1"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:gravity="center"
+                                            android:inputType="textMultiLine" />
+
+                                    </LinearLayout>
+
+                                    <!--LFT-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="30dp"
+                                        android:text="LFT"
+                                        android:textColor="#008B8B"
+                                        android:textSize="20dp"
+                                        android:textStyle="italic" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:text="OT"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+                                        <EditText
+                                            android:id="@+id/anc4_examination_LFT_OT"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="1"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:gravity="center"
+                                            android:inputType="textMultiLine" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:text="PT"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+                                        <EditText
+                                            android:id="@+id/anc4_examination_LFT_PT"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="1"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:gravity="center"
+                                            android:inputType="textMultiLine" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:text="ALP"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+                                        <EditText
+                                            android:id="@+id/anc4_examination_LFT_ALP"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="1"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:gravity="center"
+                                            android:inputType="textMultiLine" />
+
+                                    </LinearLayout>
+
+                                    <!--KFT-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="30dp"
+                                        android:text="KFT"
+                                        android:textColor="#008B8B"
+                                        android:textSize="20dp"
+                                        android:textStyle="italic" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:text="Urea"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+                                        <EditText
+                                            android:id="@+id/anc4_examination_KFT_UREA"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="1"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:gravity="center"
+                                            android:inputType="textMultiLine" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:text="Creatinine"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp" />
+
+
+                                        <EditText
+                                            android:id="@+id/anc4_examination_KFT_Creatinine"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_weight="1"
+                                            android:backgroundTint="@color/colortheme"
+                                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890+-!@$%^();':,._=/?`~ "
+                                            android:gravity="center"
+                                            android:inputType="textMultiLine" />
+                                    </LinearLayout>
+
                                     <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content">
@@ -5356,7 +5356,6 @@
                                             android:visibility="visible" />
 
                                     </LinearLayout>
-
                                 </LinearLayout>
 
                             </android.support.v7.widget.CardView>
