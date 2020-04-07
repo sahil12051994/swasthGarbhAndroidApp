@@ -2319,6 +2319,22 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc3_advice_GTT.getText() + " ,\n";
                         }
 
+                        if ( (!anc6_advice_NST_Temp) && anc6_advice_NST.isChecked()){
+                            notfMessage += anc6_advice_NST.getText() + " ,\n";
+                        }
+
+                        if ( (!anc8_advice_DFMCLLP_Temp) && anc8_advice_DFMCLLP.isChecked()){
+                            notfMessage += anc8_advice_DFMCLLP.getText() + " ,\n";
+                        }
+
+                        if ( (!anc8_advice_Induction_Temp) && anc8_advice_Induction.isChecked()){
+                            notfMessage += anc8_advice_Induction.getText() + " ,\n";
+                        }
+
+                        if ( (!anc7_advice_DFMCLLP_Temp) && anc7_advice_DFMCLLP.isChecked()){
+                            notfMessage += anc7_advice_DFMCLLP.getText() + " ,\n";
+                        }
+
                         notfMessage += "\n Medicines:\n";
 
                         if ( (!anc1_advice_TFeMoreThan14Weeks_Temp) && anc1_advice_TFeMoreThan14Weeks.isChecked()){
@@ -2382,6 +2398,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         }
 
                         if ( (!anc6_advice_DFMCLLP_Temp) && anc6_advice_DFMCLLP.isChecked()){
+                            //
                             notfMessage += anc6_advice_DFMCLLP.getText() + " ,\n";
                         }
 
@@ -2389,24 +2406,8 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc6_advice_TFeCa.getText() + " ,\n";
                         }
 
-                        if ( (!anc6_advice_NST_Temp) && anc6_advice_NST.isChecked()){
-                            notfMessage += anc6_advice_NST.getText() + " ,\n";
-                        }
-
-                        if ( (!anc8_advice_DFMCLLP_Temp) && anc8_advice_DFMCLLP.isChecked()){
-                            notfMessage += anc8_advice_DFMCLLP.getText() + " ,\n";
-                        }
-
                         if ( (!anc8_advice_FeCa_Temp) && anc8_advice_FeCa.isChecked()){
                             notfMessage += anc8_advice_FeCa.getText() + " ,\n";
-                        }
-
-                        if ( (!anc8_advice_Induction_Temp) && anc8_advice_Induction.isChecked()){
-                            notfMessage += anc8_advice_Induction.getText() + " ,\n";
-                        }
-
-                        if ( (!anc7_advice_DFMCLLP_Temp) && anc7_advice_DFMCLLP.isChecked()){
-                            notfMessage += anc7_advice_DFMCLLP.getText() + " ,\n";
                         }
 
                         if ( (!anc7_advice_TFeCa_Temp) && anc7_advice_TFeCa.isChecked()){
