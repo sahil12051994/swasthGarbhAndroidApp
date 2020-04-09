@@ -2323,6 +2323,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc6_advice_NST.getText() + " ,\n";
                         }
 
+                        if ( (!anc6_advice_DFMCLLP_Temp) && anc6_advice_DFMCLLP.isChecked()){
+                            notfMessage += anc6_advice_DFMCLLP.getText() + " ,\n";
+                        }
+
                         if ( (!anc8_advice_DFMCLLP_Temp) && anc8_advice_DFMCLLP.isChecked()){
                             notfMessage += anc8_advice_DFMCLLP.getText() + " ,\n";
                         }
@@ -2397,10 +2401,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc5_advice_NST.getText() + " ,\n";
                         }
 
-                        if ( (!anc6_advice_DFMCLLP_Temp) && anc6_advice_DFMCLLP.isChecked()){
-                            //
-                            notfMessage += anc6_advice_DFMCLLP.getText() + " ,\n";
-                        }
 
                         if ( (!anc6_advice_TFeCa_Temp) && anc6_advice_TFeCa.isChecked()){
                             notfMessage += anc6_advice_TFeCa.getText() + " ,\n";
