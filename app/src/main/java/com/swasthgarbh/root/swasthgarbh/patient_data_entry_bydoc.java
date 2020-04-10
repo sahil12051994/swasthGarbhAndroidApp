@@ -2339,6 +2339,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage += anc7_advice_DFMCLLP.getText() + " ,\n";
                         }
 
+                        if (notfMessage.endsWith(",\n")) {
+                            notfMessage = notfMessage.substring(0, notfMessage.length() - 2);
+                        }
+
                         notfMessage += "\n Medicines:\n";
 
                         if ( (!anc1_advice_TFeMoreThan14Weeks_Temp) && anc1_advice_TFeMoreThan14Weeks.isChecked()){
@@ -2412,6 +2416,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
                         if ( (!anc7_advice_TFeCa_Temp) && anc7_advice_TFeCa.isChecked()){
                             notfMessage += anc7_advice_TFeCa.getText() + " ,\n";
+                        }
+
+                        if (notfMessage.endsWith(",\n")) {
+                            notfMessage = notfMessage.substring(0, notfMessage.length() - 2);
                         }
 
 
