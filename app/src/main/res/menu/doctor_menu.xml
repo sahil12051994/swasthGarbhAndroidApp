@@ -26,15 +26,15 @@
                 app:showAsAction="ifRoom"
                 android:title="ANC Assist" />
 
-            <!--<item android:id="@+id/offlineAnc2"-->
-                <!--android:icon="@drawable/pregnant"-->
-                <!--app:showAsAction="ifRoom"-->
-                <!--android:title="Register Patient" />-->
-
             <item android:id="@+id/registered_patient"
                 android:icon="@drawable/pinkultrasound"
                 app:showAsAction="ifRoom"
                 android:title="Register Patient" />
+
+            <item android:id="@+id/trimNotif"
+                android:icon="@drawable/send"
+                app:showAsAction="ifRoom"
+                android:title="Trimester Notifications" />
 
             <item android:id="@+id/action_logout"
                 android:icon="@drawable/logout"

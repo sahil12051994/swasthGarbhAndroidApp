@@ -1,5 +1,6 @@
 package com.swasthgarbh.root.swasthgarbh;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -7,11 +8,17 @@ import android.net.Uri;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -64,13 +71,16 @@ public class DoctorScreen extends AppCompatActivity {
     ArrayList<patient_data_listview_class> patientRowData = new ArrayList<patient_data_listview_class>();
     ListView patient_list_view;
     patientDataAdapter adapter;
-    private int doctorId;
+    private String doctorId;
     TextView doctorName, doctorEmail, doctorTotalPatients, doctorHospital, doctorSpeciality, dummyData;
     ImageView callDoctor, verified;
     ProgressBar barPB;
     ProgressBar piePB;
     boolean doubleBackToExitPressedOnce = false;
     int keepDummyData = 0;
+    Dialog trimesterNotifScreen;
+    private Button done;
+    EditText firstTrimMessage, secondTrimMessage, thirdTrimMessage;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.doctor_menu, menu);
@@ -97,7 +107,109 @@ public class DoctorScreen extends AppCompatActivity {
             i = new Intent(this, PatientSignupByDoctor.class);
             startActivity(i);
         }
+        else if (item.getItemId() == R.id.trimNotif) {
+            trimesterNotif();
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void trimesterNotif() {
+        trimesterNotifScreen = new Dialog(this);
+        trimesterNotifScreen.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        trimesterNotifScreen.setContentView(R.layout.trimester_notification);
+        trimesterNotifScreen.setCancelable(true);
+        done = trimesterNotifScreen.findViewById(R.id.sendTrimesterNotif);
+
+        firstTrimMessage = trimesterNotifScreen.findViewById(R.id.firstTrimMessage);
+        secondTrimMessage = trimesterNotifScreen.findViewById(R.id.secondTrimMessage);
+        thirdTrimMessage = trimesterNotifScreen.findViewById(R.id.thirdTrimMessage);
+
+        trimesterNotifScreen.show();
+
+        // Get screen width and height in pixels
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        // The absolute width of the available display size in pixels.
+        int displayWidth = displayMetrics.widthPixels;
+        // The absolute height of the available display size in pixels.
+        int displayHeight = displayMetrics.heightPixels;
+
+        // Initialize a new window manager layout parameters
+        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+
+        // Copy the alert dialog window attributes to new layout parameter instance
+        layoutParams.copyFrom(trimesterNotifScreen.getWindow().getAttributes());
+
+        // Set the alert dialog window width and height
+        // Set alert dialog width equal to screen width 90%
+        // int dialogWindowWidth = (int) (displayWidth * 0.9f);
+        // Set alert dialog height equal to screen height 90%
+        // int dialogWindowHeight = (int) (displayHeight * 0.9f);
+
+        // Set alert dialog width equal to screen width 80%
+        int dialogWindowWidth = (int) (displayWidth * 0.8f);
+        // Set alert dialog height equal to screen height 70%
+        int dialogWindowHeight = (int) (displayHeight * 0.65f);
+        // Set the width and height for the layout parameters
+        // This will bet the width and height of alert dialog
+        layoutParams.width = dialogWindowWidth;
+        layoutParams.height = dialogWindowHeight;
+        // Apply the newly created layout parameters to the alert dialog window
+        trimesterNotifScreen.getWindow().setAttributes(layoutParams);
+
+
+        done.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                String url = ApplicationController.get_base_url() + "api/trimesterNotify";
+                Log.i("Trimester Notification", url);
+                JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+                        url, null,
+                        new Response.Listener<JSONObject>() {
+
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                Log.d("change doc api resp", response.toString());
+                                trimesterNotifScreen.dismiss();
+                                Toast.makeText(DoctorScreen.this, "Notification Sent", Toast.LENGTH_LONG).show();
+                            }
+                        }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("TAG", "Error Message: " + error.getMessage());
+                    }
+                }) {
+
+                    @Override
+                    public byte[] getBody() {
+                        JSONObject params = new JSONObject();
+                        try {
+                            params.put("doctorId", Integer.parseInt(session.getUserDetails().get("id")));
+                            params.put("trimesterOneText", firstTrimMessage.getText());
+                            params.put("trimesterTwoText", secondTrimMessage.getText());
+                            params.put("trimesterThreeText", thirdTrimMessage.getText());
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                        return params.toString().getBytes();
+
+                    }
+
+                    @Override
+                    public Map<String, String> getHeaders() throws AuthFailureError {
+                        Map<String, String> params = new HashMap<String, String>();
+                        params.put("Authorization", "Token " + session.getUserDetails().get("Token"));
+                        Log.d("TAG", "Token " + session.getUserDetails().get("Token"));
+                        return params;
+                    }
+                };
+                ApplicationController.getInstance().addToRequestQueue(jsonObjReq);
+            }
+        });
     }
 
     private void logout(Context _c) {
