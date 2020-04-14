@@ -50,7 +50,8 @@
                 android:layout_margin="10dp"
                 android:backgroundTint="@color/colortheme"
                 android:ems="10"
-                android:hint="Enter Message"/>
+                android:hint="Enter Message"
+                android:inputType="text|textMultiLine"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -65,7 +66,8 @@
                 android:layout_margin="10dp"
                 android:backgroundTint="@color/colortheme"
                 android:ems="10"
-                android:hint="Enter Message"/>
+                android:hint="Enter Message"
+                android:inputType="text|textMultiLine"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -80,7 +82,8 @@
                 android:layout_margin="10dp"
                 android:backgroundTint="@color/colortheme"
                 android:ems="10"
-                android:hint="Enter Message"/>
+                android:hint="Enter Message"
+                android:inputType="text|textMultiLine"/>
 
         </LinearLayout>
 
