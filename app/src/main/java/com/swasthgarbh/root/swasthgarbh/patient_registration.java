@@ -161,6 +161,9 @@ public class patient_registration extends AppCompatActivity {
         } else if (item.getItemId() == R.id.aboutPre) {
             i = new Intent(this, AboutPreeclampsia.class);
             startActivity(i);
+        } else if (item.getItemId() == R.id.aboutCovid) {
+            i = new Intent(this, about_covid.class);
+            startActivity(i);
         }
         return super.onOptionsItemSelected(item);
     }

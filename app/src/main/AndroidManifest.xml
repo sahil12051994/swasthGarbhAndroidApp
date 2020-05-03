@@ -27,9 +27,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-
-
-        <activity android:name=".medicine_list"
+        <activity android:name=".about_covid"></activity>
+        <activity
+            android:name=".medicine_list"
             android:label="Medicines" />
         <activity android:name=".advice_nutritional" />
         <activity android:name=".PatientSignupByDoctor" />

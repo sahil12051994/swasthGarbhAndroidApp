@@ -109,6 +109,9 @@ public class DoctorScreen extends AppCompatActivity {
         }
         else if (item.getItemId() == R.id.trimNotif) {
             trimesterNotif();
+        } else if (item.getItemId() == R.id.aboutCovid) {
+            i = new Intent(this, about_covid.class);
+            startActivity(i);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -147,9 +150,9 @@ public class DoctorScreen extends AppCompatActivity {
         // int dialogWindowHeight = (int) (displayHeight * 0.9f);
 
         // Set alert dialog width equal to screen width 80%
-        int dialogWindowWidth = (int) (displayWidth * 0.8f);
+        int dialogWindowWidth = (int) (displayWidth * 0.9f);
         // Set alert dialog height equal to screen height 70%
-        int dialogWindowHeight = (int) (displayHeight * 0.65f);
+        int dialogWindowHeight = (int) (displayHeight * 0.85f);
         // Set the width and height for the layout parameters
         // This will bet the width and height of alert dialog
         layoutParams.width = dialogWindowWidth;

@@ -32,6 +32,10 @@
                 app:showAsAction="ifRoom"
                 android:title="@string/change_doctor" />
 
+            <item android:id="@+id/aboutCovid"
+                android:icon="@drawable/covid"
+                app:showAsAction="ifRoom"
+                android:title="COVID'19 advice" />
 
             <item android:id="@+id/aboutPre"
                 android:icon="@drawable/faq"

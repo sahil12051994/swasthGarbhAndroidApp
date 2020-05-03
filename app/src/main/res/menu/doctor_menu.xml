@@ -36,6 +36,11 @@
                 app:showAsAction="ifRoom"
                 android:title="Trimester Notifications" />
 
+            <item android:id="@+id/aboutCovid"
+                android:icon="@drawable/covid"
+                app:showAsAction="ifRoom"
+                android:title="COVID'19 advice" />
+
             <item android:id="@+id/action_logout"
                 android:icon="@drawable/logout"
                 app:showAsAction="ifRoom"

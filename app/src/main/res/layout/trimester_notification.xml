@@ -46,12 +46,16 @@
             <EditText
                 android:id="@+id/firstTrimMessage"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="80dp"
                 android:layout_margin="10dp"
                 android:backgroundTint="@color/colortheme"
                 android:ems="10"
                 android:hint="Enter Message"
-                android:inputType="text|textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:lines="20"
+                android:minLines="5"
+                android:scrollHorizontally="false"
+                android:scrollbars="vertical"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -62,12 +66,16 @@
             <EditText
                 android:id="@+id/secondTrimMessage"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="80dp"
                 android:layout_margin="10dp"
                 android:backgroundTint="@color/colortheme"
                 android:ems="10"
                 android:hint="Enter Message"
-                android:inputType="text|textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:lines="20"
+                android:minLines="5"
+                android:scrollHorizontally="false"
+                android:scrollbars="vertical"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -78,12 +86,16 @@
             <EditText
                 android:id="@+id/thirdTrimMessage"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="80dp"
                 android:layout_margin="10dp"
                 android:backgroundTint="@color/colortheme"
                 android:ems="10"
                 android:hint="Enter Message"
-                android:inputType="text|textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:lines="20"
+                android:minLines="5"
+                android:scrollHorizontally="false"
+                android:scrollbars="vertical"/>
 
         </LinearLayout>
 
