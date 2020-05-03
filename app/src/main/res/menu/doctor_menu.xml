@@ -37,7 +37,7 @@
                 android:title="Trimester Notifications" />
 
             <item android:id="@+id/aboutCovid"
-                android:icon="@drawable/covid"
+                android:icon="@drawable/corona"
                 app:showAsAction="ifRoom"
                 android:title="COVID'19 advice" />
 
