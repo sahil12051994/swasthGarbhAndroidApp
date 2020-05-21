@@ -811,7 +811,8 @@ public class patient_registration extends AppCompatActivity {
                                                     if (bpdata.size() == 0) {
 //                                        Toast.makeText (getContext (), "BP Data not found", Toast.LENGTH_SHORT).show ( );
                                                         Log.i("Data", "BP Data not found" + bpdata);
-                                                        ;
+                                                        pb.setVisibility(View.GONE);
+                                                        chartPB.setVisibility(View.GONE);
                                                         chart.clear();
 
                                                     } else {

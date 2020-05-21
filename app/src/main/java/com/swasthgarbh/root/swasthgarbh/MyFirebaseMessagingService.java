@@ -37,7 +37,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         NotificationManager mNotificationManager;
         final NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this, "notify_001");
-        Intent notificationIntent = new Intent(this, ControllerActivity.class);
+        Intent notificationIntent = new Intent(this, PatientNotifications.class);
         notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 

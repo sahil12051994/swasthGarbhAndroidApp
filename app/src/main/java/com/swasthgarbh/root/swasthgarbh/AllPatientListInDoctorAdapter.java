@@ -84,8 +84,8 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
         }
 
         try {
-            eddDateOfPatient.setText("EDD : " + current_patient_data.getEDD());
-            Log.d ("patient id", "EDD : " + current_patient_data.getEDD());
+            eddDateOfPatient.setText("EDD: " + current_patient_data.getEDD());
+            Log.d ("patient id", "EDD: " + current_patient_data.getEDD());
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -300,7 +300,6 @@ public class AllPatientListInDoctorAdapter extends ArrayAdapter<PatientListRowIn
                                         chart.animateXY (1000, 1000);
 
                                     }
-
 
                                 } else {
                                     Log.i("Patient Entered Data","asd");

@@ -39,7 +39,7 @@
             <item android:id="@+id/aboutCovid"
                 android:icon="@drawable/corona"
                 app:showAsAction="ifRoom"
-                android:title="COVID'19 advice" />
+                android:title="COVID'19 Advice" />
 
             <item android:id="@+id/action_logout"
                 android:icon="@drawable/logout"
