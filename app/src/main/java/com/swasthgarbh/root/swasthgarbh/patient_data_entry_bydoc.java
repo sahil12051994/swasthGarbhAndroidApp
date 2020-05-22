@@ -2292,13 +2292,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessageBody += anc2_advice_FetalEcho.getText() + ",\n";
                         }
 
-                        if ( (!anc2_advice_HbLess10_TAlbendazole_Temp) && anc2_advice_HbLess10_TAlbendazole.isChecked()){
-                            notfMessageBody += anc2_advice_HbLess10_TAlbendazole.getText() + ",\n";
-                        }
-
-                        if ( (!anc2_advice_HbLess10_TFeBD_Temp) && anc2_advice_HbLess10_TFeBD.isChecked()){
-                            notfMessageBody += anc2_advice_HbLess10_TFeBD.getText() + ",\n";
-                        }
 
                         if ( (!anc2_advice_HbLess10_Hplc_Temp) && anc2_advice_HbLess10_Hplc.isChecked()){
                             notfMessageBody += anc2_advice_HbLess10_Hplc.getText() + ",\n";
@@ -2358,7 +2351,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessage = notfMessage.substring(0, notfMessage.length() - 2);
                         }
 
-                        notfMessage += "\n\nMedicines:\n";
                         String notfMessageBodyMedicine = "";
 
                         if ( (!anc1_advice_TFeMoreThan14Weeks_Temp) && anc1_advice_TFeMoreThan14Weeks.isChecked()){
@@ -2383,6 +2375,14 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
                         if ( (!anc2_advice_Tetanus_Temp) && anc2_advice_Tetanus.isChecked()){
                             notfMessageBody += anc2_advice_Tetanus.getText() + ",\n";
+                        }
+
+                        if ( (!anc2_advice_HbLess10_TAlbendazole_Temp) && anc2_advice_HbLess10_TAlbendazole.isChecked()){
+                            notfMessageBody += anc2_advice_HbLess10_TAlbendazole.getText() + ",\n";
+                        }
+
+                        if ( (!anc2_advice_HbLess10_TFeBD_Temp) && anc2_advice_HbLess10_TFeBD.isChecked()){
+                            notfMessageBody += anc2_advice_HbLess10_TFeBD.getText() + ",\n";
                         }
 
                         if ( (!anc1_advice_TfolateLessThan14Weeks_Temp) && anc1_advice_TfolateLessThan14Weeks.isChecked()){
@@ -2441,40 +2441,47 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessageBodyMedicine += anc7_advice_TFeCa.getText() + ",\n";
                         }
 
-                        notfMessage = notfMessage + notfMessageBodyMedicine;
+                        if(!notfMessageBodyMedicine.equals((""))) {
+                            notfMessage += "\nMedicines:\n";
+                            notfMessage = notfMessage + notfMessageBodyMedicine;
 
-                        if (notfMessage.endsWith(",\n")) {
-                            notfMessage = notfMessage.substring(0, notfMessage.length() - 2);
+                            if (notfMessage.endsWith(",\n")) {
+                                notfMessage = notfMessage.substring(0, notfMessage.length() - 2);
+                            }
                         }
 
-                        notfMessage += "\n\nComments:\n";
+                        String commentsBody = "";
 
                         if(!anc1_general_Others_Temp && !anc1_general_Others.getText().toString().isEmpty()) {
-                            notfMessage += anc1_general_Others.getText().toString() + "\n";
+                            commentsBody += anc1_general_Others.getText().toString() + "\n";
                         }
                         if(!anc2_advice_Others_Temp && !anc2_advice_Others.getText().toString().isEmpty()) {
-                            notfMessage += anc2_advice_Others.getText().toString() + "\n";
+                            commentsBody += anc2_advice_Others.getText().toString() + "\n";
                         }
                         if(!anc3_advice_Others_Temp && !anc3_advice_Others.getText().toString().isEmpty()) {
-                            notfMessage += anc3_advice_Others.getText().toString() + "\n";
+                            commentsBody += anc3_advice_Others.getText().toString() + "\n";
                         }
                         if(!anc4_advice_Others_Temp && !anc4_advice_Others.getText().toString().isEmpty()) {
-                            notfMessage += anc4_advice_Others.getText().toString() + "\n";
+                            commentsBody += anc4_advice_Others.getText().toString() + "\n";
                         }
                         if(!anc5_advice_Others_Temp && !anc5_advice_Others.getText().toString().isEmpty()) {
-                            notfMessage += anc5_advice_Others.getText().toString() + "\n";
+                            commentsBody += anc5_advice_Others.getText().toString() + "\n";
                         }
                         if(!anc6_advice_Others_Temp && !anc6_advice_Others.getText().toString().isEmpty()) {
-                            notfMessage += anc6_advice_Others.getText().toString() + "\n";
+                            commentsBody += anc6_advice_Others.getText().toString() + "\n";
                         }
                         if(!anc7_advice_Others_Temp && !anc7_advice_Others.getText().toString().isEmpty()) {
-                            notfMessage += anc7_advice_Others.getText().toString() + "\n";
+                            commentsBody += anc7_advice_Others.getText().toString() + "\n";
                         }
                         if(!anc8_advice_Others_Temp && !anc8_advice_Others.getText().toString().isEmpty()) {
-                            notfMessage += anc8_advice_Others.getText().toString() + "\n";
+                            commentsBody += anc8_advice_Others.getText().toString() + "\n";
                         }
 
-                        notfMessage += "\n\nExercise:\n";
+                        if(!commentsBody.equals("")) {
+                            notfMessage += "\nComments:\n";
+                            notfMessage += commentsBody;
+                        }
+
                         String notfMessageExercise = "";
 
                         if(     ((!anc1_advice_GeneralNutritional_Temp) && anc1_advice_GeneralNutritional.isChecked()) ||
@@ -2532,9 +2539,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                     "Contact your treating Physician.\n";
                         }
 
-                        notfMessage = notfMessage + notfMessageExercise;
 
-                        notfMessage += "\n\nDiet:\n";
+                        if(!notfMessageExercise.equals((""))) {
+                            notfMessage += "\nExercise:\n";
+                            notfMessage = notfMessage + notfMessageExercise;
+                        }
+
                         String notfMessageDiet = "";
 
                         if(     ((!anc1_advice_GeneralNutritional_Temp) && anc1_advice_GeneralNutritional.isChecked()) ||
@@ -2630,7 +2640,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                     "Records should be brought to ANC OPD for assessment of therapy.";
                         }
 
-                        notfMessage = notfMessage + notfMessageDiet;
+                        if(!notfMessageDiet.equals("")) {
+                            notfMessage += "\nDiet:\n";
+                            notfMessage = notfMessage + notfMessageDiet;
+                        }
 
                         if(!notfMessageBody.equals("") || !notfMessageBodyMedicine.equals("") || !notfMessageExercise.equals("") || !notfMessageDiet.equals("")) {
                             notifGeneration(notfMessage);

@@ -52,6 +52,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         mBuilder.setContentText(messageBody);
         mBuilder.setPriority(Notification.PRIORITY_MAX);
         mBuilder.setStyle(bigText);
+        mBuilder.setAutoCancel(true);
 
         mNotificationManager =
                 (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
