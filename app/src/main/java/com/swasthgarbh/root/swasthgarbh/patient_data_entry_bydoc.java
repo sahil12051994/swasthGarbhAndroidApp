@@ -2229,8 +2229,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
                         String notfMessage = "Date: " + dateFormat.format(date) + " \n";
 
-                        notfMessage += "\nTests:\n";
-
                         String notfMessageBody = "";
 
                         if( (!anc1_advice_GTT_Temp) && anc1_advice_GTT.isChecked()){
@@ -2345,10 +2343,13 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessageBody += anc7_advice_DFMCLLP.getText() + ",\n";
                         }
 
-                        notfMessage = notfMessage + notfMessageBody;
+                        if(!notfMessageBody.equals((""))) {
+                            notfMessage += "\nTests:\n";
+                            notfMessage = notfMessage + notfMessageBody;
 
-                        if (notfMessage.endsWith(",\n")) {
-                            notfMessage = notfMessage.substring(0, notfMessage.length() - 2);
+                            if (notfMessage.endsWith(",\n")) {
+                                notfMessage = notfMessage.substring(0, notfMessage.length() - 2);
+                            }
                         }
 
                         String notfMessageBodyMedicine = "";
@@ -2582,7 +2583,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                                     "Eat small frequent meals.\n" +
                                     "Have non greasy meals with little odor.\n" +
                                     "Ginger or chamomile tea can help reduce morning sickness.\n" +
-                                    "If excessive, vitamin b6 supplements can be tried.\n";
+                                    "If excessive, vitamin B6 supplements can be tried.\n";
                         }
 
                         if(     ((!anc1_advice_HeatBurn_Temp) && anc1_advice_HeatBurn.isChecked()) ||
@@ -2608,7 +2609,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         ){
                             notfMessageDiet += "Eat fresh fruits and vegetables.\n" +
                                     "Drink 8-10 glasses of water.\n" +
-                                    "Eat foods with high fibre.\n";
+                                    "Eat foods with High fibre.\n";
                         }
 
                         if(     ((!anc1_advice_LegCramps_Temp) && anc1_advice_LegCramps.isChecked()) ||
@@ -2643,6 +2644,10 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         if(!notfMessageDiet.equals("")) {
                             notfMessage += "\nDiet:\n";
                             notfMessage = notfMessage + notfMessageDiet;
+                        }
+
+                        if (notfMessage.endsWith("\n")) {
+                            notfMessage = notfMessage.substring(0, notfMessage.length() - 1);
                         }
 
                         if(!notfMessageBody.equals("") || !notfMessageBodyMedicine.equals("") || !notfMessageExercise.equals("") || !notfMessageDiet.equals("")) {

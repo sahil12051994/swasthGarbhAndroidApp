@@ -343,6 +343,7 @@ public class DoctorScreen extends AppCompatActivity {
                                 response = ja;
                                 Toast.makeText(DoctorScreen.this, "Dummy Data", Toast.LENGTH_LONG).show();
                             } else {
+                                System.out.println("Having Dataaa");
                                 keepDummyData = 0;
                                 dummyData.setVisibility(View.GONE);
                             }
@@ -488,6 +489,7 @@ public class DoctorScreen extends AppCompatActivity {
                             }
 
                             JSONObject analysis_obj = (JSONObject) response.getJSONObject("analysis_object");
+                            System.out.println("keepDummyData" + keepDummyData);
                             if(keepDummyData == 1){
 //                                if(analysis_obj.getInt("high_sys") ==0 && analysis_obj.getInt("high_dys") ==0 && analysis_obj.getInt("high_weight") ==0 && analysis_obj.getInt("hyper_tension") ==0 && analysis_obj.getInt("urine_albumin") ==0 && analysis_obj.getInt("who_following") ==0){
                                     //dummy data for new doctor
