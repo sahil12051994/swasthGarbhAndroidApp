@@ -21,6 +21,8 @@ public class ApplicationController extends Application {
 //    App Icon Generators Online
 //    https://romannurik.github.io/AndroidAssetStudio/index.html
 //    https://appiconmaker.co/Home/Index/8d021a99-471e-4cfd-a62c-e709b080555e
+//    http://wittchen.io/solving-problems-with-avd-and-kvm-on-linux/
+//    https://stackoverflow.com/questions/27952527/panic-could-not-find-when-i-try-to-run-emulator-on-android-studio-on-ubunt?rq=1
 
     private RequestQueue mRequestQueue;
 

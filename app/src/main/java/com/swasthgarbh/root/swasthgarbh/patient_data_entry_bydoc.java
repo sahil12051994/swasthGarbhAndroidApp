@@ -2247,19 +2247,6 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessageBody += anc1_advice_DualScreen.getText() + ",\n";
                         }
 
-//                        if( anc1_advice_LeftUterineArteryPl.isChecked()){
-//                            notfMessage += anc1_advice_LeftUterineArteryPl.getText() + " ,\n";
-//                        }
-
-
-//                        if( anc1_advice_RightUterineArteryPl.isChecked()){
-//                            notfMessage += anc1_advice_RightUterineArteryPl.getText() + " ,\n";
-//                        }
-//
-//                        if( anc1_advice_PIGF.isChecked()){
-//                            notfMessage += anc1_advice_PIGF.getText() + " ,\n";
-//                        }
-
                         if( (!anc1_advice_ICT_Temp) && anc1_advice_ICT.isChecked()){
                             notfMessageBody += anc1_advice_ICT.getText() + ",\n";
                         }
@@ -2345,11 +2332,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
                         if(!notfMessageBody.equals((""))) {
                             notfMessage += "\nTests:\n";
-                            notfMessage = notfMessage + notfMessageBody;
 
-                            if (notfMessage.endsWith(",\n")) {
-                                notfMessage = notfMessage.substring(0, notfMessage.length() - 2);
+                            if (notfMessageBody.endsWith(",\n")) {
+                                notfMessageBody = notfMessageBody.substring(0, notfMessageBody.length() - 2);
                             }
+
+                            notfMessage = notfMessage + notfMessageBody;
                         }
 
                         String notfMessageBodyMedicine = "";
@@ -2375,15 +2363,15 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         }
 
                         if ( (!anc2_advice_Tetanus_Temp) && anc2_advice_Tetanus.isChecked()){
-                            notfMessageBody += anc2_advice_Tetanus.getText() + ",\n";
+                            notfMessageBodyMedicine += anc2_advice_Tetanus.getText() + ",\n";
                         }
 
                         if ( (!anc2_advice_HbLess10_TAlbendazole_Temp) && anc2_advice_HbLess10_TAlbendazole.isChecked()){
-                            notfMessageBody += anc2_advice_HbLess10_TAlbendazole.getText() + ",\n";
+                            notfMessageBodyMedicine += anc2_advice_HbLess10_TAlbendazole.getText() + ",\n";
                         }
 
                         if ( (!anc2_advice_HbLess10_TFeBD_Temp) && anc2_advice_HbLess10_TFeBD.isChecked()){
-                            notfMessageBody += anc2_advice_HbLess10_TFeBD.getText() + ",\n";
+                            notfMessageBodyMedicine += anc2_advice_HbLess10_TFeBD.getText() + ",\n";
                         }
 
                         if ( (!anc1_advice_TfolateLessThan14Weeks_Temp) && anc1_advice_TfolateLessThan14Weeks.isChecked()){
@@ -2391,7 +2379,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         }
 
                         if ( (!anc3_advice_InjTetanus_Temp) && anc3_advice_InjTetanus.isChecked()){
-                            notfMessageBody += anc3_advice_InjTetanus.getText() + ",\n";
+                            notfMessageBodyMedicine += anc3_advice_InjTetanus.getText() + ",\n";
                         }
 
                         if ( (!anc3_advice_TFeOD_Temp) && anc3_advice_TFeOD.isChecked()){
@@ -2444,11 +2432,12 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 
                         if(!notfMessageBodyMedicine.equals((""))) {
                             notfMessage += "\nMedicines:\n";
-                            notfMessage = notfMessage + notfMessageBodyMedicine;
 
-                            if (notfMessage.endsWith(",\n")) {
-                                notfMessage = notfMessage.substring(0, notfMessage.length() - 2);
+                            if (notfMessageBodyMedicine.endsWith(",\n")) {
+                                notfMessageBodyMedicine = notfMessageBodyMedicine.substring(0, notfMessageBodyMedicine.length() - 2);
                             }
+
+                            notfMessage = notfMessage + notfMessageBodyMedicine;
                         }
 
                         String commentsBody = "";
@@ -2701,7 +2690,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                     params.put("obsForG", "" + obsForG.getText());
                     params.put("obsForA", "" + obsForA.getText());
                     params.put("obsForP", "" + obsForP.getText());
-                    params.put("obsForL ", "" + obsForL.getText());
+                    params.put("obsForL", "" + obsForL.getText());
 
 
                     params.put("anc3_advice_review", "" + anc3_advice_review.isChecked());
