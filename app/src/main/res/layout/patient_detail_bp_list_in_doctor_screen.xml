@@ -18,7 +18,7 @@
     <LinearLayout
         android:id="@+id/dateData"
         android:layout_width="70dp"
-        android:layout_height="100dp"
+        android:layout_height="120dp"
         android:orientation="vertical"
         android:paddingTop="0dp">
 
@@ -90,16 +90,22 @@
             tools:text="Text 3" />
 
         <TextView
+            android:id="@+id/bleedingVag"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Text 5" />
+
+        <TextView
             android:id="@+id/weightVal"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             tools:text="Text 4" />
 
         <TextView
-            android:id="@+id/bleedingVag"
+            android:id="@+id/hrVal"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Text 5" />
+            tools:text="Text 6" />
 
     </LinearLayout>
 
