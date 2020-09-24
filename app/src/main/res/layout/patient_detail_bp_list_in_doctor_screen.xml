@@ -96,16 +96,16 @@
             android:text="Text 5" />
 
         <TextView
-            android:id="@+id/weightVal"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            tools:text="Text 4" />
-
-        <TextView
             android:id="@+id/hrVal"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             tools:text="Text 6" />
+
+        <TextView
+            android:id="@+id/weightVal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            tools:text="Text 4" />
 
     </LinearLayout>
 
