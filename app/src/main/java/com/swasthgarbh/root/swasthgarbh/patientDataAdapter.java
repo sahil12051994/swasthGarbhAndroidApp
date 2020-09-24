@@ -189,7 +189,7 @@ public class patientDataAdapter extends ArrayAdapter<patient_data_listview_class
         if(current_patient_data.getHeartRate() == 0){
             heartRateView.setText("Heart Rate:\t" + "N/A");
         }else{
-            heartRateView.setText("Hear Rate:\t" + Integer.toString(current_patient_data.getHeartRate()));
+            heartRateView.setText("Heart Rate:\t" + Integer.toString(current_patient_data.getHeartRate()));
         }
 
         TextView bpDysTextView = (TextView)listItemView.findViewById(R.id.dysValue);

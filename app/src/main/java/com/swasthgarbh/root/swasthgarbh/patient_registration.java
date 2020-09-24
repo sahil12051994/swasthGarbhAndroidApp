@@ -583,7 +583,8 @@ public class patient_registration extends AppCompatActivity {
                                         Integer sys, dys, wt;
 
                                         Integer sys_temp = 0, dys_temp = 0, wt_temp = 0, update_temp_sys = 0, update_temp_dys = 0, update_temp_wt = 0;
-                                        for (int i = patientBpData.length() - 1; i >= 0; i--) {
+
+                                        for (int i = patientBpData.length() -1; i >= 0; i--) {
                                             JSONObject po = (JSONObject) patientBpData.get(i);
                                             if (patientBpData.length() > 1) {
                                                 if (update_temp_sys == 0) {
@@ -610,7 +611,9 @@ public class patient_registration extends AppCompatActivity {
                                                     System.out.println(po.getInt("weight"));
                                                     if (po.has("weight")) {
                                                         if(po.getInt("weight") != 0) {
-                                                            wt_temp = ((JSONObject) patientBpData.get(i + 1)).getInt("weight");
+                                                            System.out.println("patient lengthhhh" + patientBpData.length());
+                                                            System.out.println("patient lengthhhh" + i);
+                                                            wt_temp = ((JSONObject) patientBpData.get(i)).getInt("weight");
                                                             update_temp_wt = 1;
                                                         }
                                                     }
