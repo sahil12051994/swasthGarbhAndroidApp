@@ -185,6 +185,13 @@ public class patientDataAdapter extends ArrayAdapter<patient_data_listview_class
             bpSysTextView.setText("Systolic BP:\t" + Integer.toString(current_patient_data.bpSysValue()));
         }
 
+        TextView heartRateView = (TextView)listItemView.findViewById(R.id.hrVal);
+        if(current_patient_data.getHeartRate() == 0){
+            heartRateView.setText("Heart Rate:\t" + "N/A");
+        }else{
+            heartRateView.setText("Hear Rate:\t" + Integer.toString(current_patient_data.getHeartRate()));
+        }
+
         TextView bpDysTextView = (TextView)listItemView.findViewById(R.id.dysValue);
         if(current_patient_data.bpDysValue() == 0){
             bpDysTextView.setText("Diastolic BP:\t" + "N/A");

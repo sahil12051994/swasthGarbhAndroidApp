@@ -8,7 +8,7 @@ public class patient_data_listview_class {
 //  patient-> 0 , Doctor->1
 
     private int bp_sys;
-    private int bp_dys, weight, dataId, totalPatients;
+    private int bp_dys, weight, dataId, totalPatients, heart_rate;
     private Double urine_albumin, bleedingVag;
     private String date_date, date_month, date_year, time_hour, time_min, time_period, time, timeExtracted;
 
@@ -17,7 +17,7 @@ public class patient_data_listview_class {
     int bleeding_per_vaginum =0;
     int dummyData = 0;
 
-    public patient_data_listview_class(int dummyData, int totalPatients, int dataId, String date,int bp_sysArg, int bp_dysArg, Double urine_albuminArg, int weight, Double bleedingVag,String extra_comments) {
+    public patient_data_listview_class(int dummyData, int totalPatients, int dataId, String date,int bp_sysArg, int bp_dysArg, Double urine_albuminArg, int weight, Double bleedingVag,String extra_comments, int heart_rate) {
         this.bp_sys = bp_sysArg;
         this.bp_dys = bp_dysArg;
         this.urine_albumin = urine_albuminArg;
@@ -36,9 +36,10 @@ public class patient_data_listview_class {
         this.totalPatients = totalPatients;
         this.dummyData = dummyData;
         this.extra_comments = extra_comments;
+        this.heart_rate = heart_rate;
     }
 
-    public patient_data_listview_class(int dummyData, int totalPatients, int dataId, String date,int bp_sysArg, int bp_dysArg, Double urine_albuminArg, int weight, Double bleedingVag) {
+    public patient_data_listview_class(int dummyData, int totalPatients, int dataId, String date,int bp_sysArg, int bp_dysArg, Double urine_albuminArg, int weight, Double bleedingVag, int heart_rate) {
         this.bp_sys = bp_sysArg;
         this.bp_dys = bp_dysArg;
         this.urine_albumin = urine_albuminArg;
@@ -57,11 +58,12 @@ public class patient_data_listview_class {
         this.totalPatients = totalPatients;
         this.dummyData = dummyData;
         this.extra_comments="null";
+        this.heart_rate = heart_rate;
     }
 
     public patient_data_listview_class(int dummyDataVariable, int totalPatients, String date, int bp_sysArg, int bp_dysArg, Double urine_albuminArg,
                                        int weight, Boolean headache, Boolean abdominal_pain, Boolean visual_problems, Double bleedingVag,
-                                       Boolean decreased_fetal_movements, Boolean swelling_in_hands_or_face, String extra_comments) {
+                                       Boolean decreased_fetal_movements, Boolean swelling_in_hands_or_face, String extra_comments, int heart_rate) {
         this.bp_sys = bp_sysArg;
         this.bp_dys = bp_dysArg;
         this.urine_albumin = urine_albuminArg;
@@ -82,6 +84,7 @@ public class patient_data_listview_class {
         this.swelling_in_hands_or_face = swelling_in_hands_or_face;
         this.bleedingVag = bleedingVag;
         this.extra_comments = extra_comments;
+        this.heart_rate = heart_rate;
 
         this.docScreen_or_pScreen=1;
         this.totalPatients = totalPatients;
@@ -153,6 +156,10 @@ public class patient_data_listview_class {
 
     public String getExtra_comments(){
         return extra_comments;
+    }
+
+    public int getHeartRate(){
+        return heart_rate;
     }
 
     public int getStatusId(){

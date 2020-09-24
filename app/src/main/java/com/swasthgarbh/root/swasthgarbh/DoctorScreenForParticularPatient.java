@@ -290,7 +290,7 @@ public class DoctorScreenForParticularPatient extends AppCompatActivity implemen
                                 ArrayList<Entry> y3Values = new ArrayList<Entry>();
                                 for (int i = 0; i < patientBpData.length(); i++) {
                                     JSONObject po = (JSONObject) patientBpData.get(i);
-                                    patient_data_listview_class pr = new patient_data_listview_class(dummyDataVariable, patientBpData.length(), po.getString("time_stamp"),po.getInt("systolic"), po.getInt("diastolic"), po.getDouble("urine_albumin") ,po.getInt("weight"), po.getBoolean("headache"), po.getBoolean("abdominal_pain"), po.getBoolean("visual_problems"), po.getDouble("bleeding_per_vaginum") , po.getBoolean("decreased_fetal_movements"), po.getBoolean("swelling_in_hands_or_face"), po.getString("extra_comments"));
+                                    patient_data_listview_class pr = new patient_data_listview_class(dummyDataVariable, patientBpData.length(), po.getString("time_stamp"),po.getInt("systolic"), po.getInt("diastolic"), po.getDouble("urine_albumin") ,po.getInt("weight"), po.getBoolean("headache"), po.getBoolean("abdominal_pain"), po.getBoolean("visual_problems"), po.getDouble("bleeding_per_vaginum") , po.getBoolean("decreased_fetal_movements"), po.getBoolean("swelling_in_hands_or_face"), po.getString("extra_comments"), po.getInt("heart_rate"));
                                     patientRowData.add(pr);
                                     Log.i("Data in array", "" + String.valueOf(patientBpData.get(i)));
                                 }

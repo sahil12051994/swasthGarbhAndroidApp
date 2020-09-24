@@ -569,12 +569,12 @@ public class patient_registration extends AppCompatActivity {
                                             if (po.has("extra_comments")) {
                                                 patient_data_listview_class pr = new patient_data_listview_class(dummyDataVariable, patientBpData.length(),
                                                         po.getInt("pk"), po.getString("time_stamp"), po.getInt("systolic"), po.getInt("diastolic"),
-                                                        po.getDouble("urine_albumin"), po.getInt("weight"), po.getDouble("bleeding_per_vaginum"), po.getString("extra_comments"));
+                                                        po.getDouble("urine_albumin"), po.getInt("weight"), po.getDouble("bleeding_per_vaginum"), po.getString("extra_comments"), po.getInt("heart_rate"));
                                                 patientRowData.add(pr);
                                             } else {
                                                 patient_data_listview_class pr = new patient_data_listview_class(dummyDataVariable, patientBpData.length(),
                                                         po.getInt("pk"), po.getString("time_stamp"), po.getInt("systolic"), po.getInt("diastolic"),
-                                                        po.getDouble("urine_albumin"), po.getInt("weight"), po.getDouble("bleeding_per_vaginum"));
+                                                        po.getDouble("urine_albumin"), po.getInt("weight"), po.getDouble("bleeding_per_vaginum"), po.getInt("heart_rate"));
                                                 patientRowData.add(pr);
                                             }
                                         }
@@ -607,12 +607,15 @@ public class patient_registration extends AppCompatActivity {
                                                 }
 
                                                 if (update_temp_wt == 0) {
-                                                    if (po.getInt("weight") == 0) {
-                                                        wt_temp = ((JSONObject) patientBpData.get(i + 1)).getInt("weight");
-                                                        update_temp_wt = 1;
+                                                    System.out.println(po.getInt("weight"));
+                                                    if (po.has("weight")) {
+                                                        if(po.getInt("weight") != 0) {
+                                                            wt_temp = ((JSONObject) patientBpData.get(i + 1)).getInt("weight");
+                                                            update_temp_wt = 1;
+                                                        }
                                                     }
                                                 }
-                                                if (po.getInt("weight") != 0) {
+                                                if (!po.has("weight")) {
                                                     update_temp_wt = 0;
                                                 }
                                             }
