@@ -691,7 +691,7 @@ public class patient_registration extends AppCompatActivity {
                                         ll.enableDashedLine(4, 2, 0);
                                         leftAxis.addLimitLine(ll);
 
-                                        LimitLine l2 = new LimitLine(90f, "Critical");
+                                        LimitLine l2 = new LimitLine(110f, "Critical");
                                         l2.setLineColor(Color.rgb(171, 235, 198));
                                         l2.setLineWidth(1f);
                                         l2.setTextColor(Color.rgb(171, 235, 198));
@@ -881,7 +881,7 @@ public class patient_registration extends AppCompatActivity {
                                                         ll.enableDashedLine(4, 2, 0);
                                                         leftAxis.addLimitLine(ll);
 
-                                                        LimitLine l2 = new LimitLine(90f, "Critical");
+                                                        LimitLine l2 = new LimitLine(110f, "Critical");
                                                         l2.setLineColor(Color.rgb(171, 235, 198));
                                                         l2.setLineWidth(1f);
                                                         l2.setTextColor(Color.rgb(171, 235, 198));

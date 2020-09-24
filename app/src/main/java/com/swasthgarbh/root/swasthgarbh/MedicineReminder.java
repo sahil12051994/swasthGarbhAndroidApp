@@ -278,11 +278,12 @@ public class MedicineReminder extends AppCompatActivity {
                             params.put("medicine_Image", "Sample image byte for Medicine");
                             params.put("medicine_start", medStartTime);
                             params.put("medicine_end", medEndTime);
-                            params.put("medicine_freq", freq);
                             if(isSOS) {
                                 params.put("isSOS", isSOS);
                                 isSOS = Boolean.FALSE;
+                                freq = "";
                             }
+                            params.put("medicine_freq", freq);
 
                             Log.i("Boddddyyyyy", "getBody: " + params.toString());
                         } catch (JSONException e) {

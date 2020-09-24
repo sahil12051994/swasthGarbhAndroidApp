@@ -350,6 +350,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
     Boolean anc7_advice_Others_Temp = Boolean.FALSE;
     Boolean anc8_advice_Others_Temp = Boolean.FALSE;
 
+    Boolean anc3_investigations_UrineCS_Temp = Boolean.FALSE;
+    Boolean anc3_investigations_ICT_Temp = Boolean.FALSE;
+
 
     private SimpleDateFormat dateFormatterShow, dateFormatterServer;
     String g;
@@ -383,11 +386,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //            Log.i("days", "" + days);
             String m = "";
             if (weeks == 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else if (weeks > 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -424,11 +427,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //            Log.i("days", "" + days);
             String m = "";
             if (weeks == 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else if (weeks > 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -465,11 +468,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //            Log.i("days", "" + days);
             String m = "";
             if (weeks == 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else if (weeks > 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -506,11 +509,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //            Log.i("days", "" + days);
             String m = "";
             if (weeks == 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else if (weeks > 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -547,11 +550,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //            Log.i("days", "" + days);
             String m = "";
             if (weeks == 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else if (weeks > 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -588,11 +591,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //            Log.i("days", "" + days);
             String m = "";
             if (weeks == 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else if (weeks > 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -629,11 +632,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //            Log.i("days", "" + days);
             String m = "";
             if (weeks == 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else if (weeks > 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -670,11 +673,11 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
 //            Log.i("days", "" + days);
             String m = "";
             if (weeks == 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else if (weeks > 1) {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
             } else {
-                m = weeks + " weeks " + " and " + days + " Days";
+                m = weeks + " weeks " + " and " + days + " days";
                 Toast.makeText(this, "Invalid Date!", Toast.LENGTH_SHORT).show();
             }
             Log.d("final m =", m);
@@ -1999,7 +2002,9 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             anc8_advice_FeCa_Temp = response.getBoolean("anc8_advice_FeCa");
                             anc8_advice_Induction_Temp = response.getBoolean("anc8_advice_Induction");
                             anc7_advice_DFMCLLP_Temp = response.getBoolean("anc7_advice_DFMCLLP");
-                            anc7_advice_TFeCa_Temp =response.getBoolean ("anc7_advice_TFeCa");
+                            anc7_advice_TFeCa_Temp = response.getBoolean ("anc7_advice_TFeCa");
+                            anc3_investigations_ICT_Temp = response.getBoolean ("anc3_investigations_ICT");
+                            anc3_investigations_UrineCS_Temp = response.getBoolean ("anc3_investigations_UrineCS");
 
                             anc1_general_Others_Temp = response.getString("anc1_general_Others").equals("") ? Boolean.FALSE : Boolean.TRUE;
                             anc2_advice_Others_Temp = response.getString("anc2_advice_Others").equals("") ? Boolean.FALSE : Boolean.TRUE;
@@ -2330,6 +2335,14 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                             notfMessageBody += anc7_advice_DFMCLLP.getText() + ",\n";
                         }
 
+                        if((!anc3_investigations_UrineCS_Temp) && anc3_investigations_UrineCS.isChecked()) {
+                            notfMessageBody += anc3_investigations_UrineCS.getText() + ",\n";
+                        }
+
+                        if((!anc3_investigations_ICT_Temp) && anc3_investigations_ICT.isChecked()) {
+                            notfMessageBody += anc3_investigations_ICT.getText() + ",\n";
+                        }
+
                         if(!notfMessageBody.equals((""))) {
                             notfMessage += "\nTests:\n";
 
@@ -2431,7 +2444,7 @@ public class patient_data_entry_bydoc extends AppCompatActivity {
                         }
 
                         if(!notfMessageBodyMedicine.equals((""))) {
-                            notfMessage += "\nMedicines:\n";
+                            notfMessage += "\n\nMedicines:\n";
 
                             if (notfMessageBodyMedicine.endsWith(",\n")) {
                                 notfMessageBodyMedicine = notfMessageBodyMedicine.substring(0, notfMessageBodyMedicine.length() - 2);

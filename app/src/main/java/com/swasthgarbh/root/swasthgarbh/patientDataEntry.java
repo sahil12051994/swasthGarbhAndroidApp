@@ -153,7 +153,7 @@ public class patientDataEntry extends AppCompatActivity {
                     str_bleedingVag = Float.parseFloat(bleedingVag.getText().toString());
                 }
                 final Float str_urine;
-                if (bleedingVag.getText().length() == 0) {
+                if (urineAlb.getText().length() == 0) {
                     str_urine = 0f;
                 } else {
                     str_urine = Float.parseFloat(urineAlb.getText().toString());
@@ -173,9 +173,9 @@ public class patientDataEntry extends AppCompatActivity {
                                 if(ImgBytes.length() == 0){
 
                                     pb.setVisibility(View.GONE);
-                                    if(Integer.parseInt(sysData.getText().toString()) > 160 || Integer.parseInt(dysData.getText().toString()) > 110) {
-                                        mNotificationManager.notify(0, mBuilder.build());
-                                    }
+//                                    if(Integer.parseInt(sysData.getText().toString()) > 160 || Integer.parseInt(dysData.getText().toString()) > 110) {
+//                                        mNotificationManager.notify(0, mBuilder.build());
+//                                    }
                                     Intent i = new Intent(patientDataEntry.this, patient_registration.class);
                                     startActivity(i);
                                     return;
@@ -235,9 +235,10 @@ public class patientDataEntry extends AppCompatActivity {
                                     };
                                     ApplicationController.getInstance().addToRequestQueue(jsonObjReq2);
                                     if(sysData.getText().length() != 0 && dysData.getText().length() != 0){
-                                        if(Integer.parseInt(sysData.getText().toString()) > 160 || Integer.parseInt(dysData.getText().toString()) > 110) {
-                                            mNotificationManager.notify(0, mBuilder.build());
-                                        }
+//                                        Notify at frontend if BP is High
+//                                        if(Integer.parseInt(sysData.getText().toString()) > 160 || Integer.parseInt(dysData.getText().toString()) > 110) {
+//                                            mNotificationManager.notify(0, mBuilder.build());
+//                                        }
                                     }
                                     Intent i = new Intent(patientDataEntry.this, patient_registration.class);
                                     startActivity(i);
