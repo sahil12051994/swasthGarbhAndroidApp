@@ -525,7 +525,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Second visit  24-26 weeks:  before  "
+                            android:text="Third visit  24-26 weeks:  before  "
                             android:textStyle="italic" />
 
                         <TextView
@@ -829,7 +829,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Third visit  32 weeks:  before  "
+                            android:text="Fifth visit  32 weeks:  before  "
                             android:textStyle="italic" />
 
                         <TextView
@@ -1117,7 +1117,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Fourth visit  36-38 weeks:  before  "
+                            android:text="Seventh visit  36-38 weeks:  before  "
                             android:textStyle="italic" />
 
                         <TextView
